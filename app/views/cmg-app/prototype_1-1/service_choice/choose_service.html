@@ -1,0 +1,85 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+    {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form method="post" novalidate>
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                  <h1 class="govuk-fieldset__heading">
+                    How would you like child maintenance to be paid?
+                  </h1>
+                </legend>
+                <div class="govuk-radios">
+
+                  <span id="service-choice-hint" class="govuk-hint">
+      Select your preferred option. The other parent will be given a choice too.
+    </span>
+    <div class="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="service-choice-1" name="service-choice" type="radio" value="government-gateway" aria-describedby="service-choice-1-item-hint">
+        <label class="govuk-label govuk-radios__label govuk-label--s" for="service-choice-1">
+          Set up payments between yourselves
+        </label>
+        <span id="service-choice-1-item-hint" class="govuk-hint govuk-radios__hint">
+          The Child Maintenance Service can work out how much child maintenance
+          should be paid and tell both parents. This is called 'Direct Pay'.
+        </span>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="service-choice-2" name="service-choice" type="radio" value="govuk-verify" aria-describedby="service-choice-2-item-hint">
+        <label class="govuk-label govuk-radios__label govuk-label--s" for="service-choice-2">
+          Get the Child Maintenance Service to collect payments
+        </label>
+        <span id="service-choice-2-item-hint" class="govuk-hint govuk-radios__hint">
+          The Child Maintenance Service might be able to collect child maintenance
+          from the other parent and pass it on to you. This is called 'Collect and Pay'.
+          You'll need to pay to use Collect and Pay.
+        </span>
+      </div>
+    </div>
+
+              </fieldset>
+            </div>
+
+            <details class="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  What does it cost to get the Child Maintenance Service to
+                  collect payments?
+                </span>
+              </summary>
+              <div class="govuk-details__text">
+                <p>You’ll need to pay:</p>
+
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>a 4% fee from your regular child maintenance payment if
+                    you’re receiving child maintenance</li>
+                  <li>a 20% fee on top of your regular child maintenance payment
+                    if you’re paying child maintenance</li>
+                </ul>
+
+            </details>
+
+            <button type="submit" class="govuk-button">
+              Continue
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+  {% endblock %}

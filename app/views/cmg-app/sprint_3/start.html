@@ -1,0 +1,109 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<!--Change to test initial commit *this can be removed-->
+{{ govukBackLink({
+  text: 'Back',
+  href: 'javascript:history.back()'
+}) }}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Child maintenance online application
+        <span class="govuk-caption-xl">{{releaseVersion}}</span>
+      </h1>{{releaseVersion | log }}
+      <span class="govuk-caption-xl">{{serviceName}}</span>
+     
+  
+      
+  
+      <span class="govuk-caption-l">Alpha phase</span>
+      <h2 class="govuk-heading-l">Other parent journey iterations</h2>
+      <br>
+      <br>
+      <br>
+  
+    </div>
+  </div>
+  
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+  
+      <h3 class="govuk-heading-m">Iteration</h3>
+  
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col">Sprint/iterations</th>
+            <th class="govuk-table__header" scope="col">Date</th>
+            <th class="govuk-table__header" scope="col">Notes</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="row"><a href="sprint_3_linear_prototype/index.html">Sprint 3 linear prototype</a></td>
+                  <td class="govuk-table__cell">24 April 2019 to 1 May 2019</td>
+                <td class="govuk-table__cell">Iteration of prototype upto current date</td>
+              </tr>
+
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="row"><a href="sprint_3_tasklist_example/index.html">Sprint 3 tasklist example</a></td>
+                  <td class="govuk-table__cell">7 May 2019 to 8 May 2019 </td>
+                <td class="govuk-table__cell">further example of tasklist for possible future prototype</td>
+              </tr>
+           
+          <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="row"><a href="other_parent_iteration_1/about_other_parent/other_parent_introduction.html">Other parent iteration 1</a></td>
+                  <td class="govuk-table__cell">24 April 2019 to 8 May 2019</td>
+                <td class="govuk-table__cell">Iteration 1: Update of other parent section.</td>
+              </tr>
+
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="row"><a href="other_parent_iteration_2/about_other_parent/other_parent_introduction.html">Other parent iteration 2</a></td>
+                  <td class="govuk-table__cell">25 April 2019 to 8 May 2019</td>
+                <td class="govuk-table__cell">Iteration 2: Addition of employment details.</td>
+              </tr>
+
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="row"><a href="other_parent_iteration_3/about_other_parent/other_parent_introduction.html">Other parent iteration 3</a></td>
+                  <td class="govuk-table__cell">25 April 2019 to 8 May 2019</td>
+                <td class="govuk-table__cell">Iteration 3: Further refinement of journey after workshop on 30th April.</td>
+              </tr>
+
+              <tr class="govuk-table__row">
+                  <td class="govuk-table__cell" scope="row"><a href="contact_page_iterations/start.html">Contact page iterations</a></td>
+                    <td class="govuk-table__cell">25 April 2019 to 8 May 2019</td>
+                  <td class="govuk-table__cell">Iterations of 'contact page'</td>
+                </tr>
+
+
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell" scope="row"><a href="payment_types_iteration_1/service_choice/contact_with_other_parent.html">Payment type iteration 1</a></td>
+                    <td class="govuk-table__cell">25 April 2019 to 8 May 2019</td>
+                  <td class="govuk-table__cell">Redesigns to payment choice pages</td>
+                </tr>
+
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell" scope="row"><a href="payment_types_iteration_2/service_choice/contact_with_other_parent.html">Payment type iteration 2</a></td>
+                    <td class="govuk-table__cell">25 April 2019 to 8 May 2019</td>
+                  <td class="govuk-table__cell">Redesigns to payment choice pages</td>
+                </tr>
+
+
+
+
+            </tbody>
+          </table>
+  
+          <br><br>
+    </div>
+  </div>
+
+{% endblock %}

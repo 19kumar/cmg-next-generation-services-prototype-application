@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+{% block content %}
+<div class="govuk-width-container">
+  {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+  <main class="govuk-main-wrapper" id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+
+                <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" aria-describedby="passport-issued-hint" role="group">
+                          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                            <h1 class="govuk-fieldset__heading">
+                          In total, What is the number of children you are applying for child maintenance?
+                            </h1>
+                          </legend>
+                          
+                          <div class="govuk-form-group">
+                              
+                                <input class="govuk-input govuk-input--width-2" id="how-many-children" name="how-many-children" type="text">
+                              </div>
+                        </fieldset>
+                      </div>
+         
+
+
+
+          <button type="submit" class="govuk-button">
+            Continue
+          </button>
+        </form>
+      </div>
+    </div>
+  </main>
+</div>
+{% endblock %}

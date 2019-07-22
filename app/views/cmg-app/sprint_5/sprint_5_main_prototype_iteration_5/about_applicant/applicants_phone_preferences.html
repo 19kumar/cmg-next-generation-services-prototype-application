@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+{% block content %}
+<div class="govuk-width-container">
+  {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+          <div class="govuk-form-group">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
+              <h1 class="govuk-fieldset__heading">
+                When can we call you?
+              </h1>
+            </legend>
+          <!--  <label class="govuk-label" for="applicant-telephone-number" style="visibility:hidden">
+                UK telephone number
+              </label> -->
+            <p>
+              We might need to call you if we need more information about your application.
+            </p>
+
+<!--Add here-->
+<div class="govuk-form-group">
+  <label class="govuk-label" for="contact-time">
+    <strong>Preferred days and times</strong>
+  </label>
+  <span id="contact-time-hint" class="govuk-hint">
+    We can only call you from Monday to Friday between 8am and 7.30pm, and Saturday between 9am and 4pm.
+  </span>
+  <textarea class="govuk-textarea" id="contact-time" name="contact-time" rows="5" aria-describedby="contact-time-hint"></textarea>
+</div>
+
+<!--Start of checkbox-->
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="answer-machine-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+
+    <div class="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="answer-machine" name="answer-machine" type="checkbox" value="yes">
+        <label class="govuk-label govuk-checkboxes__label" for="answer-machine">
+          Can we leave you an answer phone message?
+        </label> </div>
+    </div>
+  </fieldset>
+</div>
+
+<!--End here-->
+
+          </div>
+          <button type="submit" class="govuk-button">
+            Continue
+          </button>
+        </form>
+      </div>
+    </div>
+  </main>
+</div>
+{% endblock %}

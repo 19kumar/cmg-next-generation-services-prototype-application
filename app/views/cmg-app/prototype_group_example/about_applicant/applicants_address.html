@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <a href="applicants_national_insurance_number.html" class="govuk-back-link">Back</a>
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+          <div class="govuk-form-group">
+
+            <!--Start of applicants-address fields-->
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                <h1 class="govuk-fieldset__heading">
+                  What is your address?
+                </h1>
+              </legend>
+              <div class="govuk-form-group">
+               
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="applicants-address-postcode">
+                  Postcode
+                </label>
+                <input class="govuk-input govuk-input--width-10" id="applicants-address-postcode"
+                  name="applicants-address-postcode" type="text">
+              </div>
+
+            </fieldset>
+            <!--End of applicants-address fields-->
+
+          </div>
+          <button type="submit" class="govuk-button">
+            Continue
+          </button>
+        </form>
+
+      </div>
+    </div>
+  </main>
+</div>
+
+{% endblock %}

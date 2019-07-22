@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+{% block content %}
+<!--Feedback banner start-->
+{% include "feedback_banner_no_link.html" %}
+<!--Feedback banner stop-->
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper" id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+      
+            <form method="post" novalidate>
+
+                    <fieldset class="govuk-fieldset">
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl govuk-!-padding-bottom-4">
+                              <h1 class="govuk-fieldset__heading">
+                                    We need your feedback to improve this service
+                              </h1>
+                            </legend>
+
+                            <div class="govuk-form-group ">
+                                    <label class="govuk-label" for="more-detail">
+                                         <strong>Tell us what you think of the online Child Maintenance service</strong>
+                                    </label>
+                                    <span id="more-detail-hint" class="govuk-hint">
+                                      Do not include personal or financial information, like your National Insurance number or credit card details.
+                                    </span>
+                                    <textarea class="govuk-textarea " id="more-detail" name="more-detail" rows="10" aria-describedby="more-detail-hint"></textarea>
+                                    
+                                  </div>
+                          
+  
+                              
+                          
+                          </fieldset>
+
+                          <button type="submit" class="govuk-button">
+                                Continue
+                              </button>
+
+                                                                 <!--I do not have an invitation code section-->
+        <details class="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              I need help with my application
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+
+            <p>You’ll need to speak to Child Maintenance Service.</p>
+            <p class="govuk-body"><strong>Child Maintenance Service</strong><br>
+              Telephone: 0800 171 2345 <br>
+
+              <p class="govuk-body">Monday to Friday, 8am to 7:30pm (excluding bank holidays)</br>
+                Saturday, 9am to 4pm<br>
+                  <a href="/call-charges">Find out about call charges</a></p>
+        </details>
+
+            </form>
+
+
+
+      </div>
+    </div>
+  </main>
+</div>
+{% endblock %}

@@ -1,0 +1,131 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-width-container">
+
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Apply to the Child Maintenance Service</h1>
+
+        <p class="govuk-body-l">Use this service to get help making a child
+          maintenance arrangement if you and the other parent cannot agree to
+          one yourselves.</p>
+
+          <p class="govuk-body">
+            You can <a class="govuk-link" href="https://child-maintenance.awscmg-dev.dwpcloud.uk/options/">arrange child
+              maintenance yourselves</a>, if you can agree.
+          </p>
+
+        <h2 class="govuk-heading-m">Before you start</h2>
+
+        <p class="govuk-body">You’ll need:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>your unique invitation code – this is in the email you were sent
+            after speaking to Child Maintenance Options</li>
+          <li>your National Insurance number</li>
+          <li>your bank details, if you need us to pass them on to the other parent</li>
+          <li>details of the children you're applying for
+          <li>the other parent's name</li>
+        </ul>
+
+        <div class="govuk-inset-text">There’s usually a £20 application fee – this cannot be refunded. You’ll need
+          a debit or credit card to pay this.</div>
+
+
+        <h2 class="govuk-heading-m">Contacting the other parent</h2>
+
+        <p>You do not have to contact the other parent – we can contact
+          them for you.
+          Only your name and children's names will be
+          shared with them.</p>
+
+          <div class="govuk-inset-text">Your bank account details can be
+            shared with the other parent or protected. You can speak to your bank
+            or building society about getting an account that does not give away
+            your location – we call this a 'non-geographic account'.</div>
+
+        <p class="govuk-body">Any information you give about the other parent
+          will help us to set up an arrangement. If you do
+          not give enough, we might not be able to do this.
+          Helpful details include:</p>
+
+          <ul class="govuk-list govuk-list--bullet">
+            <li>any details about where they live</li>
+            <li>their date of birth or age</li>
+            <li>their National Insurance number</li>
+            <li>their phone number</li>
+            <li>where they work</li>
+          </ul>
+
+
+          <a href="eligibility_questions/introduction.html" role="button" draggable="false"
+          class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8">
+          Start now
+          </a>
+
+
+        <h2 class="govuk-heading-m">If you need to claim from more than one parent</h2>
+
+        <p class="govuk-body">You should speak to Child Maintenance Options.</p>
+
+        <p class="govuk-body"><strong>Child Maintenance Options</strong><br>
+          Telephone: 0800 953 0191 <br>
+
+          <p class="govuk-body">Monday to Friday, 8am to 7.30pm <br>
+
+            <p class="govuk-body">Saturday, 9am to 4pm<br>
+              <a href="/call-charges">Find out about call charges</a></p>
+
+
+                    <!-- Before you start section -->
+
+
+
+
+      </div>
+
+      <div class="govuk-grid-column-one-third">
+
+        <!-- The Related items component is not part of GOV.UK Frontend but will be styled if used in the Prototype Kit -->
+
+        <aside class="app-related-items" role="complementary">
+          <h2 class="govuk-heading-m" id="subsection-title">
+            Subsection
+          </h2>
+          <nav role="navigation" aria-labelledby="subsection-title">
+            <ul class="govuk-list govuk-!-font-size-16">
+              <li>
+                <a class="govuk-link" href="#">
+                  Related link
+                </a>
+              </li>
+              <li>
+                <a class="govuk-link" href="#">
+                  Related link
+                </a>
+              </li>
+              <li>
+                <a href="#" class="govuk-link govuk-!-font-weight-bold">
+                  More
+                  <span class="govuk-visually-hidden">in Subsection</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </aside>
+
+      </div>
+    </div>
+  </main>
+</div>
+
+{% endblock %}

@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+    {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form method="post" novalidate>
+
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="other-parent-date-of-birth-hint" role="group">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl govuk-!-margin-bottom-9">
+                    <h1 class="govuk-fieldset__heading">
+                      What is the other parent’s date of birth?
+                    </h1>
+                  </legend>
+
+                  <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset" role="group">
+                    <span id="other-parent-date-of-birth-hint" class="govuk-hint">
+                      Give as much of the date of birth as you can. This will help us to
+                      process your application faster.
+                    </span>
+
+                    <label class="govuk-label" for="other-parent-date-of-birth">
+                      Date of birth
+                    </label>
+
+                    <span id="other-parent-date-of-birth-hint" class="govuk-hint">
+                      For example, '12 11 1970' or ‘1970’.
+                    </span>
+
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="other-parent-date-of-birth-day">
+                            Day
+                          </label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-2 " id="other-parent-date-of-birth-day" name="other-parent-date-of-birth-day" type="number" pattern="[0-9]*">
+                        </div>
+
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="other-parent-date-of-birth-month">
+                            Month
+                          </label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-2 " id="other-parent-date-of-birth-month" name="other-parent-date-of-birth-month" type="number" pattern="[0-9]*">
+                        </div>
+
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="other-parent-date-of-birth-year">
+                            Year
+                          </label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-4 " id="other-parent-date-of-birth-year" name="other-parent-date-of-birth-year" type="number" pattern="[0-9]*">
+                        </div>
+                    </div>
+                    </fieldset>
+                  </div>
+                </div>
+              </div>
+
+            <button type="submit" class="govuk-button">
+              Continue
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+  {% endblock %}

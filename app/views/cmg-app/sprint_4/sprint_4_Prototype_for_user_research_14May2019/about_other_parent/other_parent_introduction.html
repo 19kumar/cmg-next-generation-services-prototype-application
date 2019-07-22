@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+{% block content %}
+<div class="govuk-width-container">
+  {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+          <div class="govuk-form-group">
+            <h1 class="govuk-heading-xl">We need to tell the other parent how much child maintenance to pay</h1>
+            <p class="govuk-body">The answers you give to the next questions will
+              help us to find and contact them.</p>
+
+              <div class="govuk-inset-text">
+                If you cannot give any information about the other parent, we are
+                unlikely to be able to set up a child maintenance arrangement
+                for you.
+              </div>
+
+            <p>Helpful information includes:</p>
+
+            <ul class="govuk-list govuk-list--bullet">
+              <li>any details about where they live</li>
+              <li>their date of birth or age</li>
+              <li>their National Insurance number</li>
+              <li>their phone number</li>
+              <li>where they work</li>
+            </ul>
+
+            <button type="submit" class="govuk-button">
+              Continue
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+</div>
+{% endblock %}

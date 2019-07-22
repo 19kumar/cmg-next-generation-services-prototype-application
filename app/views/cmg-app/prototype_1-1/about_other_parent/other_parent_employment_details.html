@@ -1,0 +1,244 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">About the other parent's work</h1>
+        <form method="post" novalidate>
+
+          <span id="other-parent-employment-national-insurance-number-hint" class="govuk-hint">
+            Give as much information as you can – this will help us to process your
+            application faster.
+          </span>
+
+          <!--Start of first job role 1-->
+
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-!-width-two-thirds govuk-body govuk-!-font-weight-bold" for="full-name">
+              Job title
+            </label>
+            <input class="govuk-input govuk-!-width-two-thirds" id="other-parent-employment-job-title-1"
+              name="other-parent-employment-job-title-1" type="text" autocomplete="name" spellcheck="false">
+          </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-!-width-two-thirds govuk-body govuk-!-font-weight-bold" for="full-name">
+              Employer name
+            </label>
+            <input class="govuk-input govuk-!-width-two-thirds" id="other-parent-employment-employer-name-1"
+              name="other-parent-employment-employer-name-1" type="text" autocomplete="name" spellcheck="false">
+          </div>
+
+
+
+
+          <fieldset class="govuk-fieldset">
+            <label class="govuk-label govuk-!-width-two-thirds govuk-body govuk-!-font-weight-bold" for="full-name">
+              Address
+            </label>
+
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="other-parent-employment-address-line-1">
+                Building and street
+                <span class="govuk-visually-hidden">line 1 of 2</span>
+              </label>
+              <input class="govuk-input" id="other-parent-employment-address-line-1"
+                name="other-parent-employment-address-line-1" type="text">
+            </div>
+
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="other-parent-employment-address-line-2">
+                <span class="govuk-visually-hidden">Building and street line 2 of 2</span>
+              </label>
+              <input class="govuk-input" id="other-parent-employment-address-line-2"
+                name="other-parent-employment-address-line-2" type="text">
+            </div>
+
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="other-parent-employment-address-town">
+                Town or city
+              </label>
+              <input class="govuk-input govuk-!-width-two-thirds" id="other-parent-employment-address-town"
+                name="other-parent-employment-address-town" type="text">
+            </div>
+
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="other-parent-employment-address-county">
+                County
+              </label>
+              <input class="govuk-input govuk-!-width-two-thirds" id="other-parent-employment-address-county"
+                name="other-parent-employment-address-county" type="text">
+            </div>
+
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="other-parent-employment-address-postcode">
+                Postcode
+              </label>
+              <input class="govuk-input govuk-input--width-10" id="other-parent-employment-address-postcode"
+                name="other-parent-employment-address-postcode" type="text">
+            </div>
+          </fieldset>
+
+          <!--End of first job role 1-->
+
+          <!--Start of first job role 1-->
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="citizenship-conditional-hint">
+
+              <div class="govuk-checkboxes" data-module="checkboxes">
+                <div class="govuk-checkboxes__item">
+
+                  <input class="govuk-checkboxes__input" id="add_employment_role" name="add_employment_role" type="checkbox"
+                    value="on" data-aria-controls="conditional-citizenship-conditional-1">
+                  <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-1">
+                    Add another job
+                  </label>
+
+                </div>
+                <div class=" govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-1">
+
+                  <!--Start of first job role 2-->
+                  <br>
+                  <br>
+                  <h3 class="govuk-heading-m">Second job</h3>
+
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-!-width-two-thirds govuk-body govuk-!-font-weight-bold"
+                      for="full-name">
+                      Job title
+                    </label>
+                    <input class="govuk-input govuk-!-width-two-thirds" id="other-parent-employment-job-2-job-title-1"
+                      name="other-parent-employment-job-2-job-title-1" type="text" autocomplete="name" spellcheck="false">
+                  </div>
+
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-!-width-two-thirds govuk-body govuk-!-font-weight-bold"
+                      for="full-name">
+                      Employer name
+                    </label>
+                    <input class="govuk-input govuk-!-width-two-thirds" id="other-parent-employment-job-2-employer-name-1"
+                      name="other-parent-employment-job-2-employer-name-1" type="text" autocomplete="name" spellcheck="false">
+                  </div>
+
+
+
+
+                  <fieldset class="govuk-fieldset">
+                    <label class="govuk-label govuk-!-width-two-thirds govuk-body govuk-!-font-weight-bold"
+                      for="full-name">
+                      Address
+                    </label>
+
+                    <div class="govuk-form-group">
+                      <label class="govuk-label" for="other-parent-employment-job-2-address-line-1">
+                        Building and street
+                        <span class="govuk-visually-hidden">line 1 of 2</span>
+                      </label>
+                      <input class="govuk-input" id="other-parent-employment-job-2-address-line-1"
+                        name="other-parent-employment-job-2-address-line-1" type="text">
+                    </div>
+
+                    <div class="govuk-form-group">
+                      <label class="govuk-label" for="other-parent-employment-job-2-address-line-2">
+                        <span class="govuk-visually-hidden">Building and street line 2 of 2</span>
+                      </label>
+                      <input class="govuk-input" id="other-parent-employment-job-2-address-line-2"
+                        name="other-parent-employment-job-2-address-line-2" type="text">
+                    </div>
+
+                    <div class="govuk-form-group">
+                      <label class="govuk-label" for="other-parent-employment-job-2-address-town">
+                        Town or city
+                      </label>
+                      <input class="govuk-input govuk-!-width-two-thirds" id="other-parent-employment-job-2-address-town"
+                        name="other-parent-employment-job-2-address-town" type="text">
+                    </div>
+
+                    <div class="govuk-form-group">
+                      <label class="govuk-label" for="other-parent-employment-job-2-address-county">
+                        County
+                      </label>
+                      <input class="govuk-input govuk-!-width-two-thirds" id="other-parent-employment-job-2-address-county"
+                        name="other-parent-employment-job-2-address-county" type="text">
+                    </div>
+
+                    <div class="govuk-form-group">
+                      <label class="govuk-label" for="other-parent-employment-job-2-address-postcode">
+                        Postcode
+                      </label>
+                      <input class="govuk-input govuk-input--width-10" id="other-parent-employment-job-2-address-postcode"
+                        name="other-parent-employment-job-2-address-postcode" type="text">
+                    </div>
+                  </fieldset>
+
+                  <!--End of first job role 2-->
+
+                  <!--Start of checkbox-->
+
+
+                  <div class="govuk-form-group">
+                  </div>
+                  <div class="govuk-form-group"></div>
+                  <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+
+                    <div class="govuk-checkboxes">
+
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                          Add another employment role
+                        </label>
+                      </div>
+                    </div>
+                  </fieldset>
+
+
+                </div>
+
+              </div>
+          </div>
+
+          </fieldset>
+
+
+
+      </div>
+
+
+
+
+    </div>
+
+
+
+    <!--End of check box-->
+
+
+    <button type="submit" class="govuk-button">
+      Continue
+    </button>
+    </form>
+
+</div>
+</div>
+</main>
+</div>
+
+
+
+
+
+
+{% endblock %}

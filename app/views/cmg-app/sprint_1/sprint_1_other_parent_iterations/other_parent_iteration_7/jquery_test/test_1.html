@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+    {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form  method="post" novalidate>
+            <div class="govuk-form-group">
+              <h1 class="govuk-label-wrapper">
+                <label class="govuk-label govuk-label--xl" for="postcode">
+                Do you know the other parent’s home address?
+                </label>
+              </h1>
+              <div class="govuk-radios govuk-radios--inline">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="test-yes" name="test" type="radio" value="Yes">
+                  <label class="govuk-label govuk-radios__label" for="test-yes">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="test-no" name="test" type="radio" value="No">
+                  <label class="govuk-label govuk-radios__label" for="test-no">
+                    No
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <div>Do you have Pin No?</div>
+<label for="chkYes">
+  <input type="radio" id="chkYes" name="chkPinNo" value="Yes" /> Yes
+</label>
+<label for="chkNo">
+  <input type="radio" id="chkNo" name="chkPinNo" value="No"/> No
+</label>
+<hr>
+<div id="dvPinNo" style="display: none">
+    Pin No:
+    <input type="text" id="txtPinNo" />
+  </div>
+  
+
+
+
+
+
+            <button type="submit" class="govuk-button">
+              Continue
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  {% endblock %}

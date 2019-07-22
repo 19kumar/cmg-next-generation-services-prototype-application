@@ -1,0 +1,107 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<!--Change to test initial commit *this can be removed-->
+{{ govukBackLink({
+  text: 'Back',
+  href: 'javascript:history.back()'
+}) }}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Child maintenance online application
+        <span class="govuk-caption-xl">{{releaseVersion}}</span>
+      </h1>{{releaseVersion | log }}
+      <span class="govuk-caption-xl">{{serviceName}}</span>
+     
+  
+      
+  
+      <span class="govuk-caption-l">Alpha phase</span>
+      <h2 class="govuk-heading-l">Other parent journey iterations</h2>
+      <br>
+      <br>
+      <br>
+  
+    </div>
+  </div>
+  
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+  
+      <h3 class="govuk-heading-m">Iteration</h3>
+  
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col">Sprint/iterations</th>
+            <th class="govuk-table__header" scope="col">Date</th>
+            <th class="govuk-table__header" scope="col">Notes</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="row"><a href="sprint_6_main_prototype_iteration_1_2/index.html">Sprint 6 iteration 1.2</a></td>
+                  <td class="govuk-table__cell">25 June 2019 - 25 June 2019</td>
+                <td class="govuk-table__cell">Updated iteration to match removed pages for MVP </td>
+              </tr>
+
+              <tr class="govuk-table__row">
+                  <td class="govuk-table__cell" scope="row"><a href="sprint_6_main_prototype_iteration_1/index.html">Sprint 6 iteration 1</a></td>
+                    <td class="govuk-table__cell">10 June 2019 - 17 June 2019</td>
+                  <td class="govuk-table__cell">Updates to content based off feedback from stakeholders</td>
+                </tr>
+  
+
+
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="row"><a href="sprint_6_main_prototype_iteration_2/index.html">Sprint 6 iteration 2</a></td>
+                  <td class="govuk-table__cell">17 June 2019 - 17 June 2019</td>
+                <td class="govuk-table__cell">Updates to content based off further feedback from stakeholders - <span style="color: red">to be confirmed</span></td>
+              </tr>
+
+
+
+            
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="row"><a href="sprint_6_trimmed_for_user_research/index.html">Sprint 6 iteration 1 - condensed for user research</a></td>
+                  <td class="govuk-table__cell">10 June 2019 - 17 June 2019</td>
+                <td class="govuk-table__cell">Condensed version for user research</td>
+              </tr>
+
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="row"><a href="sprint_6_child_loop_iteration_1/about_qualifying_child/how_many_children.html">Sprint 6 child loop iteration 1</a></td>
+                  <td class="govuk-table__cell">10 June 2019 - 17 June 2019</td>
+                <td class="govuk-table__cell">Group child names</td>
+              </tr>
+
+             
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="row"><a href="sprint_6_child_loop_iteration_2/about_qualifying_child/how_many_children.html">Sprint 6 child loop iteration 2</a></td>
+                  <td class="govuk-table__cell">10 June 2019 - 17 June 2019</td>
+                <td class="govuk-table__cell">design more inline with options</td>
+              </tr>
+   
+
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="row"><a href="sprint_6_child_loop_iteration_3/about_qualifying_child/how_many_children.html">Sprint 6 child loop iteration 3</a></td>
+                  <td class="govuk-table__cell">10 June 2019 - 17 June 2019</td>
+                <td class="govuk-table__cell">uneligible children included on results page</td>
+              </tr>
+   
+
+            </tbody>
+          </table>
+  
+          <br><br>
+    </div>
+  </div>
+
+{% endblock %}

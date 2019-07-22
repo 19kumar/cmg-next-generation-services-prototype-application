@@ -1,0 +1,104 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+    {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+
+<!--start of new code-->
+<form method="post" novalidate>
+
+    <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="child-1-date-of-birth-hint" role="group">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl govuk-!-margin-bottom-9">
+            <h1 class="govuk-fieldset__heading">
+            You have told us about 1 child
+            </h1>
+ </legend>
+
+ <!--start of list-->
+
+ <ol class="app-task-list">
+    <li>
+      <ul class="app-task-list__items">
+        <li class="app-task-list__item">
+         <p class="govuk-body tasklist_float_60">{{data['child-1-first-name'] }} {{data['child-1-last-name'] }}</p>
+         <a class="govuk-link tasklist_float_20" href="child_check_answers.html">Change</a>
+         <a class="govuk-link tasklist_float_20" href="#">Remove</a>
+        </li>
+
+
+  </ol>
+ <!--Start of radio buttons-->
+ <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+
+        <h2 class="govuk-heading-m">
+        Do you need to add another child?
+        </h2>
+
+      <div class="govuk-radios govuk-radios--inline">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="add-another-child-1-yes" name="add-another-child-1" type="radio" value="yes">
+          <label class="govuk-label govuk-radios__label" for="add-another-child-1-yes">
+            Yes
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="add-another-child-1-no" name="add-another-child-1" type="radio" value="no">
+          <label class="govuk-label govuk-radios__label" for="add-another-child-1-no">
+            No
+          </label>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+</div>
+ <!--end of radio buttons-->
+
+ <button type="submit" class="govuk-button">
+    Continue
+  </button>
+
+
+</form>
+        </div>
+      </div>
+    </main>
+  </div>
+
+
+  <style>
+      .app-task-list__item:first-child {
+        border-top: 0px solid #bfc1c3 !important;
+    }
+
+
+    .tasklist_float_60 {
+        float: left;
+        width: 60%;
+    }
+
+    .tasklist_float_20 {
+        float: left;
+        width: 20%;
+        text-align: right;
+    }
+
+    .app-task-list__items {
+    padding-left: 0px;
+}
+
+
+      </style>
+
+  {% endblock %}

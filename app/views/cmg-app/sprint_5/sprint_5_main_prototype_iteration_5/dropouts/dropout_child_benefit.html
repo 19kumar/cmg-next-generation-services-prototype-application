@@ -1,0 +1,45 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+    {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-two-thirds">
+
+            <h1 class="govuk-heading-xl">You are not eligible to apply to the Child Maintenance Service</h1>
+
+            <p class="govuk-body">
+              You'll need to register your children for Child Benefit. After you've done this, you'll be able to continue with your application using your unique invitation code.</p>
+
+                <p><strong>Child Benefit helpline</strong><br>
+                  Telephone: 0300 200 3100  <br>
+
+                <p>Monday to Friday, 8am to 8pm  <br>
+
+                <p>Saturday, 9am to 4pm<br>
+                  <a href="/call-charges">Find out about call charges</a></p>
+
+
+
+
+
+
+
+      </div>
+    </main>
+
+</div>
+
+{% endblock %}

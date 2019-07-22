@@ -1,0 +1,92 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
+                <h1 class="govuk-fieldset__heading">
+                  How often does {{data['child-3-first-name'] }} stay overnight with the other parent?
+                </h1>
+              </legend>
+              <p class="govuk-body">Include any extra overnight stays – for example,
+                holidays that might not be part of a weekly arrangement.</p>
+              <div class="govuk-radios">
+
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="shared-care-child-3-1" name="shared-care-child-3" type="radio" value="Never">
+                  <label class="govuk-label govuk-radios__label" for="shared-care-child-3-1">
+                    Never
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="shared-care-child-3-2" name="shared-care-child-3" type="radio"
+                    value="Less than 1 night a week">
+                  <label class="govuk-label govuk-radios__label" for="shared-care-child-3-2">
+                    Less than 1 night a week (less than 52 nights a year)
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="shared-care-child-3-3" name="shared-care-child-3" type="radio"
+                    value="1 to 2 nights a week">
+                  <label class="govuk-label govuk-radios__label" for="shared-care-child-3-3">
+                    1 to 2 nights a week (52 to 103 a year)
+                  </label>
+                </div>
+
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="shared-care-child-3-4" name="shared-care-child-3" type="radio"
+                    value="2 to 3 nights a week">
+                  <label class="govuk-label govuk-radios__label" for="shared-care-child-3-4">
+                    2 to 3 nights a week (104 to 155 a year)
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="shared-care-child-3-5" name="shared-care-child-3" type="radio"
+                    value="3 nights a week">
+                  <label class="govuk-label govuk-radios__label" for="shared-care-child-3-5">
+                    3 nights a week (156 to 174 a year)
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="shared-care-child-3-6" name="shared-care-child-3" type="radio"
+                    value="More than 3 nights a week">
+                  <label class="govuk-label govuk-radios__label" for="shared-care-child-3-6">
+                    More than 3 nights a week (175 to 182 a year)
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="shared-care-child-3-7" name="shared-care-child-3" type="radio"
+                    value="183 nights">
+                  <label class="govuk-label govuk-radios__label" for="shared-care-child-3-7">
+                    More than 183 nights a year
+                  </label>
+                </div>
+
+              </div>
+            </fieldset>
+          </div>
+
+          <button type="submit" class="govuk-button">
+            Continue
+          </button>
+        </form>
+      </div>
+    </div>
+  </main>
+</div>
+{% endblock %}

@@ -1,0 +1,69 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+    {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-two-thirds">
+
+            <h1 class="govuk-heading-xl">You are not eligible to apply to the Child Maintenance Service</h1>
+            <p class="govuk-body">The Child Maintenance Service can only help in certain circumstances if one parent lives abroad, for example if the paying parent lives abroad and:</p>
+
+            <ul class="govuk-list govuk-list--bullet">
+              <li>is a civil servant</li>
+              <li>works in Her Majesty’s Diplomatic Service</li>
+              <li>is a member of the armed forces</li>
+              <li>works for a company that is based and registered in the UK</li>
+              <li>works for the NHS</li>
+              <li>works for a UK local authority</li>
+            </ul>
+
+            <h2 class="govuk-heading-m">If one parent lives abroad</h2>
+
+            <p class="govuk-body">The UK has international agreements with more than 100 countries for child maintenance. These arrangements are called Reciprocal Enforcement of Maintenance Orders (REMO).</p>
+
+            <p class="govuk-body">If a REMO is in place, it means that:</p>
+
+            <ul class="govuk-list govuk-list--bullet">
+                <li>if a receiving parent and child live abroad, they can apply for a foreign child maintenance order which will be enforceable against the paying parent who lives in the UK</li>
+                <li>if the receiving parent and child live in the UK, they can seek an order to register and enforce the recovery of a child maintenance order from the paying parent who lives abroad</li>
+              </ul>
+
+              <p class="govuk-body">Find out more about <a href="https://www.gov.uk/child-maintenance-if-one-parent-lives-abroad" class="govuk-link">arranging child maintenance if one parent lives abroad</a>.</p>
+
+
+
+            <div class="govuk-inset-text">
+              <div class="contact">
+                <p><strong>Child Maintenance Service</strong><br>
+                  Telephone: 0800 953 0191  <br>
+
+                <p>Monday to Friday, 8am to 8pm  <br>
+
+                <p>Saturday, 9am to 4pm<br>
+                  <a href="/call-charges">Find out about call charges</a></p>
+              </div>
+            </div>
+
+
+
+
+
+      </div>
+    </main>
+
+</div>
+
+{% endblock %}

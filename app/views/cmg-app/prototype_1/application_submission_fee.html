@@ -1,0 +1,91 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+    <a href="review_your_answers.html" class="govuk-back-link">Back</a>
+  
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+<!--
+            <h1 class="govuk-heading-xl">Submit application on payment of fee</h1>
+            <p class="govuk-body">*Note: This page will potentially be a Govpay popup</p>
+            <p class="govuk-body">
+                <a href="../sprint_1/next_steps.html"  role="button" draggable="false" class="govuk-button">
+                    Pay fee and submit application
+                </a>
+            </p>
+
+          -->
+          <h1 class="govuk-heading-xl">Enter card details and submit application</h1>
+          <p class="govuk-body">Please pay the £20 submission fee to submit your application.</p>
+        <form method="post" novalidate>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-!-width-two-thirds" for="app-fee-name">
+              Card number
+            </label>
+
+            <input class="govuk-input govuk-!-width-two-thirds" id="app-fee-name" name="app-fee-name" type="app-fee-name"
+              aria-describedby="app-fee-name-hint" autocomplete="app-fee-name" spellcheck="false">  
+          </div>
+
+              <div class="govuk-date-input" id="sort-code">
+                  <label class="govuk-label" for="width-5">
+                      Expiry date
+                    </label>
+                    <span id="app-fee-hint" class="govuk-hint">
+                        For example, 10/20
+                      </span>
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="app-fee-day">
+                          Day
+                        </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="app-fee-day" name="app-fee-day" type="number" pattern="[0-9]*">
+                  </div>
+                </div>
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="app-fee-year">
+                          Year
+                        </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="app-fee-year" name="app-fee-year" type="number" pattern="[0-9]*">
+                  </div>
+                </div>
+               
+              </div>
+
+              <div class="govuk-form-group">
+                  <label class="govuk-label govuk-!-width-two-thirds" for="app-fee-name">
+                    Name on card
+                  </label>
+      
+                  <input class="govuk-input govuk-!-width-two-thirds" id="app-fee-name" name="app-fee-name" type="app-fee-name"
+                    aria-describedby="app-fee-name-hint" autocomplete="app-fee-name" spellcheck="false">  
+                </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="width-5">
+              Card security code
+            </label>
+            <span id="app-fee-hint" class="govuk-hint">
+                The last 3 digits on the back of the card
+              </span>
+            <input class="govuk-input govuk-input--width-5" id="app-fee-security-code" name="app-fee-security-code" type="text">
+          </div>
+          <button type="submit" class="govuk-button">
+              Pay £20 fee and submit application
+            </button>
+
+        </form>
+
+      </div>
+    </div>
+  </main>
+  </div>
+  {% endblock %}

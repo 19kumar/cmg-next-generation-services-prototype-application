@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+{% block content %}
+<div class="govuk-width-container">
+  {{ govukBackLink({
+    text: 'Back',
+    href: 'javascript:history.back()'
+}) }}
+  <main c
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+    <!--start of radio-->
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="portal_query-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl govuk-fieldset__legend--xl ">
+          <h1 class="govuk-fieldset__heading">
+          Would you like to manage your case online?
+          </h1>
+        </legend>
+
+        <p class="govuk-body">After you've registered some details, you'll be able to:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>change your personal information, including contact preferences</li>
+          <li>view child maintenance payments</li>
+          <li>contact us about your case</li>
+        </ul>
+
+              <div class="govuk-inset-text">The details you register are
+                confidential – only you and our team can see them.</div>
+
+
+        <div class="govuk-radios govuk-radios--inline">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="portal_query-1" name="portal_query" type="radio" value="yes">
+            <label class="govuk-label govuk-radios__label" for="portal_query-1">
+              Yes
+            </label> </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="portal_query-2" name="portal_query" type="radio" value="no">
+            <label class="govuk-label govuk-radios__label" for="portal_query-2">
+              No
+            </label> </div>
+        </div>
+      </fieldset>
+    </div>
+    <!--end-->
+          <button type="submit" class="govuk-button">
+            Continue
+          </button>
+        </form>
+      </div>
+    </div>
+  </main>
+</div>
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+        {{ govukBackLink({
+            text: 'Back',
+            href: 'javascript:history.back()'
+        }) }}
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds-from-desktop">
+
+                <h1 class="govuk-heading-xl">Check your answers</h1>
+
+                {% include "cmg-app/prototype_1-3/reviews/review_content/review_about_applicant.html" %}
+                {% include "cmg-app/prototype_1-3/reviews/review_content/review_about_child_1.html" %}
+                {% include "cmg-app/prototype_1-3/reviews/review_content/review_about_child_2.html" %}
+                {% include "cmg-app/prototype_1-3/reviews/review_content/review_about_other_parent.html" %}
+                {% include "cmg-app/prototype_1-3/reviews/review_content/review_about_maintenance_payments.html" %}
+                {% include "cmg-app/sprint_1/sprint_1_main_prototype/reviews/review_content/review_about_password_pin.html" %}
+
+                    <form  method="post" novalidate>
+                        <button type="submit" class="govuk-button">
+                                Continue
+                              </button>
+
+                </p>
+            </form>
+
+            </div>
+        </div>
+    </main>
+</div>
+
+{% endblock %}

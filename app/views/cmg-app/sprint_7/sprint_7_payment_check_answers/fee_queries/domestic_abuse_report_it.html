@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+          <div class="govuk-form-group">
+             <!--Checkboxes-->
+
+             <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" aria-describedby="abuse-checkbox-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
+                  <h1 class="govuk-fieldset__heading">
+                    Do you want to report this domestic abuse?
+                  </h1>
+                </legend>
+
+                <p>If you report it:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>you will not have to pay the £20 application fee</li>
+                  <li>you will need to start your application again</li>
+                </ul>
+
+                  <div class="govuk-radios govuk-radios--inline">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="abuse-report-it-1" name="abuse-report-it" type="radio" value="yes">
+                        <label class="govuk-label govuk-radios__label" for="abuse-report-it-1">
+                          Yes
+                        </label> </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="abuse-report-it-2" name="abuse-report-it" type="radio" value="no">
+                        <label class="govuk-label govuk-radios__label" for="abuse-report-it-2">
+                          No
+                        </label> </div>
+                    </div>
+                  </fieldset>
+                </div>
+                </div>
+                <button type="submit" class="govuk-button">
+                    Continue
+                  </button>
+
+        </form>
+      </div>
+    </div>
+  </main>
+</div>
+{% endblock %}

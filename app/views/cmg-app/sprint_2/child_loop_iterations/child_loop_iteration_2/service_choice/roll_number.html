@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+    {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl govuk-!-margin-bottom-9">
+          <h1 class="govuk-fieldset__heading">
+            What is your roll number?
+          </h1>
+        </legend>
+
+        <span id="collect-and-pay-bank-details-hint" class="govuk-hint">It’s on your building society card, statement or passbook.</span>
+
+        <form method="post" novalidate>
+          
+          <div class="govuk-form-group">
+            <input class="govuk-input govuk-!-width-three-quarters" id="roll-number" name="roll-number" type="text">
+          </div>
+          </div>
+        </div>
+
+          <button type="submit" class="govuk-button">
+              Continue
+            </button>
+
+        </form>
+
+
+
+
+      </div>
+    </div>
+  </main>
+</div>
+{% endblock %}

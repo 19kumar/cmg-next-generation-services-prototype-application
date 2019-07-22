@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+    {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+    
+        <div id="testing" name="testing" class="testing"> <p>here is some text to test</p></div>  
+        
+        <div id="dvPinNo" style="display: none">
+            Pin No:
+            <input type="text" id="txtPinNo" />
+          </div>
+          
+
+        </div>
+      </div>
+    </main>
+  </div>
+
+  
+
+  {% endblock %}

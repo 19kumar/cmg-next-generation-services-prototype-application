@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+
+                <form method="post" novalidate>
+                 
+
+                       
+                        <div class="govuk-form-group">
+
+                                <h1 class="govuk-heading-xl">You've paid</h1>
+                                <p class="govuk-body">Your payment reference number:</p>
+                                <p class="govuk-body-l">HDJ2123F</p>
+                                <div class="govuk-inset-text">
+                                        This reference number is only to register  receipt of payment. It cannot be used to identify your case and is not to be confused with your unique reference number which will be provided to you once your application has been processed.
+                                      </div>
+                                <hr class="govuk-section-break govuk-section-break--visible">
+                                </div>
+
+                                <div class="govuk-warning-text">
+                                        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                                        <strong class="govuk-warning-text__text">
+                                          <span class="govuk-warning-text__assistive">Warning</span>
+                                          You have not yet submitted your application, you need to continue to complete the process.
+                                        </strong>
+                                      </div>
+        
+
+                       
+
+                    <button type="submit" class="govuk-button">
+                        Continue
+                    </button>
+                </form>
+
+            </div>
+        </div>
+    </main>
+</div>
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+
+                <form method="post" novalidate>
+                    <div class="govuk-form-group">
+
+                        <h1 class="govuk-heading-xl">You've paid - next, you need to register for a self-service account </h1>
+                        <p><strong>Your payment reference number</strong><br>
+                            HDJ2123F</p>
+                        </div>
+
+                        <div class="govuk-form-group">
+                            <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+                        <h2 class="govuk-heading-m">Self-service portal</h2>
+                        <p class="govuk-body">Our self-service website will let you see your case information 24 hours a day, 7 days a week – saving you the time and cost of calling us, and it’s available whenever you need it.</p>
+
+                        <p class="govuk-body">Once you’ve registered for a self-service account, you can:</p>
+
+                        <ul class="govuk-list govuk-list--bullet">
+                                <li>view and track your payments (Collect and Pay only)</li>
+                                <li>update your personal details</li>
+                                <li>view your contact history</li>
+                              </ul>
+
+                              <p class="govuk-body">You’ll also be able to get in touch with us at a time that suits you, using an online feedback form. Information on this site is confidential and only you and our staff can see it.</p>
+
+
+
+                        </div>
+                       
+
+                    <button type="submit" class="govuk-button">
+                        Continue
+                    </button>
+                </form>
+
+            </div>
+        </div>
+    </main>
+</div>
+{% endblock %}

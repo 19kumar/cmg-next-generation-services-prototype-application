@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+    {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form  method="post" novalidate>
+            <div class="govuk-form-group">
+              <h1 class="govuk-label-wrapper">
+                <label class="govuk-label govuk-label--xl " for="postcode">
+                Do you know where the other parent used to live?
+                </label>
+              </h1>
+              <span id="other-parent-date-of-birth-hint" class="govuk-hint">
+                This could be a previous address or the address of your children's
+              grandparents.</span>
+
+              <div class="govuk-radios govuk-radios--inline">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="other-parent-know-previous-address-yes" name="other-parent-know-previous-address" type="radio" value="yes">
+                  <label class="govuk-label govuk-radios__label" for="other-parent-know-previous-address-yes">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="other-parent-know-previous-address-no" name="other-parent-know-previous-address" type="radio" value="no">
+                  <label class="govuk-label govuk-radios__label" for="other-parent-know-previous-address-no">
+                    No
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+
+
+
+            <button type="submit" class="govuk-button">
+              Continue
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  {% endblock %}

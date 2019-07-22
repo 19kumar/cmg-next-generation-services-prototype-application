@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+{% block content %}
+<div class="govuk-width-container">
+  {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+    <!--start of radio-->
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="question-2-live-uk-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl govuk-fieldset__legend--xl">
+          <h1 class="govuk-fieldset__heading">
+            Do you or the other parent live abroad and work for a UK employer?
+          </h1>
+        </legend>
+
+        <div class="govuk-radios govuk-radios--inline">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="question-2-live-uk-1" name="question-2-live-uk" type="radio" value="yes">
+            <label class="govuk-label govuk-radios__label" for="question-2-live-uk-1">
+              Yes
+            </label> </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="question-2-live-uk-2" name="question-2-live-uk" type="radio" value="no">
+            <label class="govuk-label govuk-radios__label" for="question-2-live-uk-2">
+              No
+            </label> </div>
+        </div>
+      </fieldset>
+    </div>
+    <!--end-->
+          <button type="submit" class="govuk-button">
+            Continue
+          </button>
+        </form>
+      </div>
+    </div>
+  </main>
+</div>
+{% endblock %}

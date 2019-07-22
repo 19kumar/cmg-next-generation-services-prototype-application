@@ -1,0 +1,146 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+
+              <div class="govuk-form-group">
+                <h1 class="govuk-label-wrapper">
+                  <label class="govuk-label govuk-label--xl govuk-!-margin-bottom-9" for="applicants-contact-details">
+                    How should we contact you?
+                  </label>
+                </h1>
+                <p>We will only use this information to contact you about your
+                  application.</p>
+
+                <span id="event-name-hint" class="govuk-hint">
+                  You must choose at least one option.
+                </span>
+
+
+
+                <!--Start of Home phone checkbox-->
+                <div class="govuk-checkboxes" data-module="checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="citizenship-conditional-1" name="citizen" type="checkbox"
+                      value="email" data-aria-controls="conditional-citizenship-conditional-1">
+                    <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-1">
+                      Phone
+                    </label>
+                  </div>
+
+                  <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden"
+                    id="conditional-citizenship-conditional-1">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label" for="applicants-contact-home-phone">
+                        Phone number
+                      </label>
+                      <input class="govuk-input govuk-!-width-one-third" id="applicants-contact-home-phone"
+                        name="applicants-contact-home-phone" type="phone" spellcheck="false">
+                    </div>
+                  </div>
+
+                  <!--Start of Mobile phone checkbox-->
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="citizenship-conditional-2" name="citizen" type="checkbox"
+                      value="phone" data-aria-controls="conditional-citizenship-conditional-2">
+                    <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-2">
+                      Text message
+                    </label>
+                  </div>
+
+                  <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden"
+                    id="conditional-citizenship-conditional-2">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label" for="applicants-contact-mobile-phone">
+                        Mobile phone number
+                      </label>
+                      <label class="govuk-hint" for="applicants-contact-mobile-phone">
+                        We will send text messages to update you about your arrangement.
+                      </label>
+                      <input class="govuk-input govuk-!-width-one-third" id="applicants-contact-mobile-phone"
+                        name="applicants-contact-mobile-phone" type="tel">
+                    </div>
+                  </div>
+
+                </div>
+
+
+
+                              <!--Start of Emailcheckbox-->
+                              <div class="govuk-checkboxes" data-module="checkboxes">
+                                <div class="govuk-checkboxes__item">
+                                  <input class="govuk-checkboxes__input" id="citizenship-conditional-1" name="citizen" type="checkbox"
+                                    value="email" data-aria-controls="conditional-citizenship-conditional-1">
+                                  <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-1">
+                                    Email
+                                  </label>
+                                </div>
+
+                                <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden"
+                                  id="conditional-citizenship-conditional-1">
+                                  <div class="govuk-form-group">
+                                    <label class="govuk-label" for="applicant-email">
+                                      Email address
+                                    </label>
+                                    <input class="govuk-input govuk-!-width-one-third" id="applicant-email"
+                                      name="applicant-email" type="phone" spellcheck="false">
+                                  </div>
+                                </div>
+                              </div>
+
+<!--End of email box-->
+
+<!--Start of postcheckbox-->
+              <div class="govuk-checkboxes" data-module="checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="citizenship-conditional-1" name="citizen" type="checkbox"
+                    value="post" data-aria-controls="conditional-citizenship-conditional-1">
+                  <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-1">
+                    Post
+                  </label>
+                </div>
+
+                <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden"
+                  id="conditional-citizenship-conditional-1">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="applicant-post">
+                      <strong>Home address:</strong>
+                    </label>
+<p class="govuk-body">
+                    10 Beachwood Way,
+                    <br>Beachwood Drive, Beachwood,
+                    <br>NE31 3HD
+                  </p>
+                  <p class="govuk-body"><a href="applicants_contact_address.html">Use a different address for post</a>.</p>
+
+                  </div>
+                </div>
+<!--End of post-->
+
+
+
+          </div>
+        </div>
+
+        <button type="submit" class="govuk-button">
+          Continue
+        </button>
+
+      </div>
+    </div>
+  </main>
+</div>
+{% endblock %}

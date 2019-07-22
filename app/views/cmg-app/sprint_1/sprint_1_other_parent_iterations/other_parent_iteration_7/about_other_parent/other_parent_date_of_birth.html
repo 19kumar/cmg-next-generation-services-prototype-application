@@ -1,0 +1,105 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+    {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form method="post" novalidate>
+
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="other-parent-date-of-birth-hint" role="group">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                    <h1 class="govuk-fieldset__heading">
+                      Do you know the other parent’s date of birth?
+                    </h1>
+                  </legend>
+
+                  <div class="govuk-radios" data-module="radios">
+
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="nino_query-1" name="nino_query" type="radio" value="yes" aria-controls="conditional-nino_query-1" aria-expanded="true">
+                        <label class="govuk-label govuk-radios__label" for="nino_query-1">
+                          Yes
+                        </label>
+                      </div>
+
+                      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-nino_query-1">
+
+                  <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset" role="group">
+
+                    <legend class="govuk-fieldset__legend">
+                      Date of birth
+                    </legend>
+
+                    <span id="other-parent-date-of-birth-hint" class="govuk-hint">
+                      For example, '12 11 1970'.
+                    </span>
+
+                    <div class="govuk-date-input" id="nino_query-date">
+
+                      <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="nino_query-date-day">
+                            Day
+                          </label>
+
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-2 " id="nino_query-date-day" name="nino_query-date-day" type="number" pattern="[0-9]*">
+                        </div>
+                      </div>
+
+                      <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="nino_query-date-month">
+                            Month
+                          </label>
+
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-2 " id="nino_query-date-month" name="nino_query-date-month" type="number" pattern="[0-9]*">
+                        </div>
+                      </div>
+
+                      <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="nino_query-date-year">
+                            Year
+                          </label>
+
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-4 " id="nino_query-date-year" name="nino_query-date-year" type="number" pattern="[0-9]*">
+                        </div>
+                      </div>
+
+                    </div>
+                    </fieldset>
+
+                  </div>
+                        </div>
+
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="nino_query-2" name="nino_query" type="radio" value="no" checked="">
+                        <label class="govuk-label govuk-radios__label" for="nino_query-2">
+                          No
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+            <button type="submit" class="govuk-button">
+              Continue
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+  {% endblock %}

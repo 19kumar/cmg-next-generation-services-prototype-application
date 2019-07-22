@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form  method="post" novalidate>
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl govuk-!-margin-bottom-9">
+                <h1 class="govuk-fieldset__heading">
+                    Your payment has been cancelled
+                </h1>
+              </legend>
+              <p class="govuk-body-l">
+                No money has been taken from your account. 
+                 
+              </p>
+              <div class="govuk-warning-text">
+                  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                  <strong class="govuk-warning-text__text">
+                    <span class="govuk-warning-text__assistive">Warning</span>
+                    If you abort your application at this stage we will not store your information and you will need to start again. 
+                  </strong>
+                </div>
+
+                <p class="govuk-body">
+                If would you like to <a href="#" class="govuk-link">leave the application</a> at this stage, you can re-apply at any time using your current invitation code.
+                </p>   
+              <button type="submit" class="govuk-button">
+                Continue
+              </button>
+
+  
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+
+
+
+
+  {% endblock %}

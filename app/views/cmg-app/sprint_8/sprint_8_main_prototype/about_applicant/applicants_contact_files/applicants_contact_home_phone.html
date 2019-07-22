@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+
+              <div class="govuk-form-group">
+                <h1 class="govuk-label-wrapper">
+                  <label class="govuk-label govuk-label--xl govuk-!-margin-bottom-9" for="applicants-contact-details">
+                    What phone number can we use contact you?
+                  </label>
+                </h1>
+                <p>We will only use this information to contact you about your
+                  application.</p>
+
+
+                <!--Start of Home phone checkbox-->
+                
+                    <div class="govuk-form-group">
+                      <label class="govuk-label" for="applicants-contact-home-phone">
+                        Phone number
+                      </label>
+                      <input class="govuk-input govuk-!-width-one-third" id="applicants-contact-home-phone"
+                        name="applicants-contact-home-phone" type="phone" spellcheck="false">
+                    </div>
+                 
+                 
+                
+              </div>
+
+
+
+
+          </div>
+        </div>
+
+        <button type="submit" class="govuk-button">
+          Continue
+        </button>
+
+      </div>
+    </div>
+  </main>
+</div>
+{% endblock %}

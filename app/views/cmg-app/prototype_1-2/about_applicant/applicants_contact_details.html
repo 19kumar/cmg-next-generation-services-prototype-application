@@ -1,0 +1,103 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+
+              <div class="govuk-form-group">
+                <h1 class="govuk-label-wrapper">
+                  <label class="govuk-label govuk-label--xl" for="applicants-contact-details">
+                    How should we contact you?
+                  </label>
+                </h1>
+                <p>We will only use this information to contact you about your
+                  child maintenance arrangement.</p>
+
+                <span id="event-name-hint" class="govuk-hint">
+                  You must give at least one phone number.
+                </span>
+
+                <!--Start of Home phone checkbox-->
+                <div class="govuk-checkboxes" data-module="checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="citizenship-conditional-1" name="citizen" type="checkbox"
+                      value="email" data-aria-controls="conditional-citizenship-conditional-1">
+                    <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-1">
+                      Phone
+                    </label>
+                  </div>
+
+                  <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden"
+                    id="conditional-citizenship-conditional-1">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label" for="applicants-contact-home-phone">
+                        Phone number
+                      </label>
+                      <input class="govuk-input govuk-!-width-one-third" id="applicants-contact-home-phone"
+                        name="applicants-contact-home-phone" type="phone" spellcheck="false">
+                    </div>
+                  </div>
+
+                  <!--Start of Mobile phone checkbox-->
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="citizenship-conditional-2" name="citizen" type="checkbox"
+                      value="phone" data-aria-controls="conditional-citizenship-conditional-2">
+                    <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-2">
+                      Text message
+                    </label>
+                  </div>
+
+                  <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden"
+                    id="conditional-citizenship-conditional-2">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label" for="applicants-contact-mobile-phone">
+                        Mobile phone number
+                      </label>
+                      <label class="govuk-hint" for="applicants-contact-mobile-phone">
+                        We will send text messages to update you about your arrangement.
+                      </label>
+                      <input class="govuk-input govuk-!-width-one-third" id="applicants-contact-mobile-phone"
+                        name="applicants-contact-mobile-phone" type="tel">
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              <!--start of email box-->
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-!-width-two-thirds" for="applicant-email">
+                  Email address (optional)
+                </label>
+                <span id="applicant-email-info" class="govuk-hint">
+                  We will use this to confirm we've received your application.
+                </span>
+                <input class="govuk-input govuk-!-width-two-thirds" id="applicant-email" name="applicant-email"
+                  type="applicant-email" aria-describedby="applicant-email-info" autocomplete="applicant-email"
+                  spellcheck="false">
+              </div>
+              <!--End of email box-->
+          </div>
+        </div>
+
+        <button type="submit" class="govuk-button">
+          Continue
+        </button>
+
+      </div>
+    </div>
+  </main>
+</div>
+{% endblock %}

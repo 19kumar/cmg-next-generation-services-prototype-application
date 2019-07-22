@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+{% block content %}
+<div class="govuk-width-container">
+  {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+          <div class="govuk-form-group">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl govuk-!-margin-bottom-9">
+              <h1 class="govuk-fieldset__heading">
+                Your answer is confidential.
+              </h1>
+            </legend>
+
+            <span id="domesticReportedDescription" class="govuk-hint">This will
+              not be shared with the other parent.</span>
+
+            <label class="govuk-label" for="correspondence-address">
+              Postcode
+            </label>
+            <input class="govuk-input govuk-!-width-one-quarter" id="correspondence-address"
+              name="correspondence-address" type="text">
+          </div>
+          <button type="submit" class="govuk-button">
+            Find address
+          </button>
+        </form>
+      </div>
+    </div>
+  </main>
+</div>
+{% endblock %}

@@ -1,0 +1,40 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+    {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-two-thirds">
+            <form method="post" novalidate>
+
+            <h1 class="govuk-heading-xl">We cannot make a child maintenance arrangement for {{data['child-1-first-name'] }} </h1>
+            <p class="govuk-body">The Child Maintenance Service can only make
+              child maintenance arrangements for children who stay with the other parent less than 182 nights a year.</p>
+
+                  <p><a href="../about_qualifying_child/how_many_children.html" class="govuk-link">Add another child</a></p>
+
+               <!--Start of radio buttons-->
+
+
+
+
+
+</form>
+
+      </div>
+    </main>
+
+</div>
+
+{% endblock %}

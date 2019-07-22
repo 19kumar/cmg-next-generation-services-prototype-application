@@ -1,0 +1,85 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+    {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form method="post" novalidate>
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl govuk-!-margin-bottom-9">
+                  <h1 class="govuk-fieldset__heading">
+                    How many children would you like to apply for child maintenance?
+                  </h1>
+                </legend>
+                <p class="govuk-body"></p>
+                <div class="govuk-radios">
+
+                    <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="number-of-children-1" name="number-of-children" type="radio" value="1">
+                    <label class="govuk-label govuk-radios__label" for="number-of-children-1">
+                      1
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="number-of-children-2" name="number-of-children" type="radio" value="2">
+                    <label class="govuk-label govuk-radios__label" for="number-of-children-2">
+                        2
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="number-of-children-3" name="number-of-children" type="radio" value="3">
+                    <label class="govuk-label govuk-radios__label" for="number-of-children-3">
+                        3
+                    </label>
+                  </div>
+
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="number-of-children-1" name="number-of-children" type="radio" value="4">
+                    <label class="govuk-label govuk-radios__label" for="number-of-children-1">
+                        4
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="number-of-children-2" name="number-of-children" type="radio" value="5">
+                    <label class="govuk-label govuk-radios__label" for="number-of-children-2">
+                        5
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="number-of-children-3" name="number-of-children" type="radio" value="6">
+                    <label class="govuk-label govuk-radios__label" for="number-of-children-3">
+                        6
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="number-of-children-3" name="number-of-children" type="radio" value="more">
+                    <label class="govuk-label govuk-radios__label" for="number-of-children-3">
+                        More than 6
+                    </label>
+                  </div>
+
+                </div>
+              </fieldset>
+            </div>
+
+            <button type="submit" class="govuk-button">
+              Continue
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+  {% endblock %}

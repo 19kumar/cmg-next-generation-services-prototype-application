@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+    {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form method="post" novalidate>
+
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl govuk-!-margin-bottom-9">
+                    <h1 class="govuk-fieldset__heading">
+                        Have you ever reported this domestic abuse?
+                    </h1>
+                  </legend>
+                  <span id="changed-name-hint" class="govuk-hint">You may have reported domestic abuse to a person who is a member of the: Police, Medical worker, Social services, Teacher, Solicitor, Charity or support organisation.</span>
+                   
+                   <div class="govuk-radios govuk-radios--inline">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="domestic-abuse-reported-yes" name="domestic-abuse-reported" type="radio" value="yes">
+                      <label class="govuk-label govuk-radios__label" for="domestic-abuse-reported-yes">
+                        Yes
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="domestic-abuse-reported-no" name="domestic-abuse-reported" type="radio" value="no" checked="checked">
+                      <label class="govuk-label govuk-radios__label" for="domestic-abuse-reported-no">
+                        No
+                      </label>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+
+              <div class="govuk-inset-text">
+                Making an arrangement between yourselves might not be appropriate if you think the other parent poses a threat to you or your children, or if you are <a href="https://www.gov.uk/guidance/domestic-abuse-how-to-get-help">a victim of domestic abuse</a>
+              </div>
+
+            <button type="submit" class="govuk-button">
+              Continue
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+  {% endblock %}

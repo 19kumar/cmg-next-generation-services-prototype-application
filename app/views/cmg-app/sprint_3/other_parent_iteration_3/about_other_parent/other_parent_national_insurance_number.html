@@ -1,0 +1,85 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+    {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form method="post" novalidate>
+
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="other-parent-date-of-birth-hint" role="group">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl govuk-!-margin-bottom-9">
+                    <h1 class="govuk-fieldset__heading">
+                      Do you know the other parent's National Insurance number?
+                    </h1>
+
+
+                  </legend>
+
+<!--start of radios-->
+
+
+
+
+<!--start-->
+
+<div class="govuk-radios" data-module="radios">
+
+    <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="court-order-1" name="court-order" type="radio" value="yes" aria-controls="conditional-court-order-1" aria-expanded="true">
+      <label class="govuk-label govuk-radios__label" for="court-order-1">
+        Yes
+      </label>
+    </div>
+
+    <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-court-order-1">
+
+        <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" role="group">
+            
+              <span id="other-parent-national-insurance-number-hint" class="govuk-hint">
+                  Enter as much of it as you can.</br> 
+                  </br>
+                  It’s on their National Insurance
+                  card, benefit letter, payslip or P60. For example, ‘QQ 12 34 56C’.
+                </span>
+            
+                <input class="govuk-input govuk-input--width-10" id="other-parent-national-insurance-number"
+                name="other-parent-national-insurance-number" type="text"
+                aria-describedby="other-parent-national-insurance-number-hint" spellcheck="false">
+            
+            
+              </fieldset>
+            </div>
+</div>
+
+    <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="court-order-2" name="court-order" type="radio" value="no" checked="">
+      <label class="govuk-label govuk-radios__label" for="court-order-2">
+        No
+      </label>
+    </div>
+  </div>
+</div>
+
+
+
+<button type="submit" class="govuk-button">
+Continue
+</button>
+</form>
+</div>
+</div>
+</main>
+</div>
+{% endblock %}
+

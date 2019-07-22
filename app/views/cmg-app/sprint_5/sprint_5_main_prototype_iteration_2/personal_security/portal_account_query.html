@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+{% block content %}
+<div class="govuk-width-container">
+  {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+    <!--start of radio-->
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="portal_query-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl govuk-fieldset__legend--xl govuk-!-margin-bottom-9">
+          <h1 class="govuk-fieldset__heading">
+          Would you like to create an account for the Self-service portal?
+          </h1>
+        </legend>
+        <p class="govuk-body" id="maintenance-liability-hint" class="govuk-hint">
+            Our self-service website will let you see your case information 24 hours a day, 7 days a week – saving you the time and cost of calling us, and it’s available whenever you need it.
+        </p>
+
+        <p class="govuk-body">Once you’ve registered for a self-service account, you can:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+                <li>view and track your payments (Collect and Pay only)</li>
+                <li>update your personal details</li>
+                <li>view your contact history</li>
+              </ul>
+
+              <p class="govuk-body govuk-!-margin-bottom-9">You’ll also be able to get in touch with us at a time that suits you, using an online feedback form. Information on this site is confidential and only you and our staff can see it.</p>
+
+       
+        <div class="govuk-radios govuk-radios--inline">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="portal_query-1" name="portal_query" type="radio" value="yes">
+            <label class="govuk-label govuk-radios__label" for="portal_query-1">
+              Yes
+            </label> </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="portal_query-2" name="portal_query" type="radio" value="no">
+            <label class="govuk-label govuk-radios__label" for="portal_query-2">
+              No
+            </label> </div>
+        </div>
+      </fieldset>
+    </div>
+    <!--end-->
+          <button type="submit" class="govuk-button">
+            Continue
+          </button>
+        </form>
+      </div>
+    </div>
+  </main>
+</div>
+{% endblock %}
+
+
+

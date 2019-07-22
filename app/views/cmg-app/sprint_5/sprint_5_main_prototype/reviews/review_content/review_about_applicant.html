@@ -1,0 +1,150 @@
+
+  <!--start of dl-->
+
+
+
+ <!--start of dl-->
+ <h2 class="govuk-heading-m">About you</h2>
+ <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+
+     <div class="govuk-summary-list__row">
+         <dt class="govuk-summary-list__key">
+             Name
+         </dt>
+         <dd class="govuk-summary-list__value">
+             {{data['applicants-title'] }} {{data['applicant-first-name'] }} {{data['applicant-middle-name'] }} {{data['applicant-last-name'] }}
+         </dd>
+         <dd class="govuk-summary-list__actions">
+             <a class="govuk-link" href="../about_applicant/applicants_name.html">
+                 Change
+                 <span class="govuk-visually-hidden"> name</span>
+             </a>
+         </dd>
+     </div>
+
+     <div class="govuk-summary-list__row">
+         <dt class="govuk-summary-list__key">
+             Date of birth
+         </dt>
+         <dd class="govuk-summary-list__value">
+                 <p class="govuk-body">{{data['applicant-date-of-birth-day'] }} {{data['applicant-date-of-birth-month'] }} {{data['applicant-date-of-birth-year'] }}</p>
+         </dd>
+         <dd class="govuk-summary-list__actions">
+             <a class="govuk-link" href="../about_applicant/applicants_date_of_birth.html">
+                 Change
+                 <span class="govuk-visually-hidden"> date of birth</span>
+             </a>
+         </dd>
+     </div>
+
+     <div class="govuk-summary-list__row">
+         <dt class="govuk-summary-list__key">
+             National Insurance number
+         </dt>
+         <dd class="govuk-summary-list__value">
+                 <p class="govuk-body">{{data['applicant-national-insurance-number'] }}</p>
+         </dd>
+         <dd class="govuk-summary-list__actions">
+             <a class="govuk-link" href="../about_applicant/applicants_national_insurance_number.html">
+                 Change
+                 <span class="govuk-visually-hidden"> name</span>
+             </a>
+         </dd>
+     </div>
+
+
+
+     <div class="govuk-summary-list__row">
+         <dt class="govuk-summary-list__key">
+             Address
+         </dt>
+         <dd class="govuk-summary-list__value">
+             10 Beachwood Way
+             <br>Beachwood Drive
+             <br>Cramlington
+             <br>NE31 3HD
+
+         </dd>
+         <dd class="govuk-summary-list__actions">
+             <a class="govuk-link" href="../about_applicant/applicants_address.html">
+                 Change
+                 <span class="govuk-visually-hidden"> contact information</span>
+             </a>
+         </dd>
+     </div>
+
+
+     <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+            Correspondence address
+        </dt>
+        <dd class="govuk-summary-list__value">
+            10 Beachwood Way
+            <br>Beachwood Drive
+            <br>Cramlington
+            <br>NE31 3HD
+
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="../about_applicant/applicants_correspondence_address.html">
+                Change
+                <span class="govuk-visually-hidden"> contact information</span>
+            </a>
+        </dd>
+    </div>
+
+    
+
+  
+
+     <div class="govuk-summary-list__row">
+         <dt class="govuk-summary-list__key">
+             Phone number
+         </dt>
+         <dd class="govuk-summary-list__value">
+                 {{data['applicant-telephone-number'] }}
+
+         </dd>
+         <dd class="govuk-summary-list__actions">
+             <a class="govuk-link" href="../about_applicant/applicants_phone_number.html">
+                 Change
+                 <span class="govuk-visually-hidden"> contact details</span>
+             </a>
+         </dd>
+     </div>
+
+
+
+    <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+                Email address
+            </dt>
+            <dd class="govuk-summary-list__value">
+                {{data['applicant-email'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="../about_applicant/applicants_email.html">
+                    Change
+                    <span class="govuk-visually-hidden"> contact details</span>
+                </a>
+            </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Abusive behaviours
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    {{data['abuse-query'] }}
+                    
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="../fee_queries/domestic_abuse_query.html">
+                        Change
+                        <span class="govuk-visually-hidden"> date</span>
+                    </a>
+                </dd>
+            </div>
+
+ </dl>

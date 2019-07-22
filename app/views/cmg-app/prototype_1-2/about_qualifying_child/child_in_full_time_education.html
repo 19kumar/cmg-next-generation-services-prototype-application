@@ -1,0 +1,95 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+    {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form method="post" novalidate>
+
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                    <h1 class="govuk-fieldset__heading">
+                    Is {{data['child-1-first-name'] }} in full-time education or training?
+                    </h1>
+                  </legend>
+                  <span id="changed-name-hint" class="govuk-hint">
+                    Full-time education could be A levels, Scottish Highers or
+                    similar.
+                    Training should be unpaid and could be Foundation Aprenticeships
+                    or similar.
+                  </span>
+                  <div class="govuk-radios govuk-radios--inline">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="child-in-full-time-education-yes" name="child-in-full-time-education" type="radio" value="Yes">
+                      <label class="govuk-label govuk-radios__label" for="child-in-full-time-education-yes">
+                        Yes
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="child-in-full-time-education-no" name="child-in-full-time-education" type="radio" value="No">
+                      <label class="govuk-label govuk-radios__label" for="child-in-full-time-education-no">
+                        No
+                      </label>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+
+            <button type="submit" class="govuk-button">
+              Continue
+            </button>
+          </form>
+          <details class="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                What counts as full-time education or training?
+              </span>
+            </summary>
+
+            <div class="govuk-details__text">
+
+              <h2 id="approved-education">Approved education</h2>
+
+<p class="govuk-body">Education must be full-time (more than an average of 12 hours a week supervised study or course-related work experience) and can include:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+
+  <li>A levels or similar, for example Pre-U, International Baccalaureate</li>
+  <li>Scottish Highers</li>
+  <li>NVQs and other vocational qualifications up to level 3</li>
+  <li>home education - if started before your child turned 16</li>
+  <li>traineeships in England</li>
+</ul>
+<p class="govuk-body">Courses are not approved if paid for by an employer or ‘advanced’, for example a university degree or BTEC Higher National Certificate.</p>
+
+            <h2 id="approved-education">Approved training</h2>
+
+          <p>Approved training should be unpaid and can include:</p>
+
+          <ul class="govuk-list govuk-list--bullet">
+            <li>Foundation Apprenticeships or Traineeships in Wales</li>
+            <li>Employability Fund programmes in Scotland</li>
+            <li>United Youth Pilot (if started before 1 June 2017), PEACE IV Children
+              and Young People 2.1 or Training for Success in Northern Ireland</li>
+          </ul>
+
+          <p>Courses that are part of a job contract are not approved.</p>
+
+            </div>
+          </details>
+        </div>
+      </div>
+    </main>
+  </div>
+  {% endblock %}

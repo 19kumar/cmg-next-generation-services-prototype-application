@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form  method="post" novalidate>
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl govuk-!-margin-bottom-9">
+                <h1 class="govuk-fieldset__heading">
+                    Your payment has been cancelled
+                </h1>
+              </legend>
+              <span id="applicant-national-insurance-number-hint" class="govuk-hint">
+                No money has been taken from your account.
+              </span>
+                      
+              <button type="submit" class="govuk-button">
+                Continue
+              </button>
+
+          
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+
+
+
+
+  {% endblock %}

@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">What is your National Insurance number?</h1>
+        <form method="post" novalidate>
+          
+          <div class="govuk-form-group">
+            <span id="applicant-national-insurance-number-hint" class="govuk-hint">
+              It’s on your National Insurance card, benefit letter, payslip or P60. For example, ‘QQ 12 34 56 C’.
+            </span>
+            <input class="govuk-input govuk-input--width-10" id="applicant-national-insurance-number"
+              name="applicant-national-insurance-number" type="text"
+              aria-describedby="applicant-national-insurance-number-hint" spellcheck="false">
+          </div>
+
+          <button type="submit" class="govuk-button">
+            Continue
+          </button>
+        </form>
+        <details class="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                I do not know my national insurance number.
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+              National insurance information</p>
+
+             
+          </details>
+      </div>
+    </div>
+  </main>
+</div>
+{% endblock %}

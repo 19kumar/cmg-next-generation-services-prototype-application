@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+    {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form method="post" novalidate>
+          <div class="govuk-form-group">
+           <h1 class="govuk-heading-xl">The next questions are about the other parent</h1>
+
+           <p>You'll need to give as much information as you can about the other parent
+             so we can find and contact them.</p>
+
+            <p class="govuk-body">
+              We will be able to arrange child maintenance more quickly if you can give
+              the other parent’s:
+            </p>
+
+            <ul class="govuk-list govuk-list--bullet">
+
+              <li>home address</li>
+              <li>date of birth</li>
+              <li>National Insurance number</li>
+              <li>phone number</li>
+            </ul>
+
+            <button type="submit" class="govuk-button">
+              Continue
+            </button>
+            </div>
+          </form>
+      </div>
+    </div>
+  </main>
+  </div>
+  {% endblock %}

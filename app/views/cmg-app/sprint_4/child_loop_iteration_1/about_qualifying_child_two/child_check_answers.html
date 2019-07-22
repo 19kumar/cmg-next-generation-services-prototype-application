@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+        {{ govukBackLink({
+            text: 'Back',
+            href: 'javascript:history.back()'
+        }) }}
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds-from-desktop">
+
+                <h1 class="govuk-heading-xl">Check your answers so far</h1>
+
+                {% include "cmg-app/sprint_4/child_loop_iteration_1/reviews/review_content/review_about_child_1.html" %}
+                {% include "cmg-app/sprint_4/child_loop_iteration_1/reviews/review_content/review_about_child_2.html" %}
+<!--radio button top-->
+<div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="add-child-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h2 class="govuk-heading-l">
+              Add another child?
+            </h2>
+          </legend>
+
+          <div class="govuk-radios govuk-radios--inline">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="add-child-1" name="add-child" type="radio" value="yes">
+              <label class="govuk-label govuk-radios__label" for="add-child-1">
+                Yes
+              </label> </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="add-child-2" name="add-child" type="radio" value="no">
+              <label class="govuk-label govuk-radios__label" for="add-child-2">
+                No
+              </label> </div>
+          </div>
+        </fieldset>
+      </div>
+<!--Radio button bottom-->
+
+                    <form  method="post" novalidate>
+                        <button type="submit" class="govuk-button">
+                                Continue
+                              </button>
+
+                </p>
+            </form>
+
+            </div>
+        </div>
+    </main>
+</div>
+
+{% endblock %}

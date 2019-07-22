@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+    {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-xl">You do not have to pay a fee to submit your application</h1>
+            <p class="govuk-body">As you, or your children have experienced domestic abuse you will do longer have to pay a fee of £20 for submitting your application. </p>
+
+            <a href="../about_applicant/applicants_name.html" role="button" draggable="false"
+          class="govuk-button govuk-!-margin-top-2 govuk-!-margin-bottom-8">
+          Continue
+        </a>
+        </div>
+      </div>
+    </main>
+  </div>
+  {% endblock %}

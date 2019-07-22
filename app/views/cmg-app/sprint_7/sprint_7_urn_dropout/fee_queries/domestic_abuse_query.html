@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+          <div class="govuk-form-group">
+             <!--Checkboxes-->
+
+             <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" aria-describedby="abuse-checkbox-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
+                  <h1 class="govuk-fieldset__heading">
+                    Have you or your children ever experienced any domestic abuse?
+                  </h1>
+                </legend>
+
+                <p>This is a repeated pattern of behaviour that could include:</p>
+
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>threatening behaviour</li>
+                    <li>financial control</li>
+                    <li>emotional abuse</li>
+                    <li>psychological abuse</li>
+                    <div class="divider">or</div>
+                    <li>sexual abuse</li>
+                  </ul>
+
+                  <div class="govuk-radios govuk-radios--inline">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="abuse-query-1" name="abuse-query" type="radio" value="yes">
+                        <label class="govuk-label govuk-radios__label" for="abuse-query-1">
+                          Yes
+                        </label> </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="abuse-query-2" name="abuse-query" type="radio" value="no">
+                        <label class="govuk-label govuk-radios__label" for="abuse-query-2">
+                          No
+                        </label> </div>
+                    </div>
+                  </fieldset>
+                </div>
+                </div>
+                <button type="submit" class="govuk-button">
+                    Continue
+                  </button>
+
+        </form>
+      </div>
+    </div>
+  </main>
+</div>
+{% endblock %}

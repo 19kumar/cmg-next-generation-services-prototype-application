@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+    {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form method="post" novalidate>
+
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="other-parent-date-of-birth-hint" role="group">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl govuk-!-margin-bottom-9">
+                    <h1 class="govuk-fieldset__heading">
+                      Give any other information that could help us find the other parent
+
+                    </h1>
+                  </legend>
+                  <p class="govuk-body">This could be their age, the company
+                    they work for or the part of the UK they live in.</p>
+
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="more-detail">
+                      Other information
+                    </label>
+                    <span id="more-detail-hint" class="govuk-hint">
+                      Do not include personal or financial information, like your
+                      National Insurance number or credit card details.
+                    </span>
+                    <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="10" aria-describedby="more-detail-hint"></textarea>
+                  </div>
+                </div>
+
+            <button type="submit" class="govuk-button">
+              Continue
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+  {% endblock %}

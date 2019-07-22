@@ -1,0 +1,130 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+    {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-xl">Do you know the other parent's details?</h1>
+            <p class="govuk-body">
+                To progress your application we need to know the other parent's name. If you can provide any further details such as date of birth or national insurance number it will improve our prospect of finding a successful match for the other parent, and increase your chance of a successful application.</p>
+              </span>
+          <form method="post" novalidate>
+            <br><br>
+            <div class="govuk-form-group">
+            <h2 class="govuk-heading-m">Other parent's name</h2>
+            <label class="govuk-label" for="width-4">
+                Title
+              </label>
+  
+              <input class="govuk-input govuk-input--width-4 title-finder" id="other-parent-title" name="other-parent-title" type="text" value="{{data['applicants-title']}}">
+            </div>
+            <input type="hidden" id="deduction" name="deduction" type="number" value="{{data['deduction']}}">
+
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-!-width-two-thirds" for="other-parent-first-name">
+                First name
+              </label>
+              <input class="govuk-input govuk-!-width-two-thirds" id="other-parent-first-name" name="other-parent-first-name" type="text" autocomplete="name" spellcheck="false">
+            </div>
+
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-!-width-two-thirds" for="other-parent-middle-name">
+                Middle names (optional)
+              </label>
+              <input class="govuk-input govuk-!-width-two-thirds" id="other-parent-middle-name" name="other-parent-middle-name" type="text" autocomplete="name" spellcheck="false">
+            </div>
+
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-!-width-two-thirds" for="other-parent-last-name">
+                Last name
+              </label>
+              <input class="govuk-input govuk-!-width-two-thirds" id="other-parent-last-name" name="other-parent-last-name" type="text" autocomplete="name" spellcheck="false">
+            </div>
+
+<!--DOB-->
+<br><br>
+<div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="other-parent-date-of-birth-hint" role="group">
+        <h2 class="govuk-heading-m">Other parent's date of birth</h2>
+
+      <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" role="group">
+
+
+        <span id="other-parent-date-of-birth-hint" class="govuk-hint">
+          For example, '12 11 1970'.
+        </span>
+
+        <div class="govuk-date-input" id="other-parent-date-of-birth">
+
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="other-parent-date-of-birth-day">
+                Day
+              </label>
+
+              <input class="govuk-input govuk-date-input__input govuk-input--width-2 " id="other-parent-date-of-birth-day" name="other-parent-date-of-birth-day" type="number" pattern="[0-9]*">
+            </div>
+          </div>
+
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="other-parent-date-of-birth-month">
+                Month
+              </label>
+
+              <input class="govuk-input govuk-date-input__input govuk-input--width-2 " id="other-parent-date-of-birth-month" name="other-parent-date-of-birth-month" type="number" pattern="[0-9]*">
+            </div>
+          </div>
+
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="other-parent-date-of-birth-year">
+                Year (optional)
+              </label>
+
+              <input class="govuk-input govuk-date-input__input govuk-input--width-4 " id="other-parent-date-of-birth-year" name="other-parent-date-of-birth-year" type="number" pattern="[0-9]*">
+            </div>
+          </div>
+
+        </div>
+        </fieldset>
+
+      </div>
+    </div>
+
+<!--NINO-->
+<br><br>
+<div class="govuk-form-group">
+    <h2 class="govuk-heading-m">Other parent's national insurance number</h2>
+    <label class="govuk-label" for="width-4">National insurance number (optional)</label>
+    <span id="other-parent-national-insurance-number-hint" class="govuk-hint">
+      It’s on their National Insurance card, benefit letter, payslip or P60. For example, ‘QQ 12 34 56
+      C’.
+    </span>
+    <input class="govuk-input govuk-input--width-10" id="other-parent-national-insurance-number"
+      name="other-parent-national-insurance-number" type="text"
+      aria-describedby="other-parent-national-insurance-number-hint" spellcheck="false">
+  </div>
+
+
+
+            <button type="submit" class="govuk-button">
+              Continue
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+  {% endblock %}

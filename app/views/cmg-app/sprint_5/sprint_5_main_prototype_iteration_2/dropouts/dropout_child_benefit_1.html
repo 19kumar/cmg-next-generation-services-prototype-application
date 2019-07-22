@@ -1,0 +1,48 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+    {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-two-thirds">
+
+            <h1 class="govuk-heading-xl">{{data['child-1-first-name'] }} is not eligible to apply to the Child Maintenance Service</h1>
+
+            <p class="govuk-body">
+              {{data['child-1-first-name'] }} must be registered to receive Child Benefit before applying to the Child Maintenance Service. You'll need to register {{data['child-1-first-name'] }} for Child Benefit before you can continue with your application.</p>
+
+                <p><strong>Child Benefit helpline</strong><br>
+                  Telephone: 0300 200 3100  <br>
+
+                <p>Monday to Friday, 8am to 8pm  <br>
+
+                <p>Saturday, 9am to 4pm<br>
+                  <a href="/call-charges">Find out about call charges</a></p>
+
+                  <div class="govuk-inset-text">
+                    <strong>The child you have told us about is not eligible for this service</strong>, would you like to <a href="../about_qualifying_child/child_name" class="govuk-link">make an application for another child</a>?
+                  </div>
+              
+
+
+
+
+
+      </div>
+    </main>
+
+</div>
+
+{% endblock %}

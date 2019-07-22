@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+    {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form method="post" novalidate>
+
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                    <h1 class="govuk-fieldset__heading">
+                        Do you want to report this domestic abuse now?
+                    </h1>
+                  </legend>
+                   <span id="changed-name-hint" class="govuk-hint">You’ll be able
+                     to start your application to the Child Maintenance Service
+                     again using the same invitation code.</span>
+                   <div class="govuk-radios govuk-radios--inline">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="report-domestic-abuse-yes" name="report-domestic-abuse" type="radio" value="Yes">
+                      <label class="govuk-label govuk-radios__label" for="report-domestic-abuse-yes">
+                        Yes
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="report-domestic-abuse-no" name="report-domestic-abuse" type="radio" value="No">
+                      <label class="govuk-label govuk-radios__label" for="report-domestic-abuse-no">
+                        No
+                      </label>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+
+            <button type="submit" class="govuk-button">
+              Continue
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+  {% endblock %}

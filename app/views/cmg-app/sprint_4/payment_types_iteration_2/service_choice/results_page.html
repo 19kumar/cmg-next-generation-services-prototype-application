@@ -1,0 +1,116 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+    {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl govuk-!-margin-bottom-9">
+          <h1 class="govuk-fieldset__heading">
+            You have chosen Collect and Pay
+          </h1>
+        </legend>
+
+        <p>This service is called 'Collect and Pay'. You will only be able to use
+          this service if the other parent agrees or if it's unlikely that the other
+          parent will pay maintenance.</p>
+
+        <h2 class="govuk-heading-m">What it costs to use Collect and Pay</h2>
+
+        <p>To use Collect and Pay, you'll need to pay:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>a 4% fee from your regular child maintenance payment if
+            you’re receiving child maintenance</li>
+          <li>a 20% fee on top of your regular child maintenance payment
+            if you’re paying child maintenance</li>
+        </ul>
+
+        <h2 class="govuk-heading-m">Examples</h2>
+
+        <table class="govuk-table">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="col">If you're receiving child maintenance</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="row">Child maintenance arrangement</th>
+      <td class="govuk-table__cell">£200 a month</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="row">Collect and Pay fee</th>
+      <td class="govuk-table__cell">£8 a month</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="row">Total child maintenance received</th>
+      <td class="govuk-table__cell">£192 a month</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="govuk-table">
+<thead class="govuk-table__head">
+  <tr class="govuk-table__row">
+    <th class="govuk-table__header" scope="col">If you're paying child maintenance</th>
+  </tr>
+</thead>
+<tbody class="govuk-table__body">
+  <tr class="govuk-table__row">
+    <th class="govuk-table__header" scope="row">Child maintenance arrangement</th>
+    <td class="govuk-table__cell">£200 a month</td>
+  </tr>
+  <tr class="govuk-table__row">
+    <th class="govuk-table__header" scope="row">Collect and Pay fee</th>
+    <td class="govuk-table__cell">£40 a month</td>
+  </tr>
+  <tr class="govuk-table__row">
+    <th class="govuk-table__header" scope="row">Total child maintenance paid</th>
+    <td class="govuk-table__cell">£240 a month</td>
+  </tr>
+</tbody>
+</table>
+
+
+<br><br>
+<h1 class="govuk-heading-m">The next questions are about the other parent</h1>
+
+<p>You'll need to give as much information as you can about the other parent
+  so we can contact them. This might include:</p>
+
+ <ul class="govuk-list govuk-list--bullet">
+
+   <li>any information about where they live</li>
+   <li>their date of birth or age</li>
+   <li>their National Insurance number</li>
+   <li>a phone number</li>
+ </ul>
+
+ <div class="govuk-inset-text">
+   If you cannot give any information about the other parent, we might
+   not be able to set up a child maintenance arrangement for you.
+ </div>
+
+
+          <button type="submit" class="govuk-button">
+              Continue
+            </button>
+
+
+
+      </div>
+    </div>
+  </main>
+</div>
+{% endblock %}

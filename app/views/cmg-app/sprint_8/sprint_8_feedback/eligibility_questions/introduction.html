@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+{% block content %}
+<!--Feedback banner start-->
+{% include "feedback_banner_padding_top.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+  {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+    <!--start of radio-->
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="live-uk-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl govuk-fieldset__legend--xl govuk-!-margin-bottom-9">
+          <h1 class="govuk-fieldset__heading">
+            Check if you're eligible to apply
+          </h1>
+        </legend>
+
+        <p>You'll be asked 3 questions.</p>
+
+        <p class="govuk-body">The answers you give will show
+          if you’re eligible to apply to use the Child Maintenance Service.</p>
+
+    <!--end-->
+          <button type="submit" class="govuk-button">
+            Continue
+          </button>
+        </form>
+      </div>
+    </div>
+  </main>
+</div>
+{% endblock %}

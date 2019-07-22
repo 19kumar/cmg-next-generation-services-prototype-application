@@ -1,0 +1,14 @@
+<!-- Javascript -->
+<script src="/public/javascripts/jquery-1.11.3.js"></script>
+
+{% for scriptUrl in extensionConfig.scripts %}
+  <script src="{{scriptUrl}}"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://ws1.postcodesoftware.co.uk/lookup.min.js"></script> 
+{% endfor %}
+
+<script src="/public/javascripts/application.js"></script>
+
+{% if useAutoStoreData %}
+  <script src="/public/javascripts/auto-store-data.js"></script>
+{% endif %}

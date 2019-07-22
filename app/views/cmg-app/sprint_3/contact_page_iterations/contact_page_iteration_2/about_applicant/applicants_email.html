@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+
+              <div class="govuk-form-group">
+                <h1 class="govuk-label-wrapper">
+                  <label class="govuk-label govuk-label--xl govuk-!-margin-bottom-9" for="applicants-contact-details">
+                    Do you have an email address?
+                  </label>
+                </h1>
+
+
+                  <span id="changed-name-hint" class="govuk-hint govuk-!-margin-bottom-6">
+                    We will only use this email address to contact you about your
+                  application.
+                  </span>
+
+
+<!--start-->
+
+<div class="govuk-radios" data-module="radios">
+
+    <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="mobile-query-1" name="mobile-query" type="radio" value="yes" aria-controls="conditional-mobile-query-1" aria-expanded="true">
+      <label class="govuk-label govuk-radios__label" for="mobile-query-1">
+        Yes
+      </label>
+    </div>
+
+    <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-mobile-query-1">
+
+        <div class="govuk-form-group">
+            <label class="govuk-label" for="email">
+              Email address
+            </label>
+
+            <input class="govuk-input" id="email" name="email" type="email" aria-describedby="email-hint" autocomplete="email" spellcheck="false">
+          </div>
+</div>
+
+    <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="mobile-query-2" name="mobile-query" type="radio" value="no" >
+      <label class="govuk-label govuk-radios__label" for="mobile-query-2">
+        No
+      </label>
+    </div>
+  </div>
+</div>
+
+
+
+        <button type="submit" class="govuk-button">
+          Continue
+        </button>
+
+      </div>
+    </div>
+  </main>
+</div>
+{% endblock %}

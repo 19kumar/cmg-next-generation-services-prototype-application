@@ -1,0 +1,293 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form  method="post" novalidate>
+
+                <h1 class="govuk-heading-l">Enter card details</h1>
+               
+                <div class="govuk-form-group">
+                        <label class="govuk-label" for="one-half">
+                          Card number
+                        </label>
+                        <input class="govuk-input govuk-!-width-two-thirds" id="payment_card_number" name="payment_card_number" type="text">
+                      </div>
+                      <!--card images-->
+                      <ul class="accepted-cards field-empty">
+                        <li class="american-express" data-key="american-express" data-credit="true" data-debit="false">
+                            <span class="govuk-warning-text__assistive">
+                              american-express
+                            </span>
+                        </li>
+                        <li class="visa" data-key="visa" data-credit="true" data-debit="true">
+                            <span class="govuk-warning-text__assistive">
+                              visa
+                            </span>
+                        </li>
+                        <li class="master-card" data-key="master-card" data-credit="true" data-debit="true">
+                            <span class="govuk-warning-text__assistive">
+                              master-card
+                            </span>
+                        </li>
+                        <li class="unionpay" data-key="unionpay" data-credit="true" data-debit="false">
+                            <span class="govuk-warning-text__assistive">
+                              unionpay
+                            </span>
+                        </li>
+                        <li class="jcb" data-key="jcb" data-credit="true" data-debit="false">
+                            <span class="govuk-warning-text__assistive">
+                              jcb
+                            </span>
+                        </li>
+                        <li class="discover" data-key="discover" data-credit="true" data-debit="false">
+                            <span class="govuk-warning-text__assistive">
+                              discover
+                            </span>
+                        </li>
+                        <li class="diners-club" data-key="diners-club" data-credit="true" data-debit="false">
+                            <span class="govuk-warning-text__assistive">
+                              diners-club
+                            </span>
+                        </li>
+                  </ul>
+                      <!--end of card images-->
+                      <span id="passport-issued-hint" class="govuk-hint">
+                        Accepted credit and debit card types 
+                      </span>
+
+<br>
+                      <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset" aria-describedby="passport-issued-hint" role="group">
+                                    <label class="govuk-label" for="one-half">
+                                            Expiry Date
+                                          </label>
+                              <span id="passport-issued-hint" class="govuk-hint">
+                                For example, 10/20
+                              </span>
+                              <div class="govuk-date-input" id="passport-issued">
+                                
+                                <div class="govuk-date-input__item">
+                                  <div class="govuk-form-group">
+                                    <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                                      Month
+                                    </label>
+                                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="payment_card_month" name="payment_card_month" type="number" pattern="[0-9]*">
+                                  </div>
+                                </div>
+                                <div class="govuk-date-input__item">
+                                  <div class="govuk-form-group">
+                                    <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                                      Year
+                                    </label>
+                                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="payment_card_year" name="payment_card_year" type="number" pattern="[0-9]*">
+                                  </div>
+                                </div>
+                              </div>
+                            </fieldset>
+                          </div>
+<br>
+                          <div class="govuk-form-group">
+                                <label class="govuk-label" for="one-half">
+                                  Name on card
+                                </label>
+                                <input class="govuk-input govuk-!-width-two-thirds" id="payment_card_name" name="payment_card_name" type="text">
+                              </div>
+
+                              <br>
+                          <div class="govuk-form-group">
+                                <label class="govuk-label" for="one-half">
+                                  Card security code
+                                </label>
+                                <span id="passport-issued-hint" class="govuk-hint">
+                                        The last 3 digits on the back of the card
+                                      </span>
+                                <input class="govuk-input govuk-input--width-3 floatLeft" id="one-half" name="one-half" type="text">
+                                      <img src="https://www.payments.service.gov.uk/images/security-code.png" class="cvc" alt="The last 3 digits on the back of the card">
+
+                              </div>
+                            
+
+<br> <br> <br>
+                            
+
+                                  <div class="govuk-form-group">
+                                        <h1 class="govuk-heading-m">Billing address</h1>
+                                        
+                                        <span id="passport-issued-hint" class="govuk-hint">
+                                               This is the address associated with the card
+                                              </span>
+                                              <label class="govuk-label" for="one-half">
+                                                    Country or territory
+                                                  </label>
+                                                  <input class="govuk-input govuk-!-width-two-thirds" id="payment_card_address_country" name="payment_card_address_country" type="text">
+                                      </div>
+                    
+                                      <div class="govuk-form-group">
+                                   
+                                            <label class="govuk-label" for="one-half">
+                                                  Building number or name and street
+                                                </label>
+                                                <input class="govuk-input govuk-!-width-two-thirds govuk-!-margin-bottom-3" id="payment_card_address_street_line_1" name="payment_card_address_street_line_1" type="text">
+
+                                                <input class="govuk-input govuk-!-width-two-thirds" id="payment_card_address_street_line_2" name="payment_card_address_street_line_2" type="text">
+                                            
+                                    </div>
+
+
+                                    <div class="govuk-form-group">
+                                            
+                                                  <label class="govuk-label" for="one-half">
+                                                        Town or city
+                                                      </label>
+                                                      <input class="govuk-input govuk-input--width-10" id="payment_card_address_town" name="payment_card_address_town" type="text">
+                                          </div>
+
+
+
+                                    <div class="govuk-form-group">
+                                            
+                                            <label class="govuk-label" for="one-half">
+                                                  Postcode
+                                                </label>
+                                                <input class="govuk-input govuk-input--width-5" id="payment_card_address_postcode" name="payment_card_address_postcode" type="text">
+                                    </div>
+
+
+                                    <div class="govuk-form-group">
+                                           
+                                            <label class="govuk-label" for="one-half">
+                                                    Email
+                                                  </label>
+                                            <span id="passport-issued-hint" class="govuk-hint">
+                                                    We’ll send your payment confirmation here
+                                                  </span>
+                                                 
+                                                      <input class="govuk-input govuk-!-width-two-thirds" id="one-half" name="one-half" type="text">
+                                          </div>
+
+                                          <button type="submit" class="govuk-button">
+                                                Continue
+                                              </button>
+<div> <a class="govuk-link" href="payment_cancellation.html">Cancel payment</a></div>
+                                             
+
+
+                         
+
+                      
+
+
+          
+          </form>
+        </div>
+<!--Second column-->
+
+<div class="govuk-grid-column-one-third">
+
+<div class="total_box">
+        <h2 class="govuk-heading-m">Payment summary</h2>
+        <h3 class="govuk-heading-s">Child Maintenance Service</h3>
+        <p class="govuk-body">Total amount:</p>
+        <p class="govuk-heading-l total_amount">£20.00</p>
+      </div>
+
+    </div>
+<!--end of Second column-->
+
+      </div>
+    </main>
+  </div>
+
+<style>
+.total_box{
+
+    background-color: #F8F8F8;
+    border: 10px solid #BFC1C3;
+    padding: 20px;
+}
+
+.total_amount{
+    padding: 0px !important; 
+    margin: 0px !important;
+}
+
+/* card images*/
+.accepted-cards.field-empty .american-express, .accepted-cards .american-express.selected {
+    background-position: 25% 0%;
+}
+
+.accepted-cards.field-empty .visa, .accepted-cards .visa.selected {
+    background-position: 0% 0%;
+}
+
+.accepted-cards.field-empty .master-card, .accepted-cards .master-card.selected {
+    background-position: 12.5% 0%;
+}
+
+.accepted-cards.field-empty .unionpay, .accepted-cards .unionpay.selected {
+    background-position: 100% 0%;
+}
+
+.accepted-cards.field-empty .jcb, .accepted-cards .jcb.selected {
+    background-position: 37.5% 0%;
+}
+
+.accepted-cards.field-empty .discover, .accepted-cards .discover.selected {
+    background-position: 62.5% 0%;
+}
+
+.accepted-cards.field-empty .diners-club, .accepted-cards .diners-club.selected {
+    background-position: 50% 0%;
+}
+
+.accepted-cards li {
+    display: block;
+    width: 3rem;
+    height: 0;
+    margin: 0 5px 5px;
+    padding-bottom: 2rem;
+    float: left;
+    background-image: url("https://www.payments.service.gov.uk/images/accepted-cards-sprite.png");
+    background-size: 900% 200%;
+}
+
+.accepted-cards {
+    display: block;
+    width: 100%;
+    margin: 15px 0 10px;
+    padding: 0;
+    float: none;
+    overflow: hidden;
+}
+
+.accepted-cards {
+    width: 66.666%;
+}
+
+.cvc{
+    position: relative;
+    top: -1px;
+    max-height: 38px;
+    margin-right: 15px;
+    float: left;
+}
+
+.floatLeft{
+  float: left;
+  margin-right: 15px;
+}
+
+</style>
+
+
+
+
+  {% endblock %}

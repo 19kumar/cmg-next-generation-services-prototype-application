@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+{% block content %}
+<div class="govuk-width-container">
+  {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+    <!--start of radio-->
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="domestic_introduction-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl govuk-fieldset__legend--xl govuk-!-margin-bottom-9">
+          <h1 class="govuk-fieldset__heading">
+            What we will ask in the following questions
+          </h1>
+        </legend>
+        <p class="govuk-body">The following question is about abuse you may have experienced in your previous relationship with the other parent. </p>
+
+        <p class="govuk-body">The reason why we ask this question relates to how we handle your case and offer you the correct support at the end of the application.</p>
+
+        <p class="govuk-body">You will then be asked a series of questions about you, your children and the other parent, this on average can take up to 45 minutes.</p>
+
+        <p class="govuk-body"> This information will help us identify the relevant people and offer you the best chance of a successful case.</p>
+      
+    <!--end-->
+          <button type="submit" class="govuk-button">
+            Continue
+          </button>
+        </form>
+      </div>
+    </div>
+  </main>
+</div>
+{% endblock %}
+
+
+

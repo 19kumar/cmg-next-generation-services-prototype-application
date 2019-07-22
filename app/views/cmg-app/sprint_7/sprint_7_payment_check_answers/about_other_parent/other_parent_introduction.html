@@ -1,0 +1,174 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+{% block content %}
+<div class="govuk-width-container">
+  {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+
+
+
+          <div class="govuk-form-group">
+              <form method="post" novalidate>
+            <div class="flash-card">
+              <header>
+                <h1 class="govuk-heading-l">You need to give as much information about the other parent as you can</h1>
+
+
+                <h2 class="govuk-heading-s">The answers you give to the next questions will
+                  help us to set up your child maintenance arrangement. Helpful details include:</h2>
+
+              </header>
+              <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                  <ul class="how-to-renew" data-id="how-to-renew-uk">
+                    <li>
+                      <span class="circle circle-step circle-white"></span>
+                      <h2 class="govuk-heading-s">their phone number</h2>
+                    </li>
+
+                    <li>
+                      <span class="circle circle-step circle-white"></span>
+                      <h2 class="govuk-heading-s">any details about where they live</h2>
+                    </li>
+
+                    <li>
+                      <span class="circle circle-step circle-white"></span>
+                      <h2 class="govuk-heading-s">their date of birth or age</h2>
+                    </li>
+
+                    <li>
+                      <span class="circle circle-step circle-white"></span>
+                      <h2 class="govuk-heading-s">their National Insurance number</h2>
+                    </li>
+
+                    <li>
+                      <span class="circle circle-step circle-white"></span>
+                      <h2 class="govuk-heading-s">where they work</h2>
+                    </li>
+                  </ul>
+
+                  <h2 class="govuk-heading-m">If you do not have this information</h2>
+
+                  <h2 class="govuk-heading-s">You can continue with your application
+                  but we might not be able to make a child maintenance arrangement.</h2>
+
+                  <div class="form-group" style="margin-top:25px;margin-bottom:0;">
+                    <input class="govuk-button button-white" type="submit" value="Continue">
+                  </div>
+
+                </div>
+              </form>
+              </div>
+
+            </div>
+
+<style>
+
+  .flash-card {
+    margin-top: 1em;
+    padding: 30px;
+    background: #005EA5;
+    color: #FFF !important;
+  }
+    header {
+      background-color: inherit;
+    }
+
+    p {
+      margin-left: 32px;
+    }
+
+    ul.how-to-renew {
+      padding-left: 0;
+      list-style: none;
+    }
+
+      h2 {
+        margin: 0;
+        margin-bottom: 0;
+        padding: 0;
+        color: #FFF !important;
+        font-size: 28px;
+      }
+
+      li {
+        margin-bottom: 22px;
+      }
+
+
+    h1 {
+      color: #FFF !important;
+    }
+      h1:first-of-type {
+        margin-top: 0 !important;
+      }
+
+
+
+      details {
+         margin-bottom: 1em;
+      }
+        summary {
+          color: #FFF !important;
+        }
+        .panel {
+          border-left-color: #FFF !important;
+        }
+
+
+
+    @media (min-width: 769px) {
+      .flash-card {
+        margin-top: 1.25em;
+        padding: 35px 50px;
+      }
+    }
+
+  .circle-white {
+    color: #005ea5;
+    background: #fff !important;
+    float: left;
+    margin-right: 15px;
+  }
+
+  .button-white {
+    color: #005ea5;
+    background: #fff !important;
+    float: left;
+    margin-right: 15px;
+  }
+
+  .button-white:hover {
+    color: #005ea5;
+    background: rgb(240, 235, 235) !important;
+    float: left;
+    margin-right: 15px;
+  }
+
+  .circle-step {
+    min-width: 10px;
+    min-height: 10px;
+    line-height: 10px;
+  }
+
+  .circle {
+    margin-top: 6px;
+    display: inline-block;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    font-family: 'Inter UI', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  </style>
+
+
+
+{% endblock %}

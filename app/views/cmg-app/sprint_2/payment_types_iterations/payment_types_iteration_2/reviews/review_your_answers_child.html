@@ -1,0 +1,106 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+        {{ govukBackLink({
+            text: 'Back',
+            href: 'javascript:history.back()'
+        }) }}
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds-from-desktop">
+
+                <h1 class="govuk-heading-xl">Check your answers so far</h1>
+
+                {% include "cmg-app/prototype_1-3/reviews/review_content/review_about_child_1.html" %}
+
+
+                    <form  method="post" novalidate>
+                        <button type="submit" class="govuk-button">
+                                Continue
+                              </button>    
+
+            </form>
+            <a href="#" id="button">TEST ANOTHER JOURNEY</a>
+            <div id="content" class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+            </br>
+             <h2 class="govuk-heading-l">Other parent journey iterations</h2>
+            <h3 class="govuk-heading-m">Iteration</h3>
+        
+            <table class="govuk-table">
+                <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="col">Sprint/iterations</th>
+                    <th class="govuk-table__header" scope="col">Date</th>
+                    <th class="govuk-table__header" scope="col">Notes</th>
+                </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                
+                <tr class="govuk-table__row">
+                        <td class="govuk-table__cell " scope="row"><a href="/cmg-app/sprint_1/sprint_1_other_parent_iterations/other_parent_iteration_1/about_other_parent/other_parent_introduction.html" class="govuk-button">Continue 1</a></td>
+                        <td class="govuk-table__cell">2 April 2019 to (To be decided)</td>
+                        <td class="govuk-table__cell">Iteration 1: Add an introduction page asking the applicant to give as much information as they can.</td>
+                    </tr>
+
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell" scope="row"><a href="/cmg-app/sprint_1/sprint_1_other_parent_iterations/other_parent_iteration_2/about_other_parent/other_parent_name.html" class="govuk-button">Continue 2</a></td>
+                        <td class="govuk-table__cell">2 April 2019 to (To be decided)</td>
+                        <td class="govuk-table__cell">Iteration 2: Stronger wording in titles – detailing to give as much information as they can.</td>
+                    </tr>
+
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell" scope="row"><a href="/cmg-app/sprint_1/sprint_1_other_parent_iterations/other_parent_iteration_3/about_other_parent/other_parent_name.html" class="govuk-button">Continue 3</a></td>
+                        <td class="govuk-table__cell">2 April 2019 to (To be decided)</td>
+                        <td class="govuk-table__cell">Iteration 3: Add Yes / No boxes to DOB / NINO.</td>
+                    </tr>
+
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell" scope="row"><a href="/cmg-app/sprint_1/sprint_1_other_parent_iterations/other_parent_iteration_4/about_other_parent/other_parent_name.html" class="govuk-button">Continue 4</a></td>
+                        <td class="govuk-table__cell">2 April 2019 to (To be decided)</td>
+                        <td class="govuk-table__cell">Iteration 4: Break apart the design pattern for DOB, maybe a large box to enter information.</td>
+                    </tr>
+
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell" scope="row"><a href="/cmg-app/sprint_1/sprint_1_other_parent_iterations/other_parent_iteration_5/about_other_parent/other_parent_name.html" class="govuk-button">Continue 5</a></td>
+                        <td class="govuk-table__cell">2 April 2019 to (To be decided)</td>
+                        <td class="govuk-table__cell">Iteration 5: Large open textbox at end of page.</td>
+                    </tr>
+
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell" scope="row"><a href="/cmg-app/sprint_1/sprint_1_other_parent_iterations/other_parent_iteration_6/about_other_parent/other_parent_name.html" class="govuk-button">Continue 6</a></td>
+                        <td class="govuk-table__cell">2 April 2019 to (To be decided)</td>
+                        <td class="govuk-table__cell">Iteration 6: Individual open textboxes for answers.</td>
+                    </tr>
+
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell" scope="row"><a href="/cmg-app/sprint_1/sprint_1_other_parent_iterations/other_parent_iteration_7/about_other_parent/other_parent_name.html" class="govuk-button">Continue 7</a></td>
+                        <td class="govuk-table__cell">2 April 2019 to (To be decided)</td>
+                        <td class="govuk-table__cell">Iteration 7: Approximate age example. (Filter down the question)</td>
+                    </tr>
+                    
+
+                    </tbody>
+                </table>
+        
+                <br><br>
+            </div>
+        </div>
+            <style>
+                #content{
+                 display: none; 
+                }
+            </style>
+            </div>
+        </div>
+    </main>
+</div>
+
+{% endblock %}

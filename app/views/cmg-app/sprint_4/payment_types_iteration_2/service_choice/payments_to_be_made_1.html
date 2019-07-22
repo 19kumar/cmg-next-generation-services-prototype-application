@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+    {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form method="post" novalidate>
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl govuk-!-margin-bottom-9">
+                  <h1 class="govuk-fieldset__heading">
+                    CMS can contact the other parent about payments. How should we do this?
+                  </h1>
+                </legend>
+                <div class="govuk-radios">
+
+                  <span id="service-choice-hint" class="govuk-hint">
+      Select your preferred option. The other parent will be given a choice too.
+    </span>
+    <div class="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="service-choice-1" name="service-choice" type="radio" value="Direct Pay" aria-describedby="service-choice-1-item-hint">
+        <label class="govuk-label govuk-radios__label govuk-label--s" for="service-choice-1">
+          Direct Pay
+        </label>
+        <span id="service-choice-1-item-hint" class="govuk-hint govuk-radios__hint">
+          <p>The Child Maintenance Service can work out how much child maintenance
+          should be paid and tell both parents. This is called 'Direct Pay'.</p>
+        </span>
+      </div>
+      
+
+      <div class="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="service-choice-1" name="service-choice" type="radio" value="Direct Pay" aria-describedby="service-choice-1-item-hint">
+          <label class="govuk-label govuk-radios__label govuk-label--s" for="service-choice-1">
+           Collect and pay
+          </label>
+          <span id="service-choice-1-item-hint" class="govuk-hint govuk-radios__hint">
+            <p>The Child Maintenance Service can work out how much child maintenance
+            should be paid and tell both parents. This is called 'Direct Pay'.</p>
+          </span>
+        </div>
+
+
+
+    </div>
+
+              </fieldset>
+            </div>
+
+            <button type="submit" class="govuk-button">
+              Continue
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+  {% endblock %}

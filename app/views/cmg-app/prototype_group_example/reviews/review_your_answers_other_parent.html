@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+        {{ govukBackLink({
+            text: 'Back',
+            href: 'javascript:history.back()'
+        }) }}
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds-from-desktop">
+
+                <h1 class="govuk-heading-xl">Check your answers so far</h1>
+
+                {% include "cmg-app/prototype_1-4/reviews/review_content/review_about_other_parent.html" %}
+
+                    <form  method="post" novalidate>
+                        <button type="submit" class="govuk-button">
+                                Continue
+                              </button>
+
+                </p>
+            </form>
+
+            </div>
+        </div>
+    </main>
+</div>
+
+{% endblock %}

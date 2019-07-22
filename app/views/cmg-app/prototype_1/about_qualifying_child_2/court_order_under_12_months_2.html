@@ -1,0 +1,157 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+    <a href="child_in_full_time_education.html" class="govuk-back-link">Back</a>
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form method="post" novalidate>
+
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                    <h1 class="govuk-fieldset__heading">
+                    Do you have a court order or consent order for child maintenance in place?
+                    </h1>
+                  </legend>
+                  <span id="changed-name-hint" class="govuk-hint">
+                    This is known as a 'minute of agreement' in Scotland.
+                  </span>
+
+                  <div class="govuk-radios" data-module="radios">
+
+
+
+
+
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="court-order-1" name="court-order" type="radio" value="yes" aria-controls="conditional-court-order-1" aria-expanded="true">
+                        <label class="govuk-label govuk-radios__label" for="court-order-1">
+                          Yes
+                        </label>
+                      </div>
+
+                        <div class="govuk-radios__conditional" id="conditional-court-order-1">
+
+
+
+
+
+
+
+
+
+                  <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset" role="group">
+
+                    <legend class="govuk-fieldset__legend">
+                      When was the court order created?
+                    </legend>
+
+
+                    <div class="govuk-date-input" id="court-order-date">
+
+
+
+
+
+
+
+
+
+
+                      <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="court-order-date-day">
+                            Day
+                          </label>
+
+
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-2 " id="court-order-date-day" name="court-order-date-day" type="number" pattern="[0-9]*">
+                        </div>
+                      </div>
+
+
+
+
+
+
+
+
+
+
+                      <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="court-order-date-month">
+                            Month
+                          </label>
+
+
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-2 " id="court-order-date-month" name="court-order-date-month" type="number" pattern="[0-9]*">
+                        </div>
+                      </div>
+
+
+
+
+
+
+
+
+
+
+                      <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="court-order-date-year">
+                            Year
+                          </label>
+
+
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-4 " id="court-order-date-year" name="court-order-date-year" type="number" pattern="[0-9]*">
+                        </div>
+                      </div>
+
+                    </div>
+                    </fieldset>
+
+
+                  </div>
+
+
+                        </div>
+
+
+
+
+
+
+
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="court-order-2" name="court-order" type="radio" value="no" checked="">
+                        <label class="govuk-label govuk-radios__label" for="court-order-2">
+                          No
+                        </label>
+                      </div>
+
+
+
+                    </div>
+                  </div>
+
+
+
+            <button type="submit" class="govuk-button">
+              Continue
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+  {% endblock %}

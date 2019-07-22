@@ -1,0 +1,92 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl govuk-!-margin-bottom-9">
+                <h1 class="govuk-fieldset__heading">
+                  You currently live outside of the UK, do any of the following statements relate to you?
+                </h1>
+              </legend>
+
+              <div class="govuk-radios">
+
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="registered-in-uk-yes" name="registered-in-uk" type="radio"
+                    value="civil">
+                  <label class="govuk-label govuk-radios__label" for="registered-in-uk-yes">
+                      You are a civil servant
+                  </label>
+                </div>
+
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="registered-in-uk-no" name="registered-in-uk" type="radio"
+                    value="diplomatic">
+                  <label class="govuk-label govuk-radios__label" for="registered-in-uk-no">
+                      You work in Her Majesty’s Diplomatic Service
+                  </label>
+                </div>
+
+                <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="registered-in-uk-no" name="registered-in-uk" type="radio"
+                      value="forces">
+                    <label class="govuk-label govuk-radios__label" for="registered-in-uk-no">
+                        You are a member of the Armed Forces
+                    </label>
+                  </div>
+
+                  <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="registered-in-uk-no" name="registered-in-uk" type="radio"
+                        value="company">
+                      <label class="govuk-label govuk-radios__label" for="registered-in-uk-no">
+                          You work for a company that is based and registered in the UK
+                      </label>
+                    </div>
+
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="registered-in-uk-no" name="registered-in-uk" type="radio"
+                          value="prescribed">
+                        <label class="govuk-label govuk-radios__label" for="registered-in-uk-no">
+                            You are working on secondment for a ‘prescribed body’, like a regional health authority or local authority
+                        </label>
+                      </div>
+
+                      <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="registered-in-uk-no" name="registered-in-uk" type="radio"
+                            value="none">
+                          <label class="govuk-label govuk-radios__label" for="registered-in-uk-no">
+                              none
+                          </label>
+                        </div>
+
+              </div>
+
+            </fieldset>
+          </div>
+
+
+
+          <button type="submit" class="govuk-button">
+            Continue
+          </button>
+        </form>
+      </div>
+    </div>
+  </main>
+</div>
+{% endblock %}

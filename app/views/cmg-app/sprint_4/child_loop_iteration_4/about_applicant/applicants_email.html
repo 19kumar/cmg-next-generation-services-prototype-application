@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+{% block content %}
+<div class="govuk-width-container">
+  {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+          <div class="govuk-form-group">
+            <h1 class="govuk-label-wrapper">
+              <label class="govuk-label govuk-label--xl govuk-!-margin-bottom-9" for="applicants-email-details">
+                Do you have an email address?
+              </label>
+            </h1>
+            <span id="applicantEmailInformation" class="govuk-hint govuk-!-margin-bottom-6">
+              We will only use this email address to contact you about your
+              application.
+            </span>
+            <div class="govuk-radios" data-module="radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="applicants-email-query-yes" name="applicants-email-query"
+                  type="radio" value="yes" aria-controls="conditional-applicants-email-query" aria-expanded="true">
+                <label class="govuk-label govuk-radios__label" for="applicants-email-query">
+                  Yes
+                </label>
+              </div>
+            </fieldset>
+
+<!--Hidden email input-->
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden"
+                id="conditional-applicants-email">
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" role="group">
+                  <label class="govuk-label" for="email">
+                    Email address
+                  </label>
+                  <input class="govuk-input" id="applicants-email" name="applicants-email" type="applicants-email"
+                    autocomplete="applicants-email" spellcheck="false">
+                </div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="applicants-email-query-no" name="applicants-email-query"
+                  type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="applicants-email-query">
+                  No
+                </label>
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="govuk-button">
+            Continue
+          </button>
+      </div>
+    </div>
+  </main>
+</div>
+
+
+
+
+
+
+
+{% endblock %}

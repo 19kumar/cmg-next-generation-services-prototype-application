@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+          <div class="govuk-form-group">
+             <!--Checkboxes-->
+
+             <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" aria-describedby="abuse-checkbox-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl govuk-!-margin-bottom-9">
+                  <h1 class="govuk-fieldset__heading">
+                    Have you ever experienced any of this behaviour?
+                  </h1>
+                </legend>
+                
+                <ul class="govuk-list govuk-list--bullet">
+                    <p class="govuk-body govuk-!-margin-bottom-6"><strong>Emotional abuse</strong><br>Has the other parent ever taken money from you? Stopped you from seeing family and friends? Told you what to think?<p>
+
+                    <p class="govuk-body govuk-!-margin-bottom-6"><strong>Threats and intimidation</strong><br>Has the other parent ever made you afraid? Threatened to hurt you? Harassed or followed you?<p>
+
+                    <p class="govuk-body govuk-!-margin-bottom-6"><strong>Physical abuse</strong><br>Has the other parent ever slapped, hit or punch you? Pushed you? Kicked you? Thrown things?<p>
+
+                    <p class="govuk-body govuk-!-margin-bottom-9"><strong>Sexual abuse</strong><br>Has the other parent ever pressured you to have sex? Made unwanted sexual demands? Hurt you during sex?<p>
+                  </ul>
+
+                  <div class="govuk-radios govuk-radios--inline">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="abuse-query-1" name="abuse-query" type="radio" value="yes">
+                        <label class="govuk-label govuk-radios__label" for="abuse-query-1">
+                          Yes
+                        </label> </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="abuse-query-2" name="abuse-query" type="radio" value="no">
+                        <label class="govuk-label govuk-radios__label" for="abuse-query-2">
+                          No
+                        </label> </div>
+                    </div>
+                  </fieldset>
+                </div>
+                </div>
+                <button type="submit" class="govuk-button">
+                    Continue
+                  </button>
+
+        </form>
+      </div>
+    </div>
+  </main>
+</div>
+{% endblock %}

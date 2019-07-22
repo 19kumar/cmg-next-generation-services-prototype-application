@@ -1,0 +1,194 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+    {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-xl">What is the child's name?</h1>
+            <form method="post" novalidate>
+
+                <span id="changed-name-hint" class="govuk-hint">
+                    Include children you need this child maintenance arrangement for.
+                    A child is anyone under 16, or under 20 and in full-time training
+                    or education up to A level or similar.
+                  </span>
+                  <br><br>
+                  <div class="govuk-form-group">
+                      <h2 class="govuk-heading-l">First Child's details</h2>
+
+                      <h3 class="govuk-heading-m">First child's name</h3>
+                    <label class="govuk-label govuk-!-width-two-thirds" for="child-1-first-name">
+                      First name
+                    </label>
+                    <input class="govuk-input govuk-!-width-two-thirds" id="child-1-first-name" name="child-1-first-name" type="text" autocomplete="name" spellcheck="false" value="{{data['child-1-first-name'] }}">
+                  </div>
+    
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-!-width-two-thirds" for="child-1-middle-name">
+                      Middle names (optional)
+                    </label>
+                    <input class="govuk-input govuk-!-width-two-thirds" id="child-1-middle-name" name="child-1-middle-name" type="text" autocomplete="name" spellcheck="false" value="{{data['child-1-middle-name'] }}">
+                  </div>
+    
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-!-width-two-thirds" for="child-1-last-name">
+                      Last name
+                    </label>
+                    <input class="govuk-input govuk-!-width-two-thirds" id="child-1-last-name" name="child-1-last-name" type="text" autocomplete="name" spellcheck="false" value="{{data['child-1-last-name'] }}">
+                  </div>
+    
+                  <!--Childs DOB-->
+                  <br><br>
+                  <div class="govuk-form-group">
+                      <fieldset class="govuk-fieldset" aria-describedby="child-1-date-of-birth-hint" role="group">
+                          <h3 class="govuk-heading-m">First child's date of birth</h3>
+                        <span id="child-date-birth-hint" class="govuk-hint">
+                          For example, '12 11 2007'.
+                        </span>
+                        <div class="govuk-date-input" id="child-1-date-of-birth">
+                          <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                              <label class="govuk-label govuk-date-input__label" for="child-1-date-of-birth-day">
+                                Day
+                              </label>
+                              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="child-1-date-of-birth-day" name="child-1-date-of-birth-day" type="number" pattern="[0-9]*" value="{{data['child-1-date-of-birth-day'] }}">
+                            </div>
+                          </div>
+                          <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                              <label class="govuk-label govuk-date-input__label" for="child-1-date-of-birth-month">
+                                Month
+                              </label>
+                              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="child-1-date-of-birth-month" name="child-1-date-of-birth-month" type="number" pattern="[0-9]*" value="{{data['child-1-date-of-birth-month'] }}">
+                            </div>
+                          </div>
+                          <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                              <label class="govuk-label govuk-date-input__label" for="child-1-date-of-birth-year">
+                                Year
+                              </label>
+                              <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="child-1-date-of-birth-year" name="child-1-date-of-birth-year" type="number" pattern="[0-9]*" value="{{data['child-1-date-of-birth-year'] }}">
+                            </div>
+                          </div>
+                        </div>
+                      </fieldset>
+                    </div>
+    
+
+<!--end of group-->
+
+<!--Child group 2-->
+<br><br>
+<div class="govuk-form-group">
+    <h2 class="govuk-heading-l">Second Child's details</h2>
+
+    <h3 class="govuk-heading-m">Second child's name</h3>
+  <label class="govuk-label govuk-!-width-two-thirds" for="child-2-first-name">
+    First name
+  </label>
+  <input class="govuk-input govuk-!-width-two-thirds" id="child-2-first-name" name="child-2-first-name" type="text" autocomplete="name" spellcheck="false">
+</div>
+
+<div class="govuk-form-group">
+  <label class="govuk-label govuk-!-width-two-thirds" for="child-2-middle-name">
+    Middle names (optional)
+  </label>
+  <input class="govuk-input govuk-!-width-two-thirds" id="child-2-middle-name" name="child-2-middle-name" type="text" autocomplete="name" spellcheck="false">
+</div>
+
+<div class="govuk-form-group">
+  <label class="govuk-label govuk-!-width-two-thirds" for="child-2-last-name">
+    Last name
+  </label>
+  <input class="govuk-input govuk-!-width-two-thirds" id="child-2-last-name" name="child-2-last-name" type="text" autocomplete="name" spellcheck="false">
+</div>
+
+<!--Childs DOB-->
+<br><br>
+<div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="child-2-date-of-birth-hint" role="group">
+        <h3 class="govuk-heading-m">Second child's date of birth</h3>
+      <span id="child-date-birth-hint" class="govuk-hint">
+        For example, '12 11 2007'.
+      </span>
+      <div class="govuk-date-input" id="child-2-date-of-birth">
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="child-2-date-of-birth-day">
+              Day
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="child-2-date-of-birth-day" name="child-2-date-of-birth-day" type="number" pattern="[0-9]*">
+          </div>
+        </div>
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="child-2-date-of-birth-month">
+              Month
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="child-2-date-of-birth-month" name="child-2-date-of-birth-month" type="number" pattern="[0-9]*">
+          </div>
+        </div>
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="child-2-date-of-birth-year">
+              Year
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="child-2-date-of-birth-year" name="child-2-date-of-birth-year" type="number" pattern="[0-9]*">
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+
+<!--end of group-->
+
+
+ <!--Start of radio buttons-->
+ <br>  <br>
+ <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+
+        <h2 class="govuk-heading-m">
+        Do you need to add another child?
+        </h2>
+
+      <div class="govuk-radios govuk-radios--inline">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="name_no_move-yes" name="name_no_move" type="radio" value="Yes">
+          <label class="govuk-label govuk-radios__label" for="add-another-child-yes">
+            Yes
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="name_no_move-no" name="name_no_move" type="radio" value="No">
+          <label class="govuk-label govuk-radios__label" for="name_no_move-no">
+            No
+          </label>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+</div>
+</div>
+ <!--end of radio buttons-->
+
+
+
+            <button type="submit" class="govuk-button">
+              Continue
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+  {% endblock %}

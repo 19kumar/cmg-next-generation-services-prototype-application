@@ -1,0 +1,78 @@
+<!-- Javascript -->
+<script src="/public/javascripts/jquery-1.11.3.js"></script>
+<script src="/node_modules/govuk-frontend/all.js"></script>
+<script src="/public/javascripts/application.js"></script>
+<script src="/node_modules/govuk-frontend/all.js"></script>
+<link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+{% if useAutoStoreData %}
+  <script src="/public/javascripts/auto-store-data.js"></script>
+{% endif %}
+
+<script>
+        $( function() {
+            var freEmployments = [
+                {occupation:"Mr", },
+                {occupation:"Mrs", },
+                {occupation:"Miss", },
+                {occupation:"Ms", },
+                {occupation:"Sir", },
+                {occupation:"Dr", },
+                
+      
+            ];
+            $(".title-finder").autocomplete({
+                source (request, response) {
+                    const matcher = new RegExp($.ui.autocomplete.escapeRegex(request.term), "i");
+                    response(
+                        freEmployments
+                            .filter(item => matcher.test(item.occupation + item.deduction))
+                            .map(item => item.occupation)
+                            .slice(0,20)
+
+                    )
+                    $('#submit').prop('disabled', true);
+
+
+                },
+               
+                minLength : 1
+            });
+
+            var freAmounts = [
+              {occupation:"HealthcareA", deduction: "185"},
+              {occupation:"HealthcareB", deduction: "125"},
+              {occupation:"HealthcareC", deduction: "125"},
+              {occupation:"HealthcareOther", deduction: "80"}
+            ]
+        });
+
+/*
+
+var Privileges = jQuery('#testing');
+var select = this.value;
+
+Privileges.load(function () {
+    if ($(this).val() == 'Yes') {
+        $('.testing').show();
+    }
+    else $('.testing').hide();
+});
+
+*/
+
+$( document ).ready(function() {
+    let chkPinNo = req.session.data['test']
+    if (chkPinNo == 'Yes') {
+       $("#testing").show();
+     } else {
+       $("#testing").hide();
+     }
+   });
+
+
+
+
+    </script>

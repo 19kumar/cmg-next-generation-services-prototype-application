@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+    {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form method="post" novalidate>
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
+                  <h1 class="govuk-fieldset__heading">
+                    Do you know anything about their work?
+                  </h1>
+                </legend>
+                <span id="other-parent-employment-national-insurance-number-hint" class="govuk-hint">
+                        This could be where they work? their job role? or who is their employer?
+                      </span>
+                <p class="govuk-body"></p>
+                <div class="govuk-radios">
+
+                    <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="other-parent-know-about-work-1" name="other-parent-know-about-work" type="radio" value="yes">
+                    <label class="govuk-label govuk-radios__label" for="other-parent-know-about-work-1">
+                      Yes
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="other-parent-know-about-work-2" name="other-parent-know-about-work" type="radio" value="no">
+                    <label class="govuk-label govuk-radios__label" for="other-parent-know-about-work-2">
+                        No
+                    </label>
+                  </div>
+
+                </div>
+              </fieldset>
+            </div>
+
+            <button type="submit" class="govuk-button">
+              Continue
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+  {% endblock %}

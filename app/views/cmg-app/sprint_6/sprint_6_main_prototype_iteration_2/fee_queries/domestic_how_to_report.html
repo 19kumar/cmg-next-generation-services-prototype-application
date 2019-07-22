@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+{% block content %}
+<div class="govuk-width-container">
+  {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+    <!--start of radio-->
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="domestic_introduction-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl govuk-fieldset__legend--xl ">
+          <h1 class="govuk-fieldset__heading">
+            Reporting domestic abuse
+          </h1>
+        </legend>
+
+        <p class="govuk-body"><a href="https://www.gov.uk/report-domestic-abuse">Get help and advice about domestic abuse</a>.</p></p>
+
+        <p>After reporting this domestic abuse, you will not have to pay the £20 application fee.<p>
+
+        <h2 class="govuk-heading-l">Starting your application again</h2>
+
+        <p>You'll be able to apply using this service and your unique invitation
+          code, or you can contact the Child Maintenance Service.</p>
+
+          <div class="contact">
+            <p class="govuk-body govuk-body govuk-!-margin-bottom-3"><strong>Child Maintenance Service</strong>
+            <p>Telephone: 0800 171 2345</p>
+            <p class="govuk-body govuk-body govuk-!-margin-bottom-3">Monday to Friday, 8am to 7.30pm</p>
+            <p class="govuk-body govuk-body govuk-!-margin-bottom-3">Saturday, 9am to 4pm</br>
+            <a href="/call-charges">Find out about call charges</a></p>
+          </div>
+
+
+        </form>
+      </div>
+    </div>
+  </main>
+</div>
+{% endblock %}

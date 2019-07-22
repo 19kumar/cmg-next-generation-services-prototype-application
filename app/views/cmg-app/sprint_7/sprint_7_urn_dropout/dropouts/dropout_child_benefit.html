@@ -1,0 +1,57 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+    {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-two-thirds">
+
+            <h1 class="govuk-heading-xl">You'll need to apply for Child Benefit first</h1>
+
+            <p class="govuk-body">
+              After you've done this, you'll be able to apply to the Child Maintenance Service
+                using your unique invitation code.
+
+            <p>You'll need to <a href="https://www.gov.uk/child-benefit/how-to-claim">apply for Child Benefit</a>
+                so your child will be registered to get a National Insurance number when they’re 16 years old.</p>
+
+            <p>You can choose not to get Child Benefit payments.</p>
+
+
+                <h3 class="govuk-heading-s">If you cannot apply for Child Benefit</h3>
+
+                <p>You'll need to call us.</p>
+
+                <div class="govuk-inset-text">
+                <p class="govuk-body"><strong>Child Maintenance Service</strong><br>
+                  Telephone: 0800 171 2345 <br>
+
+                  <p class="govuk-body">Monday to Friday, 8am to 7:30pm (excluding bank holidays)</br>
+                    Saturday, 9am to 4pm<br>
+                      <a href="/call-charges">Find out about call charges</a></p>
+                </div>
+
+
+
+
+
+
+
+      </div>
+    </main>
+
+</div>
+
+{% endblock %}

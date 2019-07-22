@@ -1,0 +1,337 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+
+  <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">
+          Apply to the Child Maintenance Service
+        </h1>
+
+        <ol class="app-task-list">
+
+
+          <li>
+            <h2 class="app-task-list__section">
+              <span class="app-task-list__section-number">1. </span> About you
+            </h2>
+
+            <ul class="app-task-list__items">
+
+              <!--Start of list item-->
+              <li class="app-task-list__item">
+                <a class="app-task-list__task-name" href="#" aria-describedby="company-information-completed">
+                  Name
+                </a>
+                <strong class="govuk-tag app-task-list__task-completed"
+                  id="company-information-completed">Completed</strong>
+              </li>
+              <!--end of list item-->
+
+              <!--Start of list item-->
+              <li class="app-task-list__item">
+                <a class="app-task-list__task-name" href="#" aria-describedby="company-information-completed">
+                  Date of birth
+                </a>
+                <strong class="govuk-tag app-task-list__task-completed"
+                  id="company-information-completed">Completed</strong>
+              </li>
+              <!--end of list item-->
+
+              <!--Start of list item-->
+              <li class="app-task-list__item">
+                <a class="app-task-list__task-name" href="#" aria-describedby="company-information-completed">
+                  Home address
+                </a>
+                <strong class="govuk-tag app-task-list__task-completed"
+                  id="company-information-completed">Completed</strong>
+              </li>
+              <!--end of list item-->
+
+              <!--Start of list item-->
+              <li class="app-task-list__item">
+                <a class="app-task-list__task-name" href="#" aria-describedby="company-information-completed">
+                  Correspondence address
+                </a>
+                <strong class="govuk-tag app-task-list__task-completed"
+                  id="company-information-completed">Completed</strong>
+              </li>
+              <!--end of list item-->
+
+              <!--Start of list item-->
+              <li class="app-task-list__item">
+                <a class="app-task-list__task-name" href="#" aria-describedby="company-information-completed">
+                  Phone number
+                </a>
+                <strong class="govuk-tag app-task-list__task-completed"
+                  id="company-information-completed">Completed</strong>
+              </li>
+              <!--end of list item-->
+
+              <!--Start of list item-->
+              <li class="app-task-list__item">
+                <a class="app-task-list__task-name" href="#" aria-describedby="company-information-completed">
+                  Email address
+                </a>
+                <strong class="govuk-tag app-task-list__task-completed"
+                  id="company-information-completed">Completed</strong>
+              </li>
+              <!--end of list item-->
+
+
+            </ul>
+          </li>
+
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">2. </span> About children
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name" href="../about_applicant/applicants_name.html"
+                aria-describedby="eligibility-completed">
+                Number of children
+              </a>
+            </li>
+          </ul>
+          </li>
+
+          <li>
+            <h2 class="app-task-list__section">
+              <span class="app-task-list__section-number">3. </span> About first child
+            </h2>
+            <ul class="app-task-list__items">
+              <li class="app-task-list__item">
+                <a class="app-task-list__task-name" href="../service_choice/choose_service.html"
+                  aria-describedby="company-information-completed">
+                  Child's name
+                </a>
+              </li>
+
+              <!--Start of list item-->
+              <li class="app-task-list__item">
+                <a class="app-task-list__task-name" href="#" aria-describedby="company-information-completed">
+                  Child's date of birth
+                </a>
+
+              </li>
+              <!--end of list item-->
+
+              <!--Start of list item-->
+              <li class="app-task-list__item">
+                <a class="app-task-list__task-name" href="#" aria-describedby="company-information-completed">
+                  Married or in a civil partnership
+                </a>
+
+              </li>
+              <!--end of list item-->
+
+              <!--Start of list item-->
+              <li class="app-task-list__item">
+                <a class="app-task-list__task-name" href="#" aria-describedby="company-information-completed">
+                  Child benefit
+                </a>
+
+              </li>
+              <!--end of list item-->
+
+              <!--Start of list item-->
+              <li class="app-task-list__item">
+                <a class="app-task-list__task-name" href="#" aria-describedby="company-information-completed">
+                  Full-time education or training
+                </a>
+
+              </li>
+              <!--end of list item-->
+
+
+              <!--Start of list item-->
+              <li class="app-task-list__item">
+                <a class="app-task-list__task-name" href="#" aria-describedby="company-information-completed">
+                  Consent order
+                </a>
+
+              </li>
+              <!--end of list item-->
+
+              <!--Start of list item-->
+              <li class="app-task-list__item">
+                <a class="app-task-list__task-name" href="#" aria-describedby="company-information-completed">
+                  Shared care
+                </a>
+
+              </li>
+              <!--end of list item-->
+
+            </ul>
+          </li>
+
+
+          <li>
+            <h2 class="app-task-list__section">
+              <span class="app-task-list__section-number">4. </span> About Second child
+            </h2>
+            <ul class="app-task-list__items">
+              <li class="app-task-list__item">
+                <a class="app-task-list__task-name" href="../service_choice/choose_service.html"
+                  aria-describedby="company-information-completed">
+                  Child's name
+                </a>
+              </li>
+
+              <!--Start of list item-->
+              <li class="app-task-list__item">
+                <a class="app-task-list__task-name" href="#" aria-describedby="company-information-completed">
+                  Child's date of birth
+                </a>
+
+              </li>
+              <!--end of list item-->
+
+              <!--Start of list item-->
+              <li class="app-task-list__item">
+                <a class="app-task-list__task-name" href="#" aria-describedby="company-information-completed">
+                  Married or in a civil partnership
+                </a>
+
+              </li>
+              <!--end of list item-->
+
+              <!--Start of list item-->
+              <li class="app-task-list__item">
+                <a class="app-task-list__task-name" href="#" aria-describedby="company-information-completed">
+                  Child benefit
+                </a>
+
+              </li>
+              <!--end of list item-->
+
+              <!--Start of list item-->
+              <li class="app-task-list__item">
+                <a class="app-task-list__task-name" href="#" aria-describedby="company-information-completed">
+                  Full-time education or training
+                </a>
+
+              </li>
+              <!--end of list item-->
+
+
+              <!--Start of list item-->
+              <li class="app-task-list__item">
+                <a class="app-task-list__task-name" href="#" aria-describedby="company-information-completed">
+                  Consent order
+                </a>
+
+              </li>
+              <!--end of list item-->
+
+              <!--Start of list item-->
+              <li class="app-task-list__item">
+                <a class="app-task-list__task-name" href="#" aria-describedby="company-information-completed">
+                  Shared care
+                </a>
+
+              </li>
+              <!--end of list item-->
+
+            </ul>
+          </li>
+
+
+          <li>
+            <h2 class="app-task-list__section">
+              <span class="app-task-list__section-number">5. </span> About other parent
+            </h2>
+            <ul class="app-task-list__items">
+
+
+              <li class="app-task-list__item">
+                <a class="app-task-list__task-name" href="../personal_security/personal_security_details.html"
+                  aria-describedby="company-information-completed">
+                  Other parent's name
+                </a>
+              </li>
+
+              <li class="app-task-list__item">
+                  <a class="app-task-list__task-name" href="../personal_security/personal_security_details.html"
+                    aria-describedby="company-information-completed">
+                    Other parent's date of bith
+                  </a>
+                </li>
+
+                <li class="app-task-list__item">
+                    <a class="app-task-list__task-name" href="../personal_security/personal_security_details.html"
+                      aria-describedby="company-information-completed">
+                      Other parent's approximate age
+                    </a>
+                  </li>
+
+                  <li class="app-task-list__item">
+                      <a class="app-task-list__task-name" href="../personal_security/personal_security_details.html"
+                        aria-describedby="company-information-completed">
+                        Other parent's national insurance number
+                      </a>
+                    </li>
+
+                    <li class="app-task-list__item">
+                        <a class="app-task-list__task-name" href="../personal_security/personal_security_details.html"
+                          aria-describedby="company-information-completed">
+                          Other parent's home address
+                        </a>
+                      </li>
+
+                      <li class="app-task-list__item">
+                          <a class="app-task-list__task-name" href="../personal_security/personal_security_details.html"
+                            aria-describedby="company-information-completed">
+                            Other parent's phone number
+                          </a>
+                        </li>
+
+                        <li class="app-task-list__item">
+                            <a class="app-task-list__task-name" href="../personal_security/personal_security_details.html"
+                              aria-describedby="company-information-completed">
+                              Further information
+                            </a>
+                          </li>
+
+            </ul>
+          </li>
+
+          <li>
+              <h2 class="app-task-list__section">
+                <span class="app-task-list__section-number">6. </span> Payment type
+              </h2>
+              <ul class="app-task-list__items">
+  
+  
+                <li class="app-task-list__item">
+                  <a class="app-task-list__task-name" href="../personal_security/personal_security_details.html"
+                    aria-describedby="company-information-completed">
+                    Payment type
+                  </a>
+                </li>
+
+              </ul>
+            </li>
+
+
+        </ol>
+
+      </div>
+    </div>
+
+
+  </main>
+</div>
+{% endblock %}

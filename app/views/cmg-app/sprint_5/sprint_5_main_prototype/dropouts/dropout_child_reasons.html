@@ -1,0 +1,51 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+    {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-two-thirds">
+            <form method="post" novalidate>
+
+            <h1 class="govuk-heading-xl">{{data['child-1-first-name'] }} is not eligible to apply to the Child
+              Maintenance Service</h1>
+            <p class="govuk-body">The Child Maintenance Service can only make
+              child maintenance arrangements for children who are:</p>
+
+              <ul class="govuk-list govuk-list--bullet">
+                <li>under 16</li>
+                <li>under 20 and in full-time education up to A level or similar</li>
+                <li>Has never been married or in a civil partnership</li>
+                <li>Where over night stays with the other parent are under 182 nights a year</li>
+              </ul>
+
+              <p class="govuk-body govuk-!-margin-bottom-6">Some separated parents make their own arrangements to support
+              older children.</p>
+              <div class="govuk-inset-text">
+                <strong>The child you have told us about is not eligible for this service</strong>, would you like to <a href="../about_qualifying_child/child_name" class="govuk-link">make an application for another child</a>?
+              </div>
+               <!--Start of radio buttons-->
+
+
+
+ 
+
+</form>
+
+      </div>
+    </main>
+
+</div>
+
+{% endblock %}

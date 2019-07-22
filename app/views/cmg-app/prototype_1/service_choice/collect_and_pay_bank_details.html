@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <a href="choose_service.html" class="govuk-back-link">Back</a>
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl">Your bank account details</h1>
+        <p class="govuk-body">This is the account your child maintenance will be paid into.</p>
+        <form method="post" novalidate>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-!-width-two-thirds" for="account-holder">
+              Name of account holder
+            </label>
+
+            <input class="govuk-input govuk-!-width-two-thirds" id="account-holder" name="account-holder" type="account-holder"
+              aria-describedby="account-holder-hint" autocomplete="account-holder" spellcheck="false">
+          </div>
+
+              <div class="govuk-date-input" id="sort-code">
+                  <label class="govuk-label" for="width-5">
+                      Sort code
+                    </label>
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="sort-code-number-1" name="sort-code-number-1" type="number" pattern="[0-9]*">
+                  </div>
+                </div>
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="sort-code-number-2" name="sort-code-number-2" type="number" pattern="[0-9]*">
+                  </div>
+                </div>
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="sort-code-number-3" name="sort-code-number-3" type="number" pattern="[0-9]*">
+                  </div>
+                </div>
+              </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="width-5">
+              Account number
+            </label>
+            <input class="govuk-input govuk-input--width-5" id="account-number" name="account-number" type="text">
+          </div>
+          <button type="submit" class="govuk-button">
+              Continue
+            </button>
+
+        </form>
+
+      </div>
+    </div>
+  </main>
+</div>
+{% endblock %}

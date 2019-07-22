@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+{% block content %}
+<div class="govuk-width-container">
+  {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
+                <h1 class="govuk-fieldset__heading">
+                  We need to ask the other parent how they want to pay child maintenance
+                </h1>
+              </legend>
+
+                <p>Your choice is important. But Collect and Pay can only be used if the other parent:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>refuses to respond to us</li>
+                    <li>has missed previous payments (and there is evidence of this), or</li>
+                    <li>also agrees to use Collect and Pay</li>
+                </ul>
+
+                <p>If the other parent wants to set up a Direct Pay arrangement
+                  and there's no evidence they will not pay, we will set up a Direct
+                  Pay arrangement. You do not need to have any contact with the other parent if
+                  we do this.</p>
+
+              <button type="submit" class="govuk-button">
+                Continue
+              </button>
+        </form>
+      </div>
+    </div>
+  </main>
+</div>
+{% endblock %}

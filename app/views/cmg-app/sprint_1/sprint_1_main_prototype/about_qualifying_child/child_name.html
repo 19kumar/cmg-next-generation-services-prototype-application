@@ -1,0 +1,94 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+    {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-xl">What is the child's name?</h1>
+            <form method="post" novalidate>
+
+              <span id="changed-name-hint" class="govuk-hint">
+                Include children you need this child maintenance arrangement for.
+                A child is anyone under 16, or under 20 and in full-time training
+                or education up to A level or similar.
+              </span>
+
+<!--Child group 1-->
+
+              <br>  <br>
+              <div class="govuk-form-group">
+                <h2 class="govuk-heading-m">Child's name</h2>
+
+
+                <label class="govuk-label govuk-!-width-two-thirds" for="child-1-first-name">
+                  First name
+                </label>
+                <input class="govuk-input govuk-!-width-two-thirds" id="child-1-first-name" name="child-1-first-name" type="text" autocomplete="name" spellcheck="false">
+              </div>
+
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-!-width-two-thirds" for="child-1-middle-name">
+                  Middle names (optional)
+                </label>
+                <input class="govuk-input govuk-!-width-two-thirds" id="child-1-middle-name" name="child-1-middle-name" type="text" autocomplete="name" spellcheck="false">
+              </div>
+
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-!-width-two-thirds" for="child-1-last-name">
+                  Last name
+                </label>
+                <input class="govuk-input govuk-!-width-two-thirds" id="child-1-last-name" name="child-1-last-name" type="text" autocomplete="name" spellcheck="false">
+              </div>
+
+<!--end of group-->
+
+
+ <!--Start of radio buttons-->
+ <br>  <br>
+ <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+
+        <h2 class="govuk-heading-m">
+        Do you need to add another child?
+        </h2>
+
+      <div class="govuk-radios govuk-radios--inline">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="add-another-name-yes" name="add-another-name" type="radio" value="yes">
+          <label class="govuk-label govuk-radios__label" for="add-another-child-yes">
+            Yes
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="add-another-name-no" name="add-another-name" type="radio" value="no">
+          <label class="govuk-label govuk-radios__label" for="add-another-name-no">
+            No
+          </label>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+</div>
+</div>
+ <!--end of radio buttons-->
+
+
+
+            <button type="submit" class="govuk-button">
+              Continue
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+  {% endblock %}

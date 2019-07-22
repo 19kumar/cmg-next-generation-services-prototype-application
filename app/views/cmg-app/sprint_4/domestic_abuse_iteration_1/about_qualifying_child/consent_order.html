@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+{% block content %}
+<div class="govuk-width-container">
+  {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="child1ArrangementInformation">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl govuk-!-margin-bottom-9">
+                <h1 class="govuk-fieldset__heading">
+                  Is there a child arrangements order in place for {{data['child-1-first-name'] }}?
+                </h1>
+              </legend>
+              <span id="child1ArrangementInformation" class="govuk-hint">
+                A ‘child arrangements order’ decides where your child lives, when your child spends time with each
+                parent and when and what other types of contact take place (phone calls, for example).
+              </span>
+              <div class="govuk-radios govuk-radios--inline">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="child-1-arrangments-order-yes" name="child-1-arrangments-order"
+                    type="radio" value="yes">
+                  <label class="govuk-label govuk-radios__label" for="child-1-arrangments-order-yes">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="child-1-arrangments-order-no" name="child-1-arrangments-order"
+                    type="radio" value="no">
+                  <label class="govuk-label govuk-radios__label" for="child-1-arrangments-order-no">
+                    No
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+          <button type="submit" class="govuk-button">
+            Continue
+          </button>
+        </form>
+
+      </div>
+    </div>
+  </main>
+</div>
+{% endblock %}

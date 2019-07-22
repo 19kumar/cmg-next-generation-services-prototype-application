@@ -1,0 +1,84 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+          <div class="govuk-form-group">
+             <!--Checkboxes-->
+
+             <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" aria-describedby="abuse-checkbox-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl govuk-!-margin-bottom-9">
+                  <h1 class="govuk-fieldset__heading">
+                    Have you ever experienced any of this behaviour?
+                  </h1>
+                </legend>
+                <span id="abuse-checkbox-hint" class="govuk-hint">
+                  Select as many as you need.
+                </span>
+                <div class="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item govuk-!-margin-bottom-6">
+                    <input class="govuk-checkboxes__input" id="abuse-checkbox-1" name="abuse-checkbox" type="checkbox" value="yes" aria-describedby="abuse-checkbox-1-item-hint">
+                    <label class="govuk-label govuk-checkboxes__label" for="abuse-checkbox-1">
+                      Emotional abuse
+                    </label> <span id="abuse-checkbox-1-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                      Has the other parent ever taken money from you? Stopped you from seeing family and friends? Told you what to think?
+                    </span> </div>
+
+                  <div class="govuk-checkboxes__item govuk-!-margin-bottom-6">
+                    <input class="govuk-checkboxes__input" id="abuse-checkbox-2" name="abuse-checkbox" type="checkbox" value="yes">
+                    <label class="govuk-label govuk-checkboxes__label" for="abuse-checkbox-2">
+                      Threats and intimidation
+                    </label> <span id="abuse-checkbox-1-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                      Has the other parent ever made you afraid? Threatened to hurt you? Harassed or followed you?
+                    </span></div>
+
+                  <div class="govuk-checkboxes__item govuk-!-margin-bottom-6">
+                    <input class="govuk-checkboxes__input" id="abuse-checkbox-2" name="abuse-checkbox" type="checkbox" value="yes">
+                    <label class="govuk-label govuk-checkboxes__label" for="abuse-checkbox-2">
+                      Physical abuse
+                    </label> <span id="abuse-checkbox-1-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                      Has the other parent ever slapped, hit or punch you? Pushed you? Kicked you? Thrown things?
+                    </span></div>
+
+                  <div class="govuk-checkboxes__item govuk-!-margin-bottom-6">
+                    <input class="govuk-checkboxes__input" id="abuse-checkbox-3" name="abuse-checkbox" type="checkbox" value="yes">
+                    <label class="govuk-label govuk-checkboxes__label" for="abuse-checkbox-3">
+                      Sexual abuse
+                    </label> <span id="abuse-checkbox-1-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                      Has the other parent ever pressured you to have sex? Made unwanted sexual demands? Hurt you during sex?
+                    </span></div>
+
+                    <div class="govuk-checkboxes__item govuk-!-margin-bottom-6">
+                      <input class="govuk-checkboxes__input" id="abuse-checkbox-4" name="abuse-checkbox" type="checkbox" value="no">
+                      <label class="govuk-label govuk-checkboxes__label" for="abuse-checkbox-3">
+                        None of the above
+                      </label></div>
+                </div>
+              </fieldset>
+            </div>
+            </div>
+
+             <!--end of Checkboxes-->
+
+
+          <button type="submit" class="govuk-button">
+            Continue
+          </button>
+        </form>
+      </div>
+    </div>
+  </main>
+</div>
+{% endblock %}

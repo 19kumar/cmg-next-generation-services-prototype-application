@@ -1,0 +1,101 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+{{ govukBackLink({
+  text: 'Back',
+  href: 'javascript:history.back()'
+}) }}
+
+<!--Change to test initial commit *this can be removed-->
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Child maintenance online application
+        <span class="govuk-caption-xl">{{releaseVersion}}</span>
+      </h1>{{releaseVersion | log }}
+      <span class="govuk-caption-xl">{{serviceName}}</span>
+     
+  
+      
+  
+      <span class="govuk-caption-l">Alpha phase</span>
+      <h2 class="govuk-heading-l">application journey</h2>
+      <br>
+      <br>
+      <br>
+  
+    </div>
+  </div>
+  
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+  
+      <h3 class="govuk-heading-m">Iteration</h3>
+  
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col">Sprint/iterations</th>
+            <th class="govuk-table__header" scope="col">Date</th>
+            <th class="govuk-table__header" scope="col">Notes</th>
+          </tr>
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" scope="row"><a href="sprint_2_main_prototype/.html">Sprint 2 main prototype</td>
+              <td class="govuk-table__cell">12 April 2019 to 24 April 2019</td>
+            <td class="govuk-table__cell">Main prototype for sprint 2</td>
+          </tr>
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" scope="row"><a href="start_page_iterations/start.html">Sprint 2 - Start page iterations</td>
+              <td class="govuk-table__cell">16 April 2019 to 24 April 2019</td>
+            <td class="govuk-table__cell">Iterations of the 'Start page'</td>
+          </tr>
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" scope="row"><a href="payment_types_iterations/start.html">Sprint 2 - Payment types iterations</td>
+              <td class="govuk-table__cell">16 April 2019 to 24 April 2019</td>
+            <td class="govuk-table__cell">Iterations of Payment type</td>
+          </tr>
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" scope="row"><a href="contact_page_iterations/start.html">Sprint 2 - Contact page iterations</td>
+              <td class="govuk-table__cell">16 April 2019 to 24 April 2019</td>
+            <td class="govuk-table__cell">Iterations of contact page</td>
+          </tr>
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" scope="row"><a href="child_loop_iterations/start.html">Sprint 2 - Child loop iterations</td>
+              <td class="govuk-table__cell">16 April 2019 to 24 April 2019</td>
+            <td class="govuk-table__cell">Iterations of the children section</td>
+          </tr>
+
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" scope="row"><a href="other_parent_employment_iterations/start.html">Sprint 2 - Other parent employment iterations</td>
+              <td class="govuk-table__cell">16 April 2019 to 24 April 2019</td>
+            <td class="govuk-table__cell">Iterations of other parent employment details</td>
+          </tr>
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" scope="row"><a href="court_order_iterations/start.html">Sprint 2 - Court order iterations</td>
+              <td class="govuk-table__cell">16 April 2019 to 24 April 2019</td>
+            <td class="govuk-table__cell">Iterations of court order</td>
+          </tr>
+
+
+
+            </tbody>
+          </table>
+  
+          <br><br>
+    </div>
+  </div>
+
+{% endblock %}

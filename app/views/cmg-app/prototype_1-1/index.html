@@ -1,0 +1,101 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-width-container">
+
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Apply to the Child Maintenance Service</h1>
+
+        <p class="govuk-body">Use this service to get help making a child
+          maintenance arrangement if you and the other parent cannot agree to
+          one yourselves.</p>
+
+        <p>You’ll need the:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>invitation code we sent in the email about applying to
+            the Child Maintenance Service</li>
+          <li>other parent's name</li>
+          <li>date any child maintenance court order started</li>
+          <li>bank account details you want child maintenance paid into</li>
+        </ul>
+
+        <p class="govuk-body">There’s usually a £20 application fee. You’ll need
+          a debit or credit card to pay this.</p>
+
+        <div class="govuk-inset-text">Your personal details will not be shared
+          with the other parent.</div>
+
+        <a href="declaration.html" role="button" draggable="false"
+          class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8">
+          Start now
+        </a>
+
+        <h2 class="govuk-heading-m">Before you start</h2>
+
+        <p>Give as much information as you can about the other parent. This could
+          include:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>where they live</li>
+          <li>their National Insurance number</li>
+          <li>their date of birth</li>
+        </ul>
+
+        <p class="govuk-body">
+          <a class="govuk-link" href="https://child-maintenance.awscmg-dev.dwpcloud.uk/options/do-both-parents-usually-live-in-the-uk">Check if you’re eligible</a> to apply
+          to the Child Maintenance Service.</p>
+
+          <p class="govuk-body">
+            You can <a class="govuk-link" href="https://child-maintenance.awscmg-dev.dwpcloud.uk/options/">arrange child maintenance yourselves</a>, if you can agree.
+            </p>
+
+        <p>This service is also available in <a href="/cael-eich-pensiwn-y-wladwriaeth">Welsh (Cymraeg)</a>.</p>
+
+      </div>
+
+      <div class="govuk-grid-column-one-third">
+
+        <!-- The Related items component is not part of GOV.UK Frontend but will be styled if used in the Prototype Kit -->
+
+        <aside class="app-related-items" role="complementary">
+          <h2 class="govuk-heading-m" id="subsection-title">
+            Subsection
+          </h2>
+          <nav role="navigation" aria-labelledby="subsection-title">
+            <ul class="govuk-list govuk-!-font-size-16">
+              <li>
+                <a class="govuk-link" href="#">
+                  Related link
+                </a>
+              </li>
+              <li>
+                <a class="govuk-link" href="#">
+                  Related link
+                </a>
+              </li>
+              <li>
+                <a href="#" class="govuk-link govuk-!-font-weight-bold">
+                  More
+                  <span class="govuk-visually-hidden">in Subsection</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </aside>
+
+      </div>
+    </div>
+  </main>
+</div>
+
+{% endblock %}

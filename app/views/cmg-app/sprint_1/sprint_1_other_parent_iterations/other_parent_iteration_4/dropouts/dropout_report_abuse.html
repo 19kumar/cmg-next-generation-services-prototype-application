@@ -1,0 +1,37 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+    {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-two-thirds">
+
+            <h1 class="govuk-heading-xl">Report this domestic abuse</h1>
+            <p class="govuk-body"><a href="https://www.gov.uk/report-domestic-abuse">Get help and advice about domestic abuse</a>.</p></p>
+
+            <div class="govuk-inset-text">
+              After reporting this domestic abuse, you’ll be able to start your
+              application to the Child Maintenance Service again using the same
+              invitation code. You will not have to pay the £20 application fee.
+            </div>
+
+
+
+      </div>
+    </main>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+{% block content %}
+<div class="govuk-width-container">
+  {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+    <!--start of radio-->
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="domestic_introduction-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl govuk-fieldset__legend--xl ">
+          <h1 class="govuk-fieldset__heading">
+            We want to help you get the support you might need
+          </h1>
+        </legend>
+        <p class="govuk-body">We need to ask you some sensitive questions about domestic abuse. The answers you give will help you to get the right support at the end of this application.</p>
+
+        <div class="govuk-inset-text">Your answers will never be shared with the
+          other parent or reported to authorities like the police or social services.</div>
+
+        <h3 class="govuk-heading-m">What is domestic abuse?</h3>
+
+        <p>Domestic abuse is controlling, forceful, threatening, degrading or
+          violent behaviour. Anybody can be an abuser, including a partner,
+          ex-partner or family member.</p>
+
+    <!--end-->
+          <button type="submit" class="govuk-button">
+            Continue
+          </button>
+        </form>
+      </div>
+    </div>
+  </main>
+</div>
+{% endblock %}

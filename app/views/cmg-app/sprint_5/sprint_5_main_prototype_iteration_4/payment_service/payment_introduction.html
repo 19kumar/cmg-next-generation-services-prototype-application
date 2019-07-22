@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+    {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+
+           <h1 class="govuk-heading-xl">You'll need to pay a £20 application fee</h1>
+
+           <p>You'll need a debit or credit card to pay it.</p>
+
+       
+
+            <a href="payment_card_details.html" role="button" draggable="false" class="govuk-button">
+                Pay fee</a>
+
+
+      </div>
+    </div>
+  </main>
+  </div>
+  {% endblock %}

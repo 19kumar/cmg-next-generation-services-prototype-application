@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+    {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form method="post" novalidate>
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl govuk-!-margin-bottom-9">
+                  <h1 class="govuk-fieldset__heading">
+                    How would you like child maintenance to be paid?
+                  </h1>
+                </legend>
+                <div class="govuk-radios">
+
+    <div class="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="service-choice-1" name="service-choice" type="radio" value="Direct Pay" aria-describedby="service-choice-1-item-hint">
+        <label class="govuk-label govuk-radios__label govuk-label--s" for="service-choice-1">
+          Direct Pay
+        </label>
+        <span id="service-choice-1-item-hint" class="govuk-hint govuk-radios__hint">
+          <p>This means:<p>
+
+          <ul class="govuk-list govuk-list--bullet">
+              <li>we work out how much should be paid and tell both parents</li>
+              <li>we pass your bank details on to the other parent – your location
+              will not be given</li>
+              <li>there are no collection fees to pay</li>
+          </ul>
+        </span>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="service-choice-2" name="service-choice" type="radio" value="Collect and Pay" aria-describedby="service-choice-2-item-hint">
+        <label class="govuk-label govuk-radios__label govuk-label--s" for="service-choice-2">
+          Collect and Pay
+        </label>
+        <span id="service-choice-2-item-hint" class="govuk-hint govuk-radios__hint">
+          <p>This means:</p>
+
+          <ul class="govuk-list govuk-list--bullet">
+            <li>we work out how much should be paid and tell both parents</li>
+            <li>we collect payments from the other parent and pass them on to you</li>
+            <li>there will be collection fees to pay</li>
+          </ul>
+
+        </span>
+      </div>
+    </div>
+
+    <div class="govuk-inset-text">You do not need to have any contact with the
+      other parent whichever option you choose.</div>
+
+              </fieldset>
+            </div>
+
+            <button type="submit" class="govuk-button">
+              Continue
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+  {% endblock %}

@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+    {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form method="post" novalidate>
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl govuk-!-margin-bottom-9">
+                  <h1 class="govuk-fieldset__heading">
+                    You can only use Collect and Pay if the other
+                      parent is unlikely to pay on time
+                  </h1>
+                </legend>
+
+          <p>We need to ask the other parent how they want to pay child maintenance.
+          If there's no evidence they have missed any previous payments, we
+          will usually set up a Direct Pay arrangement.</p>
+
+          <p>You do not need to have any contact with the other parent if you
+            use Direct Pay.</p>
+
+          <h3 class="govuk-heading-m">What it costs to use Collect and Pay</h3>
+
+          <table class="govuk-table">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="col"></th>
+      <th class="govuk-table__header govuk-table__header--numeric" scope="col">Amount you pay</th>
+      <th class="govuk-table__header govuk-table__header--numeric" scope="col">Example</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="row">If you receive child maintenance</th>
+      <td class="govuk-table__cell govuk-table__cell--numeric">4% taken from each payment</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">You'd lose £4 from a £100 payment</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="row">If you pay child maintenance</th>
+      <td class="govuk-table__cell govuk-table__cell--numeric">20% on top of each payment</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">You'd pay £20 on top of a £100 payment</td>
+    </tr>
+  </tbody>
+</table>
+
+            <button type="submit" class="govuk-button">
+              Continue
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+  {% endblock %}

@@ -1,0 +1,89 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+    {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+    <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <div class="govuk-panel govuk-panel--confirmation">
+            <h1 class="govuk-panel__title">
+              Application sent
+            </h1>
+          </div>
+
+          <p class="govuk-body">You've sent your application – we will contact you
+            if we need any more information.</p>
+
+
+          <h2 class="govuk-heading-m">What happens next</h2>
+
+          <p>We will:</p>
+
+          <ul class="govuk-list govuk-list--bullet">
+            <li>try to contact the other parent using the information you've
+              given</li>
+            <li>confirm the information we have is correct and collect any
+              other information we need from them</li>
+            <li>work out how much child maintenance they need to pay and
+              when to pay it</li>
+            <li>send you an information pack about the Child Maintenance Service</li>
+            <li>write to you with details of your application</li>
+            <li>send you a text message with your customer reference number in the next 24 hours</li>
+          </ul>
+
+          <h2 class="govuk-heading-m">How long your application will take</h2>
+
+          <p>Applications usually take about 6 weeks.</p>
+
+          <div class="govuk-inset-text">
+            Your application will take longer if we have problems contacting the other parent.
+          </div>
+
+          <p>The other parent will become responsible for paying child maintenance within 7 days
+            of us first contacting them. It might take longer for you to receive your first payment.
+
+          <h2 class="govuk-heading-m">Support if you've experienced domestic abuse</h2>
+
+          <p>Find out <a href="https://www.gov.uk/guidance/domestic-abuse-how-to-get-help">how to get help</a> if you, your children or anyone you know have ever
+            experienced domestic abuse.</p>
+
+          <h2 class="govuk-heading-m">Contacting us about your case</h2>
+
+          <p>You can <a href="https://childmaintenanceservice.direct.gov.uk/site/public/clientcredsgb/">tell us about changes to your case online</a>. You'll need to sign in using:
+            <ul class="govuk-list govuk-list--bullet">
+              <li>your customer reference number</li>
+              <li>your National Insurance number</li>
+              <li>your personal identification number (PIN)</li>
+            </ul>
+
+            <p>You can also call us about your case.</p>
+
+            <div class="contact">
+              <p class="govuk-body govuk-body govuk-!-margin-bottom-3"><strong>Child Maintenance Service</strong>
+              <p>Telephone: 0800 953 0191</p>
+              <p class="govuk-body govuk-body govuk-!-margin-bottom-3">Monday to Friday, 8am to 7.30pm</p>
+              <p class="govuk-body govuk-body govuk-!-margin-bottom-3">Saturday, 9am to 4pm</br>
+              <a href="/call-charges">Find out about call charges</a></p>
+            </div>
+
+          <p class="govuk-body">
+            <a href="#" class="govuk-link">What did you think of this service?</a>
+          </p>
+          <p class="govuk-body">
+
+        </p>
+        </div>
+      </div>
+    </main>
+  </div>
+
+    {% endblock %}

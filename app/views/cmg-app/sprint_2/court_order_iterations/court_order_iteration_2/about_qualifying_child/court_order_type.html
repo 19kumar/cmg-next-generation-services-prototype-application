@@ -1,0 +1,141 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+    {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form method="post" novalidate>
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl govuk-!-margin-bottom-9">
+                  <h1 class="govuk-fieldset__heading">
+                    Choose a court order type
+                  </h1>
+                </legend>
+                <p class="govuk-body"></p>
+                <div class="govuk-radios">
+
+                    <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="shared-care-1" name="shared-care" type="radio" value="Never">
+                    <label class="govuk-label govuk-radios__label" for="shared-care-1">
+                        Pt II Matrimonial Causes 1973
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="shared-care-2" name="shared-care" type="radio" value="Less than 1 night a week">
+                    <label class="govuk-label govuk-radios__label" for="shared-care-2">
+                        Dom Proc and Mags Crt 1978
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="shared-care-3" name="shared-care" type="radio" value="1 to 2 nights a week">
+                    <label class="govuk-label govuk-radios__label" for="shared-care-3">
+                        Pt III Matrimony&Fam Proc 1984
+                    </label>
+                  </div>
+
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="shared-care-1" name="shared-care" type="radio" value="2 to 3 nights a week">
+                    <label class="govuk-label govuk-radios__label" for="shared-care-1">
+                        The Family Law (Scot) Act 1985
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="shared-care-2" name="shared-care" type="radio" value="3 nights a week">
+                    <label class="govuk-label govuk-radios__label" for="shared-care-2">
+                        Schedule 1 Children 1989
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="shared-care-3" name="shared-care" type="radio" value="More than 3 nights a week">
+                    <label class="govuk-label govuk-radios__label" for="shared-care-3">
+                        Sch 5 6 7Civil Partnrship 2004
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="shared-care-3" name="shared-care" type="radio" value="183 nights">
+                    <label class="govuk-label govuk-radios__label" for="shared-care-3">
+                        Matrimonial Proc ChildAct 1958
+                    </label>
+                  </div>
+
+                  <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="shared-care-3" name="shared-care" type="radio" value="183 nights">
+                      <label class="govuk-label govuk-radios__label" for="shared-care-3">
+                          The Children Act 1975
+                      </label>
+                    </div>
+
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="shared-care-3" name="shared-care" type="radio" value="183 nights">
+                        <label class="govuk-label govuk-radios__label" for="shared-care-3">
+                            The Supplementary Ben Act 1976
+                        </label>
+                      </div>
+
+                      <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="shared-care-3" name="shared-care" type="radio" value="183 nights">
+                          <label class="govuk-label govuk-radios__label" for="shared-care-3">
+                              The Social Security Act 1986
+                          </label>
+                        </div>
+
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="shared-care-3" name="shared-care" type="radio" value="183 nights">
+                            <label class="govuk-label govuk-radios__label" for="shared-care-3">
+                                Social Security Admin Act 1992
+                            </label>
+                          </div>
+
+                          <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="shared-care-3" name="shared-care" type="radio" value="183 nights">
+                              <label class="govuk-label govuk-radios__label" for="shared-care-3">
+                                  Conjugal Rights Scot Act 1861
+                              </label>
+                            </div>
+
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="shared-care-3" name="shared-care" type="radio" value="183 nights">
+                                <label class="govuk-label govuk-radios__label" for="shared-care-3">
+                                    Sheriffs Court Scot Act 1907
+                                </label>
+                              </div>
+
+                              <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="shared-care-3" name="shared-care" type="radio" value="183 nights">
+                                  <label class="govuk-label govuk-radios__label" for="shared-care-3">
+                                      National Assistance Act 1948
+                                  </label>
+                                </div>
+
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="shared-care-3" name="shared-care" type="radio" value="183 nights">
+                                    <label class="govuk-label govuk-radios__label" for="shared-care-3">
+                                        Others
+                                    </label>
+                                  </div>
+            
+                </div>
+              </fieldset>
+            </div>
+
+            <button type="submit" class="govuk-button">
+              Continue
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+  {% endblock %}

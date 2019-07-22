@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="correspondenceAddressQueryInformation">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl govuk-!-margin-bottom-9">
+                <h1 class="govuk-fieldset__heading" id="correspondenceAddressQueryInformation">
+                  We need to send you letters about your application – can we use your home address?
+                </h1>
+              </legend>
+
+              <div class="govuk-radios govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="correspondence-query-yes" name="correspondence-query"
+                    type="radio" value="yes">
+                  <label class="govuk-label govuk-radios__label" for="correspondence-query-yes">
+                    Yes, use my home address
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="correspondence-query-no" name="correspondence-query"
+                    type="radio" value="no">
+                  <label class="govuk-label govuk-radios__label" for="correspondence-query-no">
+                    No, use a different address
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+          <button type="submit" class="govuk-button">
+            Continue
+          </button>
+        </form>
+
+      </div>
+    </div>
+  </main>
+</div>
+{% endblock %}

@@ -1,0 +1,30 @@
+{# <script src="https://js.ideal-postcodes.co.uk/postcodes-3.0.7.min.js"></script> #}
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://ws1.postcodesoftware.co.uk/lookup.min.js"></script>
+    <script src="https://getaddress.io/js/jquery.getAddress-2.0.8.min.js"></script>
+    <script src="/public/javascripts/application.js"></script>
+  </head>
+
+<p class="govuk-body">{{data['testvalue'] }}</p>
+
+
+
+
+<form method="post" novalidate>
+    <div class="govuk-form-group">
+      <h1 class="govuk-label-wrapper">
+        <label class="govuk-label govuk-label--xl govuk-!-margin-bottom-9" for="applicant-postcode">
+          What is your home address?
+        </label>
+      </h1>
+      <label class="govuk-label" for="address-postcode">Enter postcode</label>
+
+      <div id="lookup_field" ></div>   
+    <div>
+        <div class="govuk-form-group"></div>
+        <h3></h3><a href="" class="govuk-button" id="changer">Change value</a></h3>
+      </div>
+  </form>

@@ -1,0 +1,66 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+{{ govukBackLink({
+  text: 'Back',
+  href: 'javascript:history.back()'
+}) }}
+
+<!--Change to test initial commit *this can be removed-->
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Child maintenance online application
+        <span class="govuk-caption-xl">{{releaseVersion}}</span>
+      </h1>{{releaseVersion | log }}
+      <span class="govuk-caption-xl">{{serviceName}}</span>
+     
+  
+      
+  
+      <span class="govuk-caption-l">Alpha phase</span>
+      <h2 class="govuk-heading-l">application journey</h2>
+      <br>
+      <br>
+      <br>
+  
+    </div>
+  </div>
+  
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+  
+      <h3 class="govuk-heading-m">Iteration</h3>
+  
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col">Sprint/iterations</th>
+            <th class="govuk-table__header" scope="col">Date</th>
+            <th class="govuk-table__header" scope="col">Notes</th>
+          </tr>
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" scope="row"><a href="other_parent_employment_iteration_1/about_other_parent/other_parent_name.html">Other parent employment - iteration 1</td>
+              <td class="govuk-table__cell">12 April 2019 to 24 April 2019</td>
+            <td class="govuk-table__cell">Redesign of employment page</td>
+          </tr>
+
+   
+
+
+
+            </tbody>
+          </table>
+  
+          <br><br>
+    </div>
+  </div>
+
+{% endblock %}

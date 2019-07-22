@@ -1,0 +1,37 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <h1 class="govuk-heading-xl">Your payment has been cancelled</h1>
+          <p class="govuk-body">
+        If you would like to submit your application you need to pay the £20 submission fee. You can continue with this process by returning to the declaraton page using the button below.
+          </p>
+
+          <p class="govuk-body">If you do not want to continue with your application, or you would like to re-apply at a later date, then cancel your application.</p>
+          
+          <div class="govuk-inset-text">We do not store your data and you will need to re-enter your information if you would like to re-apply.</div>
+    
+         
+          <p class="govuk-body">
+            <a href="application_submission_fee.html" role="button" draggable="false" class="govuk-button">
+              Return to application submission page
+            </a>
+          </p>
+          <a href="index.html" class="govuk-link">Cancel application</a>
+
+        </div>
+    </div>
+  </main>
+</div>
+
+  {% endblock %}

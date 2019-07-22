@@ -1,0 +1,47 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+    What industry do you work in?
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-two-thirds">
+
+            {{ govukBackLink({
+                text: 'Back',
+                href: 'javascript:history.back()'
+            }) }}
+
+            <form method="post">
+
+                  <div class="govuk-form-group">
+                    <label class="govuk-heading-xl" for="name">
+                       What industry do you work in and what is your occupation?
+                    </label>
+                    <p class="govuk-body>">You must use the <a href="https://www.gov.uk/guidance/job-expenses-for-uniforms-work-clothing-and-tools" target="_blank">list of industries and occupations (opens in a new window or tab)</a>.</p><br>
+                    <p class="govuk-body">Start typing the industry that you work in and choose one of the options that appear.</p>
+                    <input class="govuk-input" id="industry" name="industry" type="text" value="{{data['industry']}}">
+                  </div>
+
+                <input type="hidden" id="deduction" name="deduction" type="number" value="{{data['deduction']}}">
+
+                <button type="submit" class="govuk-button" id="submit" disabled="true">
+                    Continue
+                </button>
+
+            </form>
+
+        </div>
+
+</div>
+
+<script>
+
+</script>
+
+
+{% endblock %}
+

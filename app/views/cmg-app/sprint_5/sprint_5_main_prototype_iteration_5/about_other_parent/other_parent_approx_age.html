@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="otherParentAproxAgeInformation" role="group">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
+                <h1 class="govuk-fieldset__heading" id="otherParentAproxAgeInformation">
+                  Do you know how old the other parent is?
+                </h1>
+              </legend>
+              <div class="govuk-radios" data-module="radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="aprox-age-1" name="aprox-age" type="radio" value="yes"
+                    aria-controls="conditional-aprox-age-1" aria-expanded="true">
+                  <label class="govuk-label govuk-radios__label" for="aprox-age-1">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-aprox-age-1">
+                  <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" role="group">
+                      
+                      <label class="govuk-label" for="event-name">
+                          Approximate age
+                        </label>
+                      <div class="govuk-date-input" id="aprox-age-date">
+                        <div class="govuk-date-input__item">
+                          <div class="govuk-form-group">
+                            <div class="govuk-date-input__item">
+                              <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="aprox-age-date-year">
+                                </label>
+                                <input class="govuk-input govuk-date-input__input govuk-input--width-2 "
+                                  id="aprox-age-date-year" name="aprox-age-date-year" type="number"
+                                  pattern="[0-9]*">
+                              </div>
+                            </div>
+                          </div>
+                    </fieldset>
+                  </div>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="aprox-age-2" name="aprox-age" type="radio" value="no">
+                  <label class="govuk-label govuk-radios__label" for="aprox-age-2">
+                    No
+                  </label>
+                </div>
+              </div>
+          </div>
+          <button type="submit" class="govuk-button">
+            Continue
+          </button>
+        </form>
+      </div>
+    </div>
+  </main>
+</div>
+{% endblock %}

@@ -1,0 +1,87 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+    {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form  method="post" novalidate>
+            <div class="govuk-form-group">
+              <h1 class="govuk-label-wrapper">
+                <label class="govuk-label govuk-label--xl" for="postcode">
+                  Do you know the other parent’s home address?
+                </label>
+              </h1>
+
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" role="group">
+
+                  <span id="other-parent-date-of-birth-hint" class="govuk-hint">
+                    Give as much information as you can – this will help us to
+                    process your application faster.
+                  </span>
+
+
+                  <fieldset class="govuk-fieldset">
+
+      <div class="govuk-form-group">
+                  <label class="govuk-label" for="other-parent-address-line-1">
+                    Building and street
+                    <span class="govuk-visually-hidden">line 1 of 2</span>
+                  </label>
+                  <input class="govuk-input" id="other-parent-address-line-1" name="other-parent-address-line-1" type="text">
+                </div>
+              
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="other-parent-address-line-2">
+                    <span class="govuk-visually-hidden">Building and street line 2 of 2</span>
+                  </label>
+                  <input class="govuk-input" id="other-parent-address-line-2" name="other-parent-address-line-2" type="text">
+                </div>
+              
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="other-parent-address-town">
+                    Town or city (optional)
+                  </label>
+                  <input class="govuk-input govuk-!-width-two-thirds" id="other-parent-address-town" name="other-parent-address-town" type="text">
+                </div>
+              
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="other-parent-address-county">
+                    County (optional)
+                  </label>
+                  <input class="govuk-input govuk-!-width-two-thirds" id="other-parent-address-county" name="other-parent-address-county" type="text">
+                </div>
+              
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="other-parent-address-postcode">
+                    Postcode (optional)
+                  </label>
+                  <input class="govuk-input govuk-input--width-10" id="other-parent-address-postcode" name="other-parent-address-postcode" type="text">
+                </div>
+              
+              </fieldset>
+             <!--End of other-parent-address fields-->
+            </div>
+            </div>
+
+            <button type="submit" class="govuk-button">
+              Continue
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  {% endblock %}

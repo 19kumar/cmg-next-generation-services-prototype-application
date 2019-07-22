@@ -1,0 +1,70 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<!--Change to test initial commit *this can be removed-->
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Child maintenance online application
+        <span class="govuk-caption-xl">{{releaseVersion}}</span>
+      </h1>{{releaseVersion | log }}
+      <span class="govuk-caption-xl">{{serviceName}}</span>
+     
+  
+      
+  
+      <span class="govuk-caption-l">Alpha phase</span>
+      <h2 class="govuk-heading-l">application journey</h2>
+      <br>
+      <br>
+      <br>
+  
+    </div>
+  </div>
+  
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+  
+      <h3 class="govuk-heading-m">Iteration</h3>
+  
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col">Sprint/iterations</th>
+            <th class="govuk-table__header" scope="col">Date</th>
+            <th class="govuk-table__header" scope="col">Notes</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+           
+          <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="row"><a href="sprint_7_banner_examples/index.html">Sprint 7 - Feedback designs</td>
+                  <td class="govuk-table__cell">2 July 2019 - (To be confirmed)</td>
+                <td class="govuk-table__cell">Initial design examples of the feedback process</td>
+              </tr>
+
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="row"><a href="sprint_7_urn_dropout/what_is_your_urn_number.html">Sprint 7 - URN dropout (dropout code: 1234)</td>
+                  <td class="govuk-table__cell">3 July 2019 - (To be confirmed)</td>
+                <td class="govuk-table__cell">Initial design of the URN dropout page, enter code: 1234 to see the dropout page.</td>
+              </tr>
+
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="row"><a href="sprint_7_payment_check_answers/service_choice/contact_with_other_parent.html">Sprint 7 - 'Check your answers' added to end of service payment. Removed from other parent 'Check your answers'</td>
+                  <td class="govuk-table__cell">3 July 2019 - (To be confirmed)</td>
+                <td class="govuk-table__cell">Initial design of the URN dropout page, enter code: 1234 to see the dropout page.</td>
+              </tr>
+   
+            </tbody>
+          </table>
+  
+          <br><br>
+    </div>
+  </div>
+
+{% endblock %}

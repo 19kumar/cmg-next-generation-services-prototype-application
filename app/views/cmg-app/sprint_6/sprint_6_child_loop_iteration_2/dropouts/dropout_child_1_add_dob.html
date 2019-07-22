@@ -1,0 +1,46 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+    {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-two-thirds">
+            <form method="post" novalidate>
+
+              <h1 class="govuk-heading-xl">We cannot make a child maintenance arrangement for {{data['child-1-first-name'] }} </h1>
+              <p class="govuk-body">The Child Maintenance Service can only make
+                child maintenance arrangements for children who are under the age of 20.</p>
+
+              <p class="govuk-body">Some separated parents make their own arrangements to support
+              older children.</p>
+
+               <!--Start of radio buttons-->
+                 <!-- Hidden input for exemption fee -- bad code, only way I found of storing data-->
+          <input class="hidden-input" name="remove_child_1" autocomplete="name" spellcheck="false" value="yes"
+          type="hidden">
+        <!--end-->
+
+
+ <button type="submit" class="govuk-button">
+    Continue
+  </button>
+
+</form>
+
+      </div>
+    </main>
+
+</div>
+
+{% endblock %}

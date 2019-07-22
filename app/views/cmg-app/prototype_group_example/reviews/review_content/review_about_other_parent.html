@@ -1,0 +1,92 @@
+<h2 class="govuk-heading-m">About other parent</h2>
+<dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+    
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+            Name
+        </dt>
+        <dd class="govuk-summary-list__value">
+               
+                        {{data['other-parent-title'] }}
+                        {{data['other-parent-first-name'] }}
+                        {{data['other-parent-middle-name'] }}
+                        {{data['other-parent-last-name'] }}
+                 
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="../about_other_parent/other_parent_name.html">
+                Change
+                <span class="govuk-visually-hidden"> name</span>
+            </a>
+        </dd>
+    </div>
+
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+            Date of birth
+        </dt>
+        <dd class="govuk-summary-list__value">
+                <p class="govuk-body">{{data['other-parent-date-of-birth-day'] }} {{data['other-parent-date-of-birth-month'] }} {{data['other-parent-date-of-birth-year'] }}</p>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="../about_other_parent/other_parent_date_of_birth.html">
+                Change
+                <span class="govuk-visually-hidden"> date of birth</span>
+            </a>
+        </dd>
+    </div>
+
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+            National Insurance number
+        </dt>
+        <dd class="govuk-summary-list__value">
+                <p class="govuk-body">{{data['other-parent-national-insurance-number'] }}</p>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="../about_other_parent/other_parent_national_insurance_number.html">
+                Change
+                <span class="govuk-visually-hidden"> name</span>
+            </a>
+        </dd>
+    </div>
+
+
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+            Address
+        </dt>
+        <dd class="govuk-summary-list__value">
+            {{data['other-parent-address-line-1'] }}
+            <br>{{data['other-parent-address-line-2'] }}
+            <br>{{data['other-parent-address-town'] }}
+            <br>{{data['other-parent-address-county'] }}
+            <br>{{data['other-parent-address-postcode'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="../about_other_parent/other_parent_address.html">
+                Change
+                <span class="govuk-visually-hidden"> contact information</span>
+            </a>
+        </dd>
+    </div>
+
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+            Contact details
+        </dt>
+        <dd class="govuk-summary-list__value">
+                Home: {{data['other-parent-contact-home-phone'] }}
+                <br>Mobile: {{data['other-parent-contact-mobile-phone'] }}
+                <br>Work: {{data['other-parent-contact-work-phone'] }}
+
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="../about_other_parent/other_parent_contact_details.html">
+                Change
+                <span class="govuk-visually-hidden"> contact details</span>
+            </a>
+        </dd>
+    </div>
+</dl>

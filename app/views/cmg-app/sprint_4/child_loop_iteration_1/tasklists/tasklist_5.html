@@ -1,0 +1,103 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+
+  <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+          
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">
+          Apply to the Child Maintenance Service
+        </h1>
+  
+        <ol class="app-task-list">
+              
+             
+                <li>
+                        <h2 class="app-task-list__section">
+                          <span class="app-task-list__section-number">1. </span> Maintenance liability order
+                        </h2>
+                        <ul class="app-task-list__items">
+                          <li class="app-task-list__item">
+                            <a class="app-task-list__task-name" href="../about_qualifying_child/court_order_under_12_months.html" aria-describedby="company-information-completed">
+                            Maintenance liability order
+                            </a>
+                            <strong class="govuk-tag app-task-list__task-completed" id="company-information-completed">Completed</strong>
+                          </li>
+                        </ul>
+                      </li>
+              
+            <h2 class="app-task-list__section">
+              <span class="app-task-list__section-number">2. </span> About
+            </h2>
+            <ul class="app-task-list__items">
+              <li class="app-task-list__item">
+                <a class="app-task-list__task-name" href="../about_applicant/applicants_name.html" aria-describedby="eligibility-completed">
+                  Applicant information
+                </a>
+                <strong class="govuk-tag app-task-list__task-completed" id="company-information-completed">Completed</strong>
+              </li>
+
+              <li class="app-task-list__item">
+                <a class="app-task-list__task-name" href="../about_qualifying_child/child_name.html" aria-describedby="read-declaration-completed">
+                  Children information
+                </a>
+                <strong class="govuk-tag app-task-list__task-completed" id="company-information-completed">Completed</strong>
+              </li>
+              <li class="app-task-list__item">
+                <a class="app-task-list__task-name" href="../about_other_parent/other_parent_name.html" aria-describedby="read-declaration-completed">
+                  Other parent information
+                </a>
+                <strong class="govuk-tag app-task-list__task-completed" id="company-information-completed">Completed</strong>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <h2 class="app-task-list__section">
+              <span class="app-task-list__section-number">3. </span> Choose a service
+            </h2>
+            <ul class="app-task-list__items">
+              <li class="app-task-list__item">
+                <a class="app-task-list__task-name" href="../service_choice/choose_service.html" aria-describedby="company-information-completed">
+                  Service choice
+                </a>
+                <strong class="govuk-tag app-task-list__task-completed" id="company-information-completed">Completed</strong>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <h2 class="app-task-list__section">
+              <span class="app-task-list__section-number">4. </span> Self service
+            </h2>
+            <ul class="app-task-list__items">
+              <li class="app-task-list__item">
+                <a class="app-task-list__task-name" href="../personal_security/personal_security_details.html" aria-describedby="company-information-completed">
+                  Self service security information
+                </a>
+               
+              </li>
+            </ul>
+          </li>
+
+         
+        </ol>
+  
+      </div>
+    </div>
+  
+  
+          </main>
+</div>
+{% endblock %}
