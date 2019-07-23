@@ -217,7 +217,7 @@ router.post('/about_qualifying_child/shared_care', function (req, res) {
 
 
 router.post('/about_qualifying_child/child_check_answers_loop_1', function (req, res) {
-  res.redirect('../service_choice/contact_with_other_parent')
+  res.redirect('../service_choice/about_direct_pay')
 });
 
 
