@@ -66,9 +66,22 @@ router.post('/what_is_your_urn_number', function (req, res) {
   } else {
     res.redirect('about_applicant/applicants_name')
   }
-  
-  
-  });
+});
+  // interrupt cards --------------------------------------------------------------
+
+
+router.post('/contact_interrupt', function (req, res) {
+  res.redirect('da_interrupt')
+});
+
+router.post('/da_interrupt', function (req, res) {
+  res.redirect('other_parent_interrupt')
+});
+
+router.post('/other_parent_interrupt', function (req, res) {
+  res.redirect('eligibility_questions/introduction')
+});
+
 
 
 // About applicant section --------------------------------------------------------------
