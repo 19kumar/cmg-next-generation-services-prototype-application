@@ -207,6 +207,10 @@ router.post('/about_qualifying_child/child_name', function (req, res) {
   res.redirect('child_date_of_birth')
 });
 
+router.post('/about_qualifying_child/child_name_2', function (req, res) {
+  res.redirect('child_date_of_birth_2')
+});
+
 
 router.post('/about_qualifying_child/child_date_of_birth', function (req, res) {
 let child1DateOfBirthYear = req.session.data['child-1-date-of-birth-year']
@@ -219,6 +223,17 @@ let child1DateOfBirthYear = req.session.data['child-1-date-of-birth-year']
 } 
 });
 
+router.post('/about_qualifying_child/child_date_of_birth_2', function (req, res) {
+  let child1DateOfBirthYear = req.session.data['child-1-date-of-birth-year-2']
+  if (child1DateOfBirthYear > 2003) {
+    res.redirect('shared_care_2')
+  } else if (child1DateOfBirthYear < 2000) {
+    res.redirect('../dropouts/dropout_child_1_dob')
+  } else {
+    res.redirect('shared_care_2')
+  }
+});
+
 router.post('/about_qualifying_child/shared_care', function (req, res) {
   let sharedCare = req.session.data['shared-care']
   if (sharedCare === '183 nights') {
@@ -227,6 +242,15 @@ router.post('/about_qualifying_child/shared_care', function (req, res) {
     res.redirect('child_check_answers_loop_1')
   }
   });
+
+router.post('/about_qualifying_child/shared_care_2', function (req, res) {
+  let sharedCare = req.session.data['shared-care']
+  if (sharedCare === '183 nights') {
+    res.redirect('../dropouts/dropout_child_1_shared')
+  } else {
+    res.redirect('child_check_answers_loop_2')
+  }
+});
 
 
 router.post('/about_qualifying_child/child_check_answers_loop_1', function (req, res) {
