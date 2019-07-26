@@ -1,8 +1,4 @@
-{% extends "layout.html" %}
-{% block pageTitle %}
-GOV.UK Prototype Kit
-{% endblock %}
-{% block content %}
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
 <!--Feedback banner start-->
 {% include "feedback_banner_no_link.html" %}
 <!--Feedback banner stop-->
@@ -10,19 +6,21 @@ GOV.UK Prototype Kit
   <main class="govuk-main-wrapper" id="main-content" role="main">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-      
-            <form method="post" novalidate>
 
-                <h1 class="govuk-heading-xl">Thank you</h1>
-                <p class="govuk-body">
-                    Your feedback has been submitted.
-                </p>
-               
-                          <button onclick="self.close()" type="submit" class="govuk-button">
-                                Close
-                              </button>
+        <form method="post" novalidate>
 
-            </form>
+          <h1 class="govuk-heading-xl">Thank you</h1>
+          <p class="govuk-body">
+            Your feedback has been submitted.
+          </p>
+          <p class="govuk-body">Help us improve this service by
+            <a href="research_form.html" class="govuk-link" target="_blank">Taking part in research</a>.</p>
+
+          <button onclick="self.close()" type="submit" class="govuk-button">
+            Close
+          </button>
+
+        </form>
 
 
 

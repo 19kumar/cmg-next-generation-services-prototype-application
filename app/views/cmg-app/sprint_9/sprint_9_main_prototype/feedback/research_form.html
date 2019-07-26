@@ -1,8 +1,4 @@
-{% extends "layout.html" %}
-{% block pageTitle %}
-GOV.UK Prototype Kit
-{% endblock %}
-{% block content %}
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
 <!--Feedback banner start-->
 {% include "feedback_banner_no_link.html" %}
 <!--Feedback banner stop-->
@@ -11,87 +7,83 @@ GOV.UK Prototype Kit
   <main class="govuk-main-wrapper" id="main-content" role="main">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-      
-            <form method="post" novalidate>
 
-                    <fieldset class="govuk-fieldset">
-                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl govuk-!-padding-bottom-4">
-                              <h1 class="govuk-fieldset__heading">
-                                    What are your contact details?
-                              </h1>
-                            </legend>
-                           
-                              <span id="citizenship-conditional-hint" class="govuk-hint">
-                                Any information that you provide will not effect your application for Child Maintanence. Your answers are confidential.
-                              </span>
+        <form method="post" novalidate>
 
-                            
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl govuk-!-padding-bottom-4">
+              <h1 class="govuk-fieldset__heading">
+                We need your help to improve this service
+              </h1>
+            </legend>
 
-                   
-                          
-                                  <div class="govuk-form-group govuk-!-padding-bottom-4">
-                                        
-                                        <label class="govuk-label " for="event-name">
-                                          Full name
-                                        </label>
-                                      
-                                        <input class="govuk-input govuk-!-width-one-half" id="event-name" name="event-name" type="text">
-                                      </div>
-                          
+            <p class="govuk-body">By volunteering for user research, you will help us to improve the Child Maintenance service. Please provide
+              your name and contact details if you are interested in participating. </p>
 
-                                      <div class="govuk-form-group">
-                                            <fieldset class="govuk-fieldset" aria-describedby="citizenship-conditional-hint">
-                                              <legend class="govuk-fieldset__legend ">
-                                                <p class=" govuk-body">
-                                                  <strong>How would you like to be contacted?</strong>
-                                                </p>
-                                              </legend>
-                                              <span id="citizenship-conditional-hint" class="govuk-hint">
-                                                Select all options that are relevant to you.
-                                              </span>
-                                              <div class="govuk-checkboxes" data-module="checkboxes">
-                                                <div class="govuk-checkboxes__item">
-                                                  <input class="govuk-checkboxes__input" id="citizenship-conditional-1" name="citizen" type="checkbox" value="email" data-aria-controls="conditional-citizenship-conditional-1">
-                                                  <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-1">
-                                                    Phone
-                                                  </label> </div>
-                                                <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-1">
-                                                  <div class="govuk-form-group">
-                                                    <label class="govuk-label" for="contact-by-email">
-                                                      Phone number
-                                                    </label>
-                                                    <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="contact-by-email" type="email" spellcheck="false">
-                                                  </div>
-                                          
-                                                </div>
-                                                <div class="govuk-checkboxes__item">
-                                                  <input class="govuk-checkboxes__input" id="citizenship-conditional-2" name="citizen" type="checkbox" value="phone" data-aria-controls="conditional-citizenship-conditional-2">
-                                                  <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-2">
-                                                    Email
-                                                  </label> </div>
-                                                <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-2">
-                                                  <div class="govuk-form-group">
-                                                    <label class="govuk-label" for="contact-by-phone">
-                                                            Email address                                                    </label>
-                                                    <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contact-by-phone" type="tel">
-                                                  </div>
-                                          
-                                               
-                                              
-                                          
-                                                </div>
-                                              </div>
-                                            </fieldset>
-                                          </div>
-                                     
-                          
-                          </fieldset>
+            <div class="govuk-form-group govuk-!-padding-bottom-4">
 
-                          <button type="submit" class="govuk-button">
-                                Continue
-                              </button>
+              <label class="govuk-label " for="event-name">
+                Full name
+              </label>
+              <input class="govuk-input govuk-!-width-one-half" id="event-name" name="event-name" type="text">
+            </div>
 
-            </form>
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" aria-describedby="citizenship-conditional-hint">
+                <legend class="govuk-fieldset__legend ">
+                  <p class=" govuk-body">
+                    <strong>How would you like to be contacted?</strong>
+                  </p>
+                </legend>
+                <span id="citizenship-conditional-hint" class="govuk-hint">
+                  Select all options that are relevant to you.
+                </span>
+                <div class="govuk-checkboxes" data-module="checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="citizenship-conditional-1" name="citizen" type="checkbox" value="email" data-aria-controls="conditional-citizenship-conditional-1">
+                    <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-1">
+                      Phone
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-1">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label" for="contact-by-email">
+                        Phone number
+                      </label>
+                      <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="contact-by-email" type="email" spellcheck="false">
+                    </div>
+
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="citizenship-conditional-2" name="citizen" type="checkbox" value="phone" data-aria-controls="conditional-citizenship-conditional-2">
+                    <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-2">
+                      Email
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-2">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label" for="contact-by-phone">
+                        Email address </label>
+                      <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contact-by-phone" type="tel">
+                    </div>
+
+
+
+
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+
+
+          </fieldset>
+
+          <button type="submit" class="govuk-button">
+            Continue
+          </button>
+
+        </form>
 
 
 
