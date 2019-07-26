@@ -9,12 +9,17 @@
                 <form method="post" novalidate>
 
                     <div class="govuk-form-group">
-                        <fieldset class="govuk-fieldset" aria-describedby="child-1-date-of-birth-hint" role="group">
-                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
-                                <h1 class="govuk-fieldset__heading">
-                                    Do you need to add another child?
-                                </h1>
-                            </legend>
+                        <h1 class="govuk-heading-l">You have told us about:
+                        
+                    <span class="govuk-caption-xl">{{data['child-1-first-name'] }} {{data['child-1-last-name'] }}
+                        <br> {{data['child-2-first-name'] }} {{data['child-2-last-name'] }}
+                    </span>
+                    </h1>
+                    </div>
+                                        <div class="govuk-form-group">
+
+                    <h1 class="govuk-heading-l">
+                        Do you need to add another child?</h1>
 
                             <span id="maintenance-liability-hint" class="govuk-hint">Only include children you need this child maintenance arrangement for.</span>
 
@@ -75,6 +80,11 @@
     .app-task-list__items {
         padding-left: 0px;
     }
+
+    .govuk-caption-xl {
+  text-transform: capitalize;
+}
+
 </style>
 
 {% endblock %}
