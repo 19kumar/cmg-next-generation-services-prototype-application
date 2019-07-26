@@ -126,7 +126,7 @@ router.post('/about_applicant/applicants_national_insurance_number', function (r
 
 //normal route with continue - Other parents address
 router.post('/about_applicant/applicants_phone_number', function (req, res) {
-  res.redirect('applicants_correspondence_query')
+  res.redirect('applicants_address_manual_input')
 });
 
 
@@ -143,18 +143,18 @@ router.post('/about_applicant/applicants_correspondence_query', function (req, r
 });
 
 
-router.post('/about_applicant/applicants_correspondence_address', function (req, res) {
-  let correspondenceAddress = req.session.data['correspondence-address']
+///router.post('/about_applicant/applicants_correspondence_address', function (req, res) {
+  //let correspondenceAddress = req.session.data['correspondence-address']
 
   
-  if (correspondenceAddress  === 'GH3 2LB') {
-    res.redirect('applicants_correspondence_address_cant_find')
-  } else if (correspondenceAddress  === 'gh3 2lb') {
-    res.redirect('applicants_correspondence_address_cant_find')
-  }  else {
-    res.redirect('applicants_address')
-  }
-});
+  //if (correspondenceAddress  === 'GH3 2LB') {
+    //res.redirect('applicants_correspondence_address_cant_find')
+  //} else if (correspondenceAddress  === 'gh3 2lb') {
+    //res.redirect('applicants_correspondence_address_cant_find')
+  //}  else {
+    //res.redirect('applicants_address')
+  //}
+//});
 
 
 router.post('/about_applicant/applicants_correspondence_address_cant_find', function (req, res) {
@@ -167,6 +167,9 @@ router.post('/about_applicant/applicants_correspondence_address_manual_input', f
   res.redirect('applicants_address')
 });
 
+router.post('/about_applicant/applicants_correspondence_address', function (req, res) {
+  res.redirect('../reviews/review_your_answers_applicants_details')
+});
 
 router.post('/about_applicant/applicants_address', function (req, res) {
 

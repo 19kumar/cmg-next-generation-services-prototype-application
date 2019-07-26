@@ -26,17 +26,15 @@
              <fieldset class="govuk-fieldset">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
                   <h1 class="govuk-fieldset__heading">
-                    What is your home address?
+                    What is your address?
                   </h1>
                 </legend>
 
-                <p>We ask this to confirm your identity.</p>
-
-                <p>Your answer is confidential.</p>
+                <p>We ask this to confirm your identity. We will not share this information with the other parent.</p>
 
                 <div class="govuk-form-group">
                   <label class="govuk-label" for="applicants-address-line-1">
-                    <strong>Building and street</strong>
+                    <p>Building and street</p>
                     <span class="govuk-visually-hidden">line 1 of 2</span>
                   </label>
                   <input class="govuk-input" id="applicants-address-line-1" name="applicants-address-line-1" type="text">
@@ -51,36 +49,55 @@
 
                 <div class="govuk-form-group">
                   <label class="govuk-label" for="applicants-address-town">
-                    <strong>Town or city</strong>
+                    <p>Town or city</p>
                   </label>
                   <input class="govuk-input govuk-!-width-two-thirds" id="applicants-address-town" name="applicants-address-town" type="text">
                 </div>
 
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="applicants-address-postcode">
+      <p>Postcode</p>
+    </label>
+    <input class="govuk-input govuk-input--width-10" id="applicants-address-postcode" name="applicants-address-postcode" type="text">
+  </div>
                 <div class="govuk-form-group">
                   <label class="govuk-label" for="applicants-address-county">
-                    <strong>County</strong>
-                  </label>
-                  <input class="govuk-input govuk-!-width-two-thirds" id="applicants-address-county" name="applicants-address-county" type="text">
-                </div>
-
-                <div class="govuk-form-group">
-                  <label class="govuk-label" for="applicants-address-county">
-                    <strong>Country</strong>
+                    <p>Country</p>
                   </label>
                   <input class="govuk-input govuk-!-width-two-thirds" id="applicants-address-country" name="applicants-address-country" type="text">
                 </div>
 
-                <div class="govuk-form-group">
-                  <label class="govuk-label" for="applicants-address-postcode">
-                    <strong>Postcode</strong>
-                  </label>
-                  <input class="govuk-input govuk-input--width-10" id="applicants-address-postcode" name="applicants-address-postcode" type="text">
-                </div>
+              
 
               </fieldset>
              <!--End of applicants-address fields-->
             </div>
-
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h1 class="govuk-fieldset__heading">
+       Can we send letters about your case to this address?
+      </h1>
+    </legend>
+    <span id="changed-name-hint" class="govuk-hint">
+      
+    </span>
+    <div class="govuk-radios govuk-radios--inline">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-name-1" name="changed-name" type="radio" value="yes~../reviews/review_your_answers_applicants_details">
+        <label class="govuk-label govuk-radios__label" for="changed-name-1">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no~applicants_correspondence_address">
+        <label class="govuk-label govuk-radios__label" for="changed-name-2">
+          No
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
             <button type="submit" class="govuk-button">
               Continue
             </button>
