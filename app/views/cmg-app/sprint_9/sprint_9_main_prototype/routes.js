@@ -382,7 +382,7 @@ router.post('/about_other_parent/other_parent_address', function (req, res) {
 
 
 router.post('/reviews/review_your_answers_other_parent', function (req, res) {
-  res.redirect('../personal_security/personal_security_details') 
+  res.redirect('../personal_security/portal_account_query') 
 });
 
 //security details section ----------------
