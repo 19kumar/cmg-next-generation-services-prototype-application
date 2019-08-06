@@ -75,7 +75,7 @@ router.post('/contact_interrupt', function (req, res) {
 });
 
 router.post('/da_interrupt', function (req, res) {
-  res.redirect('other_parent_interrupt')
+  res.redirect('eligibility_questions/introduction')
 });
 
 router.post('/other_parent_interrupt', function (req, res) {
@@ -173,10 +173,16 @@ router.post('/about_applicant/applicants_correspondence_query', function (req, r
 
 
 router.post('/about_applicant/applicants_correspondence_address_cant_find', function (req, res) {
-  res.redirect('applicants_address')
+  res.redirect('select_your_address_2')
 });
 
+router.post('/about_applicant/select_your_address_2', function (req, res) {
+  res.redirect('../reviews/review_your_answers_applicants_details_1')
+});
 
+router.post('/reviews/review_your_answers_applicants_details_1', function (req, res) {
+  res.redirect('../about_qualifying_child/child_name')
+});
 
 router.post('/about_applicant/applicants_correspondence_address_manual_input', function (req, res) {
   res.redirect('applicants_address')
