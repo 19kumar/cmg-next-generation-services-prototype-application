@@ -70,7 +70,7 @@ router.post('/what_is_your_urn_number', function (req, res) {
   // interrupt cards --------------------------------------------------------------
 
 
-router.post('contact_interrupt', function (req, res) {
+router.post('/contact_interrupt', function (req, res) {
   res.redirect('da_interrupt')
 });
 
@@ -126,12 +126,27 @@ router.post('/about_applicant/applicants_national_insurance_number', function (r
 
 //normal route with continue - Other parents address
 router.post('/about_applicant/applicants_phone_number', function (req, res) {
-  res.redirect('applicants_address_manual_input')
+  res.redirect('applicants_address')
+});
+
+
+router.post('/about_applicant/applicants_address', function (req, res) {
+  res.redirect('select_address')
+});
+
+router.post('/about_applicant/select_address', function (req, res) {
+  res.redirect('is_this_your_home_address')
+});
+
+router.post('/about_applicant/select_your_address', function (req, res) {
+  res.redirect('../reviews/review_your_answers_applicants_details_1')
 });
 
 
 
-
+router.post('/about_applicant/address_lookup', function (req, res) {
+  res.redirect('select_your_address')
+});
 router.post('/about_applicant/applicants_correspondence_query', function (req, res) {
 
   let correspondenceQuery = req.session.data['correspondence-query']

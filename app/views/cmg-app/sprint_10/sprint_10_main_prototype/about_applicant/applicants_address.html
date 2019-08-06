@@ -18,11 +18,10 @@ GOV.UK Prototype Kit
           <div class="govuk-form-group">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
               <h1 class="govuk-fieldset__heading">
-                What is your home address?
+                Where can we send you letters about your case?
               </h1>
             </legend>
 
-            <p>We ask this to confirm your identity.</p>
 
             <p>Your answer is confidential.</p>
 
@@ -30,14 +29,16 @@ GOV.UK Prototype Kit
               <strong>Postcode</strong>
             </label>
             <input class="govuk-input govuk-!-width-one-quarter" id="home-address-postcode" name="home-address-postcode"
-              type="text">
+              type="text" value="NE32 2LB">
           </div>
-          <button type="submit" class="govuk-button">
+          <button type="submit" class="govuk-button" onclick="return myFunction()">
             Find address
           </button>
         </form>
+        <a href="applicants_address_manual_input" class="govuk-link">Enter address manually</a>
       </div>
     </div>
   </main>
 </div>
+
 {% endblock %}
