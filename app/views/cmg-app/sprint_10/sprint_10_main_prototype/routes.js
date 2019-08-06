@@ -70,7 +70,7 @@ router.post('/what_is_your_urn_number', function (req, res) {
   // interrupt cards --------------------------------------------------------------
 
 
-router.post('/contact_interrupt', function (req, res) {
+router.post('contact_interrupt', function (req, res) {
   res.redirect('da_interrupt')
 });
 
