@@ -1,0 +1,88 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+{% block content %}
+<!--Feedback banner start-->
+{% include "feedback_banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+  {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
+          <h1 class="govuk-fieldset__heading">
+            Your bank account details
+          </h1>
+        </legend>
+        <p class="govuk-body">This is the account your child maintenance will be paid into.</p>
+        <form method="post" novalidate>
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-!-width-two-thirds" for="account-holder" id="accountHolderDescription">
+              <strong>Name of account holder</strong>
+            </label>
+            <input class="govuk-input govuk-!-width-two-thirds" id="account-holder" name="account-holder"
+              type="account-holder" aria-describedby="accountHolderDescription" autocomplete="account-holder"
+              spellcheck="false">
+          </div>
+
+          <div class="govuk-form-group">
+              <label class="govuk-label" for="account-number">
+                <strong>Account number</strong>
+              </label>
+              <input class="govuk-input govuk-!-width-two-thirds" id="account-number" name="account-number" type="text">
+            </div>
+
+          <div class="govuk-date-input" id="sort-code">
+            <p class="govuk-label" for="width-5">
+              <strong>Sort code</strong>
+            </p>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                  <label class="govuk-label" for="sort-code-number-1" style="display: none">
+                      first two numbers
+                    </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="sort-code-number-1"
+                  name="sort-code-number-1" type="number" pattern="[0-9]*">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                  <label class="govuk-label" for="sort-code-number-2" style="display: none">
+                      second two numbers
+                    </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="sort-code-number-2"
+                  name="sort-code-number-2" type="number" pattern="[0-9]*">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                  <label class="govuk-label" for="sort-code-number-3" style="display: none">
+                      third two numbers
+                    </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="sort-code-number-3"
+                  name="sort-code-number-3" type="number" pattern="[0-9]*">
+              </div>
+            </div>
+          </div>
+
+          <div class="govuk-form-group">
+              <label class="govuk-label" for="roll-number">
+                <strong>Roll or reference number (if you have a building society account)</strong>
+              </label>
+              <input class="govuk-input govuk-!-width-two-thirds" id="roll-number" name="roll-number" type="text">
+            </div>
+
+        <a href="../about_other_parent/other_parent_name" role="button" draggable="false" class="govuk-button">
+          Continue
+        </a>
+        </form>
+      </div>
+    </div>
+  </main>
+</div>
+{% endblock %}

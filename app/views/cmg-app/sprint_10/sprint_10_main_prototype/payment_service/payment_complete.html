@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<!--Feedback banner start-->
+{% include "feedback_banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+
+                <form method="post" novalidate>
+
+
+
+                        <div class="govuk-form-group">
+
+                                <h1 class="govuk-heading-xl">Your payment was successful – you can now send your application</h1>
+                                <p class="govuk-body">Your payment reference number is:</p>
+                                <p class="govuk-body-l">HDJ2123F</p>
+                                <div class="govuk-inset-text">
+                                        This reference number is what you'll see
+                                        on your bank or credit card statement.</br></br>
+                                        You cannot use it if you need to contact
+                                        us about your application.
+                                      </div>
+
+
+
+
+                    <button type="submit" class="govuk-button">
+                        Send application
+                    </button>
+                </form>
+
+            </div>
+        </div>
+    </main>
+</div>
+{% endblock %}

@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<!--Feedback banner start-->
+{% include "feedback_banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form method="post" novalidate>
+            <h1 class="govuk-heading-xl">Create security details for your online child maintenance account</h1>
+            <p class="govuk-body">You need to create a personal identification
+              number (PIN) and a password. You'll need to remember these so you
+              can sign in to your online account.</p>
+
+              <div class="govuk-inset-text">
+                Only you and our team can see the security details you create.
+              </div>
+
+            <p>You'll be shown how to sign in to your online account at the end of
+            this application.</p>
+
+            <div class="govuk-form-group">
+                <label class="govuk-label govuk-input--width-10" for="security-details-pin">
+                  <strong>Create your PIN</strong>
+                </label>
+                <span id="security-details-pin-hint" class="govuk-hint">
+                  Your PIN must have 7 numbers.
+                </span>
+                <input class="govuk-input govuk-input--width-10" id="security-details-pin" name="security-details-pin" type="text" aria-describedby="security-details-pin-hint">
+              </div>
+
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-input--width-10" for="security-details-password">
+                  <strong>Create your password</strong>
+                </label>
+                <span id="securityDetailsPasswordInformation" class="govuk-hint">
+                  Your password must have:
+
+                  <ul class="govuk-hint govuk-hint--bullet">
+                    <li>at least 8 characters</li>
+                    <li>upper and lower case letters</li>
+                    <li>a number</li>
+                  </ul>
+
+                  Try not to use an easily guessed password. For example, your
+                  children's names or dates of birth.
+                </span>
+                <input class="govuk-input govuk-input--width-10" id="security-details-password" name="security-details-password" type="text" aria-describedby="securityDetailsPasswordInformation">
+              </div>
+
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-input--width-10" for="security-details-password">
+                  <strong>Confirm your password</strong>
+                </label>
+                <input class="govuk-input govuk-input--width-10" id="security-details-password" name="security-details-password" type="text" aria-describedby="securityDetailsPasswordInformation">
+              </div>
+
+            <button id="personalDetailsBtn" type="submit" class="govuk-button">
+              Continue
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  {% endblock %}
