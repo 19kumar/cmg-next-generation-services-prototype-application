@@ -5,163 +5,32 @@
 <div class="govuk-width-container">
     {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
 
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds-from-desktop">
+
+                <h1 class="govuk-heading-xl">If you’re worried about contacting the other parent</h1>
+
+                             <p>We can contact them to set up child maintenance – you do not need to</p>
+                            <p>We will only share your name and your children’s names with them</p>
+                            <p>We can securely pass your bank details on to them so they can make payments to you</p>
+                            <p>Speak to your bank or building society about setting up an account that will hide your location before you use this service</p>
+
+ 
 
 
-    <div class="govuk-form-group">
-        <form method="post" novalidate>
-            <div class="flash-card">
-                <header>
-                    <h1 class="govuk-heading-l">If you’re worried about contacting the other parent
-</h1>
 
 
+                <form method="post" novalidate>
+                    <button type="submit" class="govuk-button">
+                        Continue
+                    </button>
 
-                </header>
-                <div class="govuk-grid-row">
-                    <div class="govuk-grid-column-full">
-                        <ul class="how-to-renew" data-id="how-to-renew-uk">
-                            <li>
-                                <span class="circle circle-step circle-white"></span>
-                                <h2 class="govuk-heading-s">We can contact them to set up child maintenance – you do not need to
-</h2>
-                            </li>
+                </form>
 
-                            <li>
-                                <span class="circle circle-step circle-white"></span>
-                                <h2 class="govuk-heading-s">We will only share your name and your children’s names with them
-</h2>
-                            </li>
-
-                            <li>
-                                <span class="circle circle-step circle-white"></span>
-                                <h2 class="govuk-heading-s">We can securely pass your bank details on to them so they can make payments to you
-</h2>
-                            </li>
-
-                            <li>
-                                <span class="circle circle-step circle-white"></span>
-                                <h2 class="govuk-heading-s">Speak to your bank or building society about setting up an account that will hide your location before you use this service
-
-</h2>
-                            </li>
-
-                        </ul>
-
-                        <div class="form-group" style="margin-top:25px;margin-bottom:0;">
-                            <input class="govuk-button button-white" type="submit" value="Continue">
-                        </div>
-
-                    </div>
-        </form>
+            </div>
         </div>
+    </main>
+</div>
 
-        </div>
-
-        <style>
-            .flash-card {
-                margin-top: 1em;
-                padding: 30px;
-                background: #005EA5;
-                color: #FFF !important;
-            }
-
-            header {
-                background-color: inherit;
-            }
-
-            p {
-                margin-left: 32px;
-            }
-
-            ul.how-to-renew {
-                padding-left: 0;
-                list-style: none;
-            }
-
-            h2 {
-                margin: 0;
-                margin-bottom: 0;
-                padding: 0;
-                color: #FFF !important;
-                font-size: 28px;
-            }
-
-            li {
-                margin-bottom: 22px;
-            }
-
-
-            h1 {
-                color: #FFF !important;
-            }
-
-            h1:first-of-type {
-                margin-top: 0 !important;
-            }
-
-
-
-            details {
-                margin-bottom: 1em;
-            }
-
-            summary {
-                color: #FFF !important;
-            }
-
-            .panel {
-                border-left-color: #FFF !important;
-            }
-
-
-
-            @media (min-width: 769px) {
-                .flash-card {
-                    margin-top: 1.25em;
-                    padding: 35px 50px;
-                }
-            }
-
-            .circle-white {
-                color: #005ea5;
-                background: #fff !important;
-                float: left;
-                margin-right: 15px;
-            }
-
-            .button-white {
-                color: #005ea5;
-                background: #fff !important;
-                float: left;
-                margin-right: 15px;
-            }
-
-            .button-white:hover {
-                color: #005ea5;
-                background: rgb(240, 235, 235) !important;
-                float: left;
-                margin-right: 15px;
-            }
-
-            .circle-step {
-                min-width: 10px;
-                min-height: 10px;
-                line-height: 10px;
-            }
-
-            .circle {
-                margin-top: 6px;
-                display: inline-block;
-                -webkit-border-radius: 50%;
-                -moz-border-radius: 50%;
-                border-radius: 50%;
-                font-family: 'Inter UI', sans-serif;
-                font-size: 15px;
-                font-weight: bold;
-                text-align: center;
-            }
-        </style>
-
-
-
-        {% endblock %}
+{% endblock %}

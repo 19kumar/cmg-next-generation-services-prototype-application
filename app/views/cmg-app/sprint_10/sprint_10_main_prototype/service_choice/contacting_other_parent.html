@@ -1,0 +1,29 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback_banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" aria-describedby="comfortableContactInformation">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
+                            <h1 class="govuk-fieldset__heading" id="comfortableContactInformation">
+                                We need to get in contact with the other parent
+                            </h1>
+                        </legend>
+
+                        <p>We need to get in contact with other parent to ask how they want to pay Child Maintenance.</p>
+                        <p> If the other parent chooses to use Collect and Pay, there might be fees to pay.</p>
+
+
+                        <a href="pass_bank_details" role="button" draggable="false" class="govuk-button">
+                            Continue
+                        </a>
+                </div>
+            </div>
+    </main>
+    </div>
+    {% endblock %}
