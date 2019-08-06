@@ -1,0 +1,148 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback_banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+
+
+
+    <div class="govuk-form-group">
+        <form method="post" novalidate>
+            <div class="flash-card">
+                <header>
+                    <h1 class="govuk-heading-l">If you’ve ever experienced domestic abuse
+
+                    </h1>
+
+
+
+                </header>
+                <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-full">
+                        <h2 class="govuk-heading-s">You should tell someone about it, if you’re able to. For example, the police, a doctor, your employer, a teacher, a social
+                        worker or a support worker.
+
+                        </h2>
+
+                            <h2 class="govuk-heading-s">You will not have to pay the £20 fee and we will protect your personal information.
+</h2>
+
+                            <div class="form-group" style="margin-top:25px;margin-bottom:0;">
+                                <input class="govuk-button button-white" type="submit" value="Continue">
+                            </div>
+
+                    </div>
+        </form>
+        </div>
+
+        </div>
+
+        <style>
+            .flash-card {
+                margin-top: 1em;
+                padding: 30px;
+                background: #005EA5;
+                color: #FFF !important;
+            }
+
+            header {
+                background-color: inherit;
+            }
+
+            p {
+                margin-left: 32px;
+            }
+
+            ul.how-to-renew {
+                padding-left: 0;
+                list-style: none;
+            }
+
+            h2 {
+                margin: 0;
+                margin-bottom: 0;
+                padding: 0;
+                color: #FFF !important;
+                font-size: 28px;
+            }
+
+            li {
+                margin-bottom: 22px;
+            }
+
+
+            h1 {
+                color: #FFF !important;
+            }
+
+            h1:first-of-type {
+                margin-top: 0 !important;
+            }
+
+
+
+            details {
+                margin-bottom: 1em;
+            }
+
+            summary {
+                color: #FFF !important;
+            }
+
+            .panel {
+                border-left-color: #FFF !important;
+            }
+
+
+
+            @media (min-width: 769px) {
+                .flash-card {
+                    margin-top: 1.25em;
+                    padding: 35px 50px;
+                }
+            }
+
+            .circle-white {
+                color: #005ea5;
+                background: #fff !important;
+                float: left;
+                margin-right: 15px;
+            }
+
+            .button-white {
+                color: #005ea5;
+                background: #fff !important;
+                float: left;
+                margin-right: 15px;
+            }
+
+            .button-white:hover {
+                color: #005ea5;
+                background: rgb(240, 235, 235) !important;
+                float: left;
+                margin-right: 15px;
+            }
+
+            .circle-step {
+                min-width: 10px;
+                min-height: 10px;
+                line-height: 10px;
+            }
+
+            .circle {
+                margin-top: 6px;
+                display: inline-block;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                border-radius: 50%;
+                font-family: 'Inter UI', sans-serif;
+                font-size: 15px;
+                font-weight: bold;
+                text-align: center;
+            }
+        </style>
+
+
+
+        {% endblock %}
