@@ -18,7 +18,7 @@
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
           <form method="post" novalidate>
-            <h1 class="govuk-heading-xl">Create security details for your online child maintenance account</h1>
+            <h1 class="govuk-heading-xl">Create security details for your online account</h1>
             <p class="govuk-body">You need to create a personal identification
               number (PIN) and a password. You'll need to remember these so you
               can sign in to your online account.</p>
@@ -65,6 +65,15 @@
                 </label>
                 <input class="govuk-input govuk-input--width-10" id="security-details-password" name="security-details-password" type="text" aria-describedby="securityDetailsPasswordInformation">
               </div>
+
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="applicant-telephone-number">
+                  <strong>Email address</strong>
+                </label>
+                <span id="changed-name-hint" class="govuk-hint">We will only use this to email you when you have a message in your online account.</span>
+                <input class="govuk-input govuk-input--width-20" id="applicant-telephone-number"
+                  name="applicant-telephone-number" type="tel" autocomplete="tel">
+                  </div>
 
             <button id="personalDetailsBtn" type="submit" class="govuk-button">
               Continue
