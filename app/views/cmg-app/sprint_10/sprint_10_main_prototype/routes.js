@@ -414,6 +414,10 @@ router.post('/personal_security/personal_security_details', function (req, res) 
 
   });
 
+router.post('/personal_security/portal_account_query', function (req, res) {
+  res.redirect('personal_security_details')
+});
+
 
 // Domestic abuse section --------------------------------------------------------------
 
