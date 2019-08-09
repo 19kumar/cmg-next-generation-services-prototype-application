@@ -69,6 +69,10 @@ router.post('/what_is_your_urn_number', function (req, res) {
 });
   // interrupt cards --------------------------------------------------------------
 
+router.post('/what_to_expect_interrupt', function (req, res) {
+  res.redirect('contact_interrupt')
+});
+
 
 router.post('/contact_interrupt', function (req, res) {
   res.redirect('da_interrupt')
@@ -216,9 +220,17 @@ router.post('/about_applicant/applicants_address_manual_input', function (req, r
   res.redirect('../reviews/review_your_answers_applicants_details')
 });
 
+router.post('/about_applicant/applicants_address_manual_input', function (req, res) {
+  res.redirect('../reviews/review_your_answers_applicants_details')
+});
+
 
 // applicant review answers section --------------------------------------------------------------
 
+
+router.post('/about_applicant/applicants_address_manual_input2', function (req, res) {
+  res.redirect('../reviews/review_your_answers_applicants_details_1')
+});
 
 router.post('/reviews/review_your_answers_applicants_details', function (req, res) {
   res.redirect('../about_qualifying_child/child_name')
@@ -294,6 +306,14 @@ router.post('/service_choice/contact_with_other_parent', function (req, res) {
   }
 });
 
+router.post('/service_choice/collect_and_pay_bank_details', function (req, res) {
+  res.redirect('../reviews/review_your_answers_collect_and_pay')
+});
+
+
+router.post('/reviews/review_your_answers_collect_and_pay', function (req, res) {
+  res.redirect('../about_other_parent/other_parent_name')
+});
 
       router.post('/service_choice/choose_service', function (req, res) {
 
@@ -394,9 +414,11 @@ router.post('/about_other_parent/other_parent_national_insurance_number', functi
 
 
 router.post('/about_other_parent/other_parent_address', function (req, res) {
+  res.redirect('other_parent_other_information')
+});
+router.post('/about_other_parent/other_parent_other_information', function (req, res) {
   res.redirect('../reviews/review_your_answers_other_parent')
 });
-
 
 
 //Other parent review section ----------------
@@ -405,6 +427,8 @@ router.post('/about_other_parent/other_parent_address', function (req, res) {
 router.post('/reviews/review_your_answers_other_parent', function (req, res) {
   res.redirect('../personal_security/portal_account_query') 
 });
+
+
 
 //security details section ----------------
 

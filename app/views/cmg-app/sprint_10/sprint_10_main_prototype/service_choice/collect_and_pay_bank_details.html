@@ -20,6 +20,29 @@ GOV.UK Prototype Kit
           </h1>
         </legend>
         <p class="govuk-body">This is the account your child maintenance will be paid into.</p>
+
+
+
+           
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" onclick="show2()" id="changed-name" name="changed-name" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="changed-name">
+                  Bank account
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" onclick="show1()" id="changed-name-2" name="changed-name" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                  Building society account
+                </label>
+              </div>
+            </div>
+          </fieldset>
+       
+        
+        <br>
+        <br>
         <form method="post" novalidate>
           <div class="govuk-form-group">
             <label class="govuk-label govuk-!-width-two-thirds" for="account-holder" id="accountHolderDescription">
@@ -70,19 +93,32 @@ GOV.UK Prototype Kit
             </div>
           </div>
 
-          <div class="govuk-form-group">
+          <div class="govuk-form-group" id="div1" style="display:none">
               <label class="govuk-label" for="roll-number">
-                <strong>Roll or reference number (if you have a building society account)</strong>
+                <strong>Roll or reference number</strong>
               </label>
-              <input class="govuk-input govuk-!-width-two-thirds" id="roll-number" name="roll-number" type="text">
+              <input class="govuk-input govuk-!-width-two-thirds" id="roll-number" name="roll-number" type="text" >
             </div>
 
-        <a href="../about_other_parent/other_parent_name" role="button" draggable="false" class="govuk-button">
-          Continue
-        </a>
+        
+            <button type="submit" class="govuk-button">
+              Continue
+            </button>
+          
+         
         </form>
       </div>
     </div>
   </main>
 </div>
+
+<script>
+  function show1() {
+      document.getElementById('div1').style.display = 'block';
+    }
+    function show2() {
+      document.getElementById('div1').style.display = 'none';
+    }
+</script>
+
 {% endblock %}
