@@ -129,10 +129,13 @@ router.post('/about_applicant/applicants_national_insurance_number', function (r
 // Contact details section --------------------------------------------------------------
 
 //normal route with continue - Other parents address
-router.post('/about_applicant/applicants_phone_number', function (req, res) {
+router.post('/about_applicant/applicants_phone_preference', function (req, res) {
   res.redirect('applicants_address')
 });
 
+router.post('/about_applicant/applicants_phone_number', function (req, res) {
+  res.redirect('applicants_phone_preference')
+});
 
 router.post('/about_applicant/applicants_address', function (req, res) {
   res.redirect('select_address')

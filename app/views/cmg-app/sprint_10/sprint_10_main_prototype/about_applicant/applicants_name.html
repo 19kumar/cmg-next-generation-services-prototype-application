@@ -17,13 +17,31 @@ GOV.UK Prototype Kit
         <h1 class="govuk-heading-xl">What is your name?</h1>
         <form method="post" novalidate>
           <!--title-->
-          <div class="govuk-form-group">
-            <label class="govuk-label" for="applicants-title">
-              Title
-            </label>
-            <input class="govuk-input govuk-input--width-4 title-finder" id="applicants-title" name="applicants-title"
-              type="text" value="{{data['applicants-title']}}">
-          </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="sort">
+            Title
+          </label>
+          <select class="govuk-select" id="sort" name="sort">
+            <option value="published">Ms</option>
+            <option value="updated" >Mrs</option>
+            <option value="views">Miss</option>
+            <option value="comments">Mr</option>
+                        <option value="comments">Captain</option>
+            <option value="comments">Colonel</option>
+            <option value="comments">Dame</option>
+            <option value="comments">Dr</option>
+            <option value="comments">Lady</option>
+            <option value="comments">Lord</option>
+            <option value="comments">Major</option>
+            <option value="comments">Professor</option>
+            <option value="comments">Reverend</option>
+            <option value="comments">Sir</option>
+
+
+
+
+          </select>
+        </div>
           <input type="hidden" id="deduction" name="deduction" type="number" value="{{data['deduction']}}">
           <!--first name-->
           <div class="govuk-form-group">
