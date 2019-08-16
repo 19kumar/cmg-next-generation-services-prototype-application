@@ -22,7 +22,7 @@ GOV.UK Prototype Kit
             <fieldset class="govuk-fieldset" aria-describedby="otherParentDobInformation" role="group">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
                 <h1 class="govuk-fieldset__heading" id="otherParentDobInformation">
-                  Do you know the other parent’s date of birth?
+                  Do you know the day, month or year the other parent was born?
                 </h1>
               </legend>
               <div class="govuk-radios" data-module="radios">
@@ -41,46 +41,45 @@ GOV.UK Prototype Kit
                         Date of birth
                       </legend>
                       <span id="otherParentDateOfBirthInformation" class="govuk-hint">
-                        For example, '12 11 1970'.
+                        Enter as much of it as you can. For example, '12 11 1970' or just the month or year.
                       </span>
                       <div class="govuk-date-input" id="other-parent-dob-date">
-                        <div class="govuk-date-input__item">
+
                           <div class="govuk-form-group">
-                            <label class="govuk-label govuk-date-input__label" for="other-parent-dob-date-day">
+                            <label class="govuk-label govuk-date-input__label" for="other-parent-dob-date-day-next-question">
                               Day
                             </label>
                             <input class="govuk-input govuk-date-input__input govuk-input--width-2"
-                              id="other-parent-dob-date-day" name="other-parent-dob-date-day" type="number"
+                              id="other-parent-dob-date-day-next-question" name="other-parent-dob-date-day-next-question" type="number"
                               pattern="[0-9]*">
                           </div>
-                        </div>
-                        <div class="govuk-date-input__item">
+
                           <div class="govuk-form-group">
-                            <label class="govuk-label govuk-date-input__label" for="other-parent-dob-date-month">
+                            <label class="govuk-label govuk-date-input__label" for="other-parent-dob-date-month-next-question">
                               Month
                             </label>
                             <input class="govuk-input govuk-date-input__input govuk-input--width-2"
-                              id="other-parent-dob-date-month" name="other-parent-dob-date-month" type="number"
+                              id="other-parent-dob-date-month-next-question" name="other-parent-dob-date-month-next-question" type="number"
                               pattern="[0-9]*">
                           </div>
-                        </div>
-                        <div class="govuk-date-input__item">
+
+
                           <div class="govuk-form-group">
-                            <label class="govuk-label govuk-date-input__label" for="other-parent-dob-date-year">
+                            <label class="govuk-label govuk-date-input__label" for="other-parent-dob-date-year-next-question">
                               Year
                             </label>
                             <input class="govuk-input govuk-date-input__input govuk-input--width-4"
-                              id="other-parent-dob-date-year" name="other-parent-dob-date-year" type="number"
+                              id="other-parent-dob-date-year-next-question" name="other-parent-dob-date-year-next-question" type="number"
                               pattern="[0-9]*">
                           </div>
-                        </div>
+
                       </div>
                     </fieldset>
                   </div>
                 </div>
                 <div class="govuk-radios__item">
                   <input class="govuk-radios__input" id="other-parent-dob-2" name="other-parent-dob" type="radio"
-                    value="no~other_parent_date_of_birth_next_question" >
+                    value="no" >
                   <label class="govuk-label govuk-radios__label" for="other-parent-dob-2">
                     No
                   </label>
