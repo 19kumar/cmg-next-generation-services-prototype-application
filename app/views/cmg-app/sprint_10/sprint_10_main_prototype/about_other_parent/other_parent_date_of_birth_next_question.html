@@ -40,39 +40,40 @@ GOV.UK Prototype Kit
                       <legend class="govuk-fieldset__legend">
                         Date of birth
                       </legend>
-                      <span id="otherParentDateOfBirthInformation" class="govuk-hint">
-                        Enter as much of it as you can. For example, '12 11 1970' or just the month or year.
-                      </span>
-                      <div class="govuk-date-input" id="other-parent-dob-date">
-
-                          <div class="govuk-form-group">
-                            <label class="govuk-label govuk-date-input__label" for="other-parent-dob-date-day-next-question">
-                              Day
-                            </label>
-                            <input class="govuk-input govuk-date-input__input govuk-input--width-2"
-                              id="other-parent-dob-date-day-next-question" name="other-parent-dob-date-day-next-question" type="number"
-                              pattern="[0-9]*">
-                          </div>
-
-                          <div class="govuk-form-group">
-                            <label class="govuk-label govuk-date-input__label" for="other-parent-dob-date-month-next-question">
-                              Month
-                            </label>
-                            <input class="govuk-input govuk-date-input__input govuk-input--width-2"
-                              id="other-parent-dob-date-month-next-question" name="other-parent-dob-date-month-next-question" type="number"
-                              pattern="[0-9]*">
-                          </div>
-
-
-                          <div class="govuk-form-group">
-                            <label class="govuk-label govuk-date-input__label" for="other-parent-dob-date-year-next-question">
-                              Year
-                            </label>
-                            <input class="govuk-input govuk-date-input__input govuk-input--width-4"
-                              id="other-parent-dob-date-year-next-question" name="other-parent-dob-date-year-next-question" type="number"
-                              pattern="[0-9]*">
-                          </div>
-
+                      <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" role="group">
+                          <span id="otherParentDateOfBirthInformation" class="govuk-hint">
+                            Enter as much information as you can. For example, 12 7 1985, or just the month or year.
+                          </span>
+                          <div class="govuk-date-input" id="other-parent-dob-date">
+                            <div class="govuk-date-input__item">
+                              <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="other-parent-dob-date-day">
+                                  Day
+                                </label>
+                                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="other-parent-dob-date-day" name="other-parent-dob-date-day"
+                                  type="number" pattern="[0-9]*">
+                              </div>
+                            </div>
+                            <div class="govuk-date-input__item">
+                              <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="other-parent-dob-date-month">
+                                  Month
+                                </label>
+                                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="other-parent-dob-date-month" name="other-parent-dob-date-month"
+                                  type="number" pattern="[0-9]*">
+                              </div>
+                            </div>
+                            <div class="govuk-date-input__item">
+                              <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="other-parent-dob-date-year">
+                                  Year
+                                </label>
+                                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="other-parent-dob-date-year" name="other-parent-dob-date-year"
+                                  type="number" pattern="[0-9]*">
+                              </div>
+                              </div>
+                              </div>
                       </div>
                     </fieldset>
                   </div>
