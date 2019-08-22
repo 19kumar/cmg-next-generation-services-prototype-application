@@ -1,0 +1,91 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback_banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
+                            <h1 class="govuk-fieldset__heading">
+                             We need to ask the other parent how they want to pay child maintenance
+                            </h1>
+                        </legend>
+
+                    </fieldset>
+                </div>
+
+                <p>The Child Maintenance Service may be able to collect payments from the other parent and pass them on to you. This is called
+                    'Collect and Pay'.
+                
+                </p>
+
+              
+<p>We will:
+</p>
+<ul class="govuk-list govuk-list--bullet">
+    <li>work out how much maintenance must be paid and tell both parents
+
+    </li>
+    <li>collect payments from the other parent and pass them on to you – there are charges for this
+
+    </li>
+    <li>review your calculation each year, or if either parent’s circumstances change
+
+    </li>
+</ul>
+
+<p>
+    You can only use Collect and Pay if the other parent either:
+</p>
+
+<ul class="govuk-list govuk-list--bullet">
+    <li>refuses to respond to us
+
+
+    </li>
+    <li>has missed previous payments (and there is evidence of this), or
+
+    </li>
+    <li>agrees to use Collect and Pay
+
+
+    </li>
+</ul>
+
+
+<table class="govuk-table">
+  <caption class="govuk-table__caption"></caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="col">Collect and Pay charges</th>
+      <th class="govuk-table__header govuk-table__header--numeric" scope="col">Amount you pay</th>
+      <th class="govuk-table__header govuk-table__header--numeric" scope="col">Example</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="row">If you receive child maintenance</th>
+      <td class="govuk-table__cell govuk-table__cell--numeric">4% taken from each payment</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">You'd lose £4 from a £100 payment</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="row">If you pay child maintenance</th>
+      <td class="govuk-table__cell govuk-table__cell--numeric">20% on top of each payment</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">You'd pay £20 on top of a £100 payment</td>
+    </tr>
+  </tbody>
+</table>
+                <a href="collect_and_pay_bank_details" role="button" draggable="false" class="govuk-button">
+                    Continue
+                </a>
+
+            </div>
+    </main>
+    </div>
+</div>
+{% endblock %}

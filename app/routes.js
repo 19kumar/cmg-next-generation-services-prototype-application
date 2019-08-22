@@ -43,6 +43,8 @@ router.use('/cmg-app/sprint_9/sprint_9_main_prototype', require('./views/cmg-app
 
 router.use('/cmg-app/sprint_10/sprint_10_main_prototype', require('./views/cmg-app/sprint_10/sprint_10_main_prototype/routes'));
 
+router.use('/cmg-app/sprint_11/sprint_11_main_prototype', require('./views/cmg-app/sprint_11/sprint_11_main_prototype/routes'));
+
 router.use('/cmg-app/proposed_designs/proposed_main_prototype', require('./views/cmg-app/proposed_designs/proposed_main_prototype/routes'));
 
 //Other parent iterations - Sprint 1

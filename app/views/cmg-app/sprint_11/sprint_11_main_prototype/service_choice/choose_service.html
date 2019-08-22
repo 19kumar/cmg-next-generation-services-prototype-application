@@ -1,0 +1,100 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+{% block content %}
+<!--Feedback banner start-->
+{% include "feedback_banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form method="post" novalidate>
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
+                  <h1 class="govuk-fieldset__heading">
+                    How would you prefer child maintenance to be paid?
+                  </h1>
+                </legend>
+                <div class="govuk-radios">
+    <div class="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="service-choice-1" name="service-choice" type="radio" value="Direct Pay" aria-describedby="directPayDescription">
+        <label class="govuk-label govuk-radios__label govuk-label--s" for="service-choice-1">
+          Direct Pay
+        </label>
+        <span id="directPayDescription" class="govuk-hint govuk-radios__hint">
+            <P class="govuk-body">This means:<p>
+          <ul class="govuk-list govuk-list--bullet">
+              <li>we work out how much should be paid and tell both parents</li>
+              <li>you give your bank details to the other parent so they can set up payments</li>
+              <li>we can take action if payments are not made</li>
+              <li>there are no collection charges to pay</li>
+          </ul>
+        </span>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="service-choice-2" name="service-choice" type="radio" value="Collect and Pay" aria-describedby="collectAndPayDescription">
+        <label class="govuk-label govuk-radios__label govuk-label--s" for="service-choice-2">
+          Collect and Pay
+        </label>
+        <span id="collectAndPayDescription" class="govuk-hint govuk-radios__hint">
+            <P class="govuk-body">This means:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>we work out how much should be paid and tell both parents</li>
+            <li>we collect payments from the other parent and pass them on to you</li>
+            <li>there will be collection charges to pay</li>
+          </ul>
+        </span>
+        <details class="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              How much does it cost to use Collect and Pay?
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+           <!--Additional Details-->
+           <table class="govuk-table">
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__header" scope="row"></td>
+                <th class="govuk-table__header" scope="col">Amount you pay</th>
+                <th class="govuk-table__header" scope="col">Example</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th class="govuk-table__header" scope="row">If you receive child maintenance</th>
+                <td class="govuk-table__cell">4% taken from each payment</td>
+                <td class="govuk-table__cell">You'd lose £4 from a £100 payment</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th class="govuk-table__header" scope="row">If you pay child maintenance</th>
+                <td class="govuk-table__cell">20% on top of each payment</td>
+                <td class="govuk-table__cell">You'd pay £20 on top of a £100 payment</td>
+              </tr>
+            </tbody>
+          </table>
+           <!--end-->
+          </div>
+        </details>
+
+      </div>
+    </div>
+              </fieldset>
+            </div>
+            <button type="submit" class="govuk-button">
+              Continue
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+  {% endblock %}

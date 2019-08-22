@@ -1,0 +1,63 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback_banner_no_link.html" %}
+<!--Feedback banner stop-->
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper" id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <form method="post" novalidate>
+
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl govuk-!-padding-bottom-4">
+              <h1 class="govuk-fieldset__heading">
+                We need your feedback to improve this service
+              </h1>
+            </legend>
+
+            <div class="govuk-form-group govuk-!-padding-bottom-1">
+              <label class="govuk-label" for="more-detail">
+                <strong>Tell us what you think of the online service</strong>
+              </label>
+              <span id="more-detail-hint" class="govuk-hint">
+                Do not include personal or financial information, like your National Insurance number or credit card details.
+              </span>
+              <textarea class="govuk-textarea " id="more-detail" name="more-detail" rows="10" aria-describedby="more-detail-hint"></textarea>
+
+            </div>
+
+            <div class="govuk-form-group">
+              <p class="govuk-body">
+                <strong>Leave your details so we can contact you if we need to</strong>
+              </p>
+              <label class="govuk-label" for="event-name">
+                Full name (optional)
+              </label>
+              <input class="govuk-input govuk-!-width-one-half" id="event-name" name="event-name" type="text">
+            </div>
+
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="event-name">
+                Email address (optional)
+              </label>
+              <input class="govuk-input govuk-!-width-one-half" id="event-name" name="event-name" type="text">
+            </div>
+
+
+          </fieldset>
+
+          <button type="submit" class="govuk-button">
+            Continue
+          </button>
+
+        </form>
+
+
+
+      </div>
+    </div>
+  </main>
+</div>
+{% endblock %}
