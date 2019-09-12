@@ -18,7 +18,7 @@ GOV.UK Prototype Kit
           <div class="govuk-form-group">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
               <h1 class="govuk-fieldset__heading">
-                What is your phone number?
+                What's the best number to call you on if we have questions about your case?
               </h1>
             </legend>
           <!--  <label class="govuk-label" for="applicant-telephone-number" style="visibility:hidden">
@@ -32,10 +32,38 @@ GOV.UK Prototype Kit
             <label class="govuk-label" for="mobile-number">
               <strong>Phone number</strong>
             </label>
-            <span id="changed-name-hint" class="govuk-hint">We will only call you if we have any questions about your case. If you do not have your own phone, give the phone number of someone you trust.</span>
+            <span id="changed-name-hint" class="govuk-hint">If you do not have your own phone, give the phone number of someone you trust.</span>
             <input class="govuk-input govuk-input--width-20" id="mobile-number"
               name="mobile-number" type="tel" autocomplete="tel">
               </div>
+              </div>
+
+              <fieldset class="govuk-fieldset" aria-describedby="child1BenefitInformation">
+                  <p>
+                      <strong>
+                          Is this your own number?
+                      </strong>
+                  </p>
+
+                  <div class="govuk-radios govuk-radios--inline">
+                      <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="child-benefit-yes" name="child-benefit" type="radio" value="yes">
+                          <label class="govuk-label govuk-radios__label" for="child-benefit-yes">
+                              Yes
+                          </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="child-benefit-no" name="child-benefit" type="radio" value="no">
+                          <label class="govuk-label govuk-radios__label" for="child-benefit-no">
+                              No
+                          </label>
+                      </div>
+                  </div>
+              </fieldset>
+
+              </div>
+              </div>
+              
 
 
           </div>
