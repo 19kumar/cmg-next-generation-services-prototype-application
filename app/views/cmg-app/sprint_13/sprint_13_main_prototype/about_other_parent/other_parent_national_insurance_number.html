@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<!--Feedback banner start-->
+{% include "feedback_banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+  {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="nationalInsuranceDescription" role="group">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
+                <h1 class="govuk-fieldset__heading" id="nationalInsuranceDescription">
+                  Do you know other parent's National Insurance number?
+                </h1>
+              </legend>
+              <div class="govuk-radios" data-module="radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="national-insurance-radio-1" name="national-insurance-radio" type="radio" value="yes"
+                    aria-controls="conditional-national-insurance-radio-1" aria-expanded="true">
+                    
+                  <label class="govuk-label govuk-radios__label" for="national-insurance-radio-1">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-national-insurance-radio-1">
+                  <div class="govuk-form-group">
+ 
+                      <label class="govuk-label" for="other-parent-national-insurance-number">
+                        National Insurance number
+                      </label>
+                      <span id="otherParentNationalInsuranceNumberInformation" class="govuk-hint">
+                        For example, ‘QQ 12 34 56C’.
+                      </span>
+                      <input class="govuk-input govuk-input--width-10" id="other-parent-national-insurance-number"
+                        name="other-parent-national-insurance-number" type="text">
+
+                  </div>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="national-insurance-radio-2" name="national-insurance-radio" type="radio" value="no">
+                  <label class="govuk-label govuk-radios__label" for="national-insurance-radio-2">
+                    No
+                  </label>
+                </div>
+              </div>
+          </div>
+
+
+
+          <button type="submit" class="govuk-button">
+            Continue
+          </button>
+        </form>
+      </div>
+    </div>
+  </main>
+</div>
+{% endblock %}

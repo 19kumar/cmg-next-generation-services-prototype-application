@@ -1,0 +1,51 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback_banner.html" %}
+<!--Feedback banner stop-->
+
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <form method="post" novalidate>
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" aria-describedby="child1BenefitInformation">
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
+                                <h1 class="govuk-fieldset__heading" id="child1BenefitInformation">
+                                    Do you live at this address?</h1>
+                            </legend>
+<div class="form-group">
+         <p>10 Hilltop drive<br> Ayton<br> Cramlington <br>NE32 2LB</p>
+         </div>
+
+                            <span id="changed-name-hint" class="govuk-hint">
+                                 We ask this to confirm your identity. We will not share this information with the other parent.
+                            </span>
+
+
+                            <div class="govuk-radios govuk-radios--inline">
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="child-benefit-yes" name="child-benefit" type="radio" value="yes~../reviews/review_your_answers_applicants_details">
+                                    <label class="govuk-label govuk-radios__label" for="child-benefit-yes">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="child-benefit-no" name="child-benefit" type="radio" value="no~address_lookup">
+                                    <label class="govuk-label govuk-radios__label" for="child-benefit-no">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <button type="submit" class="govuk-button">
+                        Continue
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+</div>
+{% endblock %}

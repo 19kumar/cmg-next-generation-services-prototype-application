@@ -1,0 +1,131 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <form method="post" novalidate>
+                    <div class="govuk-form-group">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
+                            <h1 class="govuk-fieldset__heading">
+                                When can we call you?
+                            </h1>
+                        </legend>
+                        <!--  <label class="govuk-label" for="applicant-telephone-number" style="visibility:hidden">
+                UK telephone number
+              </label> -->
+                        <p>
+                            We will need to call you if we need more information about your application.
+                        </p>
+
+                        <!--Add here-->
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="contact-time">
+                                <strong>Preferred days and times</strong>
+                            </label>
+                            <span id="contact-time-hint" class="govuk-hint">
+                                We will try to call you at your preferred time. We can only call you from Monday to Friday between 8am and 7:30pm, and Saturday
+                                between 9am and 4pm.
+                            </span>
+                           
+
+
+                            <div class="govuk-checkboxes">
+                                <div class="govuk-checkboxes__item">
+                                    <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                                    <label class="govuk-label govuk-checkboxes__label" for="waste">
+                                        Between 8am and 10am
+                                    </label>
+                                </div>
+                                <div class="govuk-checkboxes__item">
+                                    <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+                                    <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                                        Between 10am and midday
+                                    </label>
+                                </div>
+                                <div class="govuk-checkboxes__item">
+                                    <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                                    <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                        Between midday and 2pm
+                                    </label>
+                                </div>
+                                <div class="govuk-checkboxes__item">
+                                    <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                                    <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                        Between 2pm and 4pm
+                                    </label>
+                                </div>
+                                <div class="govuk-checkboxes__item">
+                                    <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                                    <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                        Between 4pm and 6pm
+                                    </label>
+                                </div>
+                                <div class="govuk-checkboxes__item">
+                                    <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                                    <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                        Between 6pm and 7.30pm
+                                    </label>
+                                </div>
+                            </div>
+                            </fieldset>
+                            </div>
+                            </div>
+                            
+                            <details class="govuk-details" data-module="govuk-details">
+                                <summary class="govuk-details__summary">
+                                    <span class="govuk-details__summary-text">
+                                        None of these times work for me
+                                    </span>
+                                </summary>
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label" for="more-detail">
+                                        Give details of when we can call you
+                                    </label>
+                                    <span id="more-detail-hint" class="govuk-hint">
+                                        Do not include personal or financial information, like your National Insurance number or credit card details.
+                                    </span>
+                                    <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+                                </div>
+                            </details>
+                        </div>
+
+                        <!--Start of checkbox-->
+                    </div>
+                        <fieldset class="govuk-fieldset" aria-describedby="child1BenefitInformation">
+                            <p>
+                                <strong>
+                                    Can we leave a voicemail message if we cannot speak to you?
+                                </strong>
+                                <span id="contact-time-hint" class="govuk-hint">We will not mention any details about the Child Maintenance Service or your case.</span>
+                            </p>
+
+                            <div class="govuk-radios govuk-radios--inline">
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="child-benefit-yes" name="child-benefit" type="radio" value="yes">
+                                    <label class="govuk-label govuk-radios__label" for="child-benefit-yes">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="child-benefit-no" name="child-benefit" type="radio" value="no">
+                                    <label class="govuk-label govuk-radios__label" for="child-benefit-no">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                        </fieldset>
+                    
+                </div>
+                    <button type="submit" class="govuk-button">
+                        Continue
+                    </button>
+                    </form>
+            </div>
+        </div>
+      
+</div>
+</div>
+</main>
+</div>
+{% endblock %}

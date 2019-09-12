@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+{% block content %}
+<!--Feedback banner start-->
+{% include "feedback_banner_no_link.html" %}
+<!--Feedback banner stop-->
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper" id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+      
+            <form method="post" novalidate>
+
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="feedback-join-hint">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                    <h1 class="govuk-fieldset__heading">
+                      Can we contact you about your experience with this service? 
+                    </h1>
+                  </legend>
+                  <span id="feedback-join-hint" class="govuk-hint">
+                    By volunteering for user research, you will help us to improve the Child Maintenance service. 
+                  </span>
+                  <div class="govuk-radios govuk-radios--inline">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="feedback-join-1" name="feedback-join" type="radio" value="yes">
+                      <label class="govuk-label govuk-radios__label" for="feedback-join-1">
+                        Yes
+                      </label> </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="feedback-join-2" name="feedback-join" type="radio" value="no">
+                      <label class="govuk-label govuk-radios__label" for="feedback-join-2">
+                        No
+                      </label> </div>
+                  </div>
+                </fieldset>
+              </div>
+
+              <button type="submit" class="govuk-button">
+                Continue
+              </button>
+            </form>
+
+
+
+      </div>
+    </div>
+  </main>
+</div>
+{% endblock %}
