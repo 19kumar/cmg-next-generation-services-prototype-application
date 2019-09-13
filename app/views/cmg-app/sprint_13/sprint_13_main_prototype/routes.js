@@ -118,10 +118,12 @@ router.post('/exemption_pages/exemption_applicant_age', function (req, res) {
 
 
 router.post('/about_applicant/applicants_national_insurance_number', function (req, res) {
-  res.redirect('applicants_phone_number')
+  res.redirect('domestic_abuse_question')
 });
 
-
+router.post('/about_applicant/domestic_abuse_who_did_you_tell', function (req, res) {
+  res.redirect('applicants_phone_number')
+});
 
 
 
