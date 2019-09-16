@@ -136,6 +136,10 @@ router.post('/about_applicant/applicants_phone_preference', function (req, res) 
 });
 
 router.post('/about_applicant/applicants_phone_number', function (req, res) {
+  res.redirect('can_we_text')
+});
+
+router.post('/about_applicant/can_we_text', function (req, res) {
   res.redirect('applicants_phone_preference')
 });
 
