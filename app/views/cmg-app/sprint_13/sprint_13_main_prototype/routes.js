@@ -434,7 +434,7 @@ router.post('/about_other_parent/other_parent_other_information', function (req,
 
 
 router.post('/reviews/review_your_answers_other_parent', function (req, res) {
-  res.redirect('../personal_security/portal_account_query') 
+  res.redirect('../personal_security/do_you_want_to_manage_online') 
 });
 
 
@@ -447,12 +447,22 @@ router.post('/personal_security/personal_security_details_pin', function (req, r
 
   });
 
-router.post('/personal_security/personal_security_details_password', function (req, res) {
+router.post('/personal_security/online_setup', function (req, res) {
   res.redirect('../../sprint_13_main_prototype/declaration')
 });
 
 router.post('/personal_security/portal_account_query', function (req, res) {
   res.redirect('personal_security_details_pin')
+});
+
+router.post('/personal_security/personal_security_details_password', function (req, res) {
+  res.redirect('online_setup')
+
+});
+
+router.post('/personal_security/personal_security_details_password', function (req, res) {
+  res.redirect('online_setup')
+
 });
 
 
