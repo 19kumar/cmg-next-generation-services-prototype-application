@@ -442,13 +442,17 @@ router.post('/reviews/review_your_answers_other_parent', function (req, res) {
 //security details section ----------------
 
 
-router.post('/personal_security/personal_security_details', function (req, res) {
-  res.redirect('../fee_queries/domestic_introduction')
+router.post('/personal_security/personal_security_details_pin', function (req, res) {
+  res.redirect('personal_security_details_password')
 
   });
 
+router.post('/personal_security/personal_security_details_password', function (req, res) {
+  res.redirect('../../sprint_13_main_prototype/declaration')
+});
+
 router.post('/personal_security/portal_account_query', function (req, res) {
-  res.redirect('personal_security_details')
+  res.redirect('personal_security_details_pin')
 });
 
 
