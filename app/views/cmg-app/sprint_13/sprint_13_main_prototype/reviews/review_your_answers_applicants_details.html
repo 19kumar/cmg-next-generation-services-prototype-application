@@ -22,7 +22,136 @@ GOV.UK Prototype Kit
 
 
 
-                {% include "cmg-app/sprint_10/sprint_10_main_prototype/reviews/review_content/review_about_applicant.html" %}
+<h2 class="govuk-heading-m">About you</h2>
+<dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+            Name
+        </dt>
+        <dd class="govuk-summary-list__value">
+            {{data['applicants-title'] }} {{data['applicant-first-name'] }} {{data['applicant-middle-name'] }} {{data['applicant-last-name']
+            }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="../about_applicant/applicants_name.html">
+                Change
+                <span class="govuk-visually-hidden"> name</span>
+            </a>
+        </dd>
+    </div>
+
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+            Date of birth
+        </dt>
+        <dd class="govuk-summary-list__value">
+            <p class="govuk-body">{{data['applicant-date-of-birth-day'] }} {{data['applicant-date-of-birth-month'] }} {{data['applicant-date-of-birth-year']
+                }}
+            </p>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="../about_applicant/applicants_date_of_birth.html">
+                Change
+                <span class="govuk-visually-hidden"> date of birth</span>
+            </a>
+        </dd>
+    </div>
+
+
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+            National Insurance number
+        </dt>
+        <dd class="govuk-summary-list__value">
+            <p class="govuk-body">{{data['applicant-national-insurance-number'] }}</p>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="../about_applicant/applicants_national_insurance_number.html">
+                Change
+                <span class="govuk-visually-hidden"> name</span>
+            </a>
+        </dd>
+    </div>
+
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+            Have you experienced domestic abuse?
+        </dt>
+        <dd class="govuk-summary-list__value">
+            <p class="govuk-body">Yes</p>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="../about_applicant/applicants_national_insurance_number.html">
+                Change
+                <span class="govuk-visually-hidden"> name</span>
+            </a>
+        </dd>
+    </div>
+
+
+
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+            Mobile number
+        </dt>
+        <dd class="govuk-summary-list__value">
+            {{data['mobile-number'] }}
+
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="../about_applicant/applicants_phone_number.html">
+                Change
+                <span class="govuk-visually-hidden"> contact details</span>
+            </a>
+        </dd>
+    </div>
+
+
+
+
+
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+           Where you live
+        </dt>
+        <dd class="govuk-summary-list__value">
+            24 Willow avenue
+            <br>Lampton
+            <br>Cramlington
+            <br>NE34 7JL
+    
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="../about_applicant/address_lookup.html">
+                Change
+                <span class="govuk-visually-hidden"> contact information</span>
+            </a>
+        </dd>
+    </div>
+
+
+
+
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+            Correspondance address
+        </dt>
+        <dd class="govuk-summary-list__value">
+            2 Ivy Lane
+            <br>Lampton
+            <br>Cramlington
+            <br>NE34 7DB
+
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="../about_applicant/applicants_correspondence_address.html">
+                Change
+                <span class="govuk-visually-hidden"> contact information</span>
+            </a>
+        </dd>
+    </div>
 
 
 
