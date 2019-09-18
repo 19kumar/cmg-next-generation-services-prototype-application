@@ -122,9 +122,12 @@ router.post('/about_applicant/applicants_national_insurance_number', function (r
 });
 
 router.post('/about_applicant/domestic_abuse_who_did_you_tell', function (req, res) {
-  res.redirect('applicants_phone_number')
+  res.redirect('how_we_use_info')
 });
 
+router.post('/about_applicant/how_we_use_info', function (req, res) {
+  res.redirect('applicants_phone_number')
+});
 
 
 
