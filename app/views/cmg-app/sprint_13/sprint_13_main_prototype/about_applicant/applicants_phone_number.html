@@ -45,28 +45,42 @@ GOV.UK Prototype Kit
                       </strong>
                   </p>
 
-                  <div class="govuk-radios govuk-radios--inline">
-                      <div class="govuk-radios__item">
-                          <input class="govuk-radios__input" id="child-benefit-yes" name="child-benefit" type="radio" value="yes">
-                          <label class="govuk-label govuk-radios__label" for="child-benefit-yes">
-                              Yes
+                  <div class="govuk-radios" data-module="radios">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="other-parent-phone-radio-1" name="other-parent-phone-radio" type="radio" value="yes"
+                      aria-expanded="true">
+                      <label class="govuk-label govuk-radios__label" for="other-parent-phone-radio-1">
+                        Yes
+                      </label> </div>
+
+
+                    <div class="govuk-radios__item">
+                      <input aria-controls="conditional-other-parent-phone-radio-1"  class="govuk-radios__input" id="other-parent-phone-radio-2" name="other-parent-phone-radio" type="radio" value="no">
+                      <label class="govuk-label govuk-radios__label" for="other-parent-phone-radio-2">
+                        No
+                      </label> </div>
+
+                      <!--start-->
+                      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-other-parent-phone-radio-1">
+
+                          <label class="govuk-label" for="other-parent-contact-work-phone">
+                            Whose number is this?
                           </label>
-                      </div>
-                      <div class="govuk-radios__item">
-                          <input class="govuk-radios__input" id="child-benefit-no" name="child-benefit" type="radio" value="no">
-                          <label class="govuk-label govuk-radios__label" for="child-benefit-no">
-                              No
-                          </label>
-                      </div>
+                          <span id="changed-name-hint" class="govuk-hint">For example, a family member, friend or support worker.</span>
+
+                          <div class="govuk-form-group">
+                            <input class="govuk-input govuk-input--width-20" id="other-parent-contact-work-phone"
+                              name="other-parent-contact-work-phone" type="tel">
+                          </div>
+                        </div>
+                        </div>
+                      <!--Stop-->
                   </div>
-              </fieldset>
+                </fieldset>
+              </div>
 
               </div>
-              </div>
-              
 
-
-          </div>
           <button type="submit" class="govuk-button">
             Continue
           </button>
