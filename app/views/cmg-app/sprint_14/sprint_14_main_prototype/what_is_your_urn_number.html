@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<!--Feedback banner start-->
+{% include "feedback_banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+  {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+          <h1 class="govuk-heading-xl">What is your unique reference number?</h1>
+          <div class="govuk-form-group">
+            <!--  <label class="govuk-label" for="urn-number" style="visibility:hidden">
+                  Invitation code
+                </label> -->
+            <span id="urnNumberInformation" class="govuk-hint">
+              This is in the email you were sent after speaking to Child Maintenance
+              Options. It starts 95
+            </span>
+            <input class="govuk-input govuk-input--width-10" id="urn-number" type="text" name="urn-number" type="text"
+              aria-describedby="urnNumberInformation" spellcheck="false">
+          </div>
+          <p class="govuk-body">
+            <button type="submit" class="govuk-button">
+              Continue
+            </button>
+          </p>
+        </form>
+
+        <!--I do not have an invitation code section-->
+        <details class="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              I do not have a unique invitation code
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+
+            <p>You’ll need to speak to Child Maintenance
+            Options. They’ll give you an invitation code and explain how to apply.</p>
+            <div class="contact">
+              <p class="govuk-body govuk-body govuk-!-margin-bottom-3"><strong>Child Maintenance Options</strong>
+              </br>Telephone: 0800 988 0988
+              <p class="govuk-body govuk-body govuk-!-margin-bottom-3">Monday to Friday, 8am to 8pm
+              </br>Saturday, 9am to 4pm
+              </br><a href="/call-charges">Find out about call
+                  charges</a></p>
+            </div>
+        </details>
+      </div>
+    </div>
+  </main>
+</div>
+
+{% endblock %}

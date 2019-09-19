@@ -1,0 +1,44 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback_banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <form method="post" novalidate>
+                    <div class="govuk-form-group">
+                        <!--Checkboxes-->
+
+<div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h1 class="govuk-fieldset__heading">
+                 We will not share your answers with anyone else
+            </h1>
+        </legend>
+
+
+
+<p>The next questions are about yourself, the children you need
+  this child maintenance arrangement for and the other parent. The answers you give will help us to:</p>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>set up your child maintenance case</li>
+    <li>get in touch if we have any questions about your case</li>
+
+    <div class="govuk-inset-text">
+      Your answers will not be shared with the other parent.
+    </div>
+
+</div>
+        <button type="submit" class="govuk-button">
+                        Continue
+                    </button>
+
+                </form>
+            </div>
+        </div>
+    </main>
+</div>
+{% endblock %}
