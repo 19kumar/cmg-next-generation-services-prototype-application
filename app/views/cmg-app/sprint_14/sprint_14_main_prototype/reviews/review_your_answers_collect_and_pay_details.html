@@ -1,0 +1,150 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback_banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds-from-desktop">
+
+                <h1 class="govuk-heading-xl">Check your answers</h1>
+
+
+                <h2 class="govuk-heading-m">Child maintenance payments</h2>
+                <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Payment type
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            <p class="govuk-body">Direct Pay</p>
+                        </dd>
+                        <dd class="govuk-summary-list__actions">
+                            <a class="govuk-link" href="../service_choice/choose_service.html">
+                                Change
+                                <span class="govuk-visually-hidden"> name</span>
+                            </a>
+                        </dd>
+                    </div>
+                
+                </dl>
+
+               
+                <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Do you want us to pass on your bank details?
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            <p class="govuk-body">Yes</p>
+                        </dd>
+                        <dd class="govuk-summary-list__actions">
+                            <a class="govuk-link" href="../service_choice/choose_service.html">
+                                Change
+                                <span class="govuk-visually-hidden"> name</span>
+                            </a>
+                        </dd>
+                    </div>
+
+                </dl>
+
+                <h2 class="govuk-heading-m">Bank account details</h2>
+                <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Type of account
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            <p class="govuk-body">Bank account</p>
+                        </dd>
+                        <dd class="govuk-summary-list__actions">
+                            <a class="govuk-link" href="../service_choice/choose_service.html">
+                                Change
+                                <span class="govuk-visually-hidden"> name</span>
+                            </a>
+                        </dd>
+                    </div>
+
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Name of account holder
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            <p class="govuk-body">{{data['account-holder'] }}</p>
+                        </dd>
+                        <dd class="govuk-summary-list__actions">
+                            <a class="govuk-link" href="../service_choice/choose_service.html">
+                                Change
+                                <span class="govuk-visually-hidden"> name</span>
+                            </a>
+                        </dd>
+                    </div>
+
+
+
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Sort code
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            <p class="govuk-body">{{data['sort-code-number-1'] }} {{data['sort-code-number-2'] }} {{data['sort-code-number-3']
+                                }}</p>
+                        </dd>
+                        <dd class="govuk-summary-list__actions">
+                            <a class="govuk-link" href="../service_choice/choose_service.html">
+                                Change
+                                <span class="govuk-visually-hidden"> name</span>
+                            </a>
+                        </dd>
+                    </div>
+
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Account number
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            {{data['account-number'] }}
+                        </dd>
+                        <dd class="govuk-summary-list__actions">
+                            <a class="govuk-link" href="../service_choice/choose_service.html">
+                                Change
+                                <span class="govuk-visually-hidden"> name</span>
+                            </a>
+                        </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Roll number
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            {{data['roll-number'] }}
+                        </dd>
+                        <dd class="govuk-summary-list__actions">
+                            <a class="govuk-link" href="../service_choice/choose_service.html">
+                                Change
+                                <span class="govuk-visually-hidden"> name</span>
+                            </a>
+                        </dd>
+                    </div>
+            </div>
+        </div>
+
+        <form method="post" novalidate>
+            <button type="submit" class="govuk-button">
+                Continue
+            </button>
+
+            </p>
+        </form>
+
+</div>
+</div>
+</main>
+</div>
+
+{% endblock %}

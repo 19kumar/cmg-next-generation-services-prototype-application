@@ -100,7 +100,7 @@ router.post('/about_applicant/you_pay_fee', function (req, res) {
 });
 
 router.post('/about_applicant/applicants_name', function (req, res) {
-  res.redirect('applicants_date_of_birth')
+  res.redirect('applicants_national_insurance_number')
 });
 
 
@@ -124,6 +124,10 @@ router.post('/exemption_pages/exemption_applicant_age', function (req, res) {
 
 
 router.post('/about_applicant/applicants_national_insurance_number', function (req, res) {
+  res.redirect('applicants_phone_number')
+});
+
+router.post('/about_applicant/applicants_phone_number', function (req, res) {
   res.redirect('applicants_phone_preference')
 });
 
@@ -336,11 +340,15 @@ router.post('/service_choice/contact_with_other_parent', function (req, res) {
 });
 
 router.post('/service_choice/collect_and_pay_bank_details', function (req, res) {
-  res.redirect('../reviews/review_your_answers_collect_and_pay')
+  res.redirect('../reviews/review_your_answers_collect_and_pay_details')
 });
 
 
-router.post('/reviews/review_your_answers_collect_and_pay', function (req, res) {
+router.post('/reviews/review_your_answers_collect_and_pay_details', function (req, res) {
+  res.redirect('../about_other_parent/other_parent_name')
+});
+
+router.post('/reviews/review_your_answers_collect_and_pay_no_details', function (req, res) {
   res.redirect('../about_other_parent/other_parent_name')
 });
 
