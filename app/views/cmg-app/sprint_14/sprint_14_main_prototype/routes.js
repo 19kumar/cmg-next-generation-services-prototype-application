@@ -64,7 +64,7 @@ router.post('/what_is_your_urn_number', function (req, res) {
   if (urnNumber === '1234') {
     res.redirect('dropouts/dropout_urn')
   } else {
-    res.redirect('about_applicant/applicants_name')
+    res.redirect('about_applicant/check_age')
   }
 });
   // interrupt cards --------------------------------------------------------------
@@ -91,7 +91,13 @@ router.post('/other_parent_interrupt', function (req, res) {
 // About applicant section --------------------------------------------------------------
 
 
+router.post('/about_applicant/no_pay_fee', function (req, res) {
+  res.redirect('applicants_name')
+});
 
+router.post('/about_applicant/you_pay_fee', function (req, res) {
+  res.redirect('applicants_name')
+});
 
 router.post('/about_applicant/applicants_name', function (req, res) {
   res.redirect('applicants_date_of_birth')
@@ -118,7 +124,7 @@ router.post('/exemption_pages/exemption_applicant_age', function (req, res) {
 
 
 router.post('/about_applicant/applicants_national_insurance_number', function (req, res) {
-  res.redirect('domestic_abuse_question')
+  res.redirect('applicants_phone_preference')
 });
 
 router.post('/about_applicant/domestic_abuse_who_did_you_tell', function (req, res) {
@@ -305,6 +311,17 @@ router.post('/about_qualifying_child/child_check_answers_loop_1', function (req,
   res.redirect('../service_choice/about_direct_pay')
 });
 
+
+router.post('/about_applicant/check_age', function (req, res) {
+  let applicantDateOfBirthYear = req.session.data['applicant-date-of-birth-year']
+  if (applicantDateOfBirthYear > 1999) {
+    res.redirect('no_pay_fee')
+  } else if (applicantDateOfBirthYear < 2000) {
+    res.redirect('domestic_abuse_question')
+  } else {
+    res.redirect('domestic_abuse_question')
+  }
+});
 
 //Payment section ----------------
 
