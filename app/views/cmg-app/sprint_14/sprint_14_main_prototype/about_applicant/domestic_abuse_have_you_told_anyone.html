@@ -1,0 +1,50 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback_banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <form method="post" novalidate>
+                    <div class="govuk-form-group">
+                        <!--Checkboxes-->
+
+                        <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset" aria-describedby="abuse-checkbox-hint">
+                                <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
+                                    <h1 class="govuk-fieldset__heading">
+Have you told anyone about the domestic abuse you or your children experienced?</h1>                                </legend>
+
+                                <p>For example, the police, a doctor, nurse, solicitor, teacher, employer, social services or a court.</p>
+
+
+
+                                <div class="govuk-radios govuk-radios--inline">
+                                    <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="abuse-query-1" name="abuse-query" type="radio" value="yes~domestic_abuse_who_did_you_tell">
+                                        <label class="govuk-label govuk-radios__label" for="abuse-query-1">
+                                            Yes
+                                        </label>
+                                    </div>
+                                    <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="abuse-query-2" name="abuse-query" type="radio" value="no~domestic_abuse_do_you_want_to_report">
+                                        <label class="govuk-label govuk-radios__label" for="abuse-query-2">
+                                            No
+                                        </label>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <button type="submit" class="govuk-button">
+                        Continue
+                    </button>
+
+                </form>
+            </div>
+        </div>
+    </main>
+</div>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback_banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <form method="post" novalidate>
+                    <!--start of radio-->
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" aria-describedby="live-uk-hint">
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl govuk-fieldset__legend--xl govuk-!-margin-bottom-9">
+                                <h1 class="govuk-fieldset__heading">
+                                     Your online account
+
+                                </h1>
+                            </legend>
+<p>When we process your application we will send you a customer reference number and information about how to access your online
+account.
+</p>
+                            <!--end-->
+                            <button type="submit" class="govuk-button">
+                                Continue
+                            </button>
+                </form>
+                </div>
+            </div>
+    </main>
+    </div>
+    {% endblock %}
