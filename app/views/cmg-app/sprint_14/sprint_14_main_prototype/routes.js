@@ -145,6 +145,10 @@ router.post('/about_applicant/how_we_use_info', function (req, res) {
 
 //normal route with continue - Other parents address
 router.post('/about_applicant/applicants_phone_preference', function (req, res) {
+  res.redirect('can_we_text')
+});
+
+router.post('/about_applicant/can_we_text', function (req, res) {
   res.redirect('applicants_address')
 });
 
@@ -476,7 +480,7 @@ router.post('/personal_security/personal_security_details_pin', function (req, r
   });
 
 router.post('/personal_security/online_setup', function (req, res) {
-  res.redirect('../../sprint_13_main_prototype/declaration')
+  res.redirect('../../sprint_14_main_prototype/declaration')
 });
 
 router.post('/personal_security/portal_account_query', function (req, res) {
