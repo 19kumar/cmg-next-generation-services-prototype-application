@@ -61,7 +61,7 @@ router.post('/what_is_your_urn_number', function (req, res) {
 
 
   let urnNumber = req.session.data['urn-number']
-  if (urnNumber === '1234') {
+  if (urnNumber === 'dropout') {
     res.redirect('dropouts/dropout_urn')
   } else {
     res.redirect('about_applicant/check_age')
