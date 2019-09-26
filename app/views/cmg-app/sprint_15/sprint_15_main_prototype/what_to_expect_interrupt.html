@@ -1,0 +1,51 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback_banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds-from-desktop">
+
+                <h1 class="govuk-heading-xl">What to expect</h1>
+
+                <p>We will ask you questions about yourself, your children and how you want child
+                  maintenance to be paid.</p>
+
+                <h2 class="govuk-heading-m">Helpful information about the other parent</h2>
+
+                <p>We need information about the other parent so we can set up your child maintenance case.
+                  You will need to give their name and as much other information as you can.
+                  This could include:</p>
+
+                          <ul class="govuk-list govuk-list--bullet">
+                            <li>their phone number</li>
+                            <li>any details about where they live or work</li>
+                            <li>their date of birth or age</li>
+                            <li>their National Insurance number</li>
+                          </ul>
+                <div class="govuk-inset-text">If you do not know all of these details you can still apply but it might take longer to set up your case.</div>
+
+                <h2 class="govuk-heading-m">Setting up an online account</h2>
+
+                <p>As part of your application, we will set up an online child maintenance account for you.
+                  We will ask you to create a personal identification number (PIN), a password and give
+                  your email address.</p>
+
+                <div class="govuk-inset-text">Only you and our team will be able to see the security details you create.</div>
+
+                <form method="post" novalidate>
+                    <button type="submit" class="govuk-button">
+                        Continue
+                    </button>
+
+                </form>
+
+            </div>
+        </div>
+    </main>
+</div>
+
+{% endblock %}

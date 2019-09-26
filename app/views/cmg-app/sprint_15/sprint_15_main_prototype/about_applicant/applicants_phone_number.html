@@ -1,0 +1,91 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+{% block content %}
+<!--Feedback banner start-->
+{% include "feedback_banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+  {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+          <div class="govuk-form-group">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
+              <h1 class="govuk-fieldset__heading">
+                What's the best number to call you on if we have questions about your case?
+              </h1>
+            </legend>
+          <!--  <label class="govuk-label" for="applicant-telephone-number" style="visibility:hidden">
+                UK telephone number
+              </label> -->
+            <p>
+              We will not share this information with the other parent.
+            </p>
+
+            <div class="govuk-form-group">
+            <label class="govuk-label" for="mobile-number">
+              <strong>Phone number</strong>
+            </label>
+            <span id="changed-name-hint" class="govuk-hint">If you do not have your own phone, give the phone number of someone you trust.</span>
+            <input class="govuk-input govuk-input--width-20" id="mobile-number"
+              name="mobile-number" type="tel" autocomplete="tel">
+              </div>
+              </div>
+
+              <fieldset class="govuk-fieldset" aria-describedby="child1BenefitInformation">
+                  <p>
+                      <strong>
+                          Is this your own number?
+                      </strong>
+                  </p>
+
+                  <div class="govuk-radios" data-module="radios">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="other-parent-phone-radio-1" name="other-parent-phone-radio" type="radio" value="yes"
+                      aria-expanded="true">
+                      <label class="govuk-label govuk-radios__label" for="other-parent-phone-radio-1">
+                        Yes
+                      </label> </div>
+
+
+                    <div class="govuk-radios__item">
+                      <input aria-controls="conditional-other-parent-phone-radio-1"  class="govuk-radios__input" id="other-parent-phone-radio-2" name="other-parent-phone-radio" type="radio" value="no">
+                      <label class="govuk-label govuk-radios__label" for="other-parent-phone-radio-2">
+                        No
+                      </label> </div>
+
+                      <!--start-->
+                      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-other-parent-phone-radio-1">
+
+                          <label class="govuk-label" for="other-parent-contact-work-phone">
+                            Whose number is this?
+                          </label>
+                          <span id="changed-name-hint" class="govuk-hint">For example, a family member, friend or support worker.</span>
+
+                          <div class="govuk-form-group">
+                            <input class="govuk-input govuk-input--width-20" id="other-parent-contact-work-phone"
+                              name="other-parent-contact-work-phone" type="tel">
+                          </div>
+                        </div>
+                        </div>
+                      <!--Stop-->
+                  </div>
+                </fieldset>
+              </div>
+
+              </div>
+          <button type="submit" class="govuk-button">
+            Continue
+          </button>
+        </form>
+      </div>
+    </div>
+  </main>
+</div>
+{% endblock %}

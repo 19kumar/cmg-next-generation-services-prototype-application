@@ -1,0 +1,63 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<!--Change to test initial commit *this can be removed-->
+{{ govukBackLink({
+  text: 'Back',
+  href: 'javascript:history.back()'
+}) }}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Child maintenance online application
+        <span class="govuk-caption-xl">{{releaseVersion}}</span>
+      </h1>{{releaseVersion | log }}
+      <span class="govuk-caption-xl">{{serviceName}}</span>
+
+
+
+
+      <span class="govuk-caption-l">Alpha phase</span>
+      <br>
+      <br>
+      <br>
+
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <h3 class="govuk-heading-m">Iteration</h3>
+
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col">Sprint/iterations</th>
+            <th class="govuk-table__header" scope="col">Date</th>
+            <th class="govuk-table__header" scope="col">Notes</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="row"><a href="sprint_14_main_prototype/index.html">Version 14 iteration 1</a></td>
+                  <td class="govuk-table__cell">25 September 2019 - in progress</td>
+                <td class="govuk-table__cell"><strong>changes include:</strong><br>
+                
+                
+                </td></tr>
+            </tbody>
+          </table>
+
+          <br><br>
+    </div>
+  </div>
+
+{% endblock %}

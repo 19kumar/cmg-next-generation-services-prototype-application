@@ -1,0 +1,36 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback_banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <form method="post" novalidate>
+                    <div class="govuk-form-group">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
+                            <h1 class="govuk-fieldset__heading">
+                                Where do you live?
+                            </h1>
+                        </legend>
+
+                        <p>We ask this to confirm your identity. We will not share this information with the other parent.</p>
+
+                        <label class="govuk-label" for="home-address-postcode">
+                            <strong>Postcode</strong>
+                        </label>
+                        <input class="govuk-input govuk-!-width-one-quarter" value="NE34 7JL"id="home-address-postcode" name="home-address-postcode" type="text">
+                    </div>
+                    <button type="submit" class="govuk-button">
+                        Find address
+                    </button>
+                    </div>
+                    </div>
+                    <a href="applicants_address_manual_input2" class="govuk-link">Enter address manually</a>
+                </form>
+            </div>
+        </div>
+    </main>
+</div>
+{% endblock %}
