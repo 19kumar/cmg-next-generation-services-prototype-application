@@ -8,15 +8,13 @@
                     <div class="govuk-form-group">
                         <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
                             <h1 class="govuk-fieldset__heading">
-                                When can we call you?
+                                When can we call you, if we need to?
                             </h1>
                         </legend>
                         <!--  <label class="govuk-label" for="applicant-telephone-number" style="visibility:hidden">
                 UK telephone number
               </label> -->
-                        <p>
-                            We will need to call you if we need more information about your application.
-                        </p>
+
 
                         <!--Add here-->
                         <div class="govuk-form-group">
@@ -27,7 +25,7 @@
                                 We will try to call you at your preferred time. We can only call you from Monday to Friday between 8am and 7:30pm, and Saturday
                                 between 9am and 4pm.
                             </span>
-                           
+
 
 
                             <div class="govuk-checkboxes">
@@ -64,7 +62,7 @@
                                 <div class="govuk-checkboxes__item">
                                     <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
                                     <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-                                        Between 6pm and 7.30pm
+                                        Between 6pm and 7:30pm
                                     </label>
                                 </div>
                                 <div class="govuk-checkboxes__item">
@@ -73,30 +71,21 @@
                                         Any time
                                     </label>
                                 </div>
-                                
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="citizenship-conditional" name="citizen" type="checkbox" value="phone" data-aria-controls="citizenship-conditional">
+                                <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional">
+                                  None of these times work for me
+                                </label>
+                              </div>
+
+
                             </div>
                             </fieldset>
                             </div>
                             </div>
-                            
-                            <details class="govuk-details" data-module="govuk-details">
-                                <summary class="govuk-details__summary">
-                                    <span class="govuk-details__summary-text">
-                                        None of these times work for me
-                                    </span>
-                                </summary>
-                                <div class="govuk-form-group">
-                                    <label class="govuk-label" for="more-detail">
-                                        Give details of when we can call you
-                                    </label>
-                                    <span id="more-detail-hint" class="govuk-hint">
-                                        Do not include personal or financial information, like your National Insurance number or credit card details.
-                                    </span>
-                                    <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
-                                </div>
-                            </details>
-                        </div>
 
+
+                        </div>
                         <!--Start of checkbox-->
                     </div>
                         <fieldset class="govuk-fieldset" aria-describedby="child1BenefitInformation">
@@ -104,7 +93,7 @@
                                 <strong>
                                     Can we leave a voicemail message if we cannot speak to you?
                                 </strong>
-                                <span id="contact-time-hint" class="govuk-hint">We will not mention any details about the Child Maintenance Service or your case.</span>
+                                <span id="contact-time-hint" class="govuk-hint">We will not mention any details about the Child Maintenance Service or your application.</span>
                             </p>
 
                             <div class="govuk-radios govuk-radios--inline">
@@ -122,7 +111,7 @@
                                 </div>
                             </div>
                         </fieldset>
-                    
+
                 </div>
                     <button type="submit" class="govuk-button">
                         Continue
@@ -130,7 +119,7 @@
                     </form>
             </div>
         </div>
-      
+
 </div>
 </div>
 </main>

@@ -18,14 +18,15 @@ GOV.UK Prototype Kit
           <div class="govuk-form-group">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
               <h1 class="govuk-fieldset__heading">
-                What's the best number to call you on if we have questions about your case?
+                What's the best number to call you on if we have questions about your application?
               </h1>
             </legend>
           <!--  <label class="govuk-label" for="applicant-telephone-number" style="visibility:hidden">
                 UK telephone number
               </label> -->
             <p>
-              We will not share this information with the other parent.
+              We will not share this information with the other parent. We will tell you
+              which number we will call you from at the end of your application.
             </p>
 
             <div class="govuk-form-group">
@@ -37,6 +38,37 @@ GOV.UK Prototype Kit
               name="mobile-number" type="tel" autocomplete="tel">
               </div>
               </div>
+
+              <div class="govuk-radios" data-module="radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="other-parent-phone-radio-1" name="other-parent-phone-radio" type="radio" value="yes"
+                  aria-expanded="true">
+                  <label class="govuk-label govuk-radios__label" for="other-parent-phone-radio-1">
+                    Yes
+                  </label> </div>
+
+
+                <div class="govuk-radios__item">
+                  <input aria-controls="conditional-other-parent-phone-radio-1"  class="govuk-radios__input" id="other-parent-phone-radio-2" name="other-parent-phone-radio" type="radio" value="no">
+                  <label class="govuk-label govuk-radios__label" for="other-parent-phone-radio-2">
+                    No
+                  </label> </div>
+
+                  <!--start-->
+                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-other-parent-phone-radio-1">
+
+                      <label class="govuk-label" for="other-parent-contact-work-phone">
+                        Whose number is this?
+                      </label>
+                      <span id="changed-name-hint" class="govuk-hint">For example, a family member, friend or support worker.</span>
+
+                      <div class="govuk-form-group">
+                        <input class="govuk-input govuk-input--width-20" id="other-parent-contact-work-phone"
+                          name="other-parent-contact-work-phone" type="tel">
+                      </div>
+                    </div>
+                    </div>
+                    </div>
 
             </div>
               </div>
