@@ -506,6 +506,10 @@ router.post('/fee_queries/domestic_introduction', function (req, res) {
   });
   
  
+
+router.post('/about_applicant/reporting_domestic_abuse', function (req, res) {
+  res.redirect('no_pay_fee')
+});
   router.post('/fee_queries/domestic_abuse_query', function (req, res) {
   
   let domesticAbuseQuery = req.session.data['abuse-query']
