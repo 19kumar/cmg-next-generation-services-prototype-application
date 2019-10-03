@@ -479,23 +479,23 @@ router.post('/personal_security/personal_security_details_pin', function (req, r
 
   });
 
-router.post('/personal_security/online_setup', function (req, res) {
-  res.redirect('../../sprint_15_main_prototype/declaration')
-});
+//router.post('/personal_security/online_setup', function (req, res) {
+  //res.redirect('../../sprint_15_main_prototype/declaration')
+//});
 
 router.post('/personal_security/portal_account_query', function (req, res) {
   res.redirect('personal_security_details_pin')
 });
 
 router.post('/personal_security/personal_security_details_password', function (req, res) {
-  res.redirect('online_setup')
+  res.redirect('../../sprint_15_main_prototype/declaration')
 
 });
 
-router.post('/personal_security/personal_security_details_password', function (req, res) {
-  res.redirect('online_setup')
+//router.post('/personal_security/personal_security_details_password', function (req, res) {
+  //res.redirect('online_setup')
 
-});
+//});
 
 
 // Domestic abuse section --------------------------------------------------------------
