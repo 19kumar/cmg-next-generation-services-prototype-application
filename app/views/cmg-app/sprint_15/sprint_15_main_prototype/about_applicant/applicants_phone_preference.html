@@ -71,19 +71,29 @@
                                         Any time
                                     </label>
                                 </div>
-                              <div class="govuk-checkboxes__item">
-                                <input class="govuk-checkboxes__input" id="citizenship-conditional" name="citizen" type="checkbox" value="phone" data-aria-controls="citizenship-conditional">
-                                <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional">
-                                  None of these times 
-                                </label>
-                              </div>
+                             
 
 
                             </div>
                             </fieldset>
                             </div>
                             </div>
-
+<details class="govuk-details" data-module="govuk-details">
+    <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+            None of these times work for me
+        </span>
+    </summary>
+    <div class="govuk-form-group">
+        <label class="govuk-label" for="more-detail">
+            Give details of when we can call you
+        </label>
+        <span id="more-detail-hint" class="govuk-hint">
+            Do not include personal or financial information, like your National Insurance number or credit card details.
+        </span>
+        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+    </div>
+</details>
 
                         </div>
                         <!--Start of checkbox-->
