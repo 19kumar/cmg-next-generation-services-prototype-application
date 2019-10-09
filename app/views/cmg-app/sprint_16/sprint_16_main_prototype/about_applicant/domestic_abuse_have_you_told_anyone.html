@@ -1,0 +1,60 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback_banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <form method="post" novalidate>
+                    <div class="govuk-form-group">
+                        <!--Checkboxes-->
+    <h1 class="govuk-heading-xl">Check whether you need to pay the application fee
+
+
+    </h1>
+    </legend>
+                        <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset" aria-describedby="abuse-checkbox-hint">
+                                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m ">
+                                    <h1 class="govuk-fieldset__heading">
+Have you told anyone about the domestic abuse you or your children experienced?</h1></legend>
+
+                                <p>For example, the police, a doctor, nurse, solicitor, teacher, employer, support worker, social services or a court.
+                                      We will not share your answer with the other parent.
+                                 </p>
+
+
+                                    <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="abuse-query-1" name="abuse-query" type="radio" value="yes~no_pay_fee">
+                                        <label class="govuk-label govuk-radios__label" for="abuse-query-1">
+                                            Yes
+                                        </label>
+                                    </div>
+                                    <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="abuse-query-2" name="abuse-query" type="radio" value="no~you_pay_fee">
+                                        <label class="govuk-label govuk-radios__label" for="abuse-query-2">
+                                            No
+                                        </label>
+                                    </div>
+                                    <div class="govuk-radios__divider">or</div>
+                                    <div class="govuk-radios__item">
+                                      <input class="govuk-radios__input" id="abuse-query-3" name="abuse-query" type="radio" value="find~reporting_domestic_abuse">
+                                      <label class="govuk-label govuk-radios__label" for="abuse-query-3">
+                                        I want to find out how to tell someone now and not pay the application fee
+                                      </label>
+                                     </div>
+                                </div>
+                                </div>
+                                </fieldset>
+                    <button type="submit" class="govuk-button">
+                        Continue
+                    </button>
+
+                </form>
+            </div>
+        </div>
+    </main>
+</div>
+{% endblock %}
