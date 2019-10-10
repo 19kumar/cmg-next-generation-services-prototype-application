@@ -1,0 +1,52 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback_banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <h1 class="govuk-heading-xl">Select the address you want us to send letters to</h1>
+
+                        <div class="govuk-inset-text">We will not share your answers with the other parent.</div>
+
+        <form method="post" novalidate>
+            <div class="govuk-form-group">
+
+
+<div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+       <strong>Select address</strong>
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+        <option value="1"> 1 Hilltop drive</option>
+                <option value="2">2 Hilltop drive</option>
+        <option value="3">3 Hilltop drive</option>
+        <option value="4">4 Hilltop drive</option>
+        <option value="5">5 Hilltop drive</option>
+        <option value="6">6 Hilltop drive</option>
+        <option value="7">7 Hilltop drive</option>
+        <option value="8">8 Hilltop drive</option>
+        <option value="9">9 Hilltop drive</option>
+
+        <option value="10" selected> 10 Hilltop drive</option>
+
+    </select>
+</div>
+</div>
+<button type="submit" class="govuk-button" data-module="govuk-button">
+    Continue
+</button>
+</div>
+</div>
+
+<a href="applicants_address_manual_input" class="govuk-link">Enter address manually</a>
+
+</div>
+</form>
+    </div>
+    </div>
+    </main>
+    </div>
+    {% endblock %}

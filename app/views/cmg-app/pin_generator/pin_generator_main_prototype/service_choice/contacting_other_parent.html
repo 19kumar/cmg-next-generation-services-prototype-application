@@ -1,0 +1,43 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback_banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" aria-describedby="comfortableContactInformation">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
+                            <h1 class="govuk-fieldset__heading" id="comfortableContactInformation">
+                                If Direct Pay stops working
+                            </h1>
+                        </legend>
+                            <p>You'll need to tell us if a payment is more than 5 days late so we can take action.</p>
+                        <p>If a payment is missed, we will: 
+                        </p>
+                        <ul class="govuk-list govuk-list--bullet">
+                            <li>contact the other parent to find out why they have not paid
+
+                            </li>
+                            <li>arrange for them to pay what they owe
+
+                            </li>
+                            <li>warn them about action that might be taken if they do not pay
+
+                            </li>
+                            <li>take action to get the child maintenance owed if they do not respond
+                        </ul>
+
+                        <div class="govuk-inset-text">We will tell you more about this after you send your application.</div>
+
+
+                        <a href="pass_bank_details" role="button" draggable="false" class="govuk-button">
+                            Continue
+                        </a>
+                </div>
+            </div>
+    </main>
+    </div>
+    {% endblock %}
