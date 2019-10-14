@@ -482,6 +482,10 @@ router.post('/reviews/review_your_answers_other_parent', function (req, res) {
 
 //security details section ----------------
 router.post('/personal_security/do_you_want_to_manage_online', function (req, res) {
+  res.redirect('personal_security_details_pin')
+});
+
+router.post('/personal_security/personal_security_details_pin', function (req, res) {
   res.redirect('personal_security_details_password')
 });
 
