@@ -71,67 +71,88 @@
                                         Any time
                                     </label>
                                 </div>
-                             
+                                <p>or</p>
+                                <div class="govuk-checkboxes__item">
+                                    <input class="govuk-checkboxes__input" id="text" name="waste" type="checkbox" value="farm">
+                                    <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                        None of these times work for me
+                                    </label>
+                                </div>
 
 
+
+                                <div class="govuk-form-group" id="text_reveal">
+                                    <label class="govuk-label" for="more-detail" id="detail">
+                                        Can you provide more detail?
+                                    </label>
+                                    <span id="more-detail-hint" class="govuk-hint">
+                                        Do not include personal or financial information, like your National Insurance number or credit card details.
+                                    </span>
+                                    <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+                                </div>
                             </div>
                             </fieldset>
-                            </div>
-                            </div>
-<details class="govuk-details" data-module="govuk-details">
-    <summary class="govuk-details__summary">
-        <span class="govuk-details__summary-text">
-            None of these times work for me
-        </span>
-    </summary>
-    <div class="govuk-form-group">
-        <label class="govuk-label" for="more-detail">
-            Give details of when we can call you
-        </label>
-        <span id="more-detail-hint" class="govuk-hint">
-            Do not include personal or financial information, like your National Insurance number or credit card details.
-        </span>
-        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
-    </div>
-</details>
-
                         </div>
-                        <!--Start of checkbox-->
                     </div>
-                        <fieldset class="govuk-fieldset" aria-describedby="child1BenefitInformation">
-                            <p>
-                                <strong>
-                                    Can we leave a voicemail message if we cannot speak to you?
-                                </strong>
-                                <span id="contact-time-hint" class="govuk-hint">We will not mention any details about the Child Maintenance Service or your application.</span>
-                            </p>
 
-                            <div class="govuk-radios govuk-radios--inline">
-                                <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="child-benefit-yes" name="child-benefit" type="radio" value="yes">
-                                    <label class="govuk-label govuk-radios__label" for="child-benefit-yes">
-                                        Yes
-                                    </label>
-                                </div>
-                                <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="child-benefit-no" name="child-benefit" type="radio" value="no">
-                                    <label class="govuk-label govuk-radios__label" for="child-benefit-no">
-                                        No
-                                    </label>
-                                </div>
-                            </div>
-                        </fieldset>
-
-                </div>
-                    <button type="submit" class="govuk-button">
-                        Continue
-                    </button>
-                    </form>
             </div>
+            <!--Start of checkbox-->
         </div>
+        <fieldset class="govuk-fieldset" aria-describedby="child1BenefitInformation">
+            <p>
+                <strong>
+                    Can we leave a voicemail message if we cannot speak to you?
+                </strong>
+                <span id="contact-time-hint" class="govuk-hint">We will not mention any details about the Child Maintenance Service or your application.</span>
+            </p>
+
+            <div class="govuk-radios govuk-radios--inline">
+                <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="child-benefit-yes" name="child-benefit" type="radio" value="yes">
+                    <label class="govuk-label govuk-radios__label" for="child-benefit-yes">
+                        Yes
+                    </label>
+                </div>
+                <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="child-benefit-no" name="child-benefit" type="radio" value="no">
+                    <label class="govuk-label govuk-radios__label" for="child-benefit-no">
+                        No
+                    </label>
+                </div>
+            </div>
+        </fieldset>
+
+</div>
+<button type="submit" class="govuk-button">
+    Continue
+</button>
+</form>
+</div>
+</div>
 
 </div>
 </div>
 </main>
 </div>
-{% endblock %}
+
+<script>
+
+    document.getElementById("text_reveal").style.display = "none";
+    // assign function to onclick property of checkbox
+    document.getElementById('text').onclick = function () {
+        // call toggleSub when checkbox clicked
+        // toggleSub args: checkbox clicked on (this), id of element to show/hide
+        toggleSub(this, 'text_reveal');
+    };
+    // called onclick of checkbox
+    function toggleSub(box, id) {
+        // get reference to related content to display/hide
+        var el = document.getElementById(id);
+
+        if (box.checked) {
+            el.style.display = 'block';
+        } else {
+            el.style.display = 'none';
+        }
+    }
+</script> {% endblock %}
