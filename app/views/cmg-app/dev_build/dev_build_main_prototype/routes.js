@@ -491,19 +491,9 @@ router.post('/personal_security/personal_security_details_password', function (r
   });
 
 router.post('/personal_security/personal_security_details_pin', function (req, res) {
-  res.redirect('../../dev_build_main_prototype/declaration')
+  res.redirect('../declaration')
 
 });
-
-//router.post('/personal_security/online_setup', function (req, res) {
-  //res.redirect('../../sprint_16_main_prototype/declaration')
-//});
-
-
-//router.post('/personal_security/personal_security_details_password', function (req, res) {
-  //res.redirect('online_setup')
-
-//});
 
 
 // Domestic abuse section --------------------------------------------------------------

@@ -56,7 +56,7 @@ router.use('/cmg-app/sprint_15/sprint_15_main_prototype', require('./views/cmg-a
 
 router.use('/cmg-app/sprint_16/sprint_16_main_prototype', require('./views/cmg-app/sprint_16/sprint_16_main_prototype/routes'));
 
-router.use('/cmg-app/dev_build/dev_build_main_prototype', require('./views/cmg-app/sprint_16/sprint_16_main_prototype/routes'));
+router.use('/cmg-app/dev_build/dev_build_main_prototype', require('./views/cmg-app/dev_build/dev_build_main_prototype/routes'));
 
 router.use('/cmg-app/pin_generator/pin_generator_main_prototype', require('./views/cmg-app/pin_generator/pin_generator_main_prototype/routes'));
 
