@@ -243,6 +243,10 @@ router.post('/about_applicant/applicants_address_cant_find', function (req, res)
 
 
 router.post('/about_applicant/applicants_address_manual_input', function (req, res) {
+  res.redirect('is_this_your_home_address_2')
+});
+
+router.post('/about_applicant/is_this_your_home_address_2', function (req, res) {
   res.redirect('../reviews/review_your_answers_applicants_details')
 });
 
