@@ -24,7 +24,7 @@ GOV.UK Prototype Kit
         <form method="post" novalidate>
           <div class="govuk-form-group">
             <label class="govuk-label govuk-!-width-two-thirds" for="account-holder" id="accountHolderDescription">
-              <strong>Name of account holder</strong>
+              Name on the account
             </label>
             <input class="govuk-input govuk-!-width-two-thirds" id="account-holder" name="account-holder"
               type="account-holder" aria-describedby="accountHolderDescription" autocomplete="account-holder"
@@ -33,8 +33,9 @@ GOV.UK Prototype Kit
 
           <div class="govuk-date-input" id="sort-code">
             <p class="govuk-label" for="width-5">
-              <strong>Sort code</strong>
+              Sort code
             </p>
+            <spam class="govuk-hint">Must be 6 digits long</spam>
             <div class="govuk-date-input__item">
               <div class="govuk-form-group">
                   <label class="govuk-label" for="sort-code-number-1" style="display: none">
@@ -66,14 +67,15 @@ GOV.UK Prototype Kit
 
           <div class="govuk-form-group">
               <label class="govuk-label" for="account-number">
-                <strong>Account number</strong>
+                Account number
               </label>
+              <span class="govuk-hint">Must be between 6 and 8 digits long</span>
               <input class="govuk-input govuk-!-width-two-thirds" id="account-number" name="account-number" type="text">
             </div>
 
           <div class="govuk-form-group">
   <label class="govuk-label" for="roll-number">
-    <strong>Building society roll number (if you have one)</strong>
+    Building society roll number (if you have one)
   </label>
   <span id="roll-number-hint" class="govuk-hint">
     You can find it on your card, statement or passbook.
