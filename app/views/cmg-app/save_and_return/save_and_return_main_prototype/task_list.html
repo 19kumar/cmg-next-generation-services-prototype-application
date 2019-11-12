@@ -1,0 +1,155 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+
+    <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+
+
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <h1 class="govuk-heading-xl">
+                    Apply to the Child Maintenance Service
+                </h1>
+
+                <ol class="app-task-list">
+
+
+                    <li>
+                        <h2 class="app-task-list__section">
+                            <span class="app-task-list__section-number">1. </span> Your eligibility
+                        </h2>
+                        <ul class="app-task-list__items">
+                            <li class="app-task-list__item">
+                                <a class="app-task-list__task-name" href="../about_qualifying_child/court_order_under_12_months.html" aria-describedby="company-information-completed">
+                                    Are you eligible to apply to the Child Maintenance service?
+                                </a>
+                                <strong class="govuk-tag app-task-list__task-completed" id="company-information-completed">Completed</strong>
+                            </li>
+                            <li class="app-task-list__item">
+                                <a class="app-task-list__task-name" href="../about_qualifying_child/court_order_under_12_months.html" aria-describedby="company-information-completed">
+                                     Do you need to pay a fee to apply?
+                                </a>
+                                <strong class="govuk-tag app-task-list__task-completed" id="company-information-completed">Completed</strong>
+                            </li>
+                           
+                        </ul>
+                    </li>
+
+
+                    <h2 class="app-task-list__section">
+                        <span class="app-task-list__section-number">2. </span> About you
+                    </h2>
+                    <ul class="app-task-list__items">
+                        <li class="app-task-list__item">
+                            <a class="app-task-list__task-name" href="../reviews/review_your_answers_applicants_details" aria-describedby="eligibility-completed">
+                                Your personal details
+                            </a>
+                            <strong class="govuk-tag app-task-list__task-completed" id="company-information-completed">Completed</strong>
+                        </li>
+
+                       
+                        <li class="app-task-list__item">
+                            <a class="app-task-list__task-name" href="../about_other_parent/other_parent_name.html" aria-describedby="read-declaration-completed">
+                                 Your contact preferences
+                            </a>
+                            <strong class="govuk-tag app-task-list__task-completed" id="company-information-completed">Completed</strong>
+
+                        </li>
+                        
+                        
+                        </li>
+                        <li class="app-task-list__item">
+                            <a class="app-task-list__task-name" href="../about_other_parent/other_parent_name.html" aria-describedby="read-declaration-completed">
+                                                         Your address</a>
+
+                                                    <strong class="govuk-tag app-task-list__task-completed" id="company-information-completed">Completed</strong>
+
+                        </li>
+                        
+<li class="app-task-list__item">
+    <a class="app-task-list__task-name" href="../about_other_parent/other_parent_name.html" aria-describedby="read-declaration-completed">
+         Check your answers</a>
+
+                            <strong class="govuk-tag app-task-list__task-completed" id="company-information-completed">Completed</strong>
+
+
+</li>
+
+                    </ul>
+                    </li>
+
+                    <li>
+                        <h2 class="app-task-list__section">
+                            <span class="app-task-list__section-number">3. </span> About your children
+                        </h2>
+                        <ul class="app-task-list__items">
+                            <li class="app-task-list__item">
+                                <a class="app-task-list__task-name" href="../service_choice/choose_service.html" aria-describedby="company-information-completed">
+                                    Your child's personal information
+                                </a>
+
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <h2 class="app-task-list__section">
+                            <span class="app-task-list__section-number">4. </span> How you recieve child maintanence
+                        </h2>
+                        <ul class="app-task-list__items">
+                            <li class="app-task-list__item">
+                                <a class="app-task-list__task-name" href="../personal_security/personal_security_details.html" aria-describedby="company-information-completed">
+                                    Choosing how child maintenance is paid
+                                </a>
+
+                            </li>
+                        </ul>
+                    </li>
+                    <h2 class="app-task-list__section">
+                        <span class="app-task-list__section-number">5. </span> The other parent's information
+                    </h2>
+                    <ul class="app-task-list__items">
+                        <li class="app-task-list__item">
+                            <a class="app-task-list__task-name" href="../personal_security/personal_security_details.html" aria-describedby="company-information-completed">
+                                Other parent's personal information
+                            </a>
+                    
+                        </li>
+                     
+                    </ul>
+                    </li>
+<h2 class="app-task-list__section">
+    <span class="app-task-list__section-number">6. </span> Managing your information online
+</h2>
+<ul class="app-task-list__items">
+    <li class="app-task-list__item">
+        <a class="app-task-list__task-name" href="../personal_security/personal_security_details.html" aria-describedby="company-information-completed">
+            Creating an online account
+        </a>
+
+    </li>
+    
+</ul>
+</li>
+
+<h2 class="app-task-list__section">
+    <span class="app-task-list__section-number">7. </span> Send your application
+</h2>
+<ul class="app-task-list__items">
+    <li class="app-task-list__item">
+        <a class="app-task-list__task-name" href="../personal_security/personal_security_details.html" aria-describedby="company-information-completed">
+           Submit and pay
+        </a>
+
+</li>
+
+
+                </ol>
+
+            </div>
+        </div>
+
+
+    </main>
+</div>
+{% endblock %}

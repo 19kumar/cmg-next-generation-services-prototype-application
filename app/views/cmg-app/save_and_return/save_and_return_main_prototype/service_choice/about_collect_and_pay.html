@@ -1,0 +1,80 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback_banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
+                            <h1 class="govuk-fieldset__heading">
+                             If you do not think Direct Pay will work for you
+                            </h1>
+                        </legend>
+
+                    </fieldset>
+                </div>
+
+                <p>We may be able to collect payments
+                  from the other parent and pass them on to you. This is called
+                    'Collect and Pay'.
+
+                </p>
+
+
+<p>We will:
+</p>
+<ul class="govuk-list govuk-list--bullet">
+    <li>work out how much the payments will be and tell both parents
+
+    </li>
+    <li>collect payments from the other parent and pass them on to you – there are charges for this
+
+    </li>
+    <li>review your calculation each year, or if either parent’s circumstances change
+
+    </li>
+</ul>
+
+<div class="govuk-inset-text">We need to ask the other parent how they want to pay.</div>
+
+<h3 class="govuk-heading-s">When you can use Collect and Pay</h3>
+
+<p>
+    You can only use Collect and Pay if the other parent:
+</p>
+
+<ul class="govuk-list govuk-list--bullet">
+    <li>refuses to respond to us
+
+
+    </li>
+    <li>has missed previous payments (and there is evidence of this)
+
+    </li>
+    <li>agrees to use Collect and Pay
+
+
+    </li>
+</ul>
+
+<h4 class="govuk-heading-s">Charges for using Collect and Pay</h4>
+
+
+<p>You and the other parent will both be charged fees if you use Collect and Pay.</p><p> When you receive child maintenance, 4% will
+be taken from each payment. When the other parent pays child maintenance, 20% is added to each payment.</p><p> If the payment amount
+was £100, you would get £96 and the other parent would pay £120. </p>
+
+<a href="collect_and_pay_bank_details" role="button" draggable="false" class="govuk-button">
+                    Continue
+                </a>
+
+            </div>
+    </main>
+    </div>
+</div>
+{% endblock %}

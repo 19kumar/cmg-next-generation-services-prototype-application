@@ -1,0 +1,75 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback_banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <form method="post" novalidate>
+                    <div class="govuk-form-group">
+                        <!--Checkboxes-->
+
+                        <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset" aria-describedby="abuse-checkbox-hint">
+                                <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
+                                    <h1 class="govuk-fieldset__heading">
+Tell someone about the domestic abuse you or your children experienced</h1>
+</legend>
+</fieldset>
+</div>
+
+<p>Domestic abuse or violence is a crime and should be reported to the police - there are also other organisations who can offer you help and support.</p>
+
+                            <div class="govuk-warning-text">
+                                <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                                <strong class="govuk-warning-text__text">
+                                    <span class="govuk-warning-text__assistive">Warning</span>
+Call 999 if it’s an emergency or you’re in immediate danger.                                </strong>
+                            </div>
+
+                            <h2 class="govuk-heading-l">Other organisations who can help</h2>
+
+                            <p>Call any of the following organisations to get help and advice about domestic abuse.</p>
+
+                            <h2 class="govuk-heading-m">After your call</h2>
+
+                              <p>You can continue with your application after your call and you will not have to
+                              pay the application fee.</p>
+
+                              <p><strong>National Domestic Violence Helpline</strong><br>
+                              0808 2000 247<br>
+
+                              <p><strong>Galop (for lesbian, gay, bisexual and transgender people)</strong><br>
+                              0800 999 5428<br>
+
+                              <p><strong>Men’s Advice Line</strong><br>
+                              0808 801 0327<br>
+
+                              <p><strong>Rape Crisis (England and Wales)</strong><br>
+                              0808 802 9999<br>
+
+                              <p><strong>Scotland’s Domestic Abuse and Forced Marriage Helpline</strong><br>
+                              0800 027 1234<br>
+
+                              <p><strong>Scottish Women’s Aid</strong><br>
+                              0131 226 6606<br>
+
+                              <p><strong>Wales Domestic Abuse Helpline</strong><br>
+                              0808 80 10 800<br>
+
+                              </div>
+
+                              <button type="submit" class="govuk-button">
+                                  Continue
+                              </button>
+
+
+
+                </form>
+            </div>
+        </div>
+    </main>
+</div>
+{% endblock %}
