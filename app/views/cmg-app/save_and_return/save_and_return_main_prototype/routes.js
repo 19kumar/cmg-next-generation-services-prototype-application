@@ -64,7 +64,7 @@ router.post('/what_is_your_urn_number', function (req, res) {
   if (urnNumber === 'dropout') {
     res.redirect('dropouts/dropout_urn')
   } else {
-    res.redirect('about_applicant/check_age')
+    res.redirect('about_applicant/applicants_name')
   }
 });
   // interrupt cards --------------------------------------------------------------
@@ -92,11 +92,11 @@ router.post('/other_parent_interrupt', function (req, res) {
 
 
 router.post('/about_applicant/no_pay_fee', function (req, res) {
-  res.redirect('applicants_name')
+  res.redirect('../task_list2')
 });
 
 router.post('/about_applicant/you_pay_fee', function (req, res) {
-  res.redirect('applicants_name')
+  res.redirect('../task_list2')
 });
 
 router.post('/about_applicant/applicants_name', function (req, res) {
@@ -121,10 +121,13 @@ router.post('/exemption_pages/exemption_applicant_age', function (req, res) {
   res.redirect('../about_applicant/applicants_national_insurance_number')
 });
 
+router.post('/reviews/review_your_answers_applicants_details_save_and_return', function (req, res) {
+  res.redirect('../task_list')
+});
 
 
 router.post('/about_applicant/applicants_national_insurance_number', function (req, res) {
-  res.redirect('applicants_phone_number')
+  res.redirect('../reviews/review_your_answers_applicants_details_save_and_return')
 });
 
 router.post('/about_applicant/applicants_phone_number', function (req, res) {
@@ -169,7 +172,7 @@ router.post('/about_applicant/select_address', function (req, res) {
 });
 
 router.post('/about_applicant/select_your_address', function (req, res) {
-  res.redirect('../reviews/review_your_answers_applicants_details_1')
+  res.redirect('../reviews/review_your_answers_task_list2')
 });
 
 
@@ -212,6 +215,10 @@ router.post('/about_applicant/select_your_address_2', function (req, res) {
 
 router.post('/reviews/review_your_answers_applicants_details_1', function (req, res) {
   res.redirect('../about_qualifying_child/child_name')
+});
+
+router.post('/reviews/review_your_answers_task_list2', function (req, res) {
+  res.redirect('../task_list3')
 });
 
 router.post('/about_applicant/applicants_correspondence_address_manual_input', function (req, res) {
