@@ -1,0 +1,84 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://ws1.postcodesoftware.co.uk/lookup.min.js"></script> {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback_banner.html" %}
+<!--Feedback banner stop-->
+
+
+<body>
+    <html>
+    <div class="govuk-width-container">
+        <a href="applicants_national_insurance_number.html" class="govuk-back-link">Back</a>
+
+        <main class="govuk-main-wrapper " id="main-content" role="main">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-two-thirds">
+                    <form method="post" novalidate>
+                        <div class="govuk-form-group">
+                            <!--Start of applicants-address fields-->
+                            <fieldset class="govuk-fieldset">
+                                <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
+                                    <h1 class="govuk-fieldset__heading">
+                                      What is your home address?
+                                    </h1>
+                                </legend>
+
+                                <p>We will not share this information with the other parent.</p>
+
+
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label" for="applicants-address-line-1">
+                                        <p>Building and street</p>
+                                        <span class="govuk-visually-hidden">line 1 of 2</span>
+                                    </label>
+                                    <input class="govuk-input" value="10 Hilltop drive" id="applicants-address-line-1" name="applicants-address-line-1" type="text">
+                                </div>
+
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label" for="applicants-address-line-2">
+                                        <span class="govuk-visually-hidden">Building and street line 2 of 2</span>
+                                    </label>
+                                    <input class="govuk-input" value="Ayton" id="applicants-address-line-2" name="applicants-address-line-2" type="text">
+                                </div>
+
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label" for="applicants-address-town">
+                                        <p>Town or city</p>
+                                    </label>
+                                    <input class="govuk-input govuk-!-width-two-thirds" value="Cramlington" id="applicants-address-town" name="applicants-address-town"
+                                        type="text">
+                                </div>
+
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label" for="applicants-address-postcode">
+                                        <p>Postcode</p>
+                                    </label>
+                                    <input class="govuk-input govuk-input--width-10" value="NE32 2LB" id="applicants-address-postcode" name="applicants-address-postcode"
+                                        type="text">
+                                </div>
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label" for="applicants-address-county">
+                                        <p>Country</p>
+                                    </label>
+                                    <input class="govuk-input govuk-!-width-two-thirds" value="United Kingdom" id="applicants-address-country" name="applicants-address-country"
+                                        type="text">
+                                </div>
+
+
+
+                            </fieldset>
+                            <!--End of applicants-address fields-->
+                        </div>
+                       
+                <a href="applicants_phone_number" class="govuk-button">
+                    Save and continue
+                </a>
+                    </form>
+
+                </div>
+            </div>
+        </main>
+    </div>
+
+    {% endblock %}
