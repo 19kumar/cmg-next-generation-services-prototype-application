@@ -1,0 +1,182 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback_banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+
+                <h1 class="govuk-heading-xl">Check your answers</h1>
+
+
+
+                <h2 class="govuk-heading-m">About you</h2>
+                <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Name
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                           John Smith
+                        </dd>
+                        <dd class="govuk-summary-list__actions">
+                            <a class="govuk-link" href="../about_applicant/applicants_name.html">
+                                Change
+                                <span class="govuk-visually-hidden"> name</span>
+                            </a>
+                        </dd>
+                    </div>
+
+
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            National Insurance number
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            <p class="govuk-body">PP 78 76 75 c</p>
+                        </dd>
+                        <dd class="govuk-summary-list__actions">
+                            <a class="govuk-link" href="../about_applicant/applicants_national_insurance_number.html">
+                                Change
+                                <span class="govuk-visually-hidden"> name</span>
+                            </a>
+                        </dd>
+                    </div>
+
+
+
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Phone number
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                           07741 343 299
+
+                        </dd>
+                        <dd class="govuk-summary-list__actions">
+                            <a class="govuk-link" href="../about_applicant/applicants_phone_number.html">
+                                Change
+                                <span class="govuk-visually-hidden"> contact details</span>
+                            </a>
+                        </dd>
+                    </div>
+
+                  
+
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Where do you live?
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            2 Ivy Lane
+                            <br>Lampton
+                            <br>Cramlington
+                            <br>NE34 7DB
+
+                        </dd>
+                        <dd class="govuk-summary-list__actions">
+                            <a class="govuk-link" href="../about_applicant/applicants_correspondence_address.html">
+                                Change
+                                <span class="govuk-visually-hidden"> contact information</span>
+                            </a>
+                        </dd>
+                    </div>
+                </div>
+                </div>
+                
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-two-thirds">
+
+                <h2 class="govuk-heading-m">About your next of kin</h2>
+                <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                
+                
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Next of kin's name
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            Sally Smith
+                        </dd>
+                        <dd class="govuk-summary-list__actions">
+                            <a class="govuk-link" href="../about_applicant/applicants_name.html">
+                                Change
+                                <span class="govuk-visually-hidden"> name</span>
+                            </a>
+                        </dd>
+                    </div>
+                
+                
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Next of kin's National Insurance number
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            <p class="govuk-body">TT 97 23 34 d</p>
+                        </dd>
+                        <dd class="govuk-summary-list__actions">
+                            <a class="govuk-link" href="../about_applicant/applicants_national_insurance_number.html">
+                                Change
+                                <span class="govuk-visually-hidden"> name</span>
+                            </a>
+                        </dd>
+                    </div>
+                
+                
+                
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Next of kin's phone number
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            07943 644 932
+                
+                        </dd>
+                        <dd class="govuk-summary-list__actions">
+                            <a class="govuk-link" href="../about_applicant/applicants_phone_number.html">
+                                Change
+                                <span class="govuk-visually-hidden"> contact details</span>
+                            </a>
+                        </dd>
+                    </div>
+                
+                
+                
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Next of kin's address
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            2 Ivy Lane
+                            <br>Lampton
+                            <br>Cramlington
+                            <br>NE34 7DB
+                
+                        </dd>
+                        <dd class="govuk-summary-list__actions">
+                            <a class="govuk-link" href="../about_applicant/applicants_correspondence_address.html">
+                                Change
+                                <span class="govuk-visually-hidden"> contact information</span>
+                            </a>
+                        </dd>
+                    </div>
+                   
+                </div>      
+           </div>
+
+
+        <a href="sent" class="govuk-button">
+           Submit
+        </a>
+
+</div>
+</div>
+</main>
+</div>
+
+{% endblock %}

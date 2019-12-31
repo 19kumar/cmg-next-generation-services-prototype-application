@@ -1,0 +1,101 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback_banner_padding_top.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+
+    <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <div class="govuk-panel govuk-panel--confirmation">
+                    <h1 class="govuk-panel__title">
+                        Application sent
+                    </h1>
+                </div>
+
+
+                <h2 class="govuk-heading-m">What happens next</h2>
+
+                <p>We will:</p>
+
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>send you a text message with your customer reference number in the next 24 hours</li>
+                    <li>contact you if we need any more information</li>
+                    <li>try to contact the other person using the information you've given
+                    </li>
+                </ul>
+
+                <h2 class="govuk-heading-m">How long your application will take</h2>
+
+                <p>Applications usually take about 6 weeks.</p>
+
+                <div class="govuk-inset-text">
+                    Your application will take longer if we cannot contact the other person.
+                </div>
+
+                <h2 class="govuk-heading-m">If we need to contact you</h2>
+
+                <p>If we have any questions about your application, we will call you from this number:</p>
+
+                <p>0800 171 2345</p>
+
+                <p>You might want to add this number to your contact list so you know it's us calling.</p>
+
+
+
+          
+
+
+               
+
+            </div>
+
+
+        </div>
+</div>
+</main>
+</div>
+
+
+
+<style>
+    .survey-heading a {
+        background-color: #005ea5;
+        font-family: "nta", Arial, sans-serif;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 1.11111;
+        display: block;
+        margin-top: 0px;
+        margin-bottom: 30px;
+        padding-bottom: 30px;
+        padding-top: 30px;
+        padding-left: 30px;
+        padding-right: 30px;
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+    .survey-heading a:hover {
+
+        text-decoration: underline;
+    }
+
+    .survey-heading {
+        text-align: center;
+        margin: 0px;
+
+    }
+
+    c-related-navigation {
+        color: #0b0c0c;
+        border-top: 2px solid #005ea5;
+    }
+
+    .app-related-items {
+        border-top: 0px solid #005ea5;
+        padding-top: 0px;
+    }
+</style>
+
+{% endblock %}
