@@ -7,10 +7,7 @@ GOV.UK Prototype Kit
 {% include "feedback_banner.html" %}
 <!--Feedback banner stop-->
 <div class="govuk-width-container">
-  {{ govukBackLink({
-      text: 'Back',
-      href: 'javascript:history.back()'
-  }) }}
+   {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
   <main class="govuk-main-wrapper " id="main-content" role="main">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
@@ -79,8 +76,12 @@ GOV.UK Prototype Kit
             Save and continue
           </a>
         </form>
+                       <div>               <a href="task_list" class="govuk-back-link">Back to application home</a>
+</div>
       </div>
+
     </div>
+
   </main>
 </div>
 {% endblock %}

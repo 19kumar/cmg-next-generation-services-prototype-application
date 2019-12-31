@@ -7,15 +7,13 @@ GOV.UK Prototype Kit
 {% include "feedback_banner.html" %}
 <!--Feedback banner stop-->
 <div class="govuk-width-container">
-  {{ govukBackLink({
-      text: 'Back',
-      href: 'javascript:history.back()'
-  }) }}
+
   <main class="govuk-main-wrapper " id="main-content" role="main">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
         <form method="post" novalidate>
           <div class="govuk-form-group">
+   {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
             <fieldset class="govuk-fieldset" aria-describedby="applicantDateOfBirthInformation" role="group">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
                 <h1 class="govuk-fieldset__heading">
@@ -65,6 +63,8 @@ GOV.UK Prototype Kit
         </form>
       </div>
     </div>
+                    <a href="task_list2" class="govuk-back-link">Back to application home</a>
+
   </main>
 </div>
 {% endblock %}

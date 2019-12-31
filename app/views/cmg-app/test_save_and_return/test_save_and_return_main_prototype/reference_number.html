@@ -1,0 +1,31 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback_banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+
+            <div class="govuk-grid-column-two-thirds">
+                <form method="post" novalidate>
+                    <h1 class="govuk-heading-xl">What is your unique reference number?</h1>
+                    <div class="govuk-form-group">
+                        <!--  <label class="govuk-label" for="urn-number" style="visibility:hidden">
+                  Invitation code
+                </label> -->
+                        <input class="govuk-input govuk-input--width-10" id="urn-number" type="text" name="urn-number" type="text" aria-describedby="urnNumberInformation"
+                            spellcheck="false">
+                    </div>
+<a href="task_list" class="govuk-button">
+    Continue
+</a>
+                </form>
+
+                <!--I do not have an invitation code section-->
+                </div>
+            </div>
+    </main>
+    </div>
+
+    {% endblock %}
