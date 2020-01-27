@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<!--Feedback banner start-->
+{% include "feedback_banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form  method="post" novalidate>
+
+          <!--start-->
+          <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" aria-describedby="otherParentKnowAddressInformation">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
+                  <h1 class="govuk-fieldset__heading" id="otherParentKnowAddressInformation">
+                      What do you know about where the other parent lives?
+                  </h1>
+                </legend>
+                <div class="govuk-radios govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="other-parent-know-address-1" name="other-parent-know-address" type="radio" value="yes">
+                    <label class="govuk-label govuk-radios__label" for="other-parent-know-address-1">
+                      Current address (some or all of it)
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="other-parent-know-address-2" name="other-parent-know-address" type="radio" value="no~other_parent_other_information">
+                    <label class="govuk-label govuk-radios__label" for="other-parent-know-address-2">
+                      A previous address (some or all of it)
+                    </label>
+                  </div>
+                  <div class="govuk-radios__divider">or</div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="other-parent-know-address-2" name="other-parent-know-address" type="radio" value="no~other_parent_other_information">
+                    <label class="govuk-label govuk-radios__label" for="other-parent-know-address-2">
+                      Nothing
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          <!--Stop-->
+
+
+
+
+            <button type="submit" class="govuk-button">
+              Continue
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  {% endblock %}
