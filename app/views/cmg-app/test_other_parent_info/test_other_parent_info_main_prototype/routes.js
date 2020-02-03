@@ -466,10 +466,13 @@ router.post('/about_other_parent/other_parent_national_insurance_number', functi
 router.post('/about_other_parent/other_parent_address', function (req, res) {
   res.redirect('other_parent_other_information')
 });
-router.post('/about_other_parent/other_parent_other_information', function (req, res) {
-  res.redirect('../reviews/review_your_answers_other_parent')
+router.post('/about_other_parent/other_parent_current_address', function (req, res) {
+  res.redirect('other_parent_other_information')
 });
 
+router.post('/other_parent_current_address', function (req, res) {
+  res.redirect('other_parent_other_information')
+});
 
 //Other parent review section ----------------
 
@@ -638,6 +641,8 @@ router.post('/feedback/feedback_join_research', function (req, res) {
     }
 
 });
+
+
 
 
 

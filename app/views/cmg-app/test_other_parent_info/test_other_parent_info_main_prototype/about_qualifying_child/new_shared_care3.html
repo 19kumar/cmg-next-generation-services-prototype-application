@@ -12,59 +12,52 @@
 
                     <!--start-->
                     <div class="govuk-form-group">
-                        <fieldset class="govuk-fieldset" aria-describedby="otherParentPhoneInformation">
+                        <fieldset class="govuk-fieldset" aria-describedby="sharedCare" role="group">
                             <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
-                                <h1 class="govuk-fieldset__heading" id="otherParentPhoneInformation">
-                                    Does Billy stay overnight with the other parent on other occasions?
+                                <h1 class="govuk-fieldset__heading" id="sharedCare">
+                                    Does this include special occasions like school holidays or birthdays?
                                 </h1>
                             </legend>
-                                <span id="changed-name-hint" class="govuk-hint">
-                                    For examples holidays, Christmas or during school holidays.
-                                </span>
+
 
 
                             <div class="govuk-radios" data-module="radios">
                                 <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="other-parent-phone-radio-1" name="other-parent-phone-radio" type="radio" value="yes"
-                                        aria-controls="conditional-other-parent-phone-radio-1" aria-expanded="true">
-                                    <label class="govuk-label govuk-radios__label" for="other-parent-phone-radio-1">
+                                    <input class="govuk-radios__input" id="national-insurance-radio-2" name="national-insurance-radio" type="radio" value="no">
+                                    <label class="govuk-label govuk-radios__label" for="national-insurance-radio-2">
                                         Yes
                                     </label>
                                 </div>
-
-                                <!--start-->
-                                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-other-parent-phone-radio-1">
-
-                                    <label class="govuk-label" for="other-parent-contact-work-phone">
-                                        How many nights a year?
-                                    </label>
-
-                                    <div class="govuk-form-group">
-                                        <input class="govuk-input govuk-input--width-20" id="other-parent-contact-work-phone" name="other-parent-contact-work-phone"
-                                            type="tel">
-                                    </div>
-                                </div>
-                                <!--Stop-->
-
-
                                 <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="other-parent-phone-radio-2" name="other-parent-phone-radio" type="radio" value="no">
-                                    <label class="govuk-label govuk-radios__label" for="other-parent-phone-radio-2">
+                                    <input class="govuk-radios__input" id="national-insurance-radio-1" name="national-insurance-radio" type="radio" value="yes"
+                                        aria-controls="conditional-national-insurance-radio-1" aria-expanded="true">
+
+                                    <label class="govuk-label govuk-radios__label" for="national-insurance-radio-1">
                                         No
                                     </label>
                                 </div>
+                                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-national-insurance-radio-1">
+                                    <div class="govuk-form-group">
+
+                                        <label class="govuk-label" for="other-parent-national-insurance-number">
+                                            How many extra nights a year will {{data['child-1-first-name'] }}stay with the other parent?
+                                        </label>
+
+                                        <input class="govuk-input govuk-input--width-10" id="other-parent-national-insurance-number" name="other-parent-national-insurance-number"
+                                            type="text">
+
+                                    </div>
+                                </div>
+
                             </div>
-                        </fieldset>
-                    </div>
-                    <!--Stop-->
-
-
-                <a href="child_check_answers_loop_1" class="govuk-button">
+                </form>
+                <a href="child_check_answers_loop_1 " class="govuk-button ">
                     Continue
                 </a>
 
+
+                </div>
             </div>
-        </div>
     </main>
-</div>
-{% endblock %}
+    </div>
+    {% endblock %}
