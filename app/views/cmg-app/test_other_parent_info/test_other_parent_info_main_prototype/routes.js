@@ -457,6 +457,10 @@ router.post('/about_other_parent/other_parent_do_you_know_occupation', function 
   res.redirect('other_parent_do_you_know_address')
 });
 
+router.post('/about_other_parent/other_parent_other_information', function (req, res) {
+  res.redirect('../reviews/review_your_answers_other_parent')
+});
+
     router.post('/about_other_parent/other_parent_do_you_know_address', function (req, res) {
       let otherParentKnowAddress = req.session.data['other-parent-know-address']
       if (otherParentKnowAddress === 'yes') {
