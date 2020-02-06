@@ -76,10 +76,25 @@
 
             <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key">
-                        Overnight stays with other parent
+                        Regular overnight stays with other parent 
                     </dt>
                     <dd class="govuk-summary-list__value">
-                            <p class="govuk-body">{{data['shared-care'] }}</p>
+                            <p class="govuk-body">{{data['weekly-nights'] }} nights a {{data['how-often'] }} </p>
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="../about_qualifying_child/shared_care.html">
+                            Change
+                            <span class="govuk-visually-hidden"> contact details</span>
+                        </a>
+                    </dd>
+                </div>
+
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Extra overnight stays with the other parent
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        <p class="govuk-body">{{data['how-many-extra-nights-1'] }} nights a year </p>
                     </dd>
                     <dd class="govuk-summary-list__actions">
                         <a class="govuk-link" href="../about_qualifying_child/shared_care.html">

@@ -304,6 +304,12 @@ router.post('/about_qualifying_child/birth_certificate_2', function (req, res) {
   res.redirect('shared_care_2')
 });
 
+router.post('/about_qualifying_child/new_shared_care2', function (req, res) {
+  res.redirect('new_shared_care3')
+});
+router.post('/about_qualifying_child/new_shared_care3', function (req, res) {
+  res.redirect('child_check_answers_loop_1')
+});
 
 router.post('/about_qualifying_child/shared_care', function (req, res) {
   let sharedCare = req.session.data['shared-care']
@@ -450,13 +456,12 @@ router.post('/about_other_parent/other_parent_national_insurance_number', functi
 
 
     router.post('/about_other_parent/other_parent_contact_details', function (req, res) {
-      res.redirect('other_parent_do_you_know_occupation')
+      res.redirect('other_parent_do_you_know_address')
     });
 
-router.post('/about_other_parent/other_parent_do_you_know_occupation', function (req, res) {
-  res.redirect('other_parent_do_you_know_address')
+router.post('/about_other_parent/other_parent_other_information', function (req, res) {
+  res.redirect('../reviews/review_your_answers_other_parent')
 });
-
 router.post('/about_other_parent/other_parent_other_information', function (req, res) {
   res.redirect('../reviews/review_your_answers_other_parent')
 });
@@ -484,6 +489,9 @@ router.post('/other_parent_current_address', function (req, res) {
 
 router.post('about_other_parent/other_parent_previous_address', function (req, res) {
   res.redirect('other_parent_other_information')
+});
+router.post('about_other_parent/other_parent_uk_region', function (req, res) {
+  res.redirect('other_parent_date_of_birth_next_question')
 });
 
 
