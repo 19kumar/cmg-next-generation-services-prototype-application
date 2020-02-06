@@ -21,29 +21,30 @@
 
 
 
-                            <div class="govuk-radios" data-module="radios" for="extra-nights">
+                            <div class="govuk-radios" data-module="radios">
                                 <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="yes-extra-nights" name="extra" type="radio" value="yes">
+                                    <input class="govuk-radios__input" id="national-insurance-radio-2" name="national-insurance-radio" type="radio" value="no">
                                     <label class="govuk-label govuk-radios__label" for="national-insurance-radio-2">
                                         Yes
                                     </label>
                                 </div>
                                 <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="no-extra-nights" name="extra" type="radio" value="no"
-                                        aria-controls="conditional-yes-extra-nights" aria-expanded="true">
+                                    <input class="govuk-radios__input" id="national-insurance-radio-1" name="national-insurance-radio" type="radio" value="yes"
+                                        aria-controls="conditional-national-insurance-radio-1" aria-expanded="true">
 
-                                    <label class="govuk-label govuk-radios__label" for="no-extra-nights">
+                                    <label class="govuk-label govuk-radios__label" for="extra-nights">
                                         No
                                     </label>
                                 </div>
-                                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="no-extra-nights" name"no-extra-nights">
+                                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" 
+                                id="conditional-national-insurance-radio-1" >
                                     <div class="govuk-form-group">
 
-                                        <label class="govuk-label" for="no-extra-nights">
-                                            How many extra nights a year will {{data['child-1-first-name'] }}stay with the other parent?
+                                        <label class="govuk-label" for="yearly-extra-nights" >
+                                            How many extra nights a year will {{data['child-1-first-name'] }} stay with the other parent?
                                         </label>
 
-                                        <input class="govuk-input govuk-input--width-10" id="how-many-extra-nights-1" name="extra"
+                                        <input class="govuk-input govuk-input--width-10" id="yearly-extra-nights" name="extra-nights" 
                                             type="text">
 
                                     </div>
