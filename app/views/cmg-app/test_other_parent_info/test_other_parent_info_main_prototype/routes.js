@@ -300,6 +300,7 @@ router.post('/about_qualifying_child/birth_certificate_1', function (req, res) {
   res.redirect('shared_care')
 });
 
+
 router.post('/about_qualifying_child/birth_certificate_2', function (req, res) {
   res.redirect('shared_care_2')
 });
@@ -320,14 +321,7 @@ router.post('/about_qualifying_child/shared_care', function (req, res) {
   }
   });
 
-router.post('/about_qualifying_child/shared_care_2', function (req, res) {
-  let sharedCare = req.session.data['shared-care']
-  if (sharedCare === '183 nights') {
-    res.redirect('../dropouts/dropout_child_1_shared')
-  } else {
-    res.redirect('child_check_answers_loop_2')
-  }
-});
+
 
 
 router.post('/about_qualifying_child/child_check_answers_loop_1', function (req, res) {
@@ -465,6 +459,11 @@ router.post('/about_other_parent/other_parent_other_information', function (req,
 router.post('/about_other_parent/other_parent_other_information', function (req, res) {
   res.redirect('../reviews/review_your_answers_other_parent')
 });
+
+router.post('/about_qualifying_child/new_shared_care2a', function (req, res) {
+  res.redirect('new_shared_care3')
+});
+
 
     router.post('/about_other_parent/other_parent_do_you_know_address', function (req, res) {
       let otherParentKnowAddress = req.session.data['other-parent-know-address']
