@@ -330,6 +330,11 @@ router.post('/about_qualifying_child/child_check_answers_loop_1', function (req,
 
 
 router.post('/about_applicant/check_age', function (req, res) {
+    res.redirect('check_dob')
+  
+});
+
+router.post('/about_applicant/check_dob', function (req, res) {
   let applicantDateOfBirthYear = req.session.data['applicant-date-of-birth-year']
   if (applicantDateOfBirthYear > 1999) {
     res.redirect('no_pay_fee')
