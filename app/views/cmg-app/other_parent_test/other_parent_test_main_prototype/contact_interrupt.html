@@ -1,0 +1,40 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback_banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds-from-desktop">
+
+                <h1 class="govuk-heading-xl">If you’re worried about contacting the other parent</h1>
+
+                <p>We will:</p>
+
+                          <ul class="govuk-list govuk-list--bullet">
+                            <li>contact them to set up child maintenance – you do not need to</li>
+                            <li>only share your name and your children’s names with them</li>
+                            <li>only give them your bank details if you ask us to so they can make payments to your account</li>
+                          </ul>
+                <p>You can also speak to your bank or building society about setting
+                  up an account that will not give away your location before you use this service.</p>
+
+
+
+
+
+                <form method="post" novalidate>
+                    <button type="submit" class="govuk-button">
+                        Continue
+                    </button>
+
+                </form>
+
+            </div>
+        </div>
+    </main>
+</div>
+
+{% endblock %}

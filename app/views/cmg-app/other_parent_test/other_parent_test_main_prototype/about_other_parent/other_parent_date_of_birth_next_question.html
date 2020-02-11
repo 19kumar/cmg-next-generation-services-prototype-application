@@ -1,0 +1,98 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<!--Feedback banner start-->
+{% include "feedback_banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+  {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="otherParentDobInformation" role="group">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
+                <h1 class="govuk-fieldset__heading" id="otherParentDobInformation">
+                  Do you know the day, month or year the other person was born?
+                </h1>
+              </legend>
+              <div class="govuk-radios" data-module="radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="other-parent-dob-1" name="other-parent-dob" type="radio"
+                    value="yes~other_parent_national_insurance_number" aria-controls="conditional-other-parent-dob-1" aria-expanded="true">
+                  <label class="govuk-label govuk-radios__label" for="other-parent-dob-1">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden"
+                  id="conditional-other-parent-dob-1">
+                  <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" role="group">
+                      <legend class="govuk-fieldset__legend">
+                        Date of birth
+                      </legend>
+                      <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" role="group">
+                          <span id="otherParentDateOfBirthInformation" class="govuk-hint">
+                            Enter as much information as you can. For example, 12 7 1985, or just the month or year.
+                          </span>
+                          <div class="govuk-date-input" id="other-parent-dob-date">
+                            <div class="govuk-date-input__item">
+                              <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="other-parent-dob-date-day">
+                                  Day
+                                </label>
+                                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="other-parent-dob-date-day" name="other-parent-dob-date-day"
+                                  type="number" pattern="[0-9]*">
+                              </div>
+                            </div>
+                            <div class="govuk-date-input__item">
+                              <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="other-parent-dob-date-month">
+                                  Month
+                                </label>
+                                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="other-parent-dob-date-month" name="other-parent-dob-date-month"
+                                  type="number" pattern="[0-9]*">
+                              </div>
+                            </div>
+                            <div class="govuk-date-input__item">
+                              <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="other-parent-dob-date-year">
+                                  Year
+                                </label>
+                                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="other-parent-dob-date-year" name="other-parent-dob-date-year"
+                                  type="number" pattern="[0-9]*">
+                              </div>
+                              </div>
+                              </div>
+                      </div>
+                    </fieldset>
+                  </div>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="other-parent-dob-2" name="other-parent-dob" type="radio"
+                    value="no~other_parent_approx_age" >
+                  <label class="govuk-label govuk-radios__label" for="other-parent-dob-2">
+                    No
+                  </label>
+                </div>
+              </div>
+          </div>
+          <button type="submit" class="govuk-button">
+            Continue
+          </button>
+        </form>
+      </div>
+    </div>
+  </main>
+</div>
+{% endblock %}
