@@ -1,0 +1,135 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback_banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds-from-desktop">
+
+                <h1 class="govuk-heading-xl">Check your answers</h1>
+
+
+
+
+                <h2 class="govuk-heading-m">About other person</h2>
+                <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+
+
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Do you know anything about where they live?
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            {{data['other-parent-address-line-1'] }}
+                            <br>{{data['other-parent-address-line-2'] }}
+                            <br>{{data['other-parent-address-town'] }}
+                            <br>{{data['other-parent-address-county'] }}
+                            <br>{{data['other-parent-address-postcode'] }}
+                        </dd>
+                        <dd class="govuk-summary-list__actions">
+                            <a class="govuk-link" href="../about_other_parent/other_parent_address.html">
+                                Change
+                                <span class="govuk-visually-hidden"> contact information</span>
+                            </a>
+                        </dd>
+                    </div>
+
+
+                    <div class="govuk-summary-list__row" id="previous-address" for="previous-address">
+                        <dt class="govuk-summary-list__key">
+                            Do you know where they used to live?
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                        </dd>
+                        <dd class="govuk-summary-list__actions">
+                            <a class="govuk-link" href="../about_other_parent/other_parent_contact_details.html">
+                                Change
+                                <span class="govuk-visually-hidden"> contact details</span>
+                            </a>
+                        </dd>
+                    </div>
+
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Do you have information about their work or benefits?
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            {{data['where-work'] }}
+
+                        </dd>
+                        <dd class="govuk-summary-list__actions">
+                            <a class="govuk-link" href="../about_other_parent/other_parent_contact_details.html">
+                                Change
+                                <span class="govuk-visually-hidden"> contact details</span>
+                            </a>
+                        </dd>
+                    </div>
+
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Do you know where they get their post sent?
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            {{data['more-detail'] }}
+
+                        </dd>
+                        <dd class="govuk-summary-list__actions">
+                            <a class="govuk-link" href="../about_other_parent/other_parent_contact_details.html">
+                                Change
+                                <span class="govuk-visually-hidden"> contact details</span>
+                            </a>
+                        </dd>
+                    </div>
+
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Do you know any other contact information?
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            {{data['other-contact-information'] }}
+
+                        </dd>
+                        <dd class="govuk-summary-list__actions">
+                            <a class="govuk-link" href="../about_other_parent/other_parent_contact_details.html">
+                                Change
+                                <span class="govuk-visually-hidden"> contact details</span>
+                            </a>
+                        </dd>
+
+
+                </dl>
+
+                <form method="post" novalidate>
+
+
+                    <button type="submit" class="govuk-button">
+                        Continue
+                    </button>
+
+                    </p>
+                </form>
+
+                </div>
+            </div>
+    </main>
+    </div>
+<script>
+    function showDivPreviousAddress() {
+        if (otherParentKnowAddressInformation="other-parent-know-address-2") {
+            document.getElementById('previous-address').style.display = 'visible';
+        }
+    else {
+            document.getElementById('previous-address').style.display = 'hidden';
+
+    }
+
+    }
+</script>
+
+
+
+    {% endblock %}

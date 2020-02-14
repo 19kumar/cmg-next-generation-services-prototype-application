@@ -455,6 +455,9 @@ router.post('/about_other_parent/other_parent_previous_address', function (req, 
   res.redirect('other_parent_other_information')
 });
 
+router.post('/about_other_parent/other_parent_other_information', function (req, res) {
+  res.redirect('review')
+});
     router.post('/about_other_parent/other_parent_contact_details', function (req, res) {
       res.redirect('other_parent_do_you_know_address')
     });
