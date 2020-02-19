@@ -448,7 +448,7 @@ router.post('/about_other_parent/other_parent_national_insurance_number', functi
 });
 
 router.post('/about_other_parent/other_parent_current_address', function (req, res) {
-  res.redirect('other_parent_other_information')
+  res.redirect('other_parent_do_you_know_previous_address')
 });
 
 router.post('/about_other_parent/other_parent_previous_address', function (req, res) {
@@ -463,11 +463,14 @@ router.post('/about_other_parent/other_parent_other_information', function (req,
     });
 
     router.post('/about_other_parent/other_parent_do_you_know_address', function (req, res) {
-      let otherParentKnowAddress = req.session.data['other-parent-know-address']
-      if (otherParentKnowAddress === 'yes') {
-        res.redirect('other_parent_address')
-      } else {
-        res.redirect('../reviews/review_your_answers_other_parent')
+      let knowAddress = req.session.data['know-address']
+      if (knowAddress === 'current') {
+        res.redirect('other_parent_current_address')
+      } else if (knowAddress === 'previous') {
+        res.redirect('other_parent_previous_address')
+      }
+      else  {
+        res.redirect('other_parent_uk_region')
       }
       });
 

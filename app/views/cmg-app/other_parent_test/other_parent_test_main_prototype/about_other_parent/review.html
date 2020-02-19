@@ -39,11 +39,16 @@
                     </div>
 
 
-                    <div class="govuk-summary-list__row" id="previous-address" for="previous-address">
+                    <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__key">
                             Do you know where they used to live?
                         </dt>
                         <dd class="govuk-summary-list__value">
+                             {{data['other-parent-old-address-line-1'] }}
+                            <br>{{data['other-parent-old-address-line-2'] }}
+                            <br>{{data['other-parent-old-address-town'] }}
+                            <br>{{data['other-parent-old-address-county'] }}
+                            <br>{{data['other-parent-old-address-postcode'] }}
                         </dd>
                         <dd class="govuk-summary-list__actions">
                             <a class="govuk-link" href="../about_other_parent/other_parent_contact_details.html">

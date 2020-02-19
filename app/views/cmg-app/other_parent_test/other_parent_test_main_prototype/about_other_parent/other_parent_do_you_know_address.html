@@ -10,41 +10,31 @@
       <div class="govuk-grid-column-two-thirds">
         <form method="post" novalidate>
 
-          <!--start-->
-          <div class="govuk-form-group" id="otherParentKnowAddressInformation">
-            <fieldset class="govuk-fieldset" aria-describedby="otherParentKnowAddressInformation">
-              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
-                <h1 class="govuk-fieldset__heading" id="otherParentKnowAddressInformation">
-                  What do you know about where the other person lives?
-                </h1>
-              </legend>
-              <div class="govuk-radios govuk-radios">
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="other-parent-know-address-1" name="other-parent-know-address" type="radio" value="no~other_parent_current_address">
-                  <label class="govuk-label govuk-radios__label" for="other-parent-know-address-1">
-                    Current address (some or all of it)
-                  </label>
-                </div>
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="other-parent-know-address-2" name="other-parent-know-address" type="radio" value="yes~other_parent_previous_address">
-                  <label class="govuk-label govuk-radios__label" for="other-parent-know-address-2">
-                    A previous address (some or all of it)
-                  </label>
-                </div>
-                <div class="govuk-radios__divider">or</div>
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="other-parent-know-address-3" name="other-parent-know-address" type="radio" value="yes~other_parent_town_city">
-                  <label class="govuk-label govuk-radios__label" for="other-parent-know-address-3">
-                    Nothing
-                  </label>
-                </div>
-              </div>
-            </fieldset>
-          </div>
-          <!--Stop-->
+    
 
-
-
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="other-person-address">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+      <h1 class="govuk-fieldset__heading">
+                   Do you know anything about the other person's current address?
+      </h1>
+    </legend>
+<div class="govuk-radios govuk-radios--inline">
+  <div class="govuk-radios__item">
+    <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes~other_parent_current_address">
+    <label class="govuk-label govuk-radios__label" for="changed-name">
+      Yes
+    </label>
+  </div>
+  <div class="govuk-radios__item">
+    <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no~other_parent_do_you_know_previous_address">
+    <label class="govuk-label govuk-radios__label" for="changed-name-2">
+      No
+    </label>
+  </div>
+</div>
+</fieldset>
+</div>
 
           <button type="submit" class="govuk-button">
             Continue
