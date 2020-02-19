@@ -455,6 +455,10 @@ router.post('/about_other_parent/other_parent_previous_address', function (req, 
   res.redirect('other_parent_other_information')
 });
 
+router.post('/about_other_parent/other_parent_previous_uk_region', function (req, res) {
+  res.redirect('other_parent_previous_uk_town_city')
+});
+
 router.post('/about_other_parent/other_parent_other_information', function (req, res) {
   res.redirect('review')
 });
