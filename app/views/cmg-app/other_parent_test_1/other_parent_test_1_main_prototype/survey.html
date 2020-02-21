@@ -1,0 +1,176 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback_banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+
+            <div class="govuk-grid-column-two-thirds">
+                <form method="post" novalidate>
+                    <h1 class="govuk-heading-xl">Help improve this service</h1>
+                    <div class="govuk-form-group">
+                        <!--  <label class="govuk-label" for="urn-number" style="visibility:hidden">
+                  Invitation code
+                </label> -->
+                        <span id="urnNumberInformation" class="govuk-hint">
+We will not share your answers with the other parent. Your feedback will not affect your application in any way.                        </span>
+                       
+ </div>
+
+                    <div class="govuk-form-group">
+                    <h2 class="govuk-heading-m">How easy or difficult was it to work out how often your children stays overnight with the other parent?</h2>
+<div class="govuk-radios">
+    <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+        <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+         Very easy
+        </label>
+    </div>
+    <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+        <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+             Easy
+        </label>
+    </div>
+    <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
+        <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+         Neither easy nor difficult
+        </label>
+    </div>
+    <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
+        <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+         Difficult
+        </label>
+    </div>
+    <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
+        <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+            Very difficult
+        </label>
+    </div>
+</div>
+</div>
+                <div class="govuk-form-group">
+                                        <h3 class="govuk-heading-s">Why did you feel this way?</h3>
+
+                    <span id="more-detail-hint" class="govuk-hint">
+                        Do not include personal or financial information, like your National Insurance number or credit card details.
+                    </span>
+                    <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+                </div>
+
+</div>
+</div>
+<div class="govuk-form-group">
+             <h4 class="govuk-heading-m">Overall, how easy or difficult was it to complete your application?</h4>
+
+<div class="govuk-radios">
+    <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+        <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+            Very easy
+        </label>
+    </div>
+    <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+        <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+            Easy
+        </label>
+    </div>
+    <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
+        <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+            Neither easy nor difficult
+        </label>
+    </div>
+    <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
+        <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+            Difficult
+        </label>
+    </div>
+    <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
+        <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+            Very difficult
+        </label>
+    </div>
+</div>
+</div>
+<div class="govuk-form-group">
+
+                    <h3 class="govuk-heading-s">Why did you feel this way?</h3>
+                
+                    <span id="more-detail-hint" class="govuk-hint">
+                        Do not include personal or financial information, like your National Insurance number or credit card details.
+                    </span>
+                    <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+                
+          
+                </div>
+
+<div class="govuk-form-group">
+    <h3 class="govuk-heading-m">Can we contact you for more feedback about this service?
+</h3>
+</div>
+
+<div class="govuk-radios" data-module="radios">
+    <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="national-insurance-radio-1" name="national-insurance-radio" type="radio" value="yes"
+            aria-controls="conditional-national-insurance-radio-1" aria-expanded="true">
+
+        <label class="govuk-label govuk-radios__label" for="national-insurance-radio-1">
+            Yes
+        </label>
+    </div>
+    <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-national-insurance-radio-1">
+        <div class="govuk-form-group">
+
+            <label class="govuk-label" for="other-parent-national-insurance-number">
+               Your name
+            </label>
+           
+            <input class="govuk-input govuk-input--width-10" id="other-parent-national-insurance-number" name="other-parent-national-insurance-number"
+                type="text">
+                </div>
+     
+
+               
+                                            <div class="govuk-form-group">
+
+                <label class="govuk-label" for="other-parent-national-insurance-number">
+                   Email address
+                </label>
+                <input class="govuk-input govuk-input--width-10" id="other-parent-national-insurance-number" name="other-parent-national-insurance-number"
+                    type="text">
+
+                </div>
+    </div>
+            
+    <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="national-insurance-radio-2" name="national-insurance-radio" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="national-insurance-radio-2">
+            No
+        </label>
+                </div>
+
+    <div class="govuk-form-group">
+                    <p class="govuk-body">
+                        <button type="submit" class="govuk-button">
+                           Send feedback
+                        </button>
+                    </p>
+                    </div>
+                </form>
+
+               
+                </div>
+            </div>
+        </main>
+    </div>
+
+    {% endblock %}

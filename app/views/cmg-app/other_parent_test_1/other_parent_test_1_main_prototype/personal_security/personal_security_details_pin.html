@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<!--Feedback banner start-->
+{% include "feedback_banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form method="post" novalidate>
+            <h1 class="govuk-heading-xl">Create PIN with 7 numbers</h1>
+            <p class="govuk-body">You'll need to remember this so you
+              can sign in to your online account.</p>
+
+
+
+
+            <div class="govuk-form-group">
+                <label class="govuk-label govuk-input--width-10" for="security-details-pin">
+                    <strong></strong>
+                </label>
+                <span id="security-details-pin-hint" class="govuk-hint">
+
+                </span>
+                <input class="govuk-input govuk-input--width-10" id="security-details-pin" name="security-details-pin" type="text" aria-describedby="security-details-pin-hint">
+              </div>
+
+
+            <button id="personalDetailsBtn" type="submit" class="govuk-button">
+              Continue
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  {% endblock %}

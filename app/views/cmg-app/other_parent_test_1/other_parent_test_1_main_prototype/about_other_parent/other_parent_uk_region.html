@@ -1,0 +1,59 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback_banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <form method="post" novalidate>
+
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" aria-describedby="otherParentDobInformation" role="group">
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
+                                <h1 class="govuk-fieldset__heading" id="otherParentDobInformation">
+                                    Do you know which area of the UK the other person currently lives in?
+                                </h1>
+                            </legend>
+                            <div class="govuk-radios" data-module="radios">
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="other-parent-dob-1" name="other-parent-dob" type="radio" value="yes~other_parent_do_you_know_previous_address"
+                                        aria-controls="conditional-other-parent-dob-1" aria-expanded="true">
+                                    <label class="govuk-label govuk-radios__label" for="other-parent-dob-1">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-other-parent-dob-1">
+                                    <div class="govuk-form-group">
+                                        <fieldset class="govuk-fieldset" role="group">
+                                            <div class="govuk-form-group">
+                                                <label class="govuk-label" for="address-town">
+                                                    Area of UK
+                                                </label>
+                                                <span id="otherParentDateOfBirthInformation" class="govuk-hint">
+                                                    For example, Yorkshire or north Wales.
+                                                </span>
+                                                <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="address-town" type="text">
+                                            </div>
+
+                                        </fieldset>
+                                    </div>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="other-parent-dob-2" name="other-parent-dob" type="radio" value="no~other_parent_do_you_know_previous_address">
+                                    <label class="govuk-label govuk-radios__label" for="other-parent-dob-2">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                    </div>
+                    <button type="submit" class="govuk-button">
+                        Continue
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+</div>
+{% endblock %}
