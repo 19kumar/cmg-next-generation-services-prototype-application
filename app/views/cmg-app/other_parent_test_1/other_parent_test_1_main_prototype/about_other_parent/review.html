@@ -24,11 +24,20 @@
                             Do you know anything about where they live?
                         </dt>
                         <dd class="govuk-summary-list__value">
+                            
                             {{data['other-parent-address-line-1'] }}
-                            <br>{{data['other-parent-address-line-2'] }}
-                            <br>{{data['other-parent-address-town'] }}
-                            <br>{{data['other-parent-address-county'] }}
-                            <br>{{data['other-parent-address-postcode'] }}
+                            <br>
+                            {{data['other-parent-address-line-2'] }}
+                            <br>
+                            {{data['other-parent-address-town'] }}
+                            <br>
+                            {{data['other-parent-address-county'] }}
+                            <br>
+                            {{data['other-parent-address-postcode'] }}
+                            <br>
+                            {{data['address-town'] }}
+                            <br>
+                             {{data['address-region'] }}
                         </dd>
                         <dd class="govuk-summary-list__actions">
                             <a class="govuk-link" href="../about_other_parent/other_parent_address.html">
@@ -49,6 +58,9 @@
                             <br>{{data['other-parent-old-address-town'] }}
                             <br>{{data['other-parent-old-address-county'] }}
                             <br>{{data['other-parent-old-address-postcode'] }}
+                            <br>{{data['prev-address-town'] }}
+                            <br>{{data['prev-address-region'] }}
+
                         </dd>
                         <dd class="govuk-summary-list__actions">
                             <a class="govuk-link" href="../about_other_parent/other_parent_contact_details.html">
