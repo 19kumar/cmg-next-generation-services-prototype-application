@@ -1,0 +1,52 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback_banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+
+
+
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
+                <h1 class="govuk-fieldset__heading">
+                  Will {{data['child-1-first-name'] }} ever stay overnight with the other parent?
+                </h1>
+              </legend>
+            </fieldset>
+
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="yes~new_shared_care2">
+                <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="no~child_check_answers_loop_1">
+                <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                  No
+                </label>
+              </div>
+             </div>
+
+          </div>
+          </fieldset>
+      </div>
+    </div>
+    <button type="submit" class="govuk-button">
+      Continue
+    </button>
+    </form>
+</div>
+</div>
+</main>
+</div>
+{% endblock %}
