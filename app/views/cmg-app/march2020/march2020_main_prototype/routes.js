@@ -281,22 +281,22 @@ router.post('/about_qualifying_child/child_name_2', function (req, res) {
 router.post('/about_qualifying_child/child_date_of_birth', function (req, res) {
 let child1DateOfBirthYear = req.session.data['child-1-date-of-birth-year']
  if (child1DateOfBirthYear > 2003) {
-  res.redirect('shared_care')
+  res.redirect('birth_certificate_1')
 } else if (child1DateOfBirthYear < 2003){
   res.redirect('../dropouts/dropout_child_1_dob')
 }  else {
-  res.redirect('shared_care')
+   res.redirect('birth_certificate_1')
 } 
 });
 
 router.post('/about_qualifying_child/child_date_of_birth_2', function (req, res) {
   let child1DateOfBirthYear = req.session.data['child-1-date-of-birth-year-2']
   if (child1DateOfBirthYear > 2003) {
-    res.redirect('shared_care_2')
+    res.redirect('birth_certificate_2')
   } else if (child1DateOfBirthYear < 2003) {
     res.redirect('../dropouts/dropout_child_1_dob')
   } else {
-    res.redirect('shared_care_2')
+    res.redirect('birth_certificate_2')
   }
 });
 
@@ -332,8 +332,11 @@ router.post('/about_qualifying_child/child_check_answers_loop_1', function (req,
   res.redirect('../service_choice/about_direct_pay')
 });
 
-
 router.post('/about_applicant/check_age', function (req, res) {
+  res.redirect('age_playback')
+});
+
+router.post('/about_applicant/age_playback', function (req, res) {
   let applicantDateOfBirthYear = req.session.data['applicant-date-of-birth-year']
   if (applicantDateOfBirthYear > 1999) {
     res.redirect('no_pay_fee')
