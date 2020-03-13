@@ -290,13 +290,35 @@ let child1DateOfBirthYear = req.session.data['child-1-date-of-birth-year']
 });
 
 router.post('/about_qualifying_child/child_date_of_birth_2', function (req, res) {
-  let child1DateOfBirthYear = req.session.data['child-1-date-of-birth-year-2']
+  let child1DateOfBirthYear = req.session.data['child-2-date-of-birth-year-2']
   if (child1DateOfBirthYear > 2003) {
-    res.redirect('shared_care_2')
+    res.redirect('shared_care_child2')
   } else if (child1DateOfBirthYear < 2003) {
     res.redirect('../dropouts/dropout_child_1_dob')
   } else {
-    res.redirect('shared_care_2')
+    res.redirect('shared_care_child2')
+  }
+});
+
+router.post('/about_qualifying_child/child_date_of_birth_3', function (req, res) {
+  let child1DateOfBirthYear = req.session.data['child-3-date-of-birth-year-3']
+  if (child1DateOfBirthYear > 2003) {
+    res.redirect('shared_care_child3')
+  } else if (child1DateOfBirthYear < 2003) {
+    res.redirect('../dropouts/dropout_child_3_dob')
+  } else {
+    res.redirect('shared_care_child3')
+  }
+});
+
+router.post('/about_qualifying_child/child_date_of_birth_4', function (req, res) {
+  let child1DateOfBirthYear = req.session.data['child-4-date-of-birth-year-3']
+  if (child1DateOfBirthYear > 2003) {
+    res.redirect('shared_care_child4')
+  } else if (child1DateOfBirthYear < 2003) {
+    res.redirect('../dropouts/dropout_child_4_dob')
+  } else {
+    res.redirect('shared_care_child4')
   }
 });
 
@@ -308,6 +330,98 @@ router.post('/about_qualifying_child/birth_certificate_2', function (req, res) {
   res.redirect('shared_care_2')
 });
 
+router.post('/about_qualifying_child/shared_care_child2', function (req, res) {
+  res.redirect('new_shared_care2_child2')
+});
+router.post('/about_qualifying_child/shared_care_child2', function (req, res) {
+  res.redirect('new_shared_care3_child2')
+});
+
+router.post('/about_qualifying_child/shared_care_child3', function (req, res) {
+  res.redirect('new_shared_care2_child3')
+});
+router.post('/about_qualifying_child/shared_care_child4', function (req, res) {
+  res.redirect('new_shared_care2_child4')
+});
+
+router.post('/about_qualifying_child/new_shared_care2_child2', function (req, res) {
+  res.redirect('new_shared_care3_child2')
+});
+
+router.post('/about_qualifying_child/new_shared_care2_child3', function (req, res) {
+  res.redirect('new_shared_care3_child3')
+});
+
+router.post('/about_qualifying_child/new_shared_care2_child4', function (req, res) {
+  res.redirect('new_shared_care3_child4')
+});
+
+router.post('/about_qualifying_child/new_shared_care2', function (req, res) {
+  res.redirect('new_shared_care3')
+});
+
+router.post('/about_qualifying_child/new_shared_care3_child2', function (req, res) {
+  res.redirect('child_check_answers_loop_2')
+});
+
+router.post('/about_qualifying_child/new_shared_care3_child3', function (req, res) {
+  res.redirect('child_check_answers_loop_3')
+});
+
+router.post('/about_qualifying_child/child_check_answers_loop_3', function (req, res) {
+  res.redirect('add_another_child_loop_4')
+});
+
+router.post('/about_qualifying_child/new_shared_care3_child4', function (req, res) {
+  res.redirect('child_check_answers_loop_4')
+});
+
+router.post('/about_qualifying_child/child_check_answers_loop_4', function (req, res) {
+  res.redirect('done')
+});
+router.post('/about_qualifying_child/new_shared_care3', function (req, res) {
+  res.redirect('child_check_answers_loop_1')
+});
+
+router.post('/about_qualifying_child/special_occasions', function (req, res) {
+  res.redirect('child_check_answers_loop_1')
+});
+
+router.post('/about_qualifying_child/special_occasions2', function (req, res) {
+  res.redirect('child_check_answers_loop_2')
+});
+
+router.post('/about_qualifying_child/special_occasions3', function (req, res) {
+  res.redirect('child_check_answers_loop_3')
+});
+
+router.post('/about_qualifying_child/special_occasions4', function (req, res) {
+  res.redirect('child_check_answers_loop_4')
+});
+
+router.post('/about_qualifying_child/new_shared_care3_child_2', function (req, res) {
+  res.redirect('child_check_answers_loop_2')
+});
+
+router.post('/about_qualifying_child/new_shared_care3_child_3', function (req, res) {
+  res.redirect('child_check_answers_loop_3')
+});
+
+router.post('/about_qualifying_child/child_check_answers_loop_2', function (req, res) {
+  res.redirect('add_another_child_loop_3')
+});
+
+router.post('/about_qualifying_child/child_check_answers_loop_3', function (req, res) {
+  res.redirect('add_another_child_loop_4')
+});
+
+router.post('/about_qualifying_child/add_another_child_loop_2', function (req, res) {
+  res.redirect('child_name_3')
+});
+
+router.post('/about_qualifying_child/add_another_child_loop_3', function (req, res) {
+  res.redirect('child_name_4')
+});
 
 router.post('/about_qualifying_child/shared_care', function (req, res) {
   let sharedCare = req.session.data['shared-care']
@@ -330,6 +444,14 @@ router.post('/about_qualifying_child/shared_care_2', function (req, res) {
 
 router.post('/about_qualifying_child/child_check_answers_loop_1', function (req, res) {
   res.redirect('../service_choice/about_direct_pay')
+});
+
+router.post('/about_qualifying_child/child_name_3', function (req, res) {
+  res.redirect('child_date_of_birth_3')
+});
+
+router.post('/about_qualifying_child/child_name_4', function (req, res) {
+  res.redirect('child_date_of_birth_4')
 });
 
 

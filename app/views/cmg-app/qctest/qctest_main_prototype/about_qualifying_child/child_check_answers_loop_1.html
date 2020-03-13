@@ -76,7 +76,7 @@
 
             <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key">
-                        How often do they stay overnight with the other parent?
+                        Will {{data['child-1-first-name'] }} stay overnight with the other parent?
                     </dt>
                     <dd class="govuk-summary-list__value">
                             <p class="govuk-body">{{data['shared-care'] }}</p>
@@ -88,6 +88,51 @@
                         </a>
                     </dd>
                 </div>
+
+
+<div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+ How often will {{data['child-1-first-name'] }} stay overnight with the other parent?    </dt>
+    <dd class="govuk-summary-list__value">
+        <p class="govuk-body">{{data['number-of-nights'] }} nights per {{data['how-regular'] }}</p>
+    </dd>
+    <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="../about_qualifying_child/shared_care.html">
+            Change
+            <span class="govuk-visually-hidden"> contact details</span>
+        </a>
+    </dd>
+</div>
+
+<div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+                                         Do you need to add special occasions like school holidays or birthdays?
+ </dt>
+    <dd class="govuk-summary-list__value">
+        <p class="govuk-body">{{data['extra-nights'] }}</p>
+    </dd>
+    <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="../about_qualifying_child/shared_care.html">
+            Change
+            <span class="govuk-visually-hidden"> contact details</span>
+        </a>
+    </dd>
+</div>
+
+<div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+                                     How many nights will {{data['child-1-first-name'] }} stay with the other parent on special occasions?
+    </dt>
+    <dd class="govuk-summary-list__value">
+        <p class="govuk-body"> {{data['special-nights'] }} per year </p>
+    </dd>
+    <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="../about_qualifying_child/shared_care.html">
+            Change
+            <span class="govuk-visually-hidden"> contact details</span>
+        </a>
+    </dd>
+</div>
 
         </dl>
 

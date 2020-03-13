@@ -1,0 +1,49 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback_banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <form method="post" novalidate>
+
+
+
+
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset">
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
+                                <h1 class="govuk-fieldset__heading">
+                                    How many nights will {{data['child-2-first-name'] }} stay with the other parent on special occasions?
+                                </h1>
+                            </legend>
+                        </fieldset>
+                        <div class="form-group">
+                            <div class="govuk-date-input" id="special-nights2">
+                                <div class="govuk-date-input__item">
+                                    <div class="govuk-form-group">
+                                        <label class="govuk-label govuk-date-input__label" for="special-nights2">
+                                            Number of nights per year
+                                        </label>
+                                        <input class="govuk-input govuk-date-input__input govuk-input--width-3" id="special-nights2" name="special-nights2" type="number">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                      
+
+
+                    </div>
+                    <button type="submit" class="govuk-button">
+                        Continue
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+</div>
+{% endblock %}
