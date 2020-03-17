@@ -1,0 +1,118 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<!--Feedback banner start-->
+{% include "feedback_banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form  method="post" novalidate>
+                <div class="govuk-form-group govuk-!-margin-bottom-9 clearfix">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl govuk-!-margin-bottom-9">
+                <h1 class="govuk-fieldset__heading">
+                    Confirm payment and send your application
+                </h1>
+              </legend>
+    <div class="payment_container">
+        <div class="payment_title"> <p class="govuk-body">Card number:</Card></p></div>
+        <div class="payment_desc"> <p class="govuk-body"><strong>**************</strong></p></div>
+        <hr class="govuk-section-break govuk-section-break--visible hr_line">
+    </div>
+
+    <div class="payment_container">
+            <div class="payment_title"> <p class="govuk-body">Expiry date:</p></div>
+            <div class="payment_desc"><strong><p class="govuk-body">{{data['payment_card_month'] }} {{data['payment_card_year'] }}</strong></p></div>
+            <hr class="govuk-section-break govuk-section-break--visible hr_line">
+        </div>
+
+        <div class="payment_container">
+                <div class="payment_title"> <p class="govuk-body">Name on card:</p></div>
+                <div class="payment_desc"> <p class="govuk-body"><strong>{{data['payment_card_name'] }}</strong></p></div>
+                <hr class="govuk-section-break govuk-section-break--visible hr_line">
+            </div>
+
+            <div class="payment_container ">
+                    <div class="payment_title"> <p class="govuk-body">Billing address:</p></div>
+                    <div class="payment_desc"> <p class="govuk-body"><strong>{{data['payment_card_address_street_line_1'] }} {{data['payment_card_address_street_line_2'] }}, {{data['payment_card_address_town'] }}, {{data['payment_card_address_country'] }}, {{data['payment_card_address_postcode'] }}</strong></p></div>
+                    <hr class="govuk-section-break govuk-section-break--visible hr_line">
+                </div>
+            </div>
+
+                <button type="submit" class="govuk-button ">
+                        Confirm and send
+                      </button>
+<div> <a class="govuk-link" href="payment_cancellation.html">Cancel payment</a></div>
+
+
+
+
+          </form>
+        </div>
+<!--Second column-->
+
+<div class="govuk-grid-column-one-third">
+
+<div class="total_box">
+        <h2 class="govuk-heading-m">Payment summary</h2>
+        <h3 class="govuk-heading-s">Child Maintenance Service</h3>
+        <p class="govuk-body">Total amount:</p>
+        <h3 class="govuk-heading-l total_amount">£20.00</h3>
+      </div>
+
+    </div>
+<!--end of Second column-->
+
+      </div>
+    </main>
+  </div>
+
+<style>
+.total_box{
+
+    background-color: #F8F8F8;
+    border: 10px solid #BFC1C3;
+    padding: 20px;
+}
+
+.total_amount{
+    padding: 0px !important;
+    margin: 0px !important;
+}
+
+.payment_container{
+    wodth:100%;
+}
+
+.payment_title{
+    float: left;
+    width: 30%;
+}
+.payment_desc{
+    float: left;
+    width: 70%;
+}
+.hr_line{
+    float: left;
+    width: 100%;
+    margin-bottom: 15px;
+
+}
+
+.clearfix {
+  overflow: auto;
+}
+
+
+</style>
+
+
+
+
+  {% endblock %}

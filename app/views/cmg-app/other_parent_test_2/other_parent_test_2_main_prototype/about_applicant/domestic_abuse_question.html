@@ -1,0 +1,86 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback_banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <form method="post" novalidate>
+                    <div class="govuk-form-group">
+                        <!--Checkboxes-->
+
+
+
+                                            <h1 class="govuk-heading-xl">Check whether you need to pay the application fee
+
+
+                                            </h1>
+                                </legend>
+
+
+
+                            <div class="govuk-inset-text">
+We will not share your answers with the other parent or anyone else.                              </div>
+
+
+                            </div>
+
+    <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="otherParentDobInformation" role="group">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m ">
+                <h1 class="govuk-fieldset__heading" id="otherParentDobInformation">
+                     Have you or your children ever experienced any of these behaviours?
+                </h1>
+            </legend>
+            <ul class="govuk-list govuk-list--bullet">
+                <li>psychological or emotional abuse
+                </li>
+                <li>physical or sexual abuse
+                </li>
+                <li>financial or economic abuse
+                </li>
+                <li>coercive control (an act or pattern of acts of assault, threats, humiliation, intimidation, degradation, isolation and
+                    control)
+                </li>
+                <li>harassment and stalking
+                </li>
+                <li>online or digital abuse
+                </li>
+            </ul>
+            <div class="govuk-radios" data-module="radios">
+                <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="da-yes" name="da-yes" type="radio" value="yes~domestic_abuse_have_you_told_anyone" aria-controls="conditional-other-parent-dob-1"
+                        aria-expanded="true">
+                    <label class="govuk-label govuk-radios__label" for="da-yes">
+                        Yes
+                    </label>
+                </div>
+
+                <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="da-no" name="da-yes" type="radio" value="no~you_pay_fee">
+                    <label class="govuk-label govuk-radios__label" for="da-no">
+                        No
+                    </label>
+                </div>
+
+
+</div>
+
+
+        </div>
+
+    <button type="submit" class="govuk-button">
+        Continue
+    </button>
+</form>
+
+
+            </div>
+        </div>
+    </main>
+</div>
+
+
+{% endblock %}

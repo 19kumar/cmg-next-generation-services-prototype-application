@@ -76,6 +76,9 @@ router.use('/cmg-app/other_parent_test/other_parent_test_main_prototype', requir
 
 router.use('/cmg-app/other_parent_test_1/other_parent_test_1_main_prototype', require('./views/cmg-app/other_parent_test_1/other_parent_test_1_main_prototype/routes'));
 
+router.use('/cmg-app/other_parent_test_2/other_parent_test_2_main_prototype', require('./views/cmg-app/other_parent_test_2/other_parent_test_2_main_prototype/routes'));
+
+
 router.use('/cmg-app/march2020/march2020_main_prototype', require('./views/cmg-app/march2020/march2020_main_prototype/routes'));
 
 router.use('/cmg-app/qctest/qctest_main_prototype', require('./views/cmg-app/qctest/qctest_main_prototype/routes'));
