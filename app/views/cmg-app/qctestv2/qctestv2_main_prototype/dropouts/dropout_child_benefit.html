@@ -1,0 +1,109 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<!--Feedback banner start-->
+{% include "feedback_banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-two-thirds">
+
+            <h1 class="govuk-heading-xl">You&rsquo;ll need to apply for Child Benefit first</h1>
+
+            <p class="govuk-body">
+              You&rsquo;ll need to <a href="https://www.gov.uk/child-benefit/how-to-claim">apply for Child Benefit</a>
+              so your child will be registered to get a National Insurance number when they’re 16 years old.</p>
+
+              <p>You can choose not to get Child Benefit payments.</p>
+
+              <p>After you've done this, you&rsquo;re be able to apply to use the Child Maintenance Service
+                with your unique reference number.</p>
+
+
+                <h3 class="govuk-heading-s">If you cannot apply for Child Benefit</h3>
+
+                <p>You&rsquo;ll need to call us.</p>
+
+                <div class="govuk-inset-text">
+                <p class="govuk-body"><strong>Child Maintenance Service</strong><br>
+                  Telephone: 0800 171 2345 <br>
+
+                  <p class="govuk-body">Monday to Friday, 8am to 7:30pm (excluding bank holidays)</br>
+                    Saturday, 9am to 4pm<br>
+                      <a href="/call-charges">Find out about call charges</a></p>
+
+                </div>
+      </div>
+
+      <div class="govuk-grid-column-one-third">
+
+        <!-- The Related items component is not part of GOV.UK Frontend but will be styled if used in the Prototype Kit -->
+
+        <div aria-labelledby="related-nav-survey_link">
+            <h3 id="related-nav-survey_link" class="survey-heading">
+              <a href="feedback/feedback_form.html" target="_blank">Help us improve this service</a>
+            </h3>
+
+          </div>
+
+
+
+      </div>
+    </div>
+    </main>
+</div>
+
+<style>
+  .survey-heading a {
+      background-color: #005ea5;
+      font-family: "nta", Arial, sans-serif;
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 1.11111;
+      display: block;
+      margin-top: 0px;
+      margin-bottom: 30px;
+      padding-bottom: 30px;
+      padding-top: 30px;
+      padding-left: 30px;
+      padding-right: 30px;
+      color: #ffffff;
+      text-decoration: none;
+  }
+
+  .survey-heading a:hover {
+
+      text-decoration: underline;
+  }
+
+  .survey-heading {
+      text-align: center;
+      margin: 0px;
+
+  }
+
+  c-related-navigation {
+      color: #0b0c0c;
+      border-top: 2px solid #005ea5;
+  }
+
+  .app-related-items {
+      border-top: 0px solid #005ea5;
+      padding-top: 0px;
+  }
+
+  </style>
+
+{% endblock %}

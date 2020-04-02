@@ -1,0 +1,61 @@
+
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback_banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <form method="post" novalidate>
+                    <!--start of radio-->
+                    <div class="govuk-form-group">
+
+                        <h1 class=govuk-heading-xl>Managing your child maintenance </h1>
+
+                        <p>You can choose to manage your child maintenance case using the online service.</p>
+<h3 class="govuk-heading-m">
+    If you don't have an online child maintenance account or have forgotten your details
+</h3>
+<p>We'll give you instructions on how you can set up an online account when you complete your application.</p>
+
+
+<h2 class="govuk-heading-m">
+                                     If you already manage your child maintenance account online
+                                </h2>
+                            </legend>
+                            <p>You can use the same 7-digit personal identification number (PIN) to manange your new application online.
+                            </p>
+
+                            
+                            <!--end-->
+                            <button type="submit" class="govuk-button">
+                                Continue
+                            </button>
+                </form>
+                </div>
+            </div>
+    </main>
+    </div>
+    {% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

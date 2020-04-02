@@ -83,6 +83,8 @@ router.use('/cmg-app/march2020/march2020_main_prototype', require('./views/cmg-a
 
 router.use('/cmg-app/qctest/qctest_main_prototype', require('./views/cmg-app/qctest/qctest_main_prototype/routes'));
 
+router.use('/cmg-app/qctestv2/qctestv2_main_prototype', require('./views/cmg-app/qctestv2/qctestv2_main_prototype/routes'));
+
 //Other parent iterations - Sprint 1
 router.use('/cmg-app/sprint_1/sprint_1_other_parent_iterations/other_parent_iteration_1', require('./views/cmg-app/sprint_1/sprint_1_other_parent_iterations/other_parent_iteration_1/routes'));
 
