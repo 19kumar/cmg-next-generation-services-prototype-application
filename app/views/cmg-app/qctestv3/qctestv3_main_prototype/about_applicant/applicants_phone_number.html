@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+{% block content %}
+<!--Feedback banner start-->
+{% include "feedback_banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+  {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+          <div class="govuk-form-group">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
+              <h1 class="govuk-fieldset__heading">
+                What&rsquo;s the best number to call you on if we have questions about your application?
+              </h1>
+            </legend>
+          <!--  <label class="govuk-label" for="applicant-telephone-number" style="visibility:hidden">
+                UK telephone number
+              </label> -->
+                          <div class="govuk-inset-text">We will not share your answers with the other parent.</div>
+
+           <p> We will tell you
+              which number we will call you from at the end of your application.</p>
+            
+
+            <div class="govuk-form-group">
+            <label class="govuk-label" for="mobile-number">
+              <strong>Phone number</strong>
+            </label>
+            <span id="changed-name-hint" class="govuk-hint">If you do not have your own phone, give the phone number of someone you trust.</span>
+            <input class="govuk-input govuk-input--width-20" id="mobile-number"
+              name="mobile-number" type="tel" autocomplete="tel">
+              </div>
+              </div>
+
+            
+          <button type="submit" class="govuk-button">
+            Continue
+          </button>
+        </form>
+      </div>
+    </div>
+  </main>
+</div>
+{% endblock %}
