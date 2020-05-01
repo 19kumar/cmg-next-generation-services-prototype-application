@@ -10,121 +10,7 @@
             <!--start of answers-->
 
             <div class="govuk-grid-column-two-thirds-from-desktop">
-                <form method="post" novalidate>
-                    <h1 class="govuk-heading-xl">Check {{data['child-1-first-name'] }} {{data['child-1-last-name'] }}&rsquo;s details</h1>
-
-
-
-
-
-
-
-
-
-                    <dl class="govuk-summary-list ">
-
-
-                        <div class="govuk-summary-list__row">
-                            <dt class="govuk-summary-list__key">
-                                What is their full name?
-                            </dt>
-                            <dd class="govuk-summary-list__value">
-                                <p class="govuk-body">
-                                    {{data['child-1-first-name'] }} {{data['child-1-middle-name'] }} {{data['child-1-last-name'] }}
-                                </p>
-                            </dd>
-                            <dd class="govuk-summary-list__actions">
-                                <a class="govuk-link" href="../about_qualifying_child/child_name.html">
-                                    Change
-                                    <span class="govuk-visually-hidden"> name</span>
-                                </a>
-                            </dd>
-                        </div>
-
-                        <div class="govuk-summary-list__row">
-                            <dt class="govuk-summary-list__key">
-                                What is their date of birth?
-                            </dt>
-                            <dd class="govuk-summary-list__value">
-                                <p class="govuk-body">{{data['child-1-date-of-birth-day'] }}/{{data['child-1-date-of-birth-month'] }}/{{data['child-1-date-of-birth-year']
-                                    }}
-                                </p>
-                            </dd>
-                            <dd class="govuk-summary-list__actions">
-                                <a class="govuk-link" href="../about_qualifying_child/child_date_of_birth.html">
-                                    Change
-                                    <span class="govuk-visually-hidden"> date of birth</span>
-                                </a>
-                            </dd>
-                        </div>
-
-
-
-
-
-
-
-                        <div class="govuk-summary-list__row">
-                            <dt class="govuk-summary-list__key">
-                                Does {{data['child-1-first-name'] }} stay overnight with the other parent?
-                            </dt>
-                            <dd class="govuk-summary-list__value">
-                                <p class="govuk-body">{{data['shared-care'] }}</p>
-                            </dd>
-                            <dd class="govuk-summary-list__actions">
-                                <a class="govuk-link" href="../about_qualifying_child/shared_care.html">
-                                    Change
-                                    <span class="govuk-visually-hidden"> contact details</span>
-                                </a>
-                            </dd>
-                        </div>
-
-
-                        <div class="govuk-summary-list__row">
-                            <dt class="govuk-summary-list__key">
-                                How often does {{data['child-1-first-name'] }} stay overnight with the other parent? </dt>
-                            <dd class="govuk-summary-list__value">
-                                <p class="govuk-body">{{data['number-of-nights'] }} nights {{data['how-regular'] }}</p>
-                            </dd>
-                            <dd class="govuk-summary-list__actions">
-                                <a class="govuk-link" href="../about_qualifying_child/new_shared_care2.html">
-                                    Change
-                                    <span class="govuk-visually-hidden"> contact details</span>
-                                </a>
-                            </dd>
-                        </div>
-
-                        <div class="govuk-summary-list__row">
-                            <dt class="govuk-summary-list__key">
-                                Does {{data['child-1-first-name'] }} spend any additional nights with the other parent that you haven't already told us about?
-                            </dt>
-                            <dd class="govuk-summary-list__value">
-                                <p class="govuk-body">{{data['extra-nights'] }}</p>
-                            </dd>
-                            <dd class="govuk-summary-list__actions">
-                                <a class="govuk-link" href="../about_qualifying_child/new_shared_care3.html">
-                                    Change
-                                    <span class="govuk-visually-hidden"> contact details</span>
-                                </a>
-                            </dd>
-                        </div>
-
-                        <div class="govuk-summary-list__row">
-                            <dt class="govuk-summary-list__key">
-                                How many additional nights does {{data['child-1-first-name'] }} spend with the other parent?
-                            </dt>
-                            <dd class="govuk-summary-list__value">
-                                <p class="govuk-body"> {{data['special-nights'] }} per year </p>
-                            </dd>
-                            <dd class="govuk-summary-list__actions">
-                                <a class="govuk-link" href="../about_qualifying_child/special_occasions.html">
-                                    Change
-                                    <span class="govuk-visually-hidden"> contact details</span>
-                                </a>
-                            </dd>
-                        </div>
-
-                    </dl>
+               
 
 
 
@@ -250,7 +136,7 @@
 
                             <input type="hidden" name="answers-checked" value="true">
 
-                            <a href="done" role="button" draggable="false" class="govuk-button">
+                            <a href="add_another_child_loop_2" role="button" draggable="false" class="govuk-button">
                                 Continue
                             </a>
 
