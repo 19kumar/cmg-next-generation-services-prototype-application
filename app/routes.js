@@ -188,6 +188,7 @@ router.use('/cmg-app/sprint_7/sprint_7_payment_check_answers', require('./views/
 
 router.use('/cmg-app/sprint_8/sprint_8_feedback', require('./views/cmg-app/sprint_8/sprint_8_feedback/routes'));
 
+router.use('/cmg-app/northern_ireland/northern_ireland_main_prototype', require('./views/cmg-app/northern_ireland/northern_ireland_main_prototype/routes'));
 
 // router.post('/what-do-you-want-to-claim-for', function(req, res) {
 //     res.render('taken-to-iform');
