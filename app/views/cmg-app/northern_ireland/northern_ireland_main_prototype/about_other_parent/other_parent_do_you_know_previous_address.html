@@ -10,23 +10,24 @@
             <div class="govuk-grid-column-two-thirds">
                 <form method="post" novalidate>
 
+
+
                     <div class="govuk-form-group">
-                        <fieldset class="govuk-fieldset" aria-describedby="child1DateBirthInformation" role="group">
-                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
+                        <fieldset class="govuk-fieldset" aria-describedby="other-parent-address">
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
                                 <h1 class="govuk-fieldset__heading">
-                                 Does {{data['child-2-first-name'] }} stay overnight with the other parent the same number of regular and additional nights as {{data['child-1-first-name'] }}?
+                                    Do you know anything about the other parent's previous address?
                                 </h1>
                             </legend>
-
                             <div class="govuk-radios govuk-radios--inline">
                                 <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes~cya_same_arrangement_child_2">
+                                    <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes~other_parent_previous_address">
                                     <label class="govuk-label govuk-radios__label" for="changed-name">
                                         Yes
                                     </label>
                                 </div>
                                 <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no~shared_care_child2">
+                                    <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no~other_parent_previous_town_city">
                                     <label class="govuk-label govuk-radios__label" for="changed-name-2">
                                         No
                                     </label>
@@ -34,6 +35,7 @@
                             </div>
                         </fieldset>
                     </div>
+
                     <button type="submit" class="govuk-button">
                         Continue
                     </button>
@@ -42,4 +44,5 @@
         </div>
     </main>
 </div>
+
 {% endblock %}

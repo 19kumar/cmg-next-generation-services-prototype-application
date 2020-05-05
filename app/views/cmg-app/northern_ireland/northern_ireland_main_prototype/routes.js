@@ -11,7 +11,7 @@ const router = express.Router()
 
 
 router.post('/eligibility_questions/introduction', function (req, res) {
-  res.redirect('child_benefit')
+  res.redirect('live_in_uk')
 });
 
 
@@ -26,7 +26,7 @@ router.post('/eligibility_questions/child_benefit', function (req, res) {
 
 
 
-router.post('/eligibility_questions/live_in_uk', function (req, res) {
+router.post('/eligibility_questions/paying_parent_live_in_uk_or_northern_ireland', function (req, res) {
   let liveUk = req.session.data['live-uk']
   if (liveUk === 'no') {
     res.redirect('../dropouts/dropout_live_in_uk')
@@ -58,16 +58,12 @@ router.post('/eligibility_questions/results_page_eligible', function (req, res) 
 
 
 router.post('/what_is_your_urn_number', function (req, res) {
-
-
-  let urnNumber = req.session.data['urn-number']
-  if (urnNumber === 'dropout') {
-    res.redirect('dropouts/dropout_urn')
-  } else {
-    res.redirect('about_applicant/check_age')
-  }
+  res.redirect('about_applicant/applicants_name')
 });
-  // interrupt cards --------------------------------------------------------------
+
+
+  
+// interrupt cards --------------------------------------------------------------
 
 router.post('/what_to_expect_interrupt', function (req, res) {
   res.redirect('contact_interrupt')
@@ -100,15 +96,18 @@ router.post('/about_applicant/you_pay_fee', function (req, res) {
 });
 
 router.post('/about_applicant/applicants_name', function (req, res) {
-  res.redirect('applicants_national_insurance_number')
+  res.redirect('applicants_date_of_birth')
 });
 
+router.post('/about_applicant/applicants_date_of_birth', function (req, res) {
+  res.redirect('applicants_national_insurance_number')
+});
 
 router.post('/about_applicant/applicants_date_of_birth', function (req, res) {
 
   let applicantDateOfBirth = req.session.data['applicant-date-of-birth-year']
 
-  
+
   if (applicantDateOfBirth > 2000) {
     res.redirect('../exemption_pages/exemption_applicant_age')
   } else {
@@ -189,16 +188,16 @@ router.post('/about_applicant/applicants_correspondence_query', function (req, r
 
 
 ///router.post('/about_applicant/applicants_correspondence_address', function (req, res) {
-  //let correspondenceAddress = req.session.data['correspondence-address']
+//let correspondenceAddress = req.session.data['correspondence-address']
 
-  
-  //if (correspondenceAddress  === 'GH3 2LB') {
-    //res.redirect('applicants_correspondence_address_cant_find')
-  //} else if (correspondenceAddress  === 'gh3 2lb') {
-    //res.redirect('applicants_correspondence_address_cant_find')
-  //}  else {
-    //res.redirect('applicants_address')
-  //}
+
+//if (correspondenceAddress  === 'GH3 2LB') {
+//res.redirect('applicants_correspondence_address_cant_find')
+//} else if (correspondenceAddress  === 'gh3 2lb') {
+//res.redirect('applicants_correspondence_address_cant_find')
+//}  else {
+//res.redirect('applicants_address')
+//}
 //});
 
 
@@ -227,12 +226,12 @@ router.post('/about_applicant/applicants_address', function (req, res) {
 
   let homeAddressPostcode = req.session.data['home-address-postcode']
 
-  
-  if (homeAddressPostcode  === 'GH3 2LB') {
+
+  if (homeAddressPostcode === 'GH3 2LB') {
     res.redirect('applicants_address_cant_find')
-  } else if (homeAddressPostcode  === 'gh3 2lb') {
+  } else if (homeAddressPostcode === 'gh3 2lb') {
     res.redirect('applicants_address_cant_find')
-  }  else {
+  } else {
     res.redirect('../reviews/review_your_answers_applicants_details')
   }
 });
@@ -279,24 +278,46 @@ router.post('/about_qualifying_child/child_name_2', function (req, res) {
 
 
 router.post('/about_qualifying_child/child_date_of_birth', function (req, res) {
-let child1DateOfBirthYear = req.session.data['child-1-date-of-birth-year']
- if (child1DateOfBirthYear > 2003) {
-  res.redirect('shared_care')
-} else if (child1DateOfBirthYear < 2003){
-  res.redirect('../dropouts/dropout_child_1_dob')
-}  else {
-  res.redirect('shared_care')
-} 
-});
-
-router.post('/about_qualifying_child/child_date_of_birth_2', function (req, res) {
-  let child1DateOfBirthYear = req.session.data['child-1-date-of-birth-year-2']
+  let child1DateOfBirthYear = req.session.data['child-1-date-of-birth-year']
   if (child1DateOfBirthYear > 2003) {
-    res.redirect('shared_care_2')
+    res.redirect('shared_care')
   } else if (child1DateOfBirthYear < 2003) {
     res.redirect('../dropouts/dropout_child_1_dob')
   } else {
-    res.redirect('shared_care_2')
+    res.redirect('shared_care')
+  }
+});
+
+router.post('/about_qualifying_child/child_date_of_birth_2', function (req, res) {
+  let child1DateOfBirthYear = req.session.data['child-2-date-of-birth-year-2']
+  if (child1DateOfBirthYear > 2003) {
+    res.redirect('shared_care_child2')
+  } else if (child1DateOfBirthYear < 2003) {
+    res.redirect('../dropouts/dropout_child_1_dob')
+  } else {
+    res.redirect('shared_care_child2')
+  }
+});
+
+router.post('/about_qualifying_child/child_date_of_birth_3', function (req, res) {
+  let child1DateOfBirthYear = req.session.data['child-3-date-of-birth-year-3']
+  if (child1DateOfBirthYear > 2003) {
+    res.redirect('shared_care_child3')
+  } else if (child1DateOfBirthYear < 2003) {
+    res.redirect('../dropouts/dropout_child_3_dob')
+  } else {
+    res.redirect('shared_care_child3')
+  }
+});
+
+router.post('/about_qualifying_child/child_date_of_birth_4', function (req, res) {
+  let child1DateOfBirthYear = req.session.data['child-4-date-of-birth-year-3']
+  if (child1DateOfBirthYear > 2003) {
+    res.redirect('shared_care_child4')
+  } else if (child1DateOfBirthYear < 2003) {
+    res.redirect('../dropouts/dropout_child_4_dob')
+  } else {
+    res.redirect('shared_care_child4')
   }
 });
 
@@ -308,15 +329,107 @@ router.post('/about_qualifying_child/birth_certificate_2', function (req, res) {
   res.redirect('shared_care_2')
 });
 
+router.post('/about_qualifying_child/shared_care_child2', function (req, res) {
+  res.redirect('new_shared_care2_child2')
+});
+router.post('/about_qualifying_child/shared_care_child2', function (req, res) {
+  res.redirect('new_shared_care3_child2')
+});
+
+router.post('/about_qualifying_child/shared_care_child3', function (req, res) {
+  res.redirect('new_shared_care2_child3')
+});
+router.post('/about_qualifying_child/shared_care_child4', function (req, res) {
+  res.redirect('new_shared_care2_child4')
+});
+
+router.post('/about_qualifying_child/new_shared_care2_child2', function (req, res) {
+  res.redirect('new_shared_care3_child2')
+});
+
+router.post('/about_qualifying_child/new_shared_care2_child3', function (req, res) {
+  res.redirect('new_shared_care3_child3')
+});
+
+router.post('/about_qualifying_child/new_shared_care2_child4', function (req, res) {
+  res.redirect('new_shared_care3_child4')
+});
+
+router.post('/about_qualifying_child/new_shared_care2', function (req, res) {
+  res.redirect('new_shared_care3')
+});
+
+router.post('/about_qualifying_child/new_shared_care3_child2', function (req, res) {
+  res.redirect('child_check_answers_loop_2')
+});
+
+router.post('/about_qualifying_child/new_shared_care3_child3', function (req, res) {
+  res.redirect('child_check_answers_loop_3')
+});
+
+router.post('/about_qualifying_child/child_check_answers_loop_3', function (req, res) {
+  res.redirect('add_another_child_loop_4')
+});
+
+router.post('/about_qualifying_child/new_shared_care3_child4', function (req, res) {
+  res.redirect('child_check_answers_loop_4')
+});
+
+router.post('/about_qualifying_child/child_check_answers_loop_4', function (req, res) {
+  res.redirect('done')
+});
+router.post('/about_qualifying_child/new_shared_care3', function (req, res) {
+  res.redirect('child_check_answers_loop_1')
+});
+
+router.post('/about_qualifying_child/special_occasions', function (req, res) {
+  res.redirect('child_check_answers_loop_1')
+});
+
+router.post('/about_qualifying_child/special_occasions2', function (req, res) {
+  res.redirect('child_check_answers_loop_2')
+});
+
+router.post('/about_qualifying_child/special_occasions3', function (req, res) {
+  res.redirect('child_check_answers_loop_3')
+});
+
+router.post('/about_qualifying_child/special_occasions4', function (req, res) {
+  res.redirect('child_check_answers_loop_4')
+});
+
+router.post('/about_qualifying_child/new_shared_care3_child_2', function (req, res) {
+  res.redirect('child_check_answers_loop_2')
+});
+
+router.post('/about_qualifying_child/new_shared_care3_child_3', function (req, res) {
+  res.redirect('child_check_answers_loop_3')
+});
+
+router.post('/about_qualifying_child/child_check_answers_loop_2', function (req, res) {
+  res.redirect('add_another_child_loop_3')
+});
+
+router.post('/about_qualifying_child/child_check_answers_loop_3', function (req, res) {
+  res.redirect('add_another_child_loop_4')
+});
+
+router.post('/about_qualifying_child/add_another_child_loop_2', function (req, res) {
+  res.redirect('child_name_3')
+});
+
+router.post('/about_qualifying_child/add_another_child_loop_3', function (req, res) {
+  res.redirect('child_name_4')
+});
 
 router.post('/about_qualifying_child/shared_care', function (req, res) {
   let sharedCare = req.session.data['shared-care']
   if (sharedCare === '183 nights') {
     res.redirect('../dropouts/dropout_child_1_shared')
-  }  else {
+  } else {
     res.redirect('child_check_answers_loop_1')
   }
-  });
+});
 
 router.post('/about_qualifying_child/shared_care_2', function (req, res) {
   let sharedCare = req.session.data['shared-care']
@@ -330,6 +443,14 @@ router.post('/about_qualifying_child/shared_care_2', function (req, res) {
 
 router.post('/about_qualifying_child/child_check_answers_loop_1', function (req, res) {
   res.redirect('../service_choice/about_direct_pay')
+});
+
+router.post('/about_qualifying_child/child_name_3', function (req, res) {
+  res.redirect('child_date_of_birth_3')
+});
+
+router.post('/about_qualifying_child/child_name_4', function (req, res) {
+  res.redirect('child_date_of_birth_4')
 });
 
 
@@ -369,26 +490,26 @@ router.post('/reviews/review_your_answers_collect_and_pay_no_details', function 
   res.redirect('../about_other_parent/other_parent_name')
 });
 
-      router.post('/service_choice/choose_service', function (req, res) {
+router.post('/service_choice/choose_service', function (req, res) {
 
-        let serviceChoice = req.session.data['service-choice']
-        if (serviceChoice === 'Direct Pay') {
-          res.redirect('../about_other_parent/other_parent_introduction')
-        } else {
-          res.redirect('choose_service_open')
-        }
-      });
+  let serviceChoice = req.session.data['service-choice']
+  if (serviceChoice === 'Direct Pay') {
+    res.redirect('../about_other_parent/other_parent_introduction')
+  } else {
+    res.redirect('choose_service_open')
+  }
+});
 
 
-      router.post('/service_choice/choose_service_open', function (req, res) {
+router.post('/service_choice/choose_service_open', function (req, res) {
 
-        let serviceChoice = req.session.data['service-choice']
-        if (serviceChoice === 'Direct Pay') {
-          res.redirect('../about_other_parent/other_parent_introduction')
-        } else {
-          res.redirect('collect_and_pay')
-        }
-      });
+  let serviceChoice = req.session.data['service-choice']
+  if (serviceChoice === 'Direct Pay') {
+    res.redirect('../about_other_parent/other_parent_introduction')
+  } else {
+    res.redirect('collect_and_pay')
+  }
+});
 
 
 router.post('/service_choice/collect_and_pay', function (req, res) {
@@ -399,35 +520,35 @@ router.post('/service_choice/collect_and_pay', function (req, res) {
 
 
 
-      router.post('/service_choice/choose_service_no_contact', function (req, res) {
+router.post('/service_choice/choose_service_no_contact', function (req, res) {
 
-        let serviceChoice = req.session.data['service-choice']
-        if (serviceChoice === 'Direct Pay') {
-          res.redirect('collect_and_pay_bank_details')
-        } else {
-          res.redirect('choose_service_no_contact_open')
-        }
-      });
+  let serviceChoice = req.session.data['service-choice']
+  if (serviceChoice === 'Direct Pay') {
+    res.redirect('collect_and_pay_bank_details')
+  } else {
+    res.redirect('choose_service_no_contact_open')
+  }
+});
 
 
-            router.post('/service_choice/choose_service_no_contact_open', function (req, res) {
+router.post('/service_choice/choose_service_no_contact_open', function (req, res) {
 
-              let serviceChoice = req.session.data['service-choice']
-              if (serviceChoice === 'Direct Pay') {
-                res.redirect('collect_and_pay_bank_details')
-              } else {
-                res.redirect('collect_and_pay')
-              }
-            });
+  let serviceChoice = req.session.data['service-choice']
+  if (serviceChoice === 'Direct Pay') {
+    res.redirect('collect_and_pay_bank_details')
+  } else {
+    res.redirect('collect_and_pay')
+  }
+});
 
 
 //Bank details section ----------------
 
-            router.post('/service_choice/collect_and_pay_bank_details', function (req, res) {
-              res.redirect('../about_other_parent/other_parent_introduction')
-            });
-            
-      
+router.post('/service_choice/collect_and_pay_bank_details', function (req, res) {
+  res.redirect('../about_other_parent/other_parent_introduction')
+});
+
+
 //Other parent section ----------------
 
 
@@ -451,35 +572,38 @@ router.post('/about_other_parent/other_parent_national_insurance_number', functi
   res.redirect('other_parent_contact_details')
 });
 
-  
-
-    router.post('/about_other_parent/other_parent_contact_details', function (req, res) {
-      res.redirect('other_parent_do_you_know_address')
-    });
-
-    router.post('/about_other_parent/other_parent_do_you_know_address', function (req, res) {
-      let otherParentKnowAddress = req.session.data['other-parent-know-address']
-      if (otherParentKnowAddress === 'yes') {
-        res.redirect('other_parent_address')
-      } else {
-        res.redirect('../reviews/review_your_answers_other_parent')
-      }
-      });
 
 
-router.post('/about_other_parent/other_parent_address', function (req, res) {
+router.post('/about_other_parent/other_parent_contact_details', function (req, res) {
+  res.redirect('other_parent_do_you_know_address')
+});
+
+router.post('/about_other_parent/other_parent_current_address', function (req, res) {
+  res.redirect('other_parent_do_you_know_previous_address')
+});
+
+router.post('/about_other_parent/other_parent_previous_address', function (req, res) {
   res.redirect('other_parent_other_information')
 });
-router.post('/about_other_parent/other_parent_other_information', function (req, res) {
-  res.redirect('../reviews/review_your_answers_other_parent')
+
+router.post('/about_other_parent/other_parent_previous_uk_region', function (req, res) {
+  res.redirect('other_parent_previous_uk_town_city')
 });
+
+router.post('/about_other_parent/other_parent_other_information', function (req, res) {
+  res.redirect('review')
+});
+router.post('/about_other_parent/review', function (req, res) {
+  res.redirect('../personal_security/do_you_want_to_manage_online')
+});
+
 
 
 //Other parent review section ----------------
 
 
 router.post('/reviews/review_your_answers_other_parent', function (req, res) {
-  res.redirect('../personal_security/do_you_want_to_manage_online') 
+  res.redirect('../personal_security/do_you_want_to_manage_online')
 });
 
 
@@ -492,7 +616,7 @@ router.post('/personal_security/do_you_want_to_manage_online', function (req, re
 router.post('/personal_security/personal_security_details_password', function (req, res) {
   res.redirect('personal_security_details_pin')
 
-  });
+});
 
 router.post('/personal_security/personal_security_details_pin', function (req, res) {
   res.redirect('../declaration')
@@ -505,42 +629,42 @@ router.post('/personal_security/personal_security_details_pin', function (req, r
 
 router.post('/fee_queries/domestic_introduction', function (req, res) {
   res.redirect('../fee_queries/domestic_abuse_query')
-  });
-  
- 
+});
+
+
 
 router.post('/about_applicant/reporting_domestic_abuse', function (req, res) {
   res.redirect('no_pay_fee')
 });
-  router.post('/fee_queries/domestic_abuse_query', function (req, res) {
-  
+router.post('/fee_queries/domestic_abuse_query', function (req, res) {
+
   let domesticAbuseQuery = req.session.data['abuse-query']
   let feeExempt = req.session.data['fee-exempt']
   if (domesticAbuseQuery == 'yes') {
-  res.redirect('domestic_abuse_been_reported')
+    res.redirect('domestic_abuse_been_reported')
   } else {
-  
-  
-  if (feeExempt === 'yes') {
-    res.redirect('../declaration_exempt')
-  } else {
-    res.redirect('../declaration')
+
+
+    if (feeExempt === 'yes') {
+      res.redirect('../declaration_exempt')
+    } else {
+      res.redirect('../declaration')
+    }
+
+
   }
-  
-  
-  }
-  });
-  
- 
-  router.post('/fee_queries/domestic_abuse_been_reported', function (req, res) {
+});
+
+
+router.post('/fee_queries/domestic_abuse_been_reported', function (req, res) {
   let domesticAbuseReported = req.session.data['domestic-abuse-reported']
   if (domesticAbuseReported == 'yes') {
-  res.redirect('../exemption_pages/exeption_domestic_abuse')
+    res.redirect('../exemption_pages/exeption_domestic_abuse')
   } else {
-  res.redirect('domestic_abuse_report_it')
+    res.redirect('domestic_abuse_report_it')
   }
-  });
-  
+});
+
 
 router.post('/exemption_pages/exeption_domestic_abuse', function (req, res) {
   res.redirect('../declaration_exempt')
@@ -550,87 +674,89 @@ router.post('/exemption_pages/exeption_domestic_abuse', function (req, res) {
 
 
 
-  router.post('/fee_queries/domestic_abuse_report_it', function (req, res) {
+router.post('/fee_queries/domestic_abuse_report_it', function (req, res) {
   let abuseReportIt = req.session.data['abuse-report-it']
   let feeExempt = req.session.data['fee-exempt']
   if (abuseReportIt == 'yes') {
-  res.redirect('domestic_how_to_report')
-  }  else {
+    res.redirect('domestic_how_to_report')
+  } else {
     if (feeExempt === 'yes') {
       res.redirect('../declaration_exempt')
     } else {
       res.redirect('../declaration')
     }
-  
+
   }
-  
-  });
+
+});
 
 
 // Declaration section --------------------------------------------------------------
 
 
- 
-    router.post('/declaration_exempt', function (req, res) {
-      let mobileNumber = req.session.data['mobile-number']
-      if (mobileNumber === 'no') {
-        res.redirect('next_steps_no_sms')
-      } else {
-        res.redirect('next_steps')
-      }
-    
-  });
+
+router.post('/declaration_exempt', function (req, res) {
+  let mobileNumber = req.session.data['mobile-number']
+  if (mobileNumber === 'no') {
+    res.redirect('next_steps_no_sms')
+  } else {
+    res.redirect('next_steps')
+  }
+
+});
 
 // Submit and pay section --------------------------------------------------------------
 
-
-
-  router.post('/payment_service/payment_card_details', function (req, res) {
-    res.redirect('payment_card_confirmation')
-  });
-  
-    router.post('/payment_service/payment_card_confirmation', function (req, res) {
-      res.redirect('payment_complete')
-    });
-  
-//normal route with continue - Applicants contact details 
-router.post('/payment_service/payment_cancellation', function (req, res) {
-  res.redirect('../declaration') 
+router.post('/declaration', function (req, res) {
+  res.redirect('next_steps')
 });
 
-  //normal route with continue - payment complete
-  router.post('/payment_service/payment_complete', function (req, res) {
-    let mobileNumber = req.session.data['mobile-number']
-    
-      if (mobileNumber === 'no') {
-        res.redirect('../next_steps_no_sms')
-      } else {
-        res.redirect('../next_steps')
-      }
-    
-  });
+router.post('/payment_service/payment_card_details', function (req, res) {
+  res.redirect('../next_steps')
+});
+
+// router.post('/payment_service/payment_card_confirmation', function (req, res) {
+// res.redirect('payment_complete')
+// });
+
+//normal route with continue - Applicants contact details 
+router.post('/payment_service/payment_cancellation', function (req, res) {
+  res.redirect('../declaration')
+});
+
+//normal route with continue - payment complete
+router.post('/payment_service/payment_complete', function (req, res) {
+  let mobileNumber = req.session.data['mobile-number']
+
+  if (mobileNumber === 'no') {
+    res.redirect('../next_steps_no_sms')
+  } else {
+    res.redirect('../next_steps')
+  }
+
+});
 
 
-  // Feedback section --------------------------------------------------------------
+// Feedback section --------------------------------------------------------------
 
 
 router.post('/feedback/feedback_form', function (req, res) {
-  res.redirect('feedback_join_research') 
+  res.redirect('feedback_join_research')
 });
 
 router.post('/feedback/research_form', function (req, res) {
-  res.redirect('research_form_submitted') 
+  res.redirect('research_form_submitted')
 });
 
 router.post('/feedback/feedback_join_research', function (req, res) {
   let feedbackJoin = req.session.data['feedback-join']
-  
-    if (feedbackJoin === 'no') {
-      res.redirect('feedback_form_submitted')
-    } else {
-      res.redirect('research_form')
-    }
-  
+
+  if (feedbackJoin === 'no') {
+    res.redirect('feedback_form_submitted')
+  } else {
+    res.redirect('research_form')
+  }
+
 });
 
 

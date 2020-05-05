@@ -1,0 +1,84 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback_banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+
+
+
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
+                <h1 class="govuk-fieldset__heading">
+                  How often does {{data['child-1-first-name'] }} stay overnight with the other parent?
+                </h1>
+
+              </legend>
+            </fieldset>
+                                            <span class="govuk-hint"> If you have not yet worked out how often {{data['child-1-first-name'] }} will stay overnight with the other parent, tell
+                                              us what's happening now.</span><span class="govuk-hint"> We will ask you about special occasions such as holidays next.</span>
+
+            <div class="form-group">
+          <div class="govuk-date-input" id="number-of-nights">
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="number-of-nights">
+                  Number of nights
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-3" id="number-of-nights" name="number-of-nights" type="number">
+              </div>
+            </div>
+          
+          </div>
+</div>
+            <p>
+              <strong>Is the number of nights weekly, fortnightly or monthly?</strong>
+            </p>
+            <div class="govuk-form-group">
+
+              <div class="govuk-radios" id="how-regular">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="how-regular" name="how-regular" type="radio" value="week">
+                  <label class="govuk-label govuk-radios__label" for="how-regular">
+                    Weekly
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="how-regular-2" name="how-regular" type="radio" value="fortnight">
+                  <label class="govuk-label govuk-radios__label" for="how-regular-2">
+                    Fortnightly
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="how-regular-3" name="how-regular" type="radio" value="month">
+                  <label class="govuk-label govuk-radios__label" for="how-regular-3">
+                    Monthly
+                  </label>
+                </div>
+
+              </div>
+              </fieldset>
+            </div>
+
+
+
+
+          </div>
+          <button type="submit" class="govuk-button">
+            Continue
+          </button>
+        </form>
+      </div>
+    </div>
+  </main>
+</div>
+{% endblock %}
+
+

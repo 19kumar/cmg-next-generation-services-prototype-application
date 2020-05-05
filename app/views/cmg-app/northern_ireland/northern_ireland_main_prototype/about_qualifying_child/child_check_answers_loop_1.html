@@ -58,7 +58,7 @@
                     What is their date of birth?
                 </dt>
                 <dd class="govuk-summary-list__value">
-                        <p class="govuk-body">{{data['child-1-date-of-birth-day'] }} {{data['child-1-date-of-birth-month'] }} {{data['child-1-date-of-birth-year'] }}</p>
+                        <p class="govuk-body">{{data['child-1-date-of-birth-day'] }}/{{data['child-1-date-of-birth-month'] }}/{{data['child-1-date-of-birth-year'] }}</p>
                 </dd>
                 <dd class="govuk-summary-list__actions">
                     <a class="govuk-link" href="../about_qualifying_child/child_date_of_birth.html">
@@ -76,7 +76,7 @@
 
             <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key">
-                        How often do they stay overnight with the other parent?
+                        Does {{data['child-1-first-name'] }} stay overnight with the other parent?
                     </dt>
                     <dd class="govuk-summary-list__value">
                             <p class="govuk-body">{{data['shared-care'] }}</p>
@@ -88,6 +88,51 @@
                         </a>
                     </dd>
                 </div>
+
+
+<div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+ How often does {{data['child-1-first-name'] }} stay overnight with the other parent?    </dt>
+    <dd class="govuk-summary-list__value">
+        <p class="govuk-body">{{data['number-of-nights'] }} nights per {{data['how-regular'] }}</p>
+    </dd>
+    <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="../about_qualifying_child/new_shared_care2.html">
+            Change
+            <span class="govuk-visually-hidden"> contact details</span>
+        </a>
+    </dd>
+</div>
+
+<div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+                                          Does {{data['child-1-first-name'] }} spend any additional nights with the other parent that you haven't already told us about?
+ </dt>
+    <dd class="govuk-summary-list__value">
+        <p class="govuk-body">{{data['extra-nights'] }}</p>
+    </dd>
+    <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="../about_qualifying_child/new_shared_care3.html">
+            Change
+            <span class="govuk-visually-hidden"> contact details</span>
+        </a>
+    </dd>
+</div>
+
+<div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+                                     How many additional nights does {{data['child-1-first-name'] }} spend with the other parent?
+    </dt> 
+    <dd class="govuk-summary-list__value">
+        <p class="govuk-body"> {{data['special-nights'] }} per year </p>
+    </dd>
+    <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="../about_qualifying_child/special_occasions.html">
+            Change
+            <span class="govuk-visually-hidden"> contact details</span>
+        </a>
+    </dd>
+</div>
 
         </dl>
 

@@ -10,33 +10,40 @@
             <div class="govuk-grid-column-two-thirds">
                 <form method="post" novalidate>
 
+                    <!--start-->
                     <div class="govuk-form-group">
-                        <fieldset class="govuk-fieldset" aria-describedby="child1DateBirthInformation" role="group">
+                        <fieldset class="govuk-fieldset" aria-describedby="sharedCare" role="group">
                             <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
-                                <h1 class="govuk-fieldset__heading">
-                                 Does {{data['child-2-first-name'] }} stay overnight with the other parent the same number of regular and additional nights as {{data['child-1-first-name'] }}?
-                                </h1>
-                            </legend>
+                                <h1 class="govuk-fieldset__heading" id="sharedCare">
+                                    Does {{data['child-4-first-name'] }} spend any additional nights with the other parent that you haven't already told us about?
+                                    </h1>
+                                </legend>
+                                <span class="govuk-hint">For example, special occasions like school holidays or birthdays.</span>
 
-                            <div class="govuk-radios govuk-radios--inline">
+
+
+                            <div class="govuk-radios" data-module="radios" id="extra-nights4">
                                 <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes~cya_same_arrangement_child_2">
-                                    <label class="govuk-label govuk-radios__label" for="changed-name">
+                                    <input class="govuk-radios__input" id="extra-nights4" name="extra-nights4" type="radio" value="yes~special_occasions4">
+                                    <label class="govuk-label govuk-radios__label" for="extra-nights4">
                                         Yes
                                     </label>
                                 </div>
                                 <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no~shared_care_child2">
-                                    <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                                    <input class="govuk-radios__input" id="extra-nights4-1" name="extra-nights4" type="radio" value="no~child_check_answers_no_special4">
+                                    <label class="govuk-label govuk-radios__label" for="extra-nights4-1">
                                         No
                                     </label>
                                 </div>
+
+
                             </div>
-                        </fieldset>
+
                     </div>
                     <button type="submit" class="govuk-button">
                         Continue
                     </button>
+
                 </form>
             </div>
         </div>
