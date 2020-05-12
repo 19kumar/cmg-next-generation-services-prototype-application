@@ -296,7 +296,7 @@ router.post('/about_qualifying_child/child_date_of_birth_2', function (req, res)
   } else if (child1DateOfBirthYear < 2003) {
     res.redirect('../dropouts/dropout_child_1_dob')
   } else {
-    res.redirect('same_arrangement_child_2')
+    res.redirect('shared_care_child2')
   }
 });
 
