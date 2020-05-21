@@ -48,7 +48,7 @@ router.post('/eligibility_questions/court_order', function (req, res) {
 
 
 router.post('/eligibility_questions/results_page_eligible', function (req, res) {
-  res.redirect('../what_is_your_urn_number')
+  res.redirect('about_applicant/applicant_name')
 });
 
 
@@ -58,7 +58,7 @@ router.post('/eligibility_questions/results_page_eligible', function (req, res) 
 
 
 router.post('/what_is_your_urn_number', function (req, res) {
-  res.redirect('about_applicant/applicants_name')
+  res.redirect('eligibility_questions/live_in_uk')
 });
 
 
