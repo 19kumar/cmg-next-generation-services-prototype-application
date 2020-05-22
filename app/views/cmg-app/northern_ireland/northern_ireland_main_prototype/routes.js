@@ -48,7 +48,7 @@ router.post('/eligibility_questions/court_order', function (req, res) {
 
 
 router.post('/eligibility_questions/results_page_eligible', function (req, res) {
-  res.redirect('about_applicant/applicant_name')
+  res.redirect('../about_applicant/applicants_name')
 });
 
 
