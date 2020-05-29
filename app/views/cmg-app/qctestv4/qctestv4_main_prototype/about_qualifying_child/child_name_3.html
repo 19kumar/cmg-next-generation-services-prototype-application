@@ -1,0 +1,90 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback_banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <h1 class="govuk-heading-xl">What are your children&rsquo;s full names?</h1>
+                <form method="post" novalidate>
+                    <h2 class="govuk-heading-m">First child&rsquo;s name</h2>
+    <div class="govuk-form-group">
+    
+        <label class="govuk-label govuk-!-width-two-thirds" for="child-1-first-name">
+            First name
+        </label>
+        <input class="govuk-input govuk-!-width-two-thirds" id="child-1-first-name" name="child-1-first-name" type="text" autocomplete="name"
+            spellcheck="false">
+    </div>
+    <div class="govuk-form-group">
+        <label class="govuk-label govuk-!-width-two-thirds" for="child-1-middle-name">
+            Middle names (if they have any)
+        </label>
+        <input class="govuk-input govuk-!-width-two-thirds" id="child-1-middle-name" name="child-1-middle-name" type="text" autocomplete="name"
+            spellcheck="false">
+    </div>
+    <div class="govuk-form-group">
+        <label class="govuk-label govuk-!-width-two-thirds" for="child-1-last-name">
+            Last name
+        </label>
+        <input class="govuk-input govuk-!-width-two-thirds" id="child-1-last-name" name="child-1-last-name" type="text" autocomplete="name"
+            spellcheck="false">
+    </div>
+    <h2 class="govuk-heading-m">Second child&rsquo;s name</h2>
+    <div class="govuk-form-group">
+    
+        <label class="govuk-label govuk-!-width-two-thirds" for="child-2-first-name">
+            First name
+        </label>
+        <input class="govuk-input govuk-!-width-two-thirds" id="child-2-first-name" name="child-2-first-name" type="text" autocomplete="name"
+            spellcheck="false">
+    </div>
+    <div class="govuk-form-group">
+        <label class="govuk-label govuk-!-width-two-thirds" for="child-2-middle-name">
+            Middle names (if they have any)
+        </label>
+        <input class="govuk-input govuk-!-width-two-thirds" id="child-2-middle-name" name="child-2-middle-name" type="text" autocomplete="name"
+            spellcheck="false">
+    </div>
+    <div class="govuk-form-group">
+        <label class="govuk-label govuk-!-width-two-thirds" for="child-2-last-name">
+            Last name
+        </label>
+        <input class="govuk-input govuk-!-width-two-thirds" id="child-2-last-name" name="child-2-last-name" type="text" autocomplete="name"
+            spellcheck="false">
+    </div>
+
+                    <h2 class="govuk-heading-m">Third child&rsquo;s name</h2>
+                    <div class="govuk-form-group">
+
+                        <label class="govuk-label govuk-!-width-two-thirds" for="child-3-first-name">
+                            First name
+                        </label>
+                        <input class="govuk-input govuk-!-width-two-thirds" id="child-3-first-name" name="child-3-first-name" type="text" autocomplete="name"
+                            spellcheck="false">
+                    </div>
+                    <div class="govuk-form-group">
+                        <label class="govuk-label govuk-!-width-two-thirds" for="child-3-middle-name">
+                            Middle names (if they have any)
+                        </label>
+                        <input class="govuk-input govuk-!-width-two-thirds" id="child-3-middle-name" name="child-3-middle-name" type="text" autocomplete="name"
+                            spellcheck="false">
+                    </div>
+                    <div class="govuk-form-group">
+                        <label class="govuk-label govuk-!-width-two-thirds" for="child-3-last-name">
+                            Last name
+                        </label>
+                        <input class="govuk-input govuk-!-width-two-thirds" id="child-3-last-name" name="child-3-last-name" type="text" autocomplete="name"
+                            spellcheck="false">
+                    </div>
+                <button type="submit" class="govuk-button">
+                    Continue
+                </button>
+                </form>
+            </div>
+        </div>
+    </main>
+</div>
+{% endblock %}

@@ -280,22 +280,22 @@ router.post('/about_qualifying_child/child_name_2', function (req, res) {
 router.post('/about_qualifying_child/child_date_of_birth', function (req, res) {
   let child1DateOfBirthYear = req.session.data['child-1-date-of-birth-year']
   if (child1DateOfBirthYear > 2003) {
-    res.redirect('shared_care')
+    res.redirect('birth_certificate_1')
   } else if (child1DateOfBirthYear < 2003) {
     res.redirect('../dropouts/dropout_child_1_dob')
   } else {
-    res.redirect('shared_care')
+    res.redirect('birth_certificate_1')
   }
 });
 
 router.post('/about_qualifying_child/child_date_of_birth_2', function (req, res) {
   let child1DateOfBirthYear = req.session.data['child-2-date-of-birth-year-2']
   if (child1DateOfBirthYear > 2003) {
-    res.redirect('shared_care_child2')
+    res.redirect('birth_certificate_2')
   } else if (child1DateOfBirthYear < 2003) {
     res.redirect('../dropouts/dropout_child_1_dob')
   } else {
-    res.redirect('shared_care_child2')
+    res.redirect('birth_certificate_2')
   }
 });
 

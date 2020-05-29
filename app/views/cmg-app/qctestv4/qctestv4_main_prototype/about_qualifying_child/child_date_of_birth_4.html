@@ -1,0 +1,189 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback_banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <form method="post" novalidate>
+
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" aria-describedby="child1DateBirthInformation" role="group">
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
+                                <h1 class="govuk-fieldset__heading">
+                                    What are your children&rsquo;s date of birth?
+                                </h1>
+                            </legend>
+                            <h2 class="govuk-heading-s">{{data['child-1-first-name'] }}&rsquo;s date of birth</h2>
+
+                            <span id="child1DateBirthInformation" class="govuk-hint">
+                                For example, 12 7 2007
+                            </span>
+                            <div class="govuk-date-input" id="child-3-date-of-birth">
+                                <div class="govuk-date-input__item">
+                                    <div class="govuk-form-group">
+                                        <label class="govuk-label govuk-date-input__label" for="child-1-date-of-birth-day">
+                                            Day
+                                        </label>
+                                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="child-1-date-of-birth-day" name="child-1-date-of-birth-day"
+                                            type="number" pattern="[0-9]*">
+                                    </div>
+                                </div>
+                                <div class="govuk-date-input__item">
+                                    <div class="govuk-form-group">
+                                        <label class="govuk-label govuk-date-input__label" for="child-1-date-of-birth-month">
+                                            Month
+                                        </label>
+                                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="child-1-date-of-birth-month" name="child-1-date-of-birth-month"
+                                            type="number" pattern="[0-9]*">
+                                    </div>
+                                </div>
+                                <div class="govuk-date-input__item">
+                                    <div class="govuk-form-group">
+                                        <label class="govuk-label govuk-date-input__label" for="child-1-date-of-birth-year">
+                                            Year
+                                        </label>
+                                        <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="child-1-date-of-birth-year" name="child-1-date-of-birth-year"
+                                            type="number" pattern="[0-9]*">
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" aria-describedby="child1DateBirthInformation" role="group">
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m ">
+
+                            </legend>
+                            <h2 class="govuk-heading-s">{{data['child-2-first-name'] }}&rsquo;s date of birth</h2>
+
+                            <span id="child1DateBirthInformation" class="govuk-hint">
+                                For example, 12 7 2007
+                            </span>
+                            <div class="govuk-date-input" id="child-2-date-of-birth">
+                                <div class="govuk-date-input__item">
+                                    <div class="govuk-form-group">
+                                        <label class="govuk-label govuk-date-input__label" for="child-2-date-of-birth-day">
+                                            Day
+                                        </label>
+                                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="child-2-date-of-birth-day" name="child-2-date-of-birth-day"
+                                            type="number" pattern="[0-9]*">
+                                    </div>
+                                </div>
+                                <div class="govuk-date-input__item">
+                                    <div class="govuk-form-group">
+                                        <label class="govuk-label govuk-date-input__label" for="child-2-date-of-birth-month">
+                                            Month
+                                        </label>
+                                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="child-2-date-of-birth-month" name="child-2-date-of-birth-month"
+                                            type="number" pattern="[0-9]*">
+                                    </div>
+                                </div>
+                                <div class="govuk-date-input__item">
+                                    <div class="govuk-form-group">
+                                        <label class="govuk-label govuk-date-input__label" for="child-2-date-of-birth-year">
+                                            Year
+                                        </label>
+                                        <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="child-2-date-of-birth-year" name="child-2-date-of-birth-year"
+                                            type="number" pattern="[0-9]*">
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" aria-describedby="child1DateBirthInformation" role="group">
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m ">
+
+                            </legend>
+                            <h2 class="govuk-heading-s">{{data['child-3-first-name'] }}&rsquo;s date of birth</h2>
+
+                            <span id="child1DateBirthInformation" class="govuk-hint">
+                                For example, 12 7 2007
+                            </span>
+                            <div class="govuk-date-input" id="child-3-date-of-birth">
+                                <div class="govuk-date-input__item">
+                                    <div class="govuk-form-group">
+                                        <label class="govuk-label govuk-date-input__label" for="child-3-date-of-birth-day">
+                                            Day
+                                        </label>
+                                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="child-3-date-of-birth-day" name="child-3-date-of-birth-day"
+                                            type="number" pattern="[0-9]*">
+                                    </div>
+                                </div>
+                                <div class="govuk-date-input__item">
+                                    <div class="govuk-form-group">
+                                        <label class="govuk-label govuk-date-input__label" for="child-3-date-of-birth-month">
+                                            Month
+                                        </label>
+                                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="child-3-date-of-birth-month" name="child-3-date-of-birth-month"
+                                            type="number" pattern="[0-9]*">
+                                    </div>
+                                </div>
+                                <div class="govuk-date-input__item">
+                                    <div class="govuk-form-group">
+                                        <label class="govuk-label govuk-date-input__label" for="child-3-date-of-birth-year">
+                                            Year
+                                        </label>
+                                        <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="child-3-date-of-birth-year" name="child-3-date-of-birth-year"
+                                            type="number" pattern="[0-9]*">
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" aria-describedby="child1DateBirthInformation" role="group">
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m ">
+                    
+                            </legend>
+                            <h2 class="govuk-heading-s">{{data['child-4-first-name'] }}&rsquo;s date of birth</h2>
+                    
+                            <span id="child1DateBirthInformation" class="govuk-hint">
+                                For example, 12 7 2007
+                            </span>
+                            <div class="govuk-date-input" id="child-3-date-of-birth">
+                                <div class="govuk-date-input__item">
+                                    <div class="govuk-form-group">
+                                        <label class="govuk-label govuk-date-input__label" for="child-4-date-of-birth-day">
+                                            Day
+                                        </label>
+                                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="child-3-date-of-birth-day" name="child-3-date-of-birth-day"
+                                            type="number" pattern="[0-9]*">
+                                    </div>
+                                </div>
+                                <div class="govuk-date-input__item">
+                                    <div class="govuk-form-group">
+                                        <label class="govuk-label govuk-date-input__label" for="child-4-date-of-birth-month">
+                                            Month
+                                        </label>
+                                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="child-4-date-of-birth-month" name="child-4-date-of-birth-month"
+                                            type="number" pattern="[0-9]*">
+                                    </div>
+                                </div>
+                                <div class="govuk-date-input__item">
+                                    <div class="govuk-form-group">
+                                        <label class="govuk-label govuk-date-input__label" for="child-4-date-of-birth-year">
+                                            Year
+                                        </label>
+                                        <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="child-4-date-of-birth-year" name="child-4-date-of-birth-year"
+                                            type="number" pattern="[0-9]*">
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <button type="submit" class="govuk-button">
+                        Continue
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+</div>
+{% endblock %}
