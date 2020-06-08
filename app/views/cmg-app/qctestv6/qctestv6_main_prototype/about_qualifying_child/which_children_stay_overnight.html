@@ -1,0 +1,56 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback_banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-form-group">
+            <form method="post" novalidate>
+        <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                <h1 class="govuk-fieldset__heading">
+                    Which of your other children stay the same number of nights as {{data['child-1-first-name'] }}?
+                </h1>
+            </legend>
+            <span id="waste-hint" class="govuk-hint">
+                Select all that apply.
+            </span>
+            <div class="govuk-checkboxes">
+               
+                <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+                    <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                         {{data['child-2-first-name'] }} {{data['child-2-last-name'] }}
+                    </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                    <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                         {{data['child-3-first-name'] }} {{data['child-3-last-name'] }}
+                    </label>
+                </div>
+
+                <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                    <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                        {{data['child-4-first-name'] }} {{data['child-4-last-name'] }}
+                    </label>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+
+
+
+                    
+        <button type="submit" class="govuk-button">
+            Continue
+        </button>
+        </form>
+</div>
+</div>
+</main>
+</div>
+{% endblock %}

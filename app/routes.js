@@ -91,6 +91,8 @@ router.use('/cmg-app/qctestv4/qctestv4_main_prototype', require('./views/cmg-app
 
 router.use('/cmg-app/qctestv5/qctestv5_main_prototype', require('./views/cmg-app/qctestv5/qctestv5_main_prototype/routes'));
 
+router.use('/cmg-app/qctestv6/qctestv6_main_prototype', require('./views/cmg-app/qctestv6/qctestv6_main_prototype/routes'));
+
 //Other parent iterations - Sprint 1
 router.use('/cmg-app/sprint_1/sprint_1_other_parent_iterations/other_parent_iteration_1', require('./views/cmg-app/sprint_1/sprint_1_other_parent_iterations/other_parent_iteration_1/routes'));
 

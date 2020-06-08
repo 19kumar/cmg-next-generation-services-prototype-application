@@ -1,0 +1,110 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback_banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+
+            <!--start of answers-->
+
+            <div class="govuk-grid-column-two-thirds-from-desktop">
+
+
+
+
+                <form method="post" novalidate>
+                    <h1 class="govuk-heading-xl">Check {{data['child-4-first-name'] }} {{data['child-4-last-name'] }}&rsquo;s details</h1>
+
+
+<dl>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Does {{data['child-4-first-name'] }} stay overnight with the other parent?
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            <p class="govuk-body">{{data['shared-care'] }}</p>
+                        </dd>
+                        <dd class="govuk-summary-list__actions">
+                            <a class="govuk-link" href="../about_qualifying_child/shared_care_child2.html">
+                                Change
+                                <span class="govuk-visually-hidden"> contact details</span>
+                            </a>
+                        </dd>
+                    </div>
+
+
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            How often does {{data['child-4-first-name'] }} stay overnight with the other parent? </dt>
+                        <dd class="govuk-summary-list__value">
+                            <p class="govuk-body">{{data['number-of-nights'] }} nights per {{data['how-regular'] }}</p>
+                        </dd>
+                        <dd class="govuk-summary-list__actions">
+                            <a class="govuk-link" href="../about_qualifying_child/new_shared_care2_child2.html">
+                                Change
+                                <span class="govuk-visually-hidden"> contact details</span>
+                            </a>
+                        </dd>
+                    </div>
+
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Does {{data['child-4-first-name'] }} spend any additional nights with the other parent that you haven't already told us about?
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            <p class="govuk-body">{{data['extra-nights'] }}</p>
+                        </dd>
+                        <dd class="govuk-summary-list__actions">
+                            <a class="govuk-link" href="../about_qualifying_child/new_shared_care3_child2.html">
+                                Change
+                                <span class="govuk-visually-hidden"> contact details</span>
+                            </a>
+                        </dd>
+                    </div>
+
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            How many additional nights does {{data['child-4-first-name'] }} spend with the other parent?
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            <p class="govuk-body"> {{data['special-nights'] }} per year </p>
+                        </dd>
+                        <dd class="govuk-summary-list__actions">
+                            <a class="govuk-link" href="../about_qualifying_child/special_occasions2.html">
+                                Change
+                                <span class="govuk-visually-hidden"> contact details</span>
+                            </a>
+                        </dd>
+                    </div>
+
+                    </dl>
+
+
+
+                </div>
+            </div>
+            </div>
+
+                            <button type="submit" class="govuk-button">
+                                Continue
+                            </button>
+
+                    </form>
+
+            </div>
+        </div>
+    </main>
+</div>
+
+<!--end of answers-->
+</div>
+</div>
+</main>
+</div>
+
+
+
+
+{% endblock %}

@@ -1,0 +1,44 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<!--Feedback banner start-->
+{% include "feedback_banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-two-thirds">
+
+            <h1 class="govuk-heading-xl">There is a problem with your unique reference number</h1>
+            <p class="govuk-body">you&rsquo;re need to apply by phone</p>
+
+            <div class="govuk-inset-text">
+              <p class="govuk-body"><strong>Child Maintenance Service</strong><br>
+                Telephone: 0800 171 2345 <br>
+
+                <p class="govuk-body">Monday to Friday, 8am to 7:30pm (excluding bank holidays)<br>
+                  Saturday, 9am to 4pm<br>
+                    <a href="/call-charges">Find out about call charges</a></p>
+            </div>
+
+
+
+
+
+      </div>
+    </main>
+
+</div>
+
+{% endblock %}

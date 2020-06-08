@@ -1,0 +1,88 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+
+                <!--start of new code-->
+                <form method="post" novalidate>
+
+                    <div class="govuk-form-group">
+                        <h1 class="govuk-heading-l">You have told us: 
+
+                            <span class="govuk-caption-xl">{{data['child-3-first-name'] }} stays overnight {{data['number-of-nights2'] }} nights a {{data['how-regular'] }} and {{data['special-nights2']
+                            }} additional nights a year
+
+                            </span>
+                        </h1>
+                    </div>
+                    <div class="govuk-form-group">
+
+                        <h1 class="govuk-heading-l">
+                           Is this the same for {{data['child-4-first-name'] }}?</h1>
+
+
+                        <!--start of list-->
+
+                        <!--Start of radio buttons-->
+                        <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+
+                                <div class="govuk-radios govuk-radios">
+                                    <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="add-another-child-1-yes" name="add-another-child-1" type="radio" value="yes~shared_care_cya4"
+                                        >
+                                        <label class="govuk-label govuk-radios__label" for="add-another-child-1-yes">
+                                            Yes
+                                        </label>
+                                    </div>
+                                    <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="add-another-child-1-no" name="add-another-child-1" type="radio" value="no~shared_care_start3">
+                                        <label class="govuk-label govuk-radios__label" for="add-another-child-1-no">
+                                            No
+                                        </label>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <!--end of radio buttons-->
+
+                    <button type="submit" class="govuk-button">
+                        Continue
+                    </button>
+
+
+                </form>
+            </div>
+        </div>
+    </main>
+</div>
+
+
+<style>
+    .app-task-list__item:first-child {
+        border-top: 0px solid #bfc1c3 !important;
+    }
+
+
+    .tasklist_float_60 {
+        float: left;
+        width: 60%;
+    }
+
+    .tasklist_float_20 {
+        float: left;
+        width: 20%;
+        text-align: right;
+    }
+
+    .app-task-list__items {
+        padding-left: 0px;
+    }
+
+    
+</style>
+
+{% endblock %}

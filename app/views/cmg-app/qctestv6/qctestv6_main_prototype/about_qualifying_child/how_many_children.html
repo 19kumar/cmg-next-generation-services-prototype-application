@@ -1,0 +1,55 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback_banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <form method="post" novalidate>
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                        <h1 class="govuk-fieldset__heading">
+                             How many children do you need to add to this Child Maintenance arrangement?
+                        </h1>
+                       
+                    </legend>
+                    <div class="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="how-many-children" name="how-many-children" type="radio" value="1~child_name">
+                            <label class="govuk-label govuk-radios__label" for="how-many-children">
+                                1
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="how-many-children-2" name="how-many-children" type="radio" value="2~child_name_2">
+                            <label class="govuk-label govuk-radios__label" for="how-many-children-2">
+                                2
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="how-many-children-3" name="how-many-children" type="radio" value="3~child_name_3">
+                            <label class="govuk-label govuk-radios__label" for="how-many-children-3">
+                                3
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="how-many-childrene-4" name="how-many-children" type="radio" value="4~child_name_4">
+                            <label class="govuk-label govuk-radios__label" for="how-many-children-4">
+                               4
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+                    <button type="submit" class="govuk-button">
+                        Continue
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+</div>
+{% endblock %}

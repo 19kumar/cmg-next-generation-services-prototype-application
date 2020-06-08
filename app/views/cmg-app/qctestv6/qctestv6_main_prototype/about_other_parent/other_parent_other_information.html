@@ -1,0 +1,105 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback_banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="otherParentMoreInformation" role="group">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
+                <h1 class="govuk-fieldset__heading" id="otherParentMoreInformation">
+                  Do you know anything else that could help us contact the other person?
+                </h1>
+
+
+              </legend>
+
+              <span id="moreDetailInformation" class="govuk-hint">
+                Select all that apply.
+              </span>
+
+              <!--Radio start-->
+              <div class="govuk-form-group">
+
+                <div class="govuk-checkboxes" data-module="checkboxes">
+
+
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="citizenship-conditional-2" name="citizen" type="checkbox" value="phone" data-aria-controls="conditional-citizenship-conditional-2">
+                    <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-2">
+                      Information about their job or benefits
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-2">
+
+                    <div class="govuk-form-group">
+                      <label class="govuk-label" for="where-work">
+                        Can you give more detail?
+                      </label>
+                      <span id="whereWorkInformation" class="govuk-hint">
+                        For example, their job, their employer, their work phone number or any benefits they receive.
+                      </span>
+                      <textarea class="govuk-textarea" id="where-work" name="where-work" rows="5" aria-describedby="whereWorkInformation"></textarea>
+                    </div>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="citizenship-conditional-3" name="citizen" type="checkbox" value="text message"
+                      data-aria-controls="conditional-citizenship-conditional-3">
+                    <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-3">
+                      Where they get their post sent
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-3">
+
+                    <div class="govuk-form-group">
+                      <label class="govuk-label" for="more-detail">
+                        Can you give more detail?
+                      </label>
+                      <span id="moreDetailInformation" class="govuk-hint">
+                        For example, their parents' address or a temporary address.
+                      </span>
+                      <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="moreDetailInformation"></textarea>
+                    </div>
+
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="citizenship-conditional-3" name="citizen" type="checkbox" value="text message"
+                      data-aria-controls="conditional-citizenship-conditional-4">
+                    <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-4">
+                      Any other contact information
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-4">
+
+                    <div class="govuk-form-group">
+                      <label class="govuk-label" for=" other-contact-information">
+                        Can you give more detail?
+                      </label>
+                      <span id="moreDetailInformation" class="govuk-hint">
+                        For example, an old phone number.
+                      </span>
+                      <textarea class="govuk-textarea" id="other-contact-information" name="other-contact-information" rows="5" aria-describedby="other-contact-information"></textarea>
+                    </div>
+
+                  </div>
+                </div>
+            </fieldset>
+            </div>
+            <!--Radio end-->
+
+
+
+            <button type="submit" class="govuk-button">
+              Continue
+            </button>
+        </form>
+        </div>
+      </div>
+  </main>
+  </div>
+  {% endblock %}
