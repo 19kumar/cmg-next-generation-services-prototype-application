@@ -1,53 +1,44 @@
-{% extends "layout.html" %}
-
-{% block pageTitle %}
-  GOV.UK Prototype Kit
-{% endblock %}
-
-{% block content %}
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
 <!--Feedback banner start-->
 {% include "feedback_banner.html" %}
 <!--Feedback banner stop-->
 <div class="govuk-width-container">
-    {{ govukBackLink({
-      text: 'Back',
-      href: 'javascript:history.back()'
-  }) }}
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
 
-    <main class="govuk-main-wrapper " id="main-content" role="main">
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-two-thirds">
-          <form method="post" novalidate>
-            <h1 class="govuk-heading-xl">Using your online account</h1>
-            <p class="govuk-body">To use your online account you will need your:</p>
-<ul class="govuk-list govuk-list--bullet">
-  <li>National Insurance number</li>
-  <li>customer reference number (you'll get this after you send your application)</li>
-  <li>7-digit Personal Identification Number (PIN)</li>
-</ul>
-
-<div class="govuk-inset-text">We will not share your online account details with the other parent.</div>
-
-<h2 class="govuk-heading-m">Create a 7-digit PIN</h2>
-
-            <div class="govuk-form-group">
-                <label class="govuk-label govuk-input--width-10" for="security-details-pin">
-                    <strong></strong>
-                </label>
-                <span id="security-details-pin-hint" class="govuk-hint">
-                  Try not to use an easily guessed PIN like your child's date of birth.
-                </span>
-                <input class="govuk-input govuk-input--width-10" id="security-details-pin" name="security-details-pin" type="text" aria-describedby="security-details-pin-hint">
-              </div>
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Create an 8-digit Personal Identification Number (PIN)</h1>
 
 
-            <button id="personalDetailsBtn" type="submit" class="govuk-button">
-              Continue
-            </button>
-          </form>
+
+
+
+
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-input--width-15" for="security-details-password">
+          </label>
+          <span class="govuk-hint">You'll need this PIN to sign into your online Child Maintenance account.</span>
+          <input class="govuk-input govuk-input--width-2" maxlength="2" id="security-details-password" name="security-details-password" type="text"
+            aria-describedby="securityDetailsPasswordInformation">
+          <input class="govuk-input govuk-input--width-2" maxlength="2" id="security-details-password" name="security-details-password"
+            type="text" aria-describedby="securityDetailsPasswordInformation">
+          <input class="govuk-input govuk-input--width-2" maxlength="2" id="security-details-password" name="security-details-password"
+            type="text" aria-describedby="securityDetailsPasswordInformation">
+          <input class="govuk-input govuk-input--width-2" maxlength="2" id="security-details-password" name="security-details-password"
+            type="text" aria-describedby="securityDetailsPasswordInformation">
+
         </div>
-      </div>
-    </main>
-  </div>
 
-  {% endblock %}
+
+
+
+        <button id="personalDetailsBtn" type="submit" class="govuk-button">
+          Continue
+        </button>
+        </form>
+      </div>
+    </div>
+  </main>
+</div>
+{% endblock %}

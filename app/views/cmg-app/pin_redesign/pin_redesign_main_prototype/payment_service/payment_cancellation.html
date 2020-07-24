@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<!--Feedback banner start-->
+{% include "feedback_banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form  method="post" novalidate>
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl govuk-!-margin-bottom-9">
+                <h1 class="govuk-fieldset__heading">
+                    Your payment has been cancelled
+                </h1>
+              </legend>
+              <p class="govuk-body">
+                No money has been taken from your account.
+
+              </p>
+              <div class="govuk-warning-text">
+                  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                  <strong class="govuk-warning-text__text">
+                    <span class="govuk-warning-text__assistive">Warning</span>
+                    If you stop your application now and decide to come back
+                    later, you'll need to start again using your invitation code.
+                  </strong>
+                </div>
+  
+              <button type="submit" class="govuk-button">
+                Continue
+              </button>
+
+
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+
+
+
+
+  {% endblock %}

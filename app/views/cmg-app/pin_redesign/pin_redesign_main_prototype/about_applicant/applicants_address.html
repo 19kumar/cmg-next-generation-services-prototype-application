@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+{% block content %}
+<!--Feedback banner start-->
+{% include "feedback_banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+  {{ govukBackLink({
+      text: 'Back',
+      href: 'javascript:history.back()'
+  }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+          <div class="govuk-form-group">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
+              <h1 class="govuk-fieldset__heading">
+                Where can we send letters about your application?
+              </h1>
+            </legend>
+
+
+                          <div class="govuk-inset-text">We will not share your answers with the other parent.</div>
+
+            <label class="govuk-label" for="home-address-postcode">
+              <strong>Postcode</strong>
+            </label>
+            <input class="govuk-input govuk-!-width-one-quarter" id="home-address-postcode" name="home-address-postcode"
+              type="text" value="NE32 2LB">
+          </div>
+          
+          <button type="submit" class="govuk-button" onclick="return myFunction()">
+            Find address
+          </button>
+        </form>
+        <a href="applicants_address_manual_input" class="govuk-link">Enter address manually</a>
+      </div>
+    </div>
+  </main>
+</div>
+
+{% endblock %}
